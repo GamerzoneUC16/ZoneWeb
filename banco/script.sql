@@ -104,3 +104,9 @@ FROM tbprodutos p
 JOIN tbtipos t
 WHERE p.id_tipo_produto=t.id_tipo;
 
+CREATE TABLE 'emails'
+'id_email' int auto_increment not null,
+'nome' varchar(40) notnull
+primary key(id_email),
+foreign key(id_usuario) references tbusuarios(id_usuario));
+
