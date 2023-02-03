@@ -27,6 +27,7 @@
                 </div>
                     <li><a href="carinho.php"><span class="bi bi-cart"></span></a></li>
                     <li><a href="loginuser.php"><span class="bi bi-person-fill"></span></a></li>
+                    <h1>teste0</h1>
                 </ul>
              </div>
      </nav>
