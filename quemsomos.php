@@ -1,4 +1,3 @@
-<?php ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,9 +6,10 @@
     <title>Quem Somos</title>
 </head>
 <body>
+    <?php include 'menu.php'?>
     <div class="container">
         <head class="topo">
-            <div class="logo_gamerzone">logo</div>
+            <div class="logo_gamerzone"></div>
         </head>
     </div>
 </body>
