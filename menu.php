@@ -9,7 +9,20 @@
 </head>
 <body>
     <nav class="navbar navbar-inverse">
-        <h1>teste</h1>
+        <div class="container-fluid">
+            <a href="inicio.php" class="navbar navbar-brand">
+                <img src="images/GZ2.png" alt="logotipogz">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-rigth">
+                <li class="active">
+                    <a href="inicio.php">
+                    <span style="background:coral" class="bi bi-house"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </body>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
