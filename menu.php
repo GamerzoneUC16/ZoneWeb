@@ -8,17 +8,36 @@
     <title>Menu</title>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="fixed navbar fixed-top navbar-light navbar-inverse">
         <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#menu" aria-expanded="false">
+                    <span class="sr-only">TESTE</span>
+                </button>
             <a href="inicio.php" class="navbar navbar-brand">
                 <img src="images/GZ2.png" alt="logotipogz">
             </a>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="nav navbar-nav navbar-rigth">
+        <div class="collapsed navbar-collapsed" id="menu">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="active">
                     <a href="inicio.php">
-                    <span style="background:coral" class="bi bi-house"></span>
+                    <span class="bi bi-house-door"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quemsomos.php">QUEM SOMOS</a>
+                </li>
+                <li>
+                    <a href="loja.php">LOJA</a>
+                </li>
+                <li>
+                    <a href="contato.php">CONTATOS</a>
+                </li>
+                <li class="active">
+                    <a href="login.php">
+                        <span class="bi bi-people">&nbsp;USER</span>
                     </a>
                 </li>
             </ul>
