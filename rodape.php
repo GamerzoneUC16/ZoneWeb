@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Rodapé</title>
 </head>
 <body class="fundofixo">
     <h2 class="breadcrumb alert-danger">Contatos</h2>
     <div class="row panel-footer fundo-rodape">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-6 col-4">
             <div class="painel-footer" style="background: none;">
                     <i>A Melhor Gamerhouse da Zona Leste</i>
                     <address>
@@ -28,7 +28,7 @@
                     </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-6 col-4">
             <div class="panel-footer">
                 <h4>Links</h4>
                 <ul class="nav nav-pills nav-stacked" style="display: flex; flex-direction:column;">
