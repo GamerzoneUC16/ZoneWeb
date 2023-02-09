@@ -31,7 +31,7 @@
         <div class="col-sm-6 col-md-4">
             <div class="panel-footer">
                 <h4>Links</h4>
-                <ul class="nav nav-pills nav-stacked">
+                <ul class="nav nav-pills nav-stacked" style="display: flex; flex-direction:column;">
                         <li>
                             <a href="inicio.php" class="text-danger">
                                 <span class="bi bi-house">&nbsp;Home</span>
