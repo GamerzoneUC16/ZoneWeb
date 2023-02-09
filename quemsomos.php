@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Quem Somos</title>
 </head>
-<body>
+<body class="fundofixo">
     <?php include 'menu.php'?>
-    <div class="container">
-        <head class="topo">
-            <div class="logo_gamerzone"></div>
-        </head>
-    </div>
+    <footer class="panel-footer" style="background: none;">
+    <?php include 'rodape.php'?>
+    </footer>
 </body>
-</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js%22%3E"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">

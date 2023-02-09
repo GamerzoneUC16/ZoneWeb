@@ -28,3 +28,10 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.mapBox{
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+}

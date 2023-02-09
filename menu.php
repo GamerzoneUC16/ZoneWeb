@@ -34,7 +34,7 @@
                     <a href="loja.php">LOJA</a>
                 </li>
                 <li>
-                    <a href="contato.php">CONTATOS</a>
+                    <a href="servicos.php">SERVIÇOS</a>
                 </li>
                 <li class="active">
                     <a href="login.php">
