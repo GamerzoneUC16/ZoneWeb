@@ -35,24 +35,28 @@
                         <li>
                             <a href="inicio.php" class="text-danger">
                                 <span class="bi bi-house">&nbsp;Home</span>
+                                <br>
                             </a>
                         </li>
                         <br>
                         <li>
                             <a href="quemsomos.php" class="text-danger">
                                 <span class="bi bi-book">&nbsp;Quem Somos</span>
+                                <br>
                             </a>
                         </li>
                         <br>
                         <li>
                             <a href="loja.php" class="text-danger">
                                 <span class="bi bi-shop">&nbsp;Loja</span>
+                                <br>
                             </a>
                         </li>
                         <br>
                         <li>
                             <a href="servicos.php" class="text-danger">
                                 <span class="bi bi-gear-wide">&nbsp;Serviços</span>
+                                <br>
                             </a>
                         </li>
                 </ul>
