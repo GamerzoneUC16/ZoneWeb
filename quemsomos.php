@@ -8,10 +8,12 @@
     <title>Quem Somos</title>
 </head>
 <body class="fundofixo">
+    <main class="container">   
     <?php include 'menu.php'?>
     <footer class="panel-footer" style="background: none;">
-    <?php include 'rodape.php'?>
+    <?php include 'rodape.php'?> 
     </footer>
+</main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js%22%3E"></script>
 <script src="js/bootstrap.min.js"></script>
