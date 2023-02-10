@@ -3,7 +3,7 @@
   background-image: 10px;  
 }
 
-nav 
+/* nav 
 {
   text-decoration: none;
   background: none;
@@ -14,9 +14,9 @@ nav
   justify-content: space-between;
   align-items: center;
   background-color: rgb(39, 39, 45)
-}
+} */
 
-ul {
+/* ul {
 
   width: 700px;
   height: 40px;
@@ -28,15 +28,15 @@ ul {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 .fundofixo{
   background: url('../images/GZ.png') no-repeat fixed;
   -webkit-background-size: cover;
   background-size: cover;    
 }
-#menu li a{
+/* #menu li a{
   text-decoration: none;
-}
+}  */
 .fundo-rodape{
   background-color: rgba(255,255,255,0.8);
 }

@@ -9,7 +9,7 @@
     <title>Menu</title>
 </head>
 <body class="fundofixo">
-    <nav>
+    <nav class="fixed navbar fixed-top navbar-light bg-light navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
             <a  href="inicio.php" class="navbar-brand">
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="collapsed navbar-collapsed">
-            <ul id ="menu">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="active">
                     <a href="inicio.php">
                     <span class="bi bi-house-door"></span>
