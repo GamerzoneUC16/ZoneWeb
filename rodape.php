@@ -8,7 +8,7 @@
     <title>Rodapé</title>
 </head>
 <body class="fundofixo">
-    <h2 class="breadcrumb alert-danger">Contatos</h2>
+    <!-- <h2 class="breadcrumb alert-danger">Contatos</h2> -->
     <div class="row panel-footer fundo-rodape">
         <div class="col-6 col-4">
             <div class="painel-footer" style="background: none;">

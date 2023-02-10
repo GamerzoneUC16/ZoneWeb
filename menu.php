@@ -8,36 +8,33 @@
     <link rel="stylesheet" href="css\style.css">
     <title>Menu</title>
 </head>
-<body>
+<body class="fundofixo">
     <nav>
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#menu" aria-expanded="false">
-                    <span class="sr-only">TESTE</span>
-                </button>
-            <a href="inicio.php" class="navbar navbar-brand">
-                <img src="images/GZ2.png" alt="logotipogz">
+            <a  href="inicio.php" class="navbar-brand">
+                <img src="images/GZ2_resized.png" alt="Gamer Zone">
             </a>
             </div>
         </div>
-        <div class="collapsed navbar-collapsed" id="menu">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="collapsed navbar-collapsed">
+            <ul id ="menu">
                 <li class="active">
                     <a href="inicio.php">
                     <span class="bi bi-house-door"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="quemsomos.php">QUEM SOMOS</a>
+                    <a href="quemsomos.php ">QUEM SOMOS</a>
                 </li>
                 <li>
-                    <a href="loja.php">LOJA</a>
+                    <a href="loja.php#LOJA">LOJA</a>
                 </li>
                 <li>
-                    <a href="servicos.php">SERVIÇOS</a>
+                    <a href="servicos.php#servicos">SERVIÇOS</a>
                 </li>
                 <li class="active">
-                    <a href="login.php">
+                    <a href="login.php#login">
                         <span class="bi bi-people">&nbsp;USER</span>
                     </a>
                 </li>
