@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <a href="servicos.php#servicos">SERVIÇOS</a>
-                </li>
+                </li>   
                 <li class="active">
                     <a href="login.php#login">
                         <span class="bi bi-people">&nbsp;USER</span>
