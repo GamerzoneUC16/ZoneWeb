@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Quem Somos</title>
-    <h1>BOAAAAAAAAAAAA</h1>
+ 
 </head>
 <body class="fundofixo">
     <main class="container">   
