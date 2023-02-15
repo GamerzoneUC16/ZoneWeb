@@ -11,7 +11,7 @@
     <main class="container">   
     <?php include 'menu.php'?>
     <footer class="panel-footer" style="background: none;">
-    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, placeat suscipit. Architecto perspiciatis eveniet ab neque. Voluptatem consectetur quas cupiditate corrupti laborum, ab velit ipsam earum reiciendis. Nam, hic dolor!</h3>
+    <h3></h3>
     <?php include 'rodape.php'?> 
     </footer>
 </main>
