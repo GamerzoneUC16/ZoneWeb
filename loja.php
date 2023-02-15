@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Store Zone</title>
 </head>
-<body>
-     <!-- abre a barra de navegação -->
+<body class="fundofixo">   
+    <!-- abre a barra de navegação -->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <!-- Agrupamento mobile -->
@@ -50,6 +50,7 @@
                 </ul>
              </div>
      </nav>
+     <main class="container">
      <!--Body da Loja-->
         <!--Destaques da loja-->
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -85,33 +86,44 @@
         <br>
         <br>
         <!--Atalhos-->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/Razer-Desc.webp" alt="Destaque-1" class="d-block w-100">
+                    <img src="" alt="Destaque-1" class="d-block w-10">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/mesa.png" alt="Destaque-2" class="d-block w-100">
+                    <img src="" alt="Destaque-2" class="d-block w-10">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/Lougetch.jpeg" alt="Destaque-3" class="d-block w-100">
+                    <img src="" alt="Destaque-3" class="d-block w-10">
+                </div>
+                <div class="carousel-item">
+                    <img src="" alt="Destaque-4" class="d-block w-10">
+                </div>
+                <div class="carousel-item">
+                    <img src="" alt="Destaque-5" class="d-block w-10">
+                </div>
+                <div class="carousel-item">
+                    <img src="" alt="Destaque-6" class="d-block w-10">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         <!--Fim Atalhos-->
      <!--fim do Body da Loja-->
+    </main>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
