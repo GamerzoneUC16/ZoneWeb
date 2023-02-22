@@ -55,3 +55,8 @@ button:hover{
    padding-bottom: 5%;
    padding-left: 23%;
 }
+li
+{
+    border: 5px;
+    border-color: aqua;
+}
