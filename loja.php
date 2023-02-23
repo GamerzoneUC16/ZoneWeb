@@ -44,7 +44,29 @@
 <!-- Fim de Menu -->
      <main class="container">
      <!--Body da Loja-->
-        <!--Destaques da loja-->
+        <!-- Inicio de Atalhos -->
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <a href="" class="btn btn-info" role="button">HARDWARE</a>   
+          </div>
+          <div class="col-md-auto">
+            <a href="" class="btn btn-info" role="button">PERIFÉRICOS</a> 
+          </div>
+          <div class="col-md-auto">
+           <a href="" class="btn btn-info" role="button">CADEIRAS</a> 
+          </div>
+          <div class="col-md-auto">
+           <a href="" class="btn btn-info" role="button">MONITOR</a> 
+          </div>
+          <div class="col-md-auto">
+           <a href="" class="btn btn-info" role="button">ACESSÓRIOS</a> 
+          </div>
+          <div class="col-md-auto">
+             <a href="" class="btn btn-info  " role="button">GABINETES</a> 
+          </div>
+        </div>
+        <!-- Fim de Atalhos -->
+        <!--Banner da loja-->
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -71,11 +93,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
          </div>
-        <!--Fim Destaques da loja-->
-       
+        <!--Fim banner da loja-->
+        <!-- Inicio Destaques -->
+        <div class="row">
+          <div class="col">
+            <img src="" >
+          </div>
+        </div>
+
+        <!-- Fim Destaques -->       
         
-        
-        <!--Fim Atalhos-->
      <!--fim do Body da Loja-->
     </main>
 
