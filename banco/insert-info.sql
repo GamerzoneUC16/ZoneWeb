@@ -3,4 +3,3 @@ insert into
 
 insert into tipos (sigla,rotulo) values ('pla','Placa de video');
 insert into tipos (sigla,rotulo) values ('har','Hardware');
-.

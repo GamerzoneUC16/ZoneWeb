@@ -1,4 +1,11 @@
+<?php 
+include "conn/connect.php";
+$ListaProd = $conn->query("select * from produtos");
+$rowListaProd = $ListaProd->fetch_assoc();
+$numRows = $ListaProd->num_rows;
 
+
+?>
 
 
 <!DOCTYPE html>
@@ -7,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Store Zone</title>
 </head>
@@ -50,7 +57,7 @@
         <!-- Inicio de Atalhos -->
         <div class="row justify-content-md-center">
           <div class="col-md-auto">
-            <a href="" class="btn btn-info" role="button">HARDWARE</a>   
+            <a href="produto_por_tipo.php" class="btn btn-info" role="button">HARDWARE</a>   
           </div>
           <div class="col-md-auto">
             <a href="" class="btn btn-info" role="button">PERIFÉRICOS</a> 
@@ -65,7 +72,7 @@
            <a href="" class="btn btn-info" role="button">ACESSÓRIOS</a> 
           </div>
           <div class="col-md-auto">
-             <a href="" class="btn btn-info  " role="button">GABINETES</a> 
+             <a href="" class="btn btn-info" role="button">GABINETES</a> 
           </div>
         </div>
         <!-- Fim de Atalhos -->
@@ -99,31 +106,30 @@
         <!--Fim banner da loja-->
         <!-- Inicio Destaques -->
         <div class="row">
-          <div class="col">
-            <img src="" >
+          <?php do { ?>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <a href="produto_detalhe.php?id=<?php echo $rowListaProd['id']; ?>">
+                <img src="images/<?php echo $rowListaProd['image'];?>" class="img-responsive img-rounded" style="height:15em">
+              </a>
+              <div class="caption text-right">
+                <h4 class="text-danger">
+                  <strong><?php echo $rowListaProd['titulo'];?></strong>
+                </h4>
+                <p class="text-left">
+                    <?php echo mb_strimwidth($rowListaProd['descricao'], 0, 42, '...'); ?>
+                </p>
+                <p class="text-end">
+                  <?php echo "R$" . number_format($rowListaProd['preco'], 2, ',', '.');?>
+                </p>
+              </div>
+            </div>
           </div>
+          <?php } while ($rowListaProd = $ListaProd->fetch_assoc());?>
         </div>
+
+       
         <!-- Fim Destaques -->  
-
-        <div id="meu-carrossel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <?php for ($i = 0; $i < count($imagens); $i++) { ?>
-        <button type="button" data-bs-target="#meu-carrossel" data-bs-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active"<?php } ?>></button>
-      <?php } ?>
-    </div>
-
-    <div class="carousel-inner">
-      <?php for ($i = 0; $i < count($imagens); $i++) { ?>
-        <div class="carousel-item <?php if ($i == 0) { ?>active<?php } ?>">
-          <img src="<?php echo $imagens[$i] ?>" class="d-block w-100">
-        </div>
-      <?php } ?>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#meu-carrossel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-
      <!--fim do Body da Loja-->
     </main>
 
