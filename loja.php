@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -100,9 +103,27 @@
             <img src="" >
           </div>
         </div>
+        <!-- Fim Destaques -->  
 
-        <!-- Fim Destaques -->       
-        
+        <div id="meu-carrossel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <?php for ($i = 0; $i < count($imagens); $i++) { ?>
+        <button type="button" data-bs-target="#meu-carrossel" data-bs-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active"<?php } ?>></button>
+      <?php } ?>
+    </div>
+
+    <div class="carousel-inner">
+      <?php for ($i = 0; $i < count($imagens); $i++) { ?>
+        <div class="carousel-item <?php if ($i == 0) { ?>active<?php } ?>">
+          <img src="<?php echo $imagens[$i] ?>" class="d-block w-100">
+        </div>
+      <?php } ?>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#meu-carrossel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+
      <!--fim do Body da Loja-->
     </main>
 
