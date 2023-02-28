@@ -18,7 +18,7 @@ USE `gamerzonedb` ;
 -- Table `gamerzonedb`.`nivel`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`nivel` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `sigla` VARCHAR(45) NOT NULL,
   `rotulo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
@@ -48,7 +48,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`tipos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`tipos` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `sigla` VARCHAR(45) NOT NULL,
   `rotulo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
@@ -123,7 +123,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`cliente`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `cpf` VARCHAR(45) NOT NULL,
   `telefone_id` INT NOT NULL,
@@ -155,7 +155,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`email`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`email` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(45) NOT NULL,
   `cliente_id` INT NOT NULL,
   PRIMARY KEY (`id`),
@@ -197,11 +197,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`frmpagameno`
+-- Table `gamerzonedb`.`frmpagamento`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`frmpagameno` (
-  `id` INT NOT NULL,
-  `` VARCHAR(45) NULL,
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`frmpagamento` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tipo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`pagamento` (
   INDEX `fk_pagamento_frmpagameno1_idx` (`frmpagameno_id` ASC) ,
   CONSTRAINT `fk_pagamento_frmpagameno1`
     FOREIGN KEY (`frmpagameno_id`)
-    REFERENCES `gamerzonedb`.`frmpagameno` (`id`)
+    REFERENCES `gamerzonedb`.`frmpagamento` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -229,7 +229,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`itempedido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`itempedido` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `quntidade` INT NOT NULL,
   `preco` DECIMAL(10,2) NOT NULL,
   `desconto` DECIMAL(10,2) NULL,
@@ -273,7 +273,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`estoque`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`estoque` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `quantidade` INT NOT NULL,
   `data_entrada` DATE NOT NULL,
   `data_saida` DATE NOT NULL,
@@ -293,7 +293,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`boleto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`boleto` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `vencimento` VARCHAR(45) NULL,
   `data` VARCHAR(45) NULL,
   `codbar` VARCHAR(45) NULL,
