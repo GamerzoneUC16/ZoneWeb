@@ -1,5 +1,10 @@
-insert into produtos ( titulo, descricao, resumo, preco, image, destaque, tipos_id) values ( 'Placa Gráfica Nvidia RTX2060', 'Placa traseira toda em metal','KO Ultra Gaming 6GB GDDR6', 2344.99, 'nvidiartx.jpg', 'sim', 1);
-insert into 
-
 insert into tipos (sigla,rotulo) values ('pla','Placa de video');
 insert into tipos (sigla,rotulo) values ('har','Hardware');
+insert into tipos (sigla,rotulo) values ('per','Periférico');
+insert into tipos (sigla,rotulo) values ('cad','Caddeira');
+insert into tipos (sigla,rotulo) values ('mon','Monitor');
+insert into tipos (sigla,rotulo) values ('ace','Acessórios');
+
+insert into produtos ( titulo, descricao, resumo, preco, image, destaque, tipos_id) values ( 'Placa Gráfica Nvidia RTX2060', 'Placa traseira toda em metal','KO Ultra Gaming 6GB GDDR6', 2344.99, 'nvidiartx.jpg', 'sim', 1);
+insert into produtos ( titulo, descricao, resumo, preco, image, destaque, tipos_id) values ( 'PLACA DE VIDEO MSI GEFORCE GTX 1650', 'O dissipador de calor extrudado de alumínio maximiza a área de contato direto com a GPU e a memória para transferir o calor com eficiência. Melhora a dissipação de calor ao guiar o fluxo de ar para o PCB através das seções do dissipador de calor.','Esse componente eletrônico processa as informações que chegam ao dispositivo e as transforma em imagens ou vídeos para exibi-las visualmente.', 959.99, 'pvmsi.jpg', 'sim', 1);
+insert into produtos ( titulo, descricao, resumo, preco, image, destaque, tipos_id) values ( 'Cadeira Gamer Craft Preta e Vermelha', 'Se você passa um longo período de tempo sentado na frente do computador sabe o quanto a cadeira influencia no aconchego do seu corpo, não é? E para aprimorar esses momentos, nada melhor do que contar com um móvel como a Cadeira Gamer Craft. Além de estrutura aconchegante, ela também possui apoio para os braços com regulagem, ajuste de altura e rodízios – tudo para se adaptar às suas necessidades.','Para ficar em uma posição ideal, com as pernas bem apoiadas e confortáveis enquanto joga, o sistema de ajuste de altura dessa cadeira é ótimo - ao acionar o dispositivo na base,', 803.58, 'cadeirag.webp', 'sim', 4);

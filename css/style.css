@@ -30,7 +30,7 @@
   transform: translate(-50%, -50%);
 } */
 .fundofixo{
-  background: url('../images/GZ.png') no-repeat;
+  background: url('../images/GZ.png') no-repeat fixed;
   -webkit-background-size: cover;
   background-size: cover;   
 }

@@ -30,31 +30,31 @@
         <div class="col-sm-4 col-md-4">
             <div class="panel-footer">
                 <h4>Links</h4>
-                <ul class="nav nav-pills nav-stacked">
+                <ul class=" list-unstyled">
                         <li>
                           
-                            <a href="inicio.php" class="text-danger">
+                            <a href="inicio.php" class="text-danger d-block mb-3">
                                 <span class="bi bi-house">&nbsp;Home</span>
                                 <br>
                             </a>
                         </li>
                         <br>
                         <li>
-                            <a href="quemsomos.php" class="text-danger">
+                            <a href="quemsomos.php" class="text-danger d-block mb-3">
                                 <span class="bi bi-book">&nbsp;Quem Somos</span>
                                 <br>
                             </a>
                         </li>
                         <br>
                         <li>
-                            <a href="loja.php" class="text-danger">
+                            <a href="loja.php" class="text-danger d-block mb-3">
                                 <span class="bi bi-shop">&nbsp;Loja</span>
                                 <br>
                             </a>
                         </li>
                         <br>
                         <li>
-                            <a href="servicos.php" class="text-danger">
+                            <a href="servicos.php" class="text-danger d-block mb-3">
                                 <span class="bi bi-gear-wide">&nbsp;Serviços</span>
                                 <br>
                             </a>
