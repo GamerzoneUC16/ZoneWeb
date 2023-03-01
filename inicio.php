@@ -36,9 +36,16 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-
-
+  <div class="img img-responsive elemento">
+    <h1 class="h1-3 text-light h1-1">GamerZone a LanHouse <br> feita para você</h1>
+    <h3 class="h3-1 text-light">Venha bater aquela gameplay avançada e evoluir suas</h3>
+    <h3 class="h3-2 text-light">mecânicas em equipamentos de alto desempenho!</h3>
+    <br>
+    <br>
+    <a href="loja.php">
+      <button type="button" class="btn btn-lg button1 text-light">COMPRE AGORA</button>
+    </a>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
