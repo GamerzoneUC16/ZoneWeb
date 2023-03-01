@@ -49,7 +49,7 @@
         <h1> FALE CONOSCO!!</h1>
         <form class="form" method="POST" action="">
             <label for="Input1" class="field">Nome Completo</label>
-            <input type="nome" class="field" id="nome" placeholder="Rogerio Ceni">
+            <input type="nome" class="field input-1" id="nome" placeholder="Rogerio Ceni">
             <br>
             <label for="Input1" class="field">E-mail</label>
             <input type="email" class="field" id="email" placeholder="Exemplo@gmail.com">
