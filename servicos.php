@@ -34,7 +34,7 @@
             flex-direction: column;
         }
 
-        /* ==.field{padding: 10px;margin-bottom: 15px ; 5px;font-family: Arial, Helvetica, sans-serif;font-size:16 ;  } */
+        .field{font-size: 20px;  } 
         textarea {
             height: 200px
         }
