@@ -16,12 +16,15 @@
         }
 
         h1 {
-            text-align: center
+            text-align: center;
+            font-weight: bold;
+            font-family:Arial, Helvetica, sans-serif
         }
 
         .content {
             display: flex;
-            justify-content: center
+            justify-content: center;
+        
         }
 
         .contato {
@@ -32,11 +35,16 @@
         .form {
             display: flex;
             flex-direction: column;
+            font-weight: bold;
         }
 
-        .field{font-size: 20px;  } 
+        .field{
+            font-size: 19px;
+              
+        } 
         textarea {
-            height: 200px
+            height: 200px;
+
         }
     </style>
 
@@ -49,22 +57,22 @@
         <h1> FALE CONOSCO!!</h1>
         <form class="form" method="POST" action="">
             <label for="Input1" class="field">Nome Completo</label>
-            <input type="nome" class="field input-1" id="nome" placeholder="Rogerio Ceni">
+            <input type="nome" class="field input-1" id="nome" placeholder="Rogerio Ceni" required>
             <br>
             <label for="Input1" class="field">E-mail</label>
-            <input type="email" class="field" id="email" placeholder="Exemplo@gmail.com">
+            <input type="email" class="field" id="email" placeholder="exemplo@gmail.com" required>
             <br>
             <label for="Input1" class="field">Telefone</label>
-            <input type="telefone" class="field" id="telefone" placeholder="(11)9999-0000">
+            <input type="telefone" class="field" id="telefone" placeholder="(11)9999-0000"required>
             <br>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="" required>
                 <option selected>Qual e o problema?</option>
                 <option value="1">hardware</option>
                 <option value="2">Redes</option>
                 <option value="3">Sistema</option>
             </select>
             <br />
-            <textarea class="field" name="mensagem" placeholder="Descreva o problema"></textarea>
+            <textarea class="field" name="mensagem" placeholder="Descreva o problema" required></textarea>
             <br>
             <button class="btn btn-primary" type="submit">Enviar</button>
 
