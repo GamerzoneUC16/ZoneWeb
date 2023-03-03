@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Serviços</title>
 </head>
         <style>
@@ -43,48 +44,57 @@
            {
                 background:rgba(242, 242, 242, 0.8);
                 color: #222;
-                padding: 50px;
+                padding: 60px;
+                margin: 20px 6px;
            }
            
+           
+           
         </style>
-    
-
 <body>
     <br>
         <!-- Serviços-->
         <h1>Serviços</h1>
         <p>GamerZone a Melhor LanHouse da Zona Leste!!</p>
+        <div class="text-center">
+       <span class="bi bi-controller fs-1"></span>
+        </div>
         <br>
            
         <section class= " servicos " >
             <div class="colunas">
                 <article>
-                    <img src="" alt=""> 
-                    <h3>Serviços</h3>
+                    <!-- <img src="" alt="">  -->
+                    <span class="bi bi-gear-fill fs-1" ></span>
+                    <h2>Serviços</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
                 <article>
-                     <img src="images/" alt=""> 
-                    <h3>Jogos</h3>
-                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-                   
+                     <!-- <img src="" alt="">  -->
+                     <i class="bi bi-controller fs-1"></i>
+                    <h2>Jogos</h2>
+                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>  
                 </article>
                 <article>
-                    <img src="" alt="">
-                    <h3>Vendas</h3>
+                   <!--  <img src="" alt=""> -->
+                   <i class="bi bi-shop fs-1"></i>
+                    <h2>Vendas</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
                 </div>
             </section>
                 <br>
-                <div>
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Abrir Chamado</button>
-
+                <!--  implementando o Modal -->
+                <div class="text-center">  
+                <button type="button" class="btn btn-primary btn-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Abrir Chamado</button>
+                </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Chamado</h1>
+        <span class="bi bi-headset fs-3" ></span>
+        <br>
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Chamado</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
