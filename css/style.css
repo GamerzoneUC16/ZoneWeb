@@ -103,7 +103,7 @@
   font-size: 22px;
   position: relative;
   top: 510px;
-  left: 270px;
+  left: 330px;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -112,7 +112,7 @@
   font-size: 22px;
   position: relative;
   top: 450px;
-  left: 483px;
+  left: 553px;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -121,7 +121,7 @@
   font-size: 22px;
   position: relative;
   top: 376px;
-  left: 650px;
+  left: 805px;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -130,7 +130,7 @@
   font-size: 22px;
   position: relative;
   top: 342px;
-  left: 859px;
+  left: 1059px;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -139,7 +139,73 @@
   font-size: 22px;
   position: relative;
   top: 307px;
-  left: 1050px;
+  left: 1350px;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.h2-1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 390px;
+  left: 330px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.h2-2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 220px;
+  left: 553px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.h2-3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 135px;
+  left: 805px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.h2-4 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: -7px;
+  left: 1059px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.h2-5 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: -42px;
+  left: 1350px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.h2-6 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+  position: relative;
+  top: -530px;
+  left: 850px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.h2-7 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 17px;
+  position: relative;
+  top: -680px;
+  left: 850px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.fundoinicio{
+  background-color: #3a0448;   
 }
