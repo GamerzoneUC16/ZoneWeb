@@ -4,6 +4,8 @@ $ListaProd = $conn->query("select * from produtos");
 $rowListaProd = $ListaProd->fetch_assoc();
 $numRows = $ListaProd->num_rows;
 
+$ListaTipo = $conn->query('select * from tipos order by rotulo');
+$row_tipos = $ListaTipo->fetch_all();
 
 ?>
 
@@ -21,64 +23,19 @@ $numRows = $ListaProd->num_rows;
 </head>
 
 <body class="fundofixo">
-  <!-- Area do Menu -->
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #003459;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="inicio.php">
-        <img src="images/GZ-NEW.png" alt="Logo-GZ" srcset="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <div class="input-group flex-nowrap">
-            <form class="d-flex">
-              <input type="search" class="form-control me-2" placeholder="Buscar Produto" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="carinho.php">
-              <span class="bi bi-cart-fill"></span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="login.php">
-              <span class="bi bi-person-fill"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Fim de Menu -->
-  <br>
-  <br>
-  <br>
-  <main class="container">
+ <!-- Area o menu -->
+ <?php include "menu-loja.php"?>
+  <!-- Fim do menu -->
+  
     <!--Body da Loja-->
     <!-- Inicio de Atalhos -->
     <div class="row justify-content-md-center">
+      <?php foreach($row_tipos as $row){?>
       <div class="col-md-auto">
-        <a href="produto_por_tipo.php" class="btn btn-info" role="button">HARDWARE</a>
+        <a href="produto_por_tipo.php?id=<?php echo $row['0'];?>" class="btn btn-info" role="button"><?php echo $row['2'];?></a>
       </div>
-      <div class="col-md-auto">
-        <a href="" class="btn btn-info" role="button">PERIFÉRICOS</a>
-      </div>
-      <div class="col-md-auto">
-        <a href="" class="btn btn-info" role="button">CADEIRAS</a>
-      </div>
-      <div class="col-md-auto">
-        <a href="" class="btn btn-info" role="button">MONITOR</a>
-      </div>
-      <div class="col-md-auto">
-        <a href="" class="btn btn-info" role="button">ACESSÓRIOS</a>
-      </div>
-      <div class="col-md-auto">
-        <a href="" class="btn btn-info" role="button">GABINETES</a>
-      </div>
+      <?php }?>
+      
     </div>
     <!-- Fim de Atalhos -->
     <!--Banner da loja-->
