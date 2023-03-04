@@ -209,3 +209,20 @@
 .fundoinicio{
   background-color: #3a0448;   
 }
+.Img-Prod{
+border-radius:15%;
+background-position: top center;
+left: 15px;
+  position: relative;
+}
+.Img-Cor{
+border-radius:15%;
+background-position: top center;
+
+}
+.h1-Prod
+{
+  left: 68px;
+  position: relative;
+  color: blue;
+}

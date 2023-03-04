@@ -1,3 +1,10 @@
+<?php 
+$current_url = $_SERVER['REQUEST_URI'];
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -19,7 +26,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
+                <?php if($current_url == '/ZoneWeb/loja.php') {?>
                     <div class="input-group flex-nowrap">
+                        
                         <form action="produtos_busca.php" method="get" name="form-busca" role="search" class="navbar-form d-flex">
                             <input type="search" name="buscar" size="30" class="form-control " placeholder="Buscar Produto" aria-label="Search" required>
                             <div class="input-group-btn">
@@ -29,6 +38,11 @@
                             </div>
                     </div>
                     </form>
+                    <?php } else {?>
+                        
+                            
+                    <?php } ?>
+                    </div>
                 </ul>
                 <a class="nav-link active" href="carinho.php">
                     <span class="bi bi-cart-fill fs-2" style="color: #EAF2EF;"></span>

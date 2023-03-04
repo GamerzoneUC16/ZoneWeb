@@ -72,7 +72,8 @@ print_r($rowPorTipo);
         </div>
       <?php } while ($rowPorTipo = $ListaPorTipo->fetch_assoc()); ?>
       <?php } else {?>
-        <h1>Não doi encontrado esse tipo de item </h1>
+        
+        <?php include "produtos_geral.php"?>
         <?php }?>
     </div>
     <!-- Fim Campo do Produto -->
