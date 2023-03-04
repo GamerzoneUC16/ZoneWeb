@@ -16,26 +16,34 @@
     <br>
     <h2>A Gamerzone e uma Lan House Gamer e assistência técnica criada em 23 de setembro de 2021 entre um grupo de 5 amigos para possibilitar que os clientes utilizem a tecnologia a favor de suas Gameplay, negócios e entretenimentos.</h2>
 <br>   
-<figure class="image1">
-  <img src="images/missao.jpg" class="figure-img img-fluid rounded" alt="">
-  <titulo class = "titulo">Missão</titulo>
-  <br>
-  <subtitulo class="subtitulo">Satisfazer nosso cliente através da tecnologia dos jogos com o maior desempenho e buscar soluções através da melhor manutenção com agilidade e qualidade de serviço.</subtitulo>
-</figure>
-<figure class="image2">
-  <img src="images/visao.jpg" class="figure-img img-fluid rounded" alt="">
-  <titulo class = "titulo">Visão</titulo>
-  <br>
-  <subtitulo class="subtitulo">Em 5 anos queremos atingir ao mercado de melhor empresa de lan house e assistência técnica em um só lugar dentro do território nacional com visibilidade para os grandes eventos dentro do país no conceito de games e manutenção em hardwares e softwares.</subtitulo>
-</figure>
-<figure class="image3">
-  <img src="images/valores.jpg" class="figure-img img-fluid rounded" alt="">
-  <titulo class = "titulo">Valores</titulo>
-  <br>
-  <subtitulo class="subtitulo">Transparência, entregamos resultados, desempenho e performance, exceder as expectativas dos clientes.
-</subtitulo>
-</figure>
-<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <figure class="image1">
+        <img src="images/missao.jpg" class="figure-img img-fluid rounded" alt="">
+          <titulo class = "titulo">Missão</titulo>
+          <br>
+          <subtitulo class="subtitulo">Satisfazer nosso cliente através da tecnologia dos jogos com o maior desempenho e buscar soluções através da melhor manutenção com agilidade e qualidade de serviço.</subtitulo>
+          </figure>
+    </div>
+    <div class="col">
+      <figure class="image2">
+        <img src="images/visao.jpg" class="figure-img img-fluid rounded" alt="">
+          <titulo class = "titulo">Visão</titulo>
+          <br>
+          <subtitulo class="subtitulo">Em 5 anos queremos atingir ao mercado de melhor empresa de lan house e assistência técnica em um só lugar dentro do território nacional com visibilidade para os grandes eventos dentro do país no conceito de games e manutenção em hardwares e softwares.</subtitulo>
+          </figure>
+    </div>
+    <div class="col">
+      <figure class="image3">
+        <img src="images/valores.jpg" class="figure-img img-fluid rounded" alt="">
+          <titulo class = "titulo">Valores</titulo>
+          <br>
+          <subtitulo class="subtitulo">Transparência, entregamos resultados, desempenho e performance, exceder as expectativas dos clientes.</subtitulo>
+          </figure>
+    </div>
+  </div>
+</div>
     <?php include 'rodape.php'?> 
     </footer>
 </main>
