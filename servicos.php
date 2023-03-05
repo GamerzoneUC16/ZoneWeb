@@ -49,7 +49,8 @@
                 margin: 20px 6px;
                 position: relative;
            }
-        
+
+                /* Parte esquerdo e inferior */
            .servicos article::before {
             content: "";
             position: absolute;
@@ -58,7 +59,7 @@
             width: 0;
             height: 0;
             background: transparent;
-            border: 2px solid transparent;
+            border: 4px solid transparent;
         }
   
        .servicos article:hover::before {
@@ -102,13 +103,13 @@
             width: 0;
             height: 0;
             background: transparent;
-            border: 2px solid transparent;
+            border: 4px solid transparent;
         }
   
         .servicos article:hover::after {
             animation: animates 1s linear forwards;
         }
-  
+            /* Parte direita e superior */
         @keyframes animates {
             0% {
                 width: 0;
