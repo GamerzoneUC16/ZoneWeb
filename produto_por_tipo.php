@@ -78,6 +78,7 @@ print_r($rowPorTipo);
     </div>
     <!-- Fim Campo do Produto -->
     </div>
+      
 
 
     <footer>

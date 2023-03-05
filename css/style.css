@@ -3,7 +3,7 @@
   background-image: 10px;  
 }
 .fundofixo{
-  background: url('../images/GZ.png') no-repeat fixed;
+  background: url('../images/Fundo.jpg') no-repeat fixed;
   -webkit-background-size: cover;
   background-size: cover;   
 }
