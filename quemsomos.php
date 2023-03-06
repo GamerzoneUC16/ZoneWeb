@@ -8,8 +8,8 @@
     <title>Quem Somos</title>
 </head>
 <body class="fundofixo">
+<?php include 'menu.php'?>
     <main class="container">   
-    <?php include 'menu.php'?>
     <footer class="panel-footer" style="background: none;">
     <br>
     <h1 class="text-center text-uppercase">QUEM SOMOS</h1>
