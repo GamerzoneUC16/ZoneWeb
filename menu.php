@@ -14,7 +14,7 @@ $current_url = $_SERVER['REQUEST_URI'];
 
 <body class="fundofixo">
     <!-- Area do Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #003459;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007EA7;">
         <div class="container-fluid">
             <a class="navbar-brand" href="inicio.php">
                 <img src="images/GZ-NEW.png" alt="Logo-GZ" srcset="">
