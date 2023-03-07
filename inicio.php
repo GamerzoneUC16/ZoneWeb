@@ -9,7 +9,7 @@
   <title>GamerZone</title>
 </head>
 
-<body>
+<body class="container">
   <!-- inicio navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
@@ -82,7 +82,7 @@
   <h3 class="h3-6 text-light">Periféricos</h3>
   <h3 class="h3-7 text-light">Horários</h3>
   <div class="fundoinicio">
-  <h3 class="h3-8 text-light">Valores</h3>
+    <h3 class="h3-8 text-light">Valores</h3>
     <h2 class="h2-1 text-light">Processador Intel i7 8700 <br>
       Vídeo RTX 2070 <br>
       SSD 240 GB <br>
@@ -111,11 +111,11 @@
       R$ 65,00 <br>
       Corujão <br>
       R$ 85,00</h2>
-      </div>
+  </div>
 
-    <h2 class="h2-6 text-light">o desempenho é algo que levamos a sério!</h2>
+  <h2 class="h2-6 text-light">o desempenho é algo que levamos a sério!</h2>
 
-    <h2 class="h2-7 text-light">A LAN</h2>
+  <h2 class="h2-7 text-light">A LAN</h2>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
