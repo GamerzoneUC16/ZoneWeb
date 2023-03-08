@@ -10,12 +10,11 @@
 <body class="fundofixo">
 <?php include 'menu.php'?>
     <main class="container">   
-    <footer class="panel-footer" style="background: none;">
+    <footer class="panel-footer" style="background: none;"> 
     <br>
     <h1 class="text-center text-uppercase">QUEM SOMOS</h1>
     <br>
-    <h2>A Gamerzone e uma Lan House Gamer e assistência técnica criada em 23 de setembro de 2021 entre um grupo de 5 amigos para possibilitar que os clientes utilizem a tecnologia a favor de suas Gameplay, negócios e entretenimentos.</h2>
-<br>   
+    <h2>A Gamerzone e uma Lan House Gamer e assistência técnica criada em 23 de setembro de 2021 entre um grupo de 5 amigos para possibilitar que os clientes utilizem a tecnologia a favor de suas Gameplay, negócios e entretenimentos.</h2> 
 <div class="container">
   <div class="row">
     <div class="col">
@@ -43,8 +42,7 @@
           </figure>
     </div>
   </div>
-</div>
-    <?php include 'rodape.php'?> 
+</div>    
     </footer>
 </main>
 </body>

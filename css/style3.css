@@ -5,7 +5,7 @@ h1 {
 
 h2 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: hsl(0, 100%, 99%);
+    color: hsl(0, 0%, 0%);
 }
 
   .container {
@@ -23,7 +23,7 @@ h2 {
 
 .subtitulo {
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
 }
 
 @media screen and (min-width: 768px) {
@@ -33,25 +33,25 @@ h2 {
 }
 
 .image1{
-  position: cover;
-  width: 340px;
+  position: relative;
+  width: 300px;
   top: 50%;
-  left: 80%;
+  left: 35%;
   text-align: center;
 }
 
 .image2{
-  position: cover;
-  width: 340px;
+  position: relative;
+  width: 300px;
   top: 50%;
-  left: 80%;
+  left: 35%;
   text-align: center;
 }
 
 .image3{
-  position: cover;
-  width: 340px;
+  position: relative;
+  width: 300px;
   top: 50%;
-  left: 80%;
+  left: 35%;
   text-align: center;
 }
