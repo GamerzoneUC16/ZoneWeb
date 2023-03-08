@@ -15,20 +15,18 @@
             {
                /*  background: url(../images/images.jpg) ; */
                  font-family: Arial, Helvetica, sans-serif; 
-             background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   
+             background-image: linear-gradient(to right, rgb(66, 206, 245), rgb(66, 206, 245));   
             }
             h1
             {
                 text-align: center;
                 font-size: 80px;
-                color: #fff;
 
             }
             p
             {
                 text-align: center;
                 font:size;
-                color: #fff;
             }   
            .servicos
            {
@@ -65,7 +63,7 @@
         }
   
        .servicos article:hover::before {
-            animation: animate 1s linear forwards;
+            animation: animate 2s linear forwards;
         }
   
         @keyframes animate {
@@ -109,7 +107,7 @@
         }
   
         .servicos article:hover::after {
-            animation: animates 1s linear forwards;
+            animation: animates 0.5s linear forwards;
         }
             /* Parte direita e superior */
         @keyframes animates {
@@ -143,7 +141,7 @@
         .card-body
            {
              padding: 50px;
-             background:rgb(11, 55, 179);
+              background:rgb(11, 55, 179); 
            }
 
            h5
@@ -192,7 +190,7 @@
           
 
            <!-- borda em processo -->
-           <div class="card bg-info text-black " style="border-radius: 25px;" >
+           <div class="cards bg-info text-black " style="border-radius: 30px;" >
   <div class="card-body">
     <h5 class="card-title text-white">Problema com produto ou com sua máquina solicite nosso suporte!</h5>
     <br>
@@ -244,7 +242,7 @@
   </label>
 </div>
           <div class="mb-3">
-            <label for="message-text" class="col-form-label">Descreva o seu Problema:</label>
+            <label for="message-text" class="col-form-label ">Descreva o seu Problema:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
           
