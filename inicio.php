@@ -9,7 +9,7 @@
   <title>GamerZone</title>
 </head>
 
-<body class="container">
+<body>
   <!-- inicio navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
@@ -48,16 +48,11 @@
     <a href="loja.php">
       <button type="button" class="btn btn-lg button1 text-light">COMPRE AGORA</button>
     </a>
-    <!-- fim introdução -->
-    <h4 class="h4-1">CORUJÃO GZH</h4>
-    <h3 class="h3-3">Reserve já</h3>
-    <h1 class="h1-2">Reserve agora mesmo o seu corujão na GZH, nosso corujão <br> começa às 22 horas e termina às 6 da manhã. <br>
-      <br>
-      Para comprar click no botão abaixo e você será redirecionado <br> para a GZH Store, nossa loja virtual, lá você poderá escolher o <br> mês e o dia que gostaria de reservar!!
-    </h1>
-    <!-- inicio modal no button -->
-    <button type="button" class="btn btn-lg button2 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">RESERVE JÁ!</button>
   </div>
+  <!-- fim introdução -->
+
+  <!-- inicio modal no button -->
+
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -68,55 +63,88 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-success">Reservar</button>
+
         </div>
       </div>
       <!-- fim modal -->
     </div>
   </div>
-  <img class="img-1" src="./images/jogadores_no_escuro.jpeg" alt="Jogadores GZH">
+  <div class="container">
+    <div class="row">
+      <h4 class="h4-1">CORUJÃO GZH</h4>
+      <h3 class="h3-3">Reserve já</h3>
+      <div class="col">
+        <h1 class="h1-2">Reserve agora mesmo o seu corujão na GZH, nosso corujão <br> começa às 22 horas e termina às 6 da manhã. <br>
+          <br>
+          Para comprar click no botão abaixo e você será redirecionado <br> para a GZH Store, nossa loja virtual, lá você poderá escolher o <br> mês e o dia que gostaria de reservar!!
+        </h1>
+        <button type="button" class="btn btn-lg button2 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">RESERVE JÁ!</button>
 
+        <img class="img-1" src="./images/jogadores_no_escuro.jpeg" alt="Jogadores GZH">
+      </div>
+    </div>
+  </div>
 
-  <h3 class="h3-4 text-light">Especificações <br> Técnicas</h3>
-  <h3 class="h3-5 text-light">Monitor e <br> Cadeira</h3>
-  <h3 class="h3-6 text-light">Periféricos</h3>
-  <h3 class="h3-7 text-light">Horários</h3>
   <div class="fundoinicio">
-    <h3 class="h3-8 text-light">Valores</h3>
-    <h2 class="h2-1 text-light">Processador Intel i7 8700 <br>
-      Vídeo RTX 2070 <br>
-      SSD 240 GB <br>
-      ASUS TUF B360M Plus <br> Gaming <br>
-      16 Gb RAM Corsair <br> 3.000Mhz</h2>
+    <div>
+      <h3 class="h3-4 text-light">A LAN</h3>
+      <h3 class="h3-5 text-light">O desempenho é algo que levamos a sério!</h3>
+    </div>
+    <div class="container" style="background-color: transparent;">
+      <div class="row">
+        <div class="col-1">
+          <h3 class="h3-6 text-light">Especificações Técnicas</h3>
+        </div>
+        <div class="col-2">
+          <h3 class="h3-11 text-light">Processador Intel i7 8700 <br>
+            Vídeo RTX 2070 <br>
+            SSD 240 GB <br>
+            ASUS TUF B360M Plus Gaming <br>
+            16 Gb RAM Corsair <br> 3.000Mhz</h3>
+        </div>
+        <div class="col-1">
+          <h3 class="h3-7 text-light">Monitor e Cadeira</h3>
+        </div>
+        <div class="col-3">
+          <h3 class="h3-12 text-light">Monitor Benq ZOWIE XL2546 240Hz Dyac <br>
+            Cadeiras Gamer DT3 Elise</h3>
+        </div>
+        <div class="col-1">
+          <h3 class="h3-8 text-light">Periféricos</h3>
+        </div>
+        <div class="col-4">
+          <h3 class="h3-15 text-light">Mouse Zowie ZA12 <br>
+            HeadSet Corsair HS50 <br>
+            Teclado Mecânico CK104 MotoSpeed <br>
+            MousePad HyperX <br> Fury S Large</h3>
+        </div>
 
-    <h2 class="h2-2 text-light">Monitor Benq ZOWIE <br> XL2546 240Hz Dyac <br>
-      Cadeiras Gamer DT3 <br> Elise</h2>
+        <div class="col-1">
+          <h3 class="h3-9 text-light">Horários</h3>
+        </div>
+        <div class="col-5">
+          <h3 class="h3-13 text-light">Todos os dias <br>
+            10:00 am - 06:00 am <br>
+            Corujão TODOS os dias!</h3>
+        </div>
+        <div class="col-1">
+          <h3 class="h3-10 text-light">Valores</h3>
+        </div>
+        <div class="col-6">
+          <h3 class="h3-14 text-light">Avulso <br>
+            R$ 10,00 <br>
+            Pacote 3 horas <br>
+            R$ 27,00 <br>
+            Pacote 6 horas <br>
+            R$ 50,00 <br>
+            Pacote 8 horas <br>
+            R$ 65,00 <br>
+            Corujão <br>
+            R$ 85,00</h3>
+        </div>
+      </div>
+    </div>
 
-    <h2 class="h2-3 text-light">Mouse Zowie ZA12 <br>
-      HeadSet Corsair HS50 <br>
-      Teclado Mecânico <br> CK104 MotoSpeed <br>
-      MousePad HyperX <br> Fury S Large</h2>
-
-    <h2 class="h2-4 text-light">Todos os dias <br>
-      10:00 am - 06:00 am <br>
-      Corujão TODOS os <br> dias!</h2>
-
-    <h2 class="h2-5 text-light">Avulso
-      R$ 10,00 <br>
-      Pacote 3 horas <br>
-      R$ 27,00 <br>
-      Pacote 6 horas <br>
-      R$ 50,00 <br>
-      Pacote 8 horas <br>
-      R$ 65,00 <br>
-      Corujão <br>
-      R$ 85,00</h2>
-  </div>
-
-  <h2 class="h2-6 text-light">o desempenho é algo que levamos a sério!</h2>
-
-  <h2 class="h2-7 text-light">A LAN</h2>
-  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

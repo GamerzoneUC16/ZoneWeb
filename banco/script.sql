@@ -19,7 +19,7 @@ USE `gamerzonedb` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`nivel` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `sigla` VARCHAR(45) NOT NULL,
+  `sigla` VARCHAR(10) NOT NULL,
   `rotulo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -30,9 +30,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `login` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(45) NOT NULL,
+  `nome` VARCHAR(50) NOT NULL,
+  `login` VARCHAR(60) NOT NULL,
+  `senha` VARCHAR(11) NOT NULL,
   `nivel_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_usuarios_nivel1_idx` (`nivel_id` ASC) ,
@@ -49,8 +49,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`tipos` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `sigla` VARCHAR(45) NOT NULL,
-  `rotulo` VARCHAR(45) NOT NULL,
+  `sigla` VARCHAR(20) NOT NULL,
+  `rotulo` VARCHAR(35) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -61,11 +61,11 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`produtos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(45) NOT NULL,
-  `descricao` VARCHAR(45) NOT NULL,
-  `resumo` VARCHAR(45) NOT NULL,
+  `descricao` MEDIUMTEXT NOT NULL,
+  `resumo` TEXT NOT NULL,
   `preco` DECIMAL(10,2) NOT NULL,
   `image` VARCHAR(45) NOT NULL,
-  `destaque` VARCHAR(45) NOT NULL,
+  `destaque` VARCHAR(10) NOT NULL,
   `desconto` DECIMAL(10,2) NULL,
   `tipos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
@@ -94,7 +94,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`enderecos` (
   `id` INT NOT NULL,
-  `logradouro` VARCHAR(50) NOT NULL,
+  `logradouro` VARCHAR(80) NOT NULL,
   `numero` VARCHAR(5) NOT NULL,
   `bairro` VARCHAR(20) NOT NULL,
   `cidade` VARCHAR(20) NOT NULL,
@@ -124,8 +124,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `cpf` VARCHAR(45) NOT NULL,
+  `nome` VARCHAR(70) NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
   `telefone_id` INT NOT NULL,
   `enderecos_id` INT NOT NULL,
   `cartao_id` INT NOT NULL,
@@ -156,7 +156,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`email` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `email` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(80) NOT NULL,
   `cliente_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_email_cliente_idx` (`cliente_id` ASC) ,
@@ -175,8 +175,8 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data` DATETIME NOT NULL,
   `titulo` VARCHAR(45) NOT NULL,
-  `assunto` VARCHAR(45) NOT NULL,
-  `status` VARCHAR(45) NOT NULL,
+  `assunto` TEXT NOT NULL,
+  `status` VARCHAR(25) NOT NULL,
   `cliente_id` INT NOT NULL,
   `usuarios_id` INT NOT NULL,
   `data_final` DATETIME NULL,
@@ -294,10 +294,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`boleto` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `vencimento` VARCHAR(45) NULL,
-  `data` VARCHAR(45) NULL,
-  `codbar` VARCHAR(45) NULL,
-  `boletocol` VARCHAR(45) NULL,
+  `vencimento` DATETIME NOT NULL,
+  `data` DATETIME NOT NULL,
+  `codbar` VARCHAR(50) NOT NULL,
   `cliente_id` INT NOT NULL,
   `pedidos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
