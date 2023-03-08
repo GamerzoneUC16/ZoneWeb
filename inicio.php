@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css\style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>GamerZone</title>
 </head>
 
@@ -90,47 +91,38 @@
       <h3 class="h3-4 text-light">A LAN</h3>
       <h3 class="h3-5 text-light">O desempenho é algo que levamos a sério!</h3>
     </div>
-    <div class="container" style="background-color: transparent;">
+    <div class="container space" style="background-color: transparent;">
       <div class="row">
-        <div class="col-1">
+        <div class="col">
+          <span class="bi bi-list-task fs-4" style="background-color: white;"></span>
           <h3 class="h3-6 text-light">Especificações Técnicas</h3>
-        </div>
-        <div class="col-2">
           <h3 class="h3-11 text-light">Processador Intel i7 8700 <br>
             Vídeo RTX 2070 <br>
             SSD 240 GB <br>
             ASUS TUF B360M Plus Gaming <br>
             16 Gb RAM Corsair <br> 3.000Mhz</h3>
         </div>
-        <div class="col-1">
+        <div class="col">
           <h3 class="h3-7 text-light">Monitor e Cadeira</h3>
-        </div>
-        <div class="col-3">
-          <h3 class="h3-12 text-light">Monitor Benq ZOWIE XL2546 240Hz Dyac <br>
-            Cadeiras Gamer DT3 Elise</h3>
-        </div>
-        <div class="col-1">
-          <h3 class="h3-8 text-light">Periféricos</h3>
-        </div>
-        <div class="col-4">
+        <h3 class="h3-12 text-light">Monitor Benq ZOWIE XL2546 240Hz Dyac <br>
+          Cadeiras Gamer DT3 Elise</h3>
+      </div>
+      <div class="col">
+        <h3 class="h3-8 text-light">Periféricos</h3>
           <h3 class="h3-15 text-light">Mouse Zowie ZA12 <br>
             HeadSet Corsair HS50 <br>
             Teclado Mecânico CK104 MotoSpeed <br>
             MousePad HyperX <br> Fury S Large</h3>
         </div>
 
-        <div class="col-1">
+        <div class="col">
           <h3 class="h3-9 text-light">Horários</h3>
-        </div>
-        <div class="col-5">
           <h3 class="h3-13 text-light">Todos os dias <br>
             10:00 am - 06:00 am <br>
             Corujão TODOS os dias!</h3>
         </div>
-        <div class="col-1">
+        <div class="col">
           <h3 class="h3-10 text-light">Valores</h3>
-        </div>
-        <div class="col-6">
           <h3 class="h3-14 text-light">Avulso <br>
             R$ 10,00 <br>
             Pacote 3 horas <br>

@@ -255,4 +255,6 @@ background-position: top center;
   position: relative;
   text-align: center;
 }
-
+.space{
+  padding-top: 250px;
+}
