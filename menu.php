@@ -18,14 +18,14 @@ $current_url = $_SERVER['REQUEST_URI'];
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #007EA7;">
         <div class="container-fluid">
             <a class="navbar-brand" href="inicio.php">
-                <img class="img-Logo" src="images/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">
+                <img class="img-Logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <?php if ($current_url == '/ZoneWeb/loja.php') { ?>
+                    <?php if ($current_url == '/ZoneWeb/loja.php' ||   '/ZoneWeb/produto_detalhe.php' ||   '/ZoneWeb/produto_por_tipo.php' ||   '/ZoneWeb/produtos_busca.php' ||   '/ZoneWeb/produtos_geral.php') { ?>
                         <div class="flex-nowrap">
                             <form action="produtos_busca.php" method="get" name="form-busca" role="search" class="navbar-form d-flex" style="position:relative">
                                 <input type="search" name="buscar" size="30" class="form-control " placeholder="Buscar Produto" aria-label="Search" required>
