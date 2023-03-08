@@ -9,15 +9,16 @@ $current_url = $_SERVER['REQUEST_URI'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-LG.css">
     <title>Store Zone</title>
 </head>
 
 <body class="fundofixo">
     <!-- Area do Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007EA7;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #007EA7;">
         <div class="container-fluid">
             <a class="navbar-brand" href="inicio.php">
-                <img src="images/GZ-NEW.png" alt="Logo-GZ" srcset="">
+                <img class="img-Logo" src="images/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

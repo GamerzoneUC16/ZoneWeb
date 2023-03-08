@@ -24,7 +24,7 @@ print_r($rowPorTipo);
     <title>Buscar por tipo</title>
 </head>
 <body class="fundofixo">
-     <?php include "menu-loja.php"?> 
+     <?php include "menu.php"?> 
     <div class="container">
         <!-- Tipo de Produto não encontrado -->
         <?php if ($numRows == 0) { ?>
