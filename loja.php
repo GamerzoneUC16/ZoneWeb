@@ -18,7 +18,8 @@ $row_tipos = $ListaTipo->fetch_all();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="style-shop.css">
+  <link rel="stylesheet" href="css/style-shop.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Store Zone</title>
 </head>
@@ -28,7 +29,7 @@ $row_tipos = $ListaTipo->fetch_all();
 
   <?php include "menu.php" ?>
   <!-- Fim do menu -->
-
+<main class="container-xl">
   <!--Body da Loja-->
   <!-- Inicio de Atalhos -->
   <div class="row justify-content-md-center">
@@ -68,23 +69,25 @@ $row_tipos = $ListaTipo->fetch_all();
     </button>
   </div>
   <!--Fim banner da loja-->
-
-  <div class="row">
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
     <div class="col-sm-7">
       <a href="produtos_geral.php">
-        <img src="images/Prod.jpg" alt="Loja-Geral" class=" Img-Prod  img-respousive img-rounded " style="height:20em;">
+        <img src="images/Prod.jpg" alt="Loja-Geral" class=" Img-Prod  img-responsive img-rounded " style="height:20em;">
       </a>
       <h1 class="h1-Prod">Produtos da Loja<h1>
     </div>
     <div class="col-sm-5">
       <a href="corujão.php">
-        <img src="images/man-wearing-smart-glasses-touching-virtual-screen-futuristic-technology-digital-remix.jpg" alt="" class="Img-Prod  img-respousive img-rounded Img-Cor" style="height:20em;">
+        <img src="images/man-wearing-smart-glasses-touching-virtual-screen-futuristic-technology-digital-remix.jpg" class="Img-Prod  img-responsive img-rounded Img-Cor" style="height:20em;">
       </a>
+
       <div class="text-center">
         <h1>Planos de Corujão</h1>
       </div>
     </div>
-  </div>
+    </div>
+  
   <!-- Inicio Destaques -->
 
   <div class="row g-2">
@@ -112,16 +115,16 @@ $row_tipos = $ListaTipo->fetch_all();
       </div>
     <?php } while ($rowListaProd = $ListaProd->fetch_assoc()); ?>
   </div>
-  
+  </div>
   <!-- Fim Destaques -->
   <!--fim do Body da Loja-->
-  <footer class="painel-footer" style="background: none;">
-    <?php include "rodape.php" ?>
-  </footer>
+  
+  
   </main>
 </body>
-
-
+<footer class="panel-footer" style="background-color: none;">
+<?php include ''?>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

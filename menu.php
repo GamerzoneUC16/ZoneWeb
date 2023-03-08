@@ -16,7 +16,7 @@ $current_url = $_SERVER['REQUEST_URI'];
 <body class="fundofixo">
     <!-- Area do Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #007EA7;">
-        <div class="container-fluid">
+        <div class="container-xl">
             <a class="navbar-brand" href="inicio.php">
                 <img class="img-Logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">
             </a>
@@ -47,7 +47,7 @@ $current_url = $_SERVER['REQUEST_URI'];
                     <li class="nav-item">
                         <a class="nav-link text-light" href="servicos.php">Serviços</a>
                     </li>
-            </div>
+           
             </ul>
             <a class="nav-link active" href="carinho.php">
                 <span class="bi bi-cart-fill fs-3" style="color: #EAF2EF;"></span>
@@ -55,6 +55,7 @@ $current_url = $_SERVER['REQUEST_URI'];
             <a class="nav-link active" href="login.php">
                 <span class="bi bi-person-fill fs-3" style="color: #EAF2EF;">Login</span>
             </a>
+            </div>
         </div>
         </div>
     </nav>
