@@ -11,7 +11,7 @@
 </head>
         <style>
 
-            body 
+            body
             {
                /*  background: url(../images/images.jpg) ; */
                  font-family: Arial, Helvetica, sans-serif; 
@@ -20,7 +20,7 @@
             h1
             {
                 text-align: center;
-                font-size: 80px;
+                font-size: 90px;
                 font-weight: bold
 
             }
@@ -158,33 +158,39 @@
            }
      
         </style>
-        <?php 
-        include 'menu.php'
-        ?>
+
+       
       
 <body>
+<?php 
+        include 'menu.php'
+        ?>
     <br>
         <!-- Serviços-->
-        <h1><b>Serviços</b></h1>
-        <p>GamerZone a Melhor LanHouse da Zona Leste!!</p>
+        <h1 class="text-white"><b>Serviços</b></h1>
+        <p class="text-white">GamerZone a Melhor LanHouse da Zona Leste!!</p>
         <div class="text-center" id="botao100">
        <span class="bi bi-controller fs-1"></span>
         </div>
         <section class= " servicos " >
             <div class="colunas">
+
+            
                 <article>
                     <!-- <img src="" alt="">  -->
-                    
                     <div class="icon"><i class="bi bi-gear-fill fs-1"></i></div>
                     <h2>Serviços</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
+              
+            
                 <article>
                      <!-- <img src="" alt="">  -->
                      <div class="i"><i class="bi bi-controller fs-1"></i></div>
                     <h2>Jogos</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>  
-                </article>
+          </article>
+                
                 <article>
                    <!--  <img src="" alt=""> -->
                    <div class="icon"><i class="bi bi-shop fs-1"></i></div>
@@ -192,6 +198,7 @@
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
                 </div>
+               
             </section>
                 
 
@@ -208,7 +215,7 @@
 
                 <!--  implementando o Modal -->
     <div class="text-center">  
-                <button type="button" class="btn btn-primary btn-lg"  data-bs-toggle="modal" data-bs-target="#chamadomodal" data-bs-whatever="@mdo">Abrir Chamado</button>
+                <button type="button" class="btn btn-success btn-lg"  data-bs-toggle="modal" data-bs-target="#chamadomodal" data-bs-whatever="@mdo">Abrir Chamado</button>
                 </div>
 <div class="modal fade" id="chamadomodal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
