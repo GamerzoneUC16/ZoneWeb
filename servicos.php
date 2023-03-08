@@ -15,18 +15,24 @@
             {
                /*  background: url(../images/images.jpg) ; */
                  font-family: Arial, Helvetica, sans-serif; 
-             background-image: linear-gradient(to right, rgb(66, 206, 245), rgb(66, 206, 245));   
+             background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));  
             }
             h1
             {
                 text-align: center;
                 font-size: 80px;
+                font-weight: bold
 
             }
             p
             {
                 text-align: center;
                 font:size;
+                font-weight: bold
+            }
+            h2
+            {
+              font-weight: bold ;
             }   
            .servicos
            {
@@ -63,7 +69,7 @@
         }
   
        .servicos article:hover::before {
-            animation: animate 2s linear forwards;
+            animation: animate 0.5s linear forwards;
         }
   
         @keyframes animate {
@@ -141,7 +147,7 @@
         .card-body
            {
              padding: 50px;
-              background:rgb(11, 55, 179); 
+              background:rgb(0, 75, 179); 
            }
 
            h5
@@ -152,10 +158,14 @@
            }
      
         </style>
+        <?php 
+        include 'menu.php'
+        ?>
+      
 <body>
     <br>
         <!-- Serviços-->
-        <h1>Serviços</h1>
+        <h1><b>Serviços</b></h1>
         <p>GamerZone a Melhor LanHouse da Zona Leste!!</p>
         <div class="text-center" id="botao100">
        <span class="bi bi-controller fs-1"></span>
@@ -167,19 +177,19 @@
                     
                     <div class="icon"><i class="bi bi-gear-fill fs-1"></i></div>
                     <h2>Serviços</h2>
-                    <p1>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
                 <article>
                      <!-- <img src="" alt="">  -->
                      <div class="i"><i class="bi bi-controller fs-1"></i></div>
                     <h2>Jogos</h2>
-                    <p2>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>  
+                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>  
                 </article>
                 <article>
                    <!--  <img src="" alt=""> -->
                    <div class="icon"><i class="bi bi-shop fs-1"></i></div>
                     <h2>Vendas</h2>
-                    <p3>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
                 </div>
             </section>
@@ -220,6 +230,9 @@
 
             <label for="Telefone" class="col-form-label" >Telefone:</label>
             <input type="tel"   name="telefone"class="form-control" id="Telefone" >
+
+            <label for="Titulo" class="col-form-label" >Titulo:</label>
+            <input type="titulo"  name="titulo"class="form-control" id="Titulo" >
           </div>
           <label for="form-check"  class="col-for-label"><b>Motivo de Contato</b></label>
           <br>
@@ -257,10 +270,14 @@
   </div> 
  </div>
 </div> 
+<br>
    
               <!-- Final Modal Implemetado com a borda -->
         
-    
+   <?php
+   
+    include 'rodape.php'
+   ?> 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
