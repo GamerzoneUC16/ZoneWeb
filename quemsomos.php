@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Quem Somos</title>
 </head>
 <body class="fundofixo">
 <?php include 'menu.php'?>
     <main class="container">   
-    <footer class="panel-footer" style="background: none;"> 
     <br>
-    <h1 class="text-center text-uppercase">QUEM SOMOS</h1>
+    <h1 class="h1-1">QUEM SOMOS</h1>
     <br>
-    <h2>A Gamerzone e uma Lan House Gamer e assistência técnica criada em 23 de setembro de 2021 entre um grupo de 5 amigos para possibilitar que os clientes utilizem a tecnologia a favor de suas Gameplay, negócios e entretenimentos.</h2> 
+    <h2 class="h2-2">A Gamerzone e uma Lan House Gamer e assistência técnica criada em 23 de setembro de 2021 entre um grupo de 5 amigos para possibilitar que os clientes utilizem a tecnologia a favor de suas Gameplay, negócios e entretenimentos.</h2> 
 <div class="container">
   <div class="row">
     <div class="col">
@@ -42,9 +42,20 @@
           </figure>
     </div>
   </div>
-</div>    
-    </footer>
+</div>        
 </main>
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <footer class="panel-footer" style="background: none;"> 
+    <?php include 'rodape.php'?>
+    </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
