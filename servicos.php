@@ -15,18 +15,20 @@
             {
                /*  background: url(../images/images.jpg) ; */
                  font-family: Arial, Helvetica, sans-serif; 
-             background-image: linear-gradient(to right, rgb(66, 206, 245), rgb(66, 206, 245));   
+             background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   
             }
             h1
             {
                 text-align: center;
                 font-size: 80px;
+                color: #fff;
 
             }
             p
             {
                 text-align: center;
                 font:size;
+                color: #fff;
             }   
            .servicos
            {
@@ -54,8 +56,8 @@
            .servicos article::before {
             content: "";
             position: absolute;
-            top: -2px;
-            left: -2px;
+            top: 0px;
+            left: 0px;
             width: 0;
             height: 0;
             background: transparent;
@@ -63,7 +65,7 @@
         }
   
        .servicos article:hover::before {
-            animation: animate 2s linear forwards;
+            animation: animate 1s linear forwards;
         }
   
         @keyframes animate {
@@ -98,8 +100,8 @@
         .servicos article::after {
             content: "";
             position: absolute;
-            top: -2px;
-            left: -2px;
+            top: 0px;
+            left: 0px;
             width: 0;
             height: 0;
             background: transparent;
@@ -164,21 +166,22 @@
             <div class="colunas">
                 <article>
                     <!-- <img src="" alt="">  -->
+                    
                     <div class="icon"><i class="bi bi-gear-fill fs-1"></i></div>
                     <h2>Serviços</h2>
-                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                    <p1>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
                 <article>
                      <!-- <img src="" alt="">  -->
                      <div class="i"><i class="bi bi-controller fs-1"></i></div>
                     <h2>Jogos</h2>
-                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>  
+                    <p2>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>  
                 </article>
                 <article>
                    <!--  <img src="" alt=""> -->
                    <div class="icon"><i class="bi bi-shop fs-1"></i></div>
                     <h2>Vendas</h2>
-                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+                    <p3>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
                 </div>
             </section>
