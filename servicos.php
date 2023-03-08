@@ -15,7 +15,7 @@
             {
                /*  background: url(../images/images.jpg) ; */
                  font-family: Arial, Helvetica, sans-serif; 
-             background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));  
+            /*  background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   */
             }
             h1
             {
@@ -76,7 +76,7 @@
             0% {
                 width: 0;
                 height: 0;
-                border-top-color: black;
+                border-top-color: blue;
                 border-right-color: transparent;
                 border-bottom-color: transparent;
                 border-left-color: transparent;
@@ -85,8 +85,8 @@
             50% {
                 width: 100%;
                 height: 0;
-                border-top-color: black;
-                border-right-color: black;
+                border-top-color: blue;
+                border-right-color: blue;
                 border-bottom-color: transparent;
                 border-left-color: transparent;
             }
@@ -94,8 +94,8 @@
             100% {
                 width: 100%;
                 height: 100%;
-                border-top-color: black;
-                border-right-color: black;
+                border-top-color: blue;
+                border-right-color: blue;
                 border-bottom-color: transparent;
                 border-left-color: transparent;
             }
@@ -123,7 +123,7 @@
                 border-top-color: transparent;
                 border-right-color: transparent;
                 border-bottom-color: transparent;
-                border-left-color: black;
+                border-left-color: blue;
             }
   
             50% {
@@ -131,8 +131,8 @@
                 height: 100%;
                 border-top-color: transparent;
                 border-right-color: transparent;
-                border-bottom-color: black;
-                border-left-color: black;
+                border-bottom-color: blue;
+                border-left-color: blue;
             }
   
             100% {
@@ -140,8 +140,8 @@
                 height: 100%;
                 border-top-color: transparent;
                 border-right-color: transparent;
-                border-bottom-color: black;
-                border-left-color: black;
+                border-bottom-color: blue;
+                border-left-color: blue;
             }
         }
         .card-body
