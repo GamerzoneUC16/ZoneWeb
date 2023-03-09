@@ -18,7 +18,6 @@ $row_tipos = $ListaTipo->fetch_all();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style-shop.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Store Zone</title>
@@ -26,19 +25,18 @@ $row_tipos = $ListaTipo->fetch_all();
 
 <body class="fundofixo">
   <!-- Area o menu -->
-
   <?php include "menu.php" ?>
   <!-- Fim do menu -->
-<main class="container-xl">
+<main class="container-xxl">
   <!--Body da Loja-->
   <!-- Inicio de Atalhos -->
+ 
   <div class="row justify-content-md-center">
     <?php foreach ($row_tipos as $row) { ?>
       <div class="col-md-auto">
         <a href="produto_por_tipo.php?id=<?php echo $row['0']; ?>" class="btn btn-info" role="button"><?php echo $row['2']; ?></a>
       </div>
     <?php } ?>
-
   </div>
   <!-- Fim de Atalhos -->
   <!--Banner da loja-->
@@ -69,21 +67,21 @@ $row_tipos = $ListaTipo->fetch_all();
     </button>
   </div>
   <!--Fim banner da loja-->
-<div class="container-fluid">
-  <div class="row justify-content-md-center">
-    <div class="col-sm-7">
+<div class="container">
+  <div class="row g-2">
+    <div class="col">
       <a href="produtos_geral.php">
-        <img src="images/Prod.jpg" alt="Loja-Geral" class=" Img-Prod  img-responsive img-rounded " style="height:20em;">
+        <img src="images/Prod.jpg" alt="Loja-Geral" class="Img-Prod img-fluid">
       </a>
-      <h1 class="h1-Prod">Produtos da Loja<h1>
+      <h1 class="text-white text-center fs-1 fw-bold">Produtos da Loja<h1>
     </div>
-    <div class="col-sm-5">
+    <div class="col">
       <a href="corujão.php">
-        <img src="images/man-wearing-smart-glasses-touching-virtual-screen-futuristic-technology-digital-remix.jpg" class="Img-Prod  img-responsive img-rounded Img-Cor" style="height:20em;">
+        <img src="images/man-wearing-smart-glasses-touching-virtual-screen-futuristic-technology-digital-remix.jpg" class="Img-Cor img-fluid">
       </a>
 
       <div class="text-center">
-        <h1>Planos de Corujão</h1>
+        <h1 class="text-white text-center fs-1 fw-bold">Planos de Corujão</h1>
       </div>
     </div>
     </div>
@@ -101,16 +99,18 @@ $row_tipos = $ListaTipo->fetch_all();
             <h4 class="card-title">
               <strong><?php echo $rowListaProd['titulo']; ?></strong>
             </h4>
+            <br>
             <p class="card-text">
-              <?php echo mb_strimwidth($rowListaProd['descricao'], 0, 42, '...'); ?>
+              <?php echo mb_strimwidth($rowListaProd['descricao'], 0, 60, '...'); ?>
             </p>
+            <br>
             <p class="card-text">
               <?php echo "R$" . number_format($rowListaProd['preco'], 2, ',', '.'); ?>
             </p>
-            <div class="d-grid gap-2">
-              <button class="btn btn-success">Adicionar ao carrinho</button>
-            </div>
           </div>
+          <div class="d-grid gap-2">
+            <a href="carinho.php?id=<?php echo $rowListaProd['id']?>" class="btn btn-success" role="button" data-bs-toggle="button">Adicionar ao Carinho</a>
+            </div>
         </div>
       </div>
     <?php } while ($rowListaProd = $ListaProd->fetch_assoc()); ?>

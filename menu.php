@@ -12,12 +12,19 @@ $current_url = $_SERVER['REQUEST_URI'];
     <link rel="stylesheet" href="css/style-LG.css">
     <title>Store Zone</title>
 </head>
-
+<style>
+    .img-border
+    {
+        border: 1px solid #007EA7;
+        padding-right: 60px;
+        position:static
+    }
+</style>
 <body class="fundofixo">
     <!-- Area do Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #007EA7;">
-        <div class="container-xl">
-            <a class="navbar-brand" href="inicio.php">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-xl border-end border-primary border-2">
+            <a class="navbar-brand border-end border-primary border-2" href="inicio.php">
                 <img class="img-Logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +32,7 @@ $current_url = $_SERVER['REQUEST_URI'];
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <?php if ($current_url == '/ZoneWeb/loja.php' ||   '/ZoneWeb/produto_detalhe.php' ||   '/ZoneWeb/produto_por_tipo.php' ||   '/ZoneWeb/produtos_busca.php' ||   '/ZoneWeb/produtos_geral.php') { ?>
+                    <?php if ($current_url == '/ZoneWeb/loja.php' ||  $current_url == '/ZoneWeb/produto_detalhe.php' || $current_url == '/ZoneWeb/produto_por_tipo.php' || $current_url == '/ZoneWeb/produtos_busca.php' || $current_url == '/ZoneWeb/produtos_geral.php') { ?>
                         <div class="flex-nowrap">
                             <form action="produtos_busca.php" method="get" name="form-busca" role="search" class="navbar-form d-flex" style="position:relative">
                                 <input type="search" name="buscar" size="30" class="form-control " placeholder="Buscar Produto" aria-label="Search" required>

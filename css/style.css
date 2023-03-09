@@ -14,12 +14,8 @@
 {
   background-color: black;
 }
-.container {
-  position: relative;
-  height: 80vh;
-  margin: auto;
-  border: 1px solid yellow;
-}
+
+
 .container-1{
   position: relative;
   height: 30vh;
@@ -204,13 +200,11 @@
 }
 .Img-Prod{
 border-radius:15%;
-background-position: top center;
-left: 15px;
-  position: relative;
+
 }
 .Img-Cor{
 border-radius:15%;
-background-position: top center;
+
 
 }
 .h1-Prod
