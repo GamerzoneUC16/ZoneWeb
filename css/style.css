@@ -14,14 +14,6 @@
 {
   background-color: black;
 }
-
-
-.container-1{
-  position: relative;
-  height: 30vh;
-  margin: auto;
-  border: 1px solid yellow;
-}
 .h3-1 {
   font-size: 21px;
   position: relative;
@@ -204,8 +196,6 @@ border-radius:15%;
 }
 .Img-Cor{
 border-radius:15%;
-
-
 }
 .h1-Prod
 {
@@ -213,42 +203,6 @@ border-radius:15%;
   position: relative;
   color: blue;
 }
-.col-1{
-  top: 40px;
-  left: 0px;
-  position: relative;
-  text-align: center;
-}
-.col-2{
-  top: 200px;
-  left: 0px;
-  position: relative;
-  text-align: center;
-}
-.col-3{
-  top: 40px;
-  left: 0px;
-  position: relative;
-  text-align: center;
-}
-.col-4{
-  top: 40px;
-  left: 0px;
-  position: relative;
-  text-align: center;
-}
-.col-5{
-  top: 40px;
-  left: 0px;
-  position: relative;
-  text-align: center;
-}
-.col-6{
-  top: 40px;
-  left: 0px;
-  position: relative;
-  text-align: center;
-}
 .space{
-  padding-top: 250px;
+  padding-top: 250x;
 }

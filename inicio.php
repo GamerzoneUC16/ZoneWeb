@@ -87,43 +87,42 @@
   </div>
 
   <div class="fundoinicio">
-    <div>
+    <div class="container">
       <h3 class="h3-4 text-light">A LAN</h3>
       <h3 class="h3-5 text-light">O desempenho é algo que levamos a sério!</h3>
-    </div>
+      </div>
     <div class="container space" style="background-color: transparent;">
       <div class="row">
         <div class="col">
-          <span class="bi bi-list-task fs-4" style="background-color: white;"></span>
-          <h3 class="h3-6 text-light">Especificações Técnicas</h3>
-          <h3 class="h3-11 text-light">Processador Intel i7 8700 <br>
+          <h3 class=" text-light">Especificações Técnicas</h3>
+          <h3 class=" text-light">Processador Intel i7 8700 <br>
             Vídeo RTX 2070 <br>
             SSD 240 GB <br>
             ASUS TUF B360M Plus Gaming <br>
             16 Gb RAM Corsair <br> 3.000Mhz</h3>
         </div>
         <div class="col">
-          <h3 class="h3-7 text-light">Monitor e Cadeira</h3>
-        <h3 class="h3-12 text-light">Monitor Benq ZOWIE XL2546 240Hz Dyac <br>
-          Cadeiras Gamer DT3 Elise</h3>
-      </div>
-      <div class="col">
-        <h3 class="h3-8 text-light">Periféricos</h3>
-          <h3 class="h3-15 text-light">Mouse Zowie ZA12 <br>
+          <h3 class=" text-light">Monitor e Cadeira</h3>
+          <h3 class=" text-light">Monitor Benq ZOWIE XL2546 240Hz Dyac <br>
+            Cadeiras Gamer DT3 Elise</h3>
+        </div>
+        <div class="col">
+          <h3 class=" text-light">Periféricos</h3>
+          <h3 class=" text-light">Mouse Zowie ZA12 <br>
             HeadSet Corsair HS50 <br>
             Teclado Mecânico CK104 MotoSpeed <br>
             MousePad HyperX <br> Fury S Large</h3>
         </div>
 
         <div class="col">
-          <h3 class="h3-9 text-light">Horários</h3>
-          <h3 class="h3-13 text-light">Todos os dias <br>
+          <h3 class=" text-light">Horários</h3>
+          <h3 class=" text-light">Todos os dias <br>
             10:00 am - 06:00 am <br>
             Corujão TODOS os dias!</h3>
         </div>
         <div class="col">
-          <h3 class="h3-10 text-light">Valores</h3>
-          <h3 class="h3-14 text-light">Avulso <br>
+          <h3 class=" text-light">Valores</h3>
+          <h3 class=" text-light">Avulso <br>
             R$ 10,00 <br>
             Pacote 3 horas <br>
             R$ 27,00 <br>
@@ -136,8 +135,8 @@
         </div>
       </div>
     </div>
-
+  </div>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </html>
