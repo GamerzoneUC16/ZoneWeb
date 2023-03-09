@@ -76,7 +76,7 @@
             0% {
                 width: 0;
                 height: 0;
-                border-top-color: blue;
+                border-top-color: rgb(0, 157, 220);
                 border-right-color: transparent;
                 border-bottom-color: transparent;
                 border-left-color: transparent;
@@ -85,8 +85,8 @@
             50% {
                 width: 100%;
                 height: 0;
-                border-top-color: blue;
-                border-right-color: blue;
+                border-top-color:  rgb(0, 157, 220);;
+                border-right-color:  rgb(0, 157, 220);;
                 border-bottom-color: transparent;
                 border-left-color: transparent;
             }
@@ -94,8 +94,8 @@
             100% {
                 width: 100%;
                 height: 100%;
-                border-top-color: blue;
-                border-right-color: blue;
+                border-top-color:  rgb(0, 157, 220);;
+                border-right-color:  rgb(0, 157, 220);;
                 border-bottom-color: transparent;
                 border-left-color: transparent;
             }
@@ -123,7 +123,7 @@
                 border-top-color: transparent;
                 border-right-color: transparent;
                 border-bottom-color: transparent;
-                border-left-color: blue;
+                border-left-color:  rgb(0, 157, 220);;
             }
   
             50% {
@@ -131,8 +131,8 @@
                 height: 100%;
                 border-top-color: transparent;
                 border-right-color: transparent;
-                border-bottom-color: blue;
-                border-left-color: blue;
+                border-bottom-color:  rgb(0, 157, 220);;
+                border-left-color:  rgb(0, 157, 220);;
             }
   
             100% {
@@ -140,15 +140,18 @@
                 height: 100%;
                 border-top-color: transparent;
                 border-right-color: transparent;
-                border-bottom-color: blue;
-                border-left-color: blue;
+                border-bottom-color:  rgb(0, 157, 220);;
+                border-left-color:  rgb(0, 157, 220);;
             }
         }
         .card-body
            {
-             padding: 50px;
-              background:rgb(0, 75, 179); 
+              padding: 50px;
+              background:rgba(242, 242, 242, 0.9); 
+              border: 6px solid blue;
+              border-radius: 40px;
            }
+
 
            h5
            {
@@ -207,15 +210,15 @@
           
 
            <!-- borda em processo -->
-           <div class="cards bg-info text-black " style="border-radius: 30px;" >
+           
   <div class="card-body">
-    <h5 class="card-title text-white">Problema com produto ou com sua máquina solicite nosso suporte!</h5>
+    <h5 class="card-title text-black">Problema com produto ou com sua máquina solicite nosso suporte!</h5>
     <br>
               <!-- Final da Borda Implemetado com modal -->
 
                 <!--  implementando o Modal -->
     <div class="text-center">  
-                <button type="button" class="btn btn-success btn-lg"  data-bs-toggle="modal" data-bs-target="#chamadomodal" data-bs-whatever="@mdo">Abrir Chamado</button>
+                <button type="button" class="btn btn-primary btn-lg"  data-bs-toggle="modal" data-bs-target="#chamadomodal" data-bs-whatever="@mdo">Abrir Chamado</button>
                 </div>
 <div class="modal fade" id="chamadomodal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -276,7 +279,7 @@
     </div>
   </div> 
  </div>
-</div> 
+
 <br>
    
               <!-- Final Modal Implemetado com a borda -->
