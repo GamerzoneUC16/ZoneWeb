@@ -54,6 +54,7 @@
                 padding: 60px;
                 margin: 20px 6px;
                 position: relative;
+                font-weight: bold
            }
 
                 /* Parte esquerdo e inferior */
@@ -159,6 +160,13 @@
             font-size: 30px;
             
            }
+
+           .close  
+           {
+              text-decoration: none;
+          }
+
+           
      
         </style>
 
@@ -178,28 +186,31 @@
         <section class= " servicos " >
             <div class="colunas">
 
-            
+                <a class="close" href="contato.php">
                 <article>
                     <!-- <img src="" alt="">  -->
                     <div class="icon"><i class="bi bi-gear-fill fs-1"></i></div>
                     <h2>Serviços</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
+                </a>
               
-            
+                <a  class="close" href="produtos_geral.php">
                 <article>
                      <!-- <img src="" alt="">  -->
                      <div class="i"><i class="bi bi-controller fs-1"></i></div>
                     <h2>Jogos</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>  
           </article>
-                
+          </a>
+                <a  class= "close" href="quemsomos.php">
                 <article>
                    <!--  <img src="" alt=""> -->
                    <div class="icon"><i class="bi bi-shop fs-1"></i></div>
                     <h2>Vendas</h2>
                     <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
                 </article>
+                </a>
                 </div>
                
             </section>
