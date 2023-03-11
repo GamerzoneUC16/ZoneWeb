@@ -245,10 +245,10 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form >
+            <form>
               <div class="mb-3">
                 <label for="Nome" class="col-form-label">Nome Completo:</label>
-                <input type="text" class="form-control" id="Nome" required>
+                <input type="text" class="form-control" id="Nome">
 
                 <label for="Email" class="col-form-label">E-mail:</label>
                 <input type="email" class="form-control" id="Email">
@@ -283,14 +283,11 @@
                 <label for="message-text" class="col-form-label ">Descreva o seu Problema:</label>
                 <textarea class="form-control" id="message-text"></textarea>
               </div>
-
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            <a href="loja.php">
             <button type="button" class="btn btn-success">Enviar</button>
-            </a>
           </div>
         </div>
       </div>
