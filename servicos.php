@@ -248,16 +248,16 @@
             <form>
               <div class="mb-3">
                 <label for="Nome" class="col-form-label">Nome Completo:</label>
-                <input type="text" class="form-control" id="Nome">
+                <input type="text" class="form-control" id="Nome" required>
 
                 <label for="Email" class="col-form-label">E-mail:</label>
-                <input type="email" class="form-control" id="Email">
+                <input type="email" class="form-control" id="Email" required>
 
                 <label for="Telefone" class="col-form-label">Telefone:</label>
-                <input type="tel" name="telefone" class="form-control" id="Telefone">
+                <input type="tel" name="telefone" class="form-control" id="Telefone" required>
 
                 <label for="Titulo" class="col-form-label">Titulo:</label>
-                <input type="titulo" name="titulo" class="form-control" id="Titulo">
+                <input type="titulo" name="titulo" class="form-control" id="Titulo" required>
               </div>
               <label for="form-check" class="col-for-label"><b>Motivo de Contato</b></label>
               <br>
@@ -283,11 +283,11 @@
                 <label for="message-text" class="col-form-label ">Descreva o seu Problema:</label>
                 <textarea class="form-control" id="message-text"></textarea>
               </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Enviar</button>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-success">Enviar</button>
+          </div> 
           </div>
         </div>
       </div>
