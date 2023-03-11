@@ -177,7 +177,7 @@
                       }
                     </style>
 
-<body>
+<body class="fundofixo">
   <?php
   include 'menu.php'
   ?>
