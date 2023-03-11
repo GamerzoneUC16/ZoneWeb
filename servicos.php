@@ -175,12 +175,7 @@
                         width: 150px;
                         position: relative;
                       }
-                      .modal-body
-                      {
-
-                        
-                      }
-                     
+                      
                     </style>
 
 <body class="fundofixo">
@@ -253,16 +248,16 @@
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="Nome" class="col-form-label">Nome Completo:</label>
+                <label for="Nome" class="col-form-label"><b> Completo:</b></label>
                 <input type="text" class="form-control" id="Nome" required>
 
-                <label for="Email" class="col-form-label">E-mail:</label>
+                <label for="Email" class="col-form-label"><b>E-mail:</b></label>
                 <input type="email" class="form-control" id="Email" required>
 
-                <label for="Telefone" class="col-form-label">Telefone:</label>
+                <label for="Telefone" class="col-form-label"><b>Telefone:</b></label>
                 <input type="tel" name="telefone" class="form-control" id="Telefone" required>
 
-                <label for="Titulo" class="col-form-label">Titulo:</label>
+                <label for="Titulo" class="col-form-label"><b>Título:</b></label>
                 <input type="titulo" name="titulo" class="form-control" id="Titulo" required>
               </div>
               <label for="form-check" class="col-for-label"><b>Motivo de Contato</b></label>
