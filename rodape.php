@@ -23,6 +23,24 @@
     {
         margin: 20px 6px;
     }
+    .close 
+    {                 
+    text-decoration: none;
+    }
+    .siga
+    {
+        font-size: 30px;
+
+    }
+    .link
+    {
+        font-size: 30px;
+
+    }
+    .endereco
+    {
+        font-size: 30px;
+    }
 </style>
 
 <body>
@@ -30,39 +48,24 @@
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top fundo">
             <!-- Contatos -->
             <div class="d-grid gap-2">
-                <h1>Siga-nos</h1>
+                <h1 class="siga text-white">Siga-nos</h1>
                 <a class="close" href="https://pt-br.facebook.com/">
-                   <article>
                     <span class="bi bi-facebook text-muted"> Facebook</span>
-                    </article>
                 </a>
                 <a class="close" href="https://wa.me/5511970617855">
-                    <article>
                     <span class="bi bi-whatsapp text-muted"> Whatsapp</span>
-                    </article>
                 </a>
-                <article>
                 <a class="close" href="mailto:gamerzoneUC16@gmail.com?subject=Contato Site&cc=igor.santiago546@outlook.com">
                     <span class="bi bi-envelope-open text-muted"> Email</span>
-                </article>
                 </a>
                 <a  class="close" href="https://github.com/GamerzoneUC16">
-                    <article>
                     <span class="bi bi-github text-muted"> Github</span>
-                    </article>
                 </a>
             </div>
             <!-- Fim Contatos -->
-            <!-- Logo -->
-            <div class="col">
-                <a href="inicio.php" class="d-flex alingn-items-center mb-3 link-dark text-decorantion-none">
-                    <img src="images/Logo/GamerZone_logo-2-removebg-preview.png" class=" img-responsive img-lg  ">
-                </a>
-            </div>
-            <!-- Fim Logo -->
             <!-- Links -->
             <div class="col">
-                <h5>Links</h5>
+                <h5 class="link text-white">Links</h5>
                 <br>
                 <ul class="d-grid gap-2">
                     <li class="nav-item mb-2">
@@ -78,7 +81,9 @@
             </div>
             <!-- Fim Links -->
             <!-- Endereço -->
-            <div class="col">
+            <div class="col enderecos">
+                <h3 class="endereco text-white">Endereços</h3>
+                <br>
                 <p>A Melhor Gamerhouse da Zona Leste</p>
                 <address>
                     <p>Av. José Pinheiro Borges - Itaquera, São Paulo - SP, 08220-900</p>
@@ -103,6 +108,13 @@
                 <!-- Fim Mapa -->
             </div>
             <!-- Fim Endereço -->
+            <!-- Logo -->
+            <div class="col">
+                <a href="inicio.php" class="d-flex img-right position-relative">
+                    <img src="images/Logo/GamerZone_logo-2-removebg-preview.png" class=" img-responsive img-lg  position-absolute top-0 end-0">
+                </a>
+            </div>
+            <!-- Fim Logo -->
         </footer>
     </div>
 </body>
