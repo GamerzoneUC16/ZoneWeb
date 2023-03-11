@@ -63,8 +63,8 @@
             <label for="Input1" class="field">E-mail</label>
             <input type="email" class="field" id="email" placeholder="exemplo@gmail.com" required>
             <br>
-            <label for="Input1" class="field">Telefone</label>
-            <input type="telefone" class="field" id="telefone" placeholder="(11)9999-0000"required>
+            <label for="Telefone" class="field">Telefone</label>
+            <input type="tel" class="field" id="telefone" placeholder="(11)9999-0000"required>
             <br>
             <select class="form-select" aria-label="" required>
                 <option selected>Qual e o problema?</option>

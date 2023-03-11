@@ -31,17 +31,25 @@
             <!-- Contatos -->
             <div class="d-grid gap-2">
                 <h1>Siga-nos</h1>
-                <a href="https://pt-br.facebook.com/">
+                <a class="close" href="https://pt-br.facebook.com/">
+                   <article>
                     <span class="bi bi-facebook text-muted"> Facebook</span>
+                    </article>
                 </a>
-                <a href="https://wa.me/5511970617855">
+                <a class="close" href="https://wa.me/5511970617855">
+                    <article>
                     <span class="bi bi-whatsapp text-muted"> Whatsapp</span>
+                    </article>
                 </a>
-                <a href="mailto:gamerzoneUC16@gmail.com?subject=Contato Site&cc=igor.santiago546@outlook.com">
+                <article>
+                <a class="close" href="mailto:gamerzoneUC16@gmail.com?subject=Contato Site&cc=igor.santiago546@outlook.com">
                     <span class="bi bi-envelope-open text-muted"> Email</span>
+                </article>
                 </a>
-                <a href="https://github.com/GamerzoneUC16">
+                <a  class="close" href="https://github.com/GamerzoneUC16">
+                    <article>
                     <span class="bi bi-github text-muted"> Github</span>
+                    </article>
                 </a>
             </div>
             <!-- Fim Contatos -->

@@ -175,6 +175,12 @@
                         width: 150px;
                         position: relative;
                       }
+                      .modal-body
+                      {
+
+                        
+                      }
+                     
                     </style>
 
 <body class="fundofixo">
@@ -210,7 +216,7 @@
           <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
         </article>
       </a>
-      <a class="close" href="quemsomos.php">
+      <a class="close" href="loja.php">
         <article>
           <!--  <img src="" alt=""> -->
           <div class="icon"><i class="bi bi-shop fs-1"></i></div>
@@ -281,7 +287,7 @@
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label ">Descreva o seu Problema:</label>
-                <textarea class="form-control" id="message-text"></textarea>
+                <textarea class="form-control" id="message-text" required></textarea>
               </div>
               <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
