@@ -3,7 +3,7 @@
   background-image: 10px;  
 }
 .fundofixo{
-  background: url('../images/Fundo.jpg') no-repeat fixed;
+  background: url('../images/Fundo/Fundo.jpg') no-repeat fixed;
   -webkit-background-size: cover;
   background-size: cover;   
 }
@@ -210,7 +210,7 @@ border-radius:15%;
   position: relative;
   color: blue;
 }
-.card-body
+.card-body1
 {
   padding: 150px;
   background:rgba(242, 242, 242, 0.9); 

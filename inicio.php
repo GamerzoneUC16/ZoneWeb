@@ -86,7 +86,7 @@
     </div>
   </div>
 
-  <div class="card-body">
+  <div class="card-body1">
     <div class="container">
       <h3 class="h3-4">A LAN</h3>
       <h3 class="h3-5">O desempenho é algo que levamos a sério!</h3>

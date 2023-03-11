@@ -5,6 +5,11 @@ $ProdutoGet = $conn->query("select * from produtos where id = $idGet");
 $rowProd = $ProdutoGet->fetch_assoc();
 $numRows = $ProdutoGet->num_rows;
 
+// $ImagesGet = $conn->query("select * from images where produto_id = $idGet");
+// $rowImage = $ImagesGet->fetch_assoc();
+// $numRowsImg = $ImagesGet->num_rows;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -18,7 +23,27 @@ $numRows = $ProdutoGet->num_rows;
 <?php include 'menu.php'?>
 <body>
     <main>
-            
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner product-images">
+    <div class="carousel-item active">
+      <img src="images/Produtos" class="d-block w-100" alt="Imagem 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Produtos" class="d-block w-100" alt="Imagem 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Produtos" class="d-block w-100" alt="Imagem 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>  
     </main>
     <footer class="panel-footer">
     <?php include 'rodape.php' ?>
