@@ -1,5 +1,6 @@
 <?php
 include "conn/connect.php";
+include "conn/connectusbw.php";
 $ListaProd = $conn->query("select * from produtos");
 $rowListaProd = $ListaProd->fetch_assoc();
 $numRows = $ListaProd->num_rows;
