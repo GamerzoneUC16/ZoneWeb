@@ -38,21 +38,30 @@
                         font-weight: bold;
                       }
 
+                      @media screen and (max-width: 640px) {
+
+                        .colunas 
+                      {
+                        display:flex;
+                         flex-direction: column; 
+                      /*    justify-content: center ; */
+                       
+                      }
+                      }
+
                       .services {
 
                         text-align: center;
                         background: no-repeat;
                         background-size: cover;
-                       
-
-
-                      }
+                       }
                         
-                      .colunas {
-                        
+                      .colunas 
+                      {
                         display:flex;
+                     /*    position: relative; */
                        
-                       
+                        
                       }
                   
                           /* colunas */
