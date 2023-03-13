@@ -15,17 +15,22 @@
                         /*  background: url(../images/images.jpg) ; */
                         font-family: Arial, Helvetica, sans-serif;
                         /*  background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   */
+                        flex-wrap: wrap;
+                        align-items: center;
+                        min-height: 100vh;
+
                       }
 
                       h1 {
                         text-align: center;
-                        font-size: 90px;
-                        font-weight: bold
+                        font-size: clamp(5.0em, 4.7em + 8vw, 4.0em);
+                        font-weight: bold;
+                        position: relative;
                       }
 
                       p {
                         text-align: center;
-                        font: size;
+                        font-size:20px;
                         font-weight: bold;
                       }
 
@@ -33,29 +38,36 @@
                         font-weight: bold;
                       }
 
-                      .servicos {
+                      .services {
 
                         text-align: center;
                         background: no-repeat;
                         background-size: cover;
+                       
+
 
                       }
-
+                        
                       .colunas {
-                        display: flex;
+                        
+                        display:flex;
+                       
+                       
                       }
-
-                      .servicos article {
-                        background: rgba(242, 242, 242, 0.9);
+                  
+                          /* colunas */
+                      .services article {
+                        background: rgba(242, 242, 242, 0.9); 
                         color: #222;
                         padding: 60px;
-                        margin: 20px 6px;
-                        position: relative;
-                        font-weight: bold
+                        margin: 20px 6px; 
+                        position: relative; 
+                        font-weight: bold ; 
+                      
                       }
 
                       /* Parte esquerdo e inferior */
-                      .servicos article::before {
+                      .services article::before {
                         content: "";
                         position: absolute;
                         top: 0px;
@@ -66,7 +78,7 @@
                         border: 4px solid transparent;
                       }
 
-                      .servicos article:hover::before {
+                      .services article:hover::before {
                         animation: animate 0.5s linear forwards;
                       }
 
@@ -103,7 +115,7 @@
                         }
                       }
 
-                      .servicos article::after {
+                      .services article::after {
                         content: "";
                         position: absolute;
                         top: 0px;
@@ -114,7 +126,7 @@
                         border: 4px solid transparent;
                       }
 
-                      .servicos article:hover::after {
+                      .services article:hover::after {
                         animation: animates 0.5s linear forwards;
                       }
 
@@ -176,6 +188,7 @@
                         position: relative;
                       }
                       
+                      
                     </style>
 
 <body class="fundofixo">
@@ -191,7 +204,7 @@
    <img  class="img" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="">
   </div>
   <!-- CARDS -->
-  <section class=" servicos ">
+  <section class=" services ">
     <div class="colunas">
 
       <a class="close" href="contato.php">
