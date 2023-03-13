@@ -20,6 +20,57 @@ insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values (
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Cadeira GAMER Roxtor LED', 'Sistema LED/RGB estático ou dinâmico, com até 04 modos.', 'Cadeira Roxtor', 1699.90, 'sim', 4 );
 
 
-insert iamges (caminho, produto_id, principal-img) values ('placa.jpg',1,'nvidiartx.png');
-insert iamges (caminho, produto_id, principal-img) values ()
-insert iamges (caminho, produto_id, principal-img) values ()
+insert images (caminho, principal-img, produto_id) values ('nvidiartx.png',1,1);
+insert images (caminho, principal-img, produto_id) values ('rtx2060.jpg',0,1);
+insert images (caminho, principal-img, produto_id) values ('lateralrtx.jpg',0,1);
+insert images (caminho, principal-img, produto_id) values ('placa.jpg',0,1);
+insert images (caminho, principal-img, produto_id) values ('pvmsi.png',1,2);
+insert images (caminho, principal-img, produto_id) values ('msiplaca.jpg',0,2);
+insert images (caminho, principal-img, produto_id) values ('msilateral.jpg',0,2);
+insert images (caminho, principal-img, produto_id) values ('cadeirag.png',1,3);
+insert images (caminho, principal-img, produto_id) values ('medidacadeira.webp',0,3);
+insert images (caminho, principal-img, produto_id) values ('atrascad.webp',0,3);
+insert images (caminho, principal-img, produto_id) values ('cadeiranin.png',1,4);
+insert images (caminho, principal-img, produto_id) values ('ninjalateral.jpg',0,4);
+insert images (caminho, principal-img, produto_id) values ('atrasninja.jpg',0,4);
+insert images (caminho, principal-img, produto_id) values ('amd-5.webp',1,5);
+insert images (caminho, principal-img, produto_id) values ('amdryz.jpg',0,5);
+insert images (caminho, principal-img, produto_id) values ('caixaryzen.jpg',0,5);
+insert images (caminho, principal-img, produto_id) values ('cadeiraz.png',1,6);
+insert images (caminho, principal-img, produto_id) values ('atrascadeiraz.webp',0,6);
+insert images (caminho, principal-img, produto_id) values ('atrascadeiraz.webp',0,6);
+insert images (caminho, principal-img, produto_id) values ('inclinacadeiraz.webp',0,6);
+insert images (caminho, principal-img, produto_id) values ('rdragonfone.jpg',1,7);
+insert images (caminho, principal-img, produto_id) values ('lateralrdragon.jpg',0,7);
+insert images (caminho, principal-img, produto_id) values ('1-rdragon.jpg',0,7);
+insert images (caminho, principal-img, produto_id) values ('ttagger.jpg',0,8);
+insert images (caminho, principal-img, produto_id) values ('multilaser.jpg',1,9);
+insert images (caminho, principal-img, produto_id) values ('lateralmlaser.jpg',0,9);
+insert images (caminho, principal-img, produto_id) values ('plugmlaser.jpg',0,8);;
+insert images (caminho, principal-img, produto_id) values ('miniteclado.jpg',1,10);
+insert images (caminho, principal-img, produto_id) values ('caixaminitec.jpg',0,10);
+insert images (caminho, principal-img, produto_id) values ('ledminit.jpg',0,10);
+insert images (caminho, principal-img, produto_id) values ('pilhaminit',0,10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
