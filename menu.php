@@ -22,7 +22,7 @@ $current_url = $_SERVER['REQUEST_URI'];
 </style>
 <body>
     <!-- Area do Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #0b212d;">
         <div class="container-xl  ">
             <a class="navbar-brand  " href="inicio.php">
                 <img class="img-Logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">

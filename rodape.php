@@ -10,10 +10,19 @@
     .img-lg {
         width: 60%;
         height: 100%;
+
+    }
+    .img-lg-rodapé {
+        width: 60%;
+        height: 100%;
+        position: relative;
+        left: 290px;
+        top: 20px;
     }
 
     .fundo {
-        background-image: linear-gradient(to right, rgb(0, 11, 12), rgb(10, 11, 12), rgb(0, 11, 12));
+        /* background-image: linear-gradient(to right, rgb(0, 11, 12), rgb(10, 11, 12), rgb(0, 11, 12)); */
+        background: #0b212d;
     }
 
     .map-container {
@@ -47,41 +56,41 @@
     <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top fundo">
             <!-- Contatos -->
-            <div class="d-grid gap-2">
+            <div class="d-grid gap-2 fs-5">
                 <h1 class="siga text-white">Siga-nos</h1>
                 <a class="close" href="https://pt-br.facebook.com/">
-                    <span class="bi bi-facebook text-muted"> Facebook</span>
+                    <span class="bi bi-facebook text-info"> Facebook</span>
                 </a>
                 <a class="close" href="https://wa.me/5511970617855">
-                    <span class="bi bi-whatsapp text-muted"> Whatsapp</span>
+                    <span class="bi bi-whatsapp text-info"> Whatsapp</span>
                 </a>
                 <a class="close" href="mailto:gamerzoneUC16@gmail.com?subject=Contato Site&cc=igor.santiago546@outlook.com">
-                    <span class="bi bi-envelope-open text-muted"> Email</span>
+                    <span class="bi bi-envelope-open text-info"> Email</span>
                 </a>
                 <a  class="close" href="https://github.com/GamerzoneUC16">
-                    <span class="bi bi-github text-muted"> Github</span>
+                    <span class="bi bi-github text-info"> Github</span>
                 </a>
             </div>
             <!-- Fim Contatos -->
             <!-- Links -->
-            <div class="col">
+            <div class="col fs-5">
                 <h5 class="link text-white">Links</h5>
                 <br>
                 <ul class="d-grid gap-2">
                     <li class="nav-item mb-2">
-                        <a href="quemsomos.php" class="nav-link p-0 text-muted">Quem Somos</a>
+                        <a href="quemsomos.php" class="nav-link p-0 text-info">Quem Somos</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="loja.php" class="nav-link p-0 text-muted">Loja</a>
+                        <a href="loja.php" class="nav-link p-0 text-info">Loja</a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="servicos.php" class="nav-link p-0 text-muted">Serviços</a>
+                        <a href="servicos.php" class="nav-link p-0 text-info">Serviços</a>
                     </li>
                 </ul>
             </div>
             <!-- Fim Links -->
             <!-- Endereço -->
-            <div class="col enderecos">
+            <div class="col enderecos fs-5 text-info">
                 <h3 class="endereco text-white">Endereços</h3>
                 <br>
                 <p>A Melhor Gamerhouse da Zona Leste</p>
@@ -111,10 +120,11 @@
             <!-- Logo -->
             <div class="col">
                 <a href="inicio.php" class="d-flex img-right position-relative">
-                    <img src="images/Logo/GamerZone_logo-2-removebg-preview.png" class=" img-responsive img-lg  position-absolute top-0 end-0">
+                    <img src="images/Logo/GamerZone_logo-2-removebg-preview.png" class=" img-responsive  img-lg-rodapé  rounded float-end img-fluid">
                 </a>
             </div>
             <!-- Fim Logo -->
+            
         </footer>
     </div>
 </body>

@@ -122,6 +122,7 @@ $row_tipos = $ListaTipo->fetch_all();
   
   
   </main>
+  
 </body>
 <footer class="panel-footer" style="background-color: none;">
 <?php include 'rodape.php'?>
