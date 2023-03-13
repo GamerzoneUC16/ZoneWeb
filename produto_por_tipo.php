@@ -55,7 +55,7 @@ print_r($rowPorTipo);
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <a href="produto_detalhe.php?id=<?php echo $rowPorTipo['id']; ?>">
-              <img src="images/<?php echo $rowPorTipo['image']; ?>" class="img-responsive img-rounded" style="height:15em">
+              <img src="images/Produtos/<?php echo $rowPorTipo['image']; ?>" class="img-responsive img-rounded" style="height:15em">
             </a>
             <div class="caption text-right">
               <h4 class="text-danger">

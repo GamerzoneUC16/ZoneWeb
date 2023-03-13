@@ -3,9 +3,9 @@
 $host = "localhost";
 $database = "gamerzonedb";
 $user = "root";
-$pass = "";
+$pass = "usbw";
 $charset = "utf8";
-$port = "3306";
+$port = "3307";
 
 $conn = new mysqli($host, $user, $pass, $database, $port);
 

@@ -41,11 +41,11 @@ $row_tipos = $ListaTipo->fetch_all();
   </div>
   <!-- Fim de Atalhos -->
   <!--Banner da loja-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div id="Carrousel-Loja" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="Carrousel-Loja" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="Carrousel-Loja" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="Carrousel-Loja" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -58,11 +58,11 @@ $row_tipos = $ListaTipo->fetch_all();
         <img src="images/Lougetch.jpeg" alt="Destaque-3" class="d-block w-100">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="Carrousel-Loja" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="Carrousel-Loja" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -91,10 +91,10 @@ $row_tipos = $ListaTipo->fetch_all();
 
   <div class="row g-2">
     <?php do { ?>
-      <div class="col d-flex ">
+      <div class="col d-flex">
         <div class="card" style="width: 18rem;">
           <a href="produto_detalhe.php?id=<?php echo $rowListaProd['id']; ?>">
-            <img class="card-img-top" src="images/<?php echo $rowListaProd['image']; ?>">
+            <img class="card-img-top" src="images/Produtos/<?php echo $rowListaProd['image']; ?>">
           </a>
           <div class="card-body">
             <h4 class="card-title">
@@ -124,7 +124,7 @@ $row_tipos = $ListaTipo->fetch_all();
   </main>
 </body>
 <footer class="panel-footer" style="background-color: none;">
-<?php include ''?>
+<?php include 'rodape.php'?>
 </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

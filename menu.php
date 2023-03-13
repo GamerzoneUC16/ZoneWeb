@@ -20,7 +20,7 @@ $current_url = $_SERVER['REQUEST_URI'];
         position:static
     }
 </style>
-<body class="fundofixo">
+<body>
     <!-- Area do Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl border-end border-primary border-2">

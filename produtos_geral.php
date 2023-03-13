@@ -25,7 +25,7 @@ $num_linhas = $listaGeral->num_rows
             <div class="col-sm col-md-4">
                 <div class="thumbnail">
                     <a href="produto_detalhe.php?id=<?php echo $row_geral['id']?>">
-                        <img src="images/<?php echo $row_geral['image']; ?>" class="img-responsive img-rounded" sryle="height:20em">
+                        <img src="images/Produtos/<?php echo $row_geral['image']; ?>" class="img-responsive img-rounded" sryle="height:20em">
                     </a>
                     <div class="caption text-right">
                         <h3 class="text-dark">
