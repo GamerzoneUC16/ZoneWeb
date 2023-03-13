@@ -23,8 +23,8 @@ $current_url = $_SERVER['REQUEST_URI'];
 <body>
     <!-- Area do Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-xl border-end border-primary border-2">
-            <a class="navbar-brand border-end border-primary border-2" href="inicio.php">
+        <div class="container-xl  ">
+            <a class="navbar-brand  " href="inicio.php">
                 <img class="img-Logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
