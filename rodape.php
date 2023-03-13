@@ -54,7 +54,7 @@
 
 <body>
     <div class="container">
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top fundo">
+        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top fundo">
             <!-- Contatos -->
             <div class="d-grid gap-2 fs-5">
                 <h1 class="siga text-white">Siga-nos</h1>

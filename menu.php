@@ -31,7 +31,7 @@ $current_url = $_SERVER['REQUEST_URI'];
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto fs-4">
                     <?php if ($current_url == '/ZoneWeb/loja.php' ||  $current_url == '/ZoneWeb/produto_detalhe.php' || $current_url == '/ZoneWeb/produto_por_tipo.php' || $current_url == '/ZoneWeb/produtos_busca.php' || $current_url == '/ZoneWeb/produtos_geral.php') { ?>
                         <div class="flex-nowrap">
                             <form action="produtos_busca.php" method="get" name="form-busca" role="search" class="navbar-form d-flex" style="position:relative">
@@ -55,13 +55,16 @@ $current_url = $_SERVER['REQUEST_URI'];
                         <a class="nav-link text-light" href="servicos.php">Serviços</a>
                     </li>
            
-            </ul>
+            <li class="nav-item">
             <a class="nav-link active" href="carinho.php">
-                <span class="bi bi-cart-fill fs-3" style="color: #EAF2EF;"></span>
+                <span class="bi bi-cart-fill" style="color: #EAF2EF;"></span>
             </a>
+            </li>
+            <li class="nav-item">
             <a class="nav-link active" href="login.php">
-                <span class="bi bi-person-fill fs-3" style="color: #EAF2EF;">Login</span>
+                <span class="bi bi-person-fill" style="color: #EAF2EF;"><?php echo $_SESSION['username'];?></span>
             </a>
+            </ul>
             </div>
         </div>
         </div>

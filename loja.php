@@ -31,7 +31,7 @@ $row_tipos = $ListaTipo->fetch_all();
 <main class="container-xxl">
   <!--Body da Loja-->
   <!-- Inicio de Atalhos -->
- 
+ <div class="container">
   <div class="row justify-content-md-center">
     <?php foreach ($row_tipos as $row) { ?>
       <div class="col-md-auto">
@@ -39,6 +39,8 @@ $row_tipos = $ListaTipo->fetch_all();
       </div>
     <?php } ?>
   </div>
+  </div>
+  <br>
   <!-- Fim de Atalhos -->
   <!--Banner da loja-->
   <div id="Carrousel-Loja" class="carousel slide" data-bs-ride="carousel">
@@ -67,6 +69,7 @@ $row_tipos = $ListaTipo->fetch_all();
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <br>
   <!--Fim banner da loja-->
 <div class="container">
   <div class="row g-2">
@@ -119,8 +122,6 @@ $row_tipos = $ListaTipo->fetch_all();
   </div>
   <!-- Fim Destaques -->
   <!--fim do Body da Loja-->
-  
-  
   </main>
   
 </body>
