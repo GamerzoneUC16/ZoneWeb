@@ -26,6 +26,7 @@ $row_tipos = $ListaTipo->fetch_all();
 <body class="fundofixo">
   <!-- Area o menu -->
   <?php include "menu.php" ?>
+  <br>
   <!-- Fim do menu -->
 <main class="container-xxl">
   <!--Body da Loja-->
