@@ -7,198 +7,216 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Serviços</title>
 </head>
-                    <style>
-                      body {
-                        /*  background: url(../images/images.jpg) ; */
-                        font-family: Arial, Helvetica, sans-serif;
-                        /*  background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   */
-                        flex-wrap: wrap;
-                        align-items: center;
-                        min-height: 100vh;
+<style>
+  body {
+    /*  background: url(../images/images.jpg) ; */
+    font-family: Arial, Helvetica, sans-serif;
+    /*  background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   */
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
 
-                      }
+  }
 
-                      h1 {
-                        text-align: center;
-                        font-size: clamp(5.0em, 4.7em + 8vw, 4.0em);
-                        font-weight: bold;
-                        position: relative;
-                      }
+  h1 {
+    text-align: center;
+    font-size: clamp(5.0em, 4.7em + 8vw, 4.0em);
+    font-weight: bold;
+    position: relative;
+  }
 
-                      p {
-                        text-align: center;
-                        font-size:20px;
-                        font-weight: bold;
-                      }
+  p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
 
-                      h2 {
-                        font-weight: bold;
-                      }
+  h2 {
+    font-weight: bold;
+  }
 
-                      @media screen and (max-width: 640px) {
+  @media screen and (max-width: 680px) {
 
-                        .colunas 
-                      {
-                        display:flex;
-                         flex-direction: column; 
-                      /*    justify-content: center ; */
-                       
-                      }
-                      }
+    .services article {
+      background: rgba(242, 242, 242, 0.9);
+      color: #222;
+      padding: 60px;
+      margin: 23px 16px;
+      position: relative;
+      font-weight: bold;
 
-                      .services {
+    }
 
-                        text-align: center;
-                        background: no-repeat;
-                        background-size: cover;
-                       }
-                        
-                      .colunas 
-                      {
-                        display:flex;
-                     /*    position: relative; */
-                       
-                        
-                      }
-                  
-                          /* colunas */
-                      .services article {
-                        background: rgba(242, 242, 242, 0.9); 
-                        color: #222;
-                        padding: 60px;
-                        margin: 20px 6px; 
-                        position: relative; 
-                        font-weight: bold ; 
-                      
-                      }
+    .colunas {
+      display: flex;
+      flex-direction: column;
+      /*    justify-content: center ; */
 
-                      /* Parte esquerdo e inferior */
-                      .services article::before {
-                        content: "";
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                        width: 0;
-                        height: 0;
-                        background: transparent;
-                        border: 4px solid transparent;
-                      }
+    }
 
-                      .services article:hover::before {
-                        animation: animate 0.5s linear forwards;
-                      }
+    .card-body {
+      padding: 50px;
+      background: rgba(242, 242, 242, 0.9);
+      border: px solid;
+      border-radius: 40px;
 
-                      @keyframes animate {
-                        0% {
-                          width: 0;
-                          height: 0;
-                          border-top-color: rgb(0, 157, 220);
-                          border-right-color: transparent;
-                          border-bottom-color: transparent;
-                          border-left-color: transparent;
-                        }
-
-                        50% {
-                          width: 100%;
-                          height: 0;
-                          border-top-color: rgb(0, 157, 220);
-                          ;
-                          border-right-color: rgb(0, 157, 220);
-                          ;
-                          border-bottom-color: transparent;
-                          border-left-color: transparent;
-                        }
-
-                        100% {
-                          width: 100%;
-                          height: 100%;
-                          border-top-color: rgb(0, 157, 220);
-                          ;
-                          border-right-color: rgb(0, 157, 220);
-                          ;
-                          border-bottom-color: transparent;
-                          border-left-color: transparent;
-                        }
-                      }
-
-                      .services article::after {
-                        content: "";
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                        width: 0;
-                        height: 0;
-                        background: transparent;
-                        border: 4px solid transparent;
-                      }
-
-                      .services article:hover::after {
-                        animation: animates 0.5s linear forwards;
-                      }
-
-                      /* Parte direita e superior */
-                      @keyframes animates {
-                        0% {
-                          width: 0;
-                          height: 0;
-                          border-top-color: transparent;
-                          border-right-color: transparent;
-                          border-bottom-color: transparent;
-                          border-left-color: rgb(0, 157, 220);
-                          ;
-                        }
-
-                        50% {
-                          width: 0;
-                          height: 100%;
-                          border-top-color: transparent;
-                          border-right-color: transparent;
-                          border-bottom-color: rgb(0, 157, 220);
-                          ;
-                          border-left-color: rgb(0, 157, 220);
-                          ;
-                        }
-
-                        100% {
-                          width: 100%;
-                          height: 100%;
-                          border-top-color: transparent;
-                          border-right-color: transparent;
-                          border-bottom-color: rgb(0, 157, 220);
-                          ;
-                          border-left-color: rgb(0, 157, 220);
-                          ;
-                        }
-                      }
-
-                      .card-body {
-                        padding: 50px;
-                        background: rgba(242, 242, 242, 0.9);
-                        border: 6px solid blue;
-                        border-radius: 40px;
-
-                      }
+    }
 
 
-                      h5 {
-                        text-align: center;
-                        font-size: 34px;
-                        font-weight: bold
-                      }
+  }
 
-                      .close {
-                        text-decoration: none;
-                      }
-                      .img{
-                        width: 150px;
-                        position: relative;
-                      }
-                      
-                      
-                    </style>
+  .services {
+
+    text-align: center;
+    background: no-repeat;
+    background-size: cover;
+  }
+
+  .colunas {
+    display: flex;
+    /*    position: relative; */
+
+
+  }
+
+  /* colunas */
+  .services article {
+    background: rgba(242, 242, 242, 0.9);
+    color: #222;
+    padding: 60px;
+    margin: 20px 6px;
+    position: relative;
+    font-weight: bold;
+
+  }
+
+  /* Parte esquerdo e inferior */
+  .services article::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+  }
+
+  .services article:hover::before {
+    animation: animate 0.5s linear forwards;
+  }
+
+  @keyframes animate {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: rgb(0, 157, 220);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+
+    50% {
+      width: 100%;
+      height: 0;
+      border-top-color: rgb(0, 157, 220);
+      ;
+      border-right-color: rgb(0, 157, 220);
+      ;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: rgb(0, 157, 220);
+      ;
+      border-right-color: rgb(0, 157, 220);
+      ;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+  .services article::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+  }
+
+  .services article:hover::after {
+    animation: animates 0.5s linear forwards;
+  }
+
+  /* Parte direita e superior */
+  @keyframes animates {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+
+    50% {
+      width: 0;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: rgb(0, 157, 220);
+      ;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: rgb(0, 157, 220);
+      ;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+  }
+
+  .card-body {
+    padding: 50px;
+    background: rgba(242, 242, 242, 0.9);
+    border: 6px solid blue;
+    border-radius: 40px;
+
+  }
+
+
+  h5 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold
+  }
+
+  .close {
+    text-decoration: none;
+  }
+
+  .img-logo {
+    width: 150px;
+    position: relative;
+  }
+</style>
 
 <body class="fundofixo">
   <?php
@@ -209,9 +227,11 @@
   <h1 class="text-white"><b>Serviços</b></h1>
   <p class="text-white">GamerZone a Melhor LanHouse da Zona Leste!!</p>
   <div class="text-center">
-   <!--  <span class="bi bi-controller fs-1"></span> -->
-   <img  class="img" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="">
+    <!--  <span class="bi bi-controller fs-1"></span> -->
+    <a href="inicio.php">
+      <img class="img-logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="">
   </div>
+  </a>
   <!-- CARDS -->
   <section class=" services ">
     <div class="colunas">
@@ -303,18 +323,18 @@
                 </label>
               </div>
               <div class="mb-3">
-                <label for="message-text" class="col-form-label ">Descreva o seu Problema:</label>
+                <label for="message-text" class="col-form-label "><b> Descreva o seu Problema:</b></label>
                 <textarea class="form-control" id="message-text" required></textarea>
               </div>
               <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success">Enviar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-success">Enviar</button>
             </form>
-          </div> 
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <br>
