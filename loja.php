@@ -104,7 +104,7 @@ $numRows = $ListaImg->num_rows;
     <?php do { ?>
       <div class="col d-flex">
         <div class="card" style="width: 18rem;">
-        <?php foreach ($$rowListaImg as $img) {?>
+    
           <a href="produto_detalhe.php?id=<?php echo $rowListaProd['id']; ?>">
             <img class="card-img-top" src="images/Produtos/<?php echo $rowListaImg['caminho']; ?>">
           </a>
