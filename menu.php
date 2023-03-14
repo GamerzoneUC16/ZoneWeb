@@ -62,7 +62,7 @@ $current_url = $_SERVER['REQUEST_URI'];
             </li>
             <li class="nav-item">
             <a class="nav-link active" href="admin/login.php">
-                <span class="bi bi-person-fill" style="color: #EAF2EF;"><?php echo $_SESSION['username'];?></span>
+                <span class="bi bi-person-fill" style="color: #EAF2EF;"></span>
             </a>
             </ul>
             </div>

@@ -37,7 +37,7 @@ if ($_POST){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Tela de login</title>
     <style>
         body{
@@ -87,6 +87,76 @@ if ($_POST){
            padding-bottom: 5%;
            padding-left: 23%;
         }
+        .img-lg-rodapé {
+        width: 60%;
+        height: 100%;
+        position: relative;
+        left: px;
+        top: 20px;
+    }
+    .form__group {
+  position: relative;
+  padding: 20px 0 0;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 965px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 9px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
     </style>
 </head>
 <body>
@@ -94,17 +164,25 @@ if ($_POST){
         <div class="Space">
         <h1>Login</h1>
         </div>
-        <div class="Space2">
-        <img src="images/GZ2_resized.png" alt="Logo">
+        <div class="Space2 d-flex img-right position-relative">
+        <img src="../images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logo" class="img-responsive  img-lg-rodapé  rounded float-end img-fluid">
         </div>
         <br>
-        <input type="text" placeholder="Nome">
-        <br><br>
-        <input type="password" placeholder="Senha">
-        <br><br>
-        <a href="">
-        <button>Entrar</button>
-        </a>
+        <form action="login.php" name="form_login" id="form_login" method="POST" enctype="multipart/form-data">
+        <div class="form__group field">
+    <input name="login_usuario" id="login_usuario" autofocus required="" placeholder="Name" autocomplete="off" class="form__field" type="text">
+    <label class="form__label" for="name">Name</label>
+</div>
+        <br>
+        <div class="form__group field">
+    <input name="login_usuario" id="login_usuario" required="" placeholder="Senha" autocomplete="off" class="form__field" type="text">
+    <label class="form__label" for="senha">Senha</label>
+</div>
+        <br>
+        <p class="text-right">
+        <input type="submit" value="Entrar" class="btn btn-primary">
+        </p>
+        </form>
         <br>
         <br>
         
