@@ -26,19 +26,95 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `gamerzonedb`.`telefone`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`telefone` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `numero` VARCHAR(11) NOT NULL,
+  `tipo` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamerzonedb`.`enderecos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`enderecos` (
+  `id` INT NOT NULL,
+  `logradouro` VARCHAR(50) NOT NULL,
+  `numero` VARCHAR(5) NOT NULL,
+  `bairro` VARCHAR(20) NOT NULL,
+  `cidade` VARCHAR(20) NOT NULL,
+  `uf` VARCHAR(2) NOT NULL,
+  `cep` VARCHAR(8) NOT NULL,
+  `complemento` VARCHAR(15) NULL,
+  `tipo` VARCHAR(15) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamerzonedb`.`cliente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(45) NOT NULL,
+  `telefone_id` INT NOT NULL,
+  `enderecos_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_cliente_telefone1_idx` (`telefone_id` ASC) ,
+  INDEX `fk_cliente_enderecos1_idx` (`enderecos_id` ASC) ,
+  CONSTRAINT `fk_cliente_telefone1`
+    FOREIGN KEY (`telefone_id`)
+    REFERENCES `gamerzonedb`.`telefone` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cliente_enderecos1`
+    FOREIGN KEY (`enderecos_id`)
+    REFERENCES `gamerzonedb`.`enderecos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamerzonedb`.`email`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`email` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(45) NOT NULL,
+  `cliente_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_email_cliente_idx` (`cliente_id` ASC) ,
+  CONSTRAINT `fk_email_cliente`
+    FOREIGN KEY (`cliente_id`)
+    REFERENCES `gamerzonedb`.`cliente` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `gamerzonedb`.`usuarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `login` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(45) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(32) NOT NULL,
   `nivel_id` INT NOT NULL,
+  `email_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_usuarios_nivel1_idx` (`nivel_id` ASC) ,
+  INDEX `fk_usuarios_email1_idx` (`email_id` ASC) ,
   CONSTRAINT `fk_usuarios_nivel1`
     FOREIGN KEY (`nivel_id`)
     REFERENCES `gamerzonedb`.`nivel` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuarios_email1`
+    FOREIGN KEY (`email_id`)
+    REFERENCES `gamerzonedb`.`email` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -78,96 +154,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`telefone`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`telefone` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `numero` VARCHAR(11) NOT NULL,
-  `tipo` VARCHAR(15) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`enderecos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`enderecos` (
-  `id` INT NOT NULL,
-  `logradouro` VARCHAR(50) NOT NULL,
-  `numero` VARCHAR(5) NOT NULL,
-  `bairro` VARCHAR(20) NOT NULL,
-  `cidade` VARCHAR(20) NOT NULL,
-  `uf` VARCHAR(2) NOT NULL,
-  `cep` VARCHAR(8) NOT NULL,
-  `complemento` VARCHAR(15) NULL,
-  `tipo` VARCHAR(15) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`cartao`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cartao` (
-  `id` INT NOT NULL,
-  `numero` VARCHAR(16) NULL,
-  `validade` VARCHAR(5) NULL,
-  `cvv` VARCHAR(3) NULL,
-  `tipo` VARCHAR(15) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`cliente`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `cpf` VARCHAR(45) NOT NULL,
-  `telefone_id` INT NOT NULL,
-  `enderecos_id` INT NOT NULL,
-  `cartao_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_cliente_telefone1_idx` (`telefone_id` ASC) ,
-  INDEX `fk_cliente_enderecos1_idx` (`enderecos_id` ASC) ,
-  INDEX `fk_cliente_cartao1_idx` (`cartao_id` ASC) ,
-  CONSTRAINT `fk_cliente_telefone1`
-    FOREIGN KEY (`telefone_id`)
-    REFERENCES `gamerzonedb`.`telefone` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_cliente_enderecos1`
-    FOREIGN KEY (`enderecos_id`)
-    REFERENCES `gamerzonedb`.`enderecos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_cliente_cartao1`
-    FOREIGN KEY (`cartao_id`)
-    REFERENCES `gamerzonedb`.`cartao` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`email`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`email` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `email` VARCHAR(45) NOT NULL,
-  `cliente_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_email_cliente_idx` (`cliente_id` ASC) ,
-  CONSTRAINT `fk_email_cliente`
-    FOREIGN KEY (`cliente_id`)
-    REFERENCES `gamerzonedb`.`cliente` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `gamerzonedb`.`chamados`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
@@ -196,12 +182,32 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `gamerzonedb`.`cartao`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cartao` (
+  `id` INT NOT NULL,
+  `numero` VARCHAR(16) NULL,
+  `validade` VARCHAR(5) NULL,
+  `cvv` VARCHAR(3) NULL,
+  `tipo` VARCHAR(15) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `gamerzonedb`.`frmpagamento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`frmpagamento` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `tipo` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
+  `cartao_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_frmpagamento_cartao1_idx` (`cartao_id` ASC) ,
+  CONSTRAINT `fk_frmpagamento_cartao1`
+    FOREIGN KEY (`cartao_id`)
+    REFERENCES `gamerzonedb`.`cartao` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 

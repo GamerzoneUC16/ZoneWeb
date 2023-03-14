@@ -1,3 +1,36 @@
+<?php 
+include "../conn/connect.php";
+// inicia a verificação do login
+if ($_POST){
+    $login = $_POST['username'];
+    $senha = $_POST['senha'];
+
+    $loginRes = $conn->query("select * from usuarios where username ='$login' and senha = md5('$senha')");
+    $rowLogin = $loginRes->fetch_assoc();
+    $numRow = mysqli_num_rows($loginRes);
+
+    // se a sessão não existir 
+    if (!isset($_SESSION)){
+        $sessaoAntiga = session_name('GamerZone');
+        session_start();
+        $session_name_new = session_name();
+    }
+    if($numRow > 0){
+        $_SESSION['username'] = $login;
+        $_SESSION['nivel'] = $rowLogin['nivel'];
+        $_SESSION['nome_da_sessao'] = session_name();
+        if($rowLogin['nivel']=='sup'){
+            echo "<script>window.open('index.php','_self')</script>";
+        }elseif ($rowLogin['nivel']=='com') {
+            echo "<script>window.open('../client/index.php','_self')</script>";
+        }
+    }else{
+        echo "<script>window.open('invasor.php','_self')</script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
