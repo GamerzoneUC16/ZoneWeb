@@ -235,7 +235,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`itempedido` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `quntidade` INT NOT NULL,
+  `quantidade` INT NOT NULL,
   `preco` DECIMAL(10,2) NOT NULL,
   `desconto` DECIMAL(10,2) NULL,
   `produto_id` INT NOT NULL,
