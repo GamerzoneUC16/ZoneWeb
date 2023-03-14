@@ -7,6 +7,14 @@ $numRows = $ListaProd->num_rows;
 $ListaTipo = $conn->query('select * from tipos order by rotulo');
 $row_tipos = $ListaTipo->fetch_all();
 
+// Buscar images
+
+$ListaImg = $conn->query("select * from images where produto_id = id");
+$rowListaImg = $ListaImg->fetch_assoc();
+$numRows = $ListaImg->num_rows;
+
+
+
 ?>
 
 
@@ -96,9 +104,11 @@ $row_tipos = $ListaTipo->fetch_all();
     <?php do { ?>
       <div class="col d-flex">
         <div class="card" style="width: 18rem;">
+        <?php foreach ($$rowListaImg as $img) {?>
           <a href="produto_detalhe.php?id=<?php echo $rowListaProd['id']; ?>">
-            <img class="card-img-top" src="images/Produtos/<?php echo $rowListaProd['image']; ?>">
+            <img class="card-img-top" src="images/Produtos/<?php echo $rowListaImg['caminho']; ?>">
           </a>
+          
           <div class="card-body">
             <h4 class="card-title">
               <strong><?php echo $rowListaProd['titulo']; ?></strong>

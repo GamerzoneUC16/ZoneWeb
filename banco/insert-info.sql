@@ -5,19 +5,19 @@ insert tipos (sigla,rotulo) values ('cad','Cadeira');
 insert tipos (sigla,rotulo) values ('mon','Monitor');
 insert tipos (sigla,rotulo) values ('acs','Acessórios');
 
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Placa Gráfica Nvidia RTX2060', 'As placas gráficas GeForce RTX são equipadas com a arquitetura Turing GPU e a nova plataforma RTX. Isso oferece maior desempenho em comparação com as placas gráficas da geração anterior e traz o poder do traçado de raios em tempo real e da IA ??para os jogos.','KO Ultra Gaming 6GB GDDR6', 2344.99 , 'sim', 1);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'PLACA DE VIDEO MSI GEFORCE GTX 1650', 'O dissipador de calor extrudado de alumínio maximiza a área de contato direto com a GPU e a memória para transferir o calor com eficiência. Melhora a dissipação de calor ao guiar o fluxo de ar para o PCB através das seções do dissipador de calor.','Esse componente eletrônico processa as informações que chegam ao dispositivo e as transforma em imagens ou vídeos para exibi-las visualmente.', 959.99, 'sim', 1);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Cadeira Gamer Craft Preta e Vermelha', 'Se você passa um longo período de tempo sentado na frente do computador sabe o quanto a cadeira influencia no aconchego do seu corpo, não é? E para aprimorar esses momentos, nada melhor do que contar com um móvel como a Cadeira Gamer Craft. Além de estrutura aconchegante, ela também possui apoio para os braços com regulagem, ajuste de altura e rodízios – tudo para se adaptar às suas necessidades.','Para ficar em uma posição ideal, com as pernas bem apoiadas e confortáveis enquanto joga, o sistema de ajuste de altura dessa cadeira é ótimo - ao acionar o dispositivo na base,', 803.58, 'sim', 4);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Cadeira Gamer Ninja Twilight, Preto e Branco', 'Assegurando um produto de qualidade com ajuste de altura.as cadeiras gamer Ninja foram feitas para acompanhar gamers de diversas alturas, além de proporcionar uma postura correta e melhor adaptação do jogador em relação à sua área de trabalho. ','Desenvolvida especialmente para gamers. A Gamer Ninja Twilight foi projetada para você aproveitar o máximo de tempo nas suas jogatinas ou até mesmo em seu trabalho, uma cadeira extremamente confortável e de alta qualidade.', 470.47, 'sim', 4);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Processador AMD Ryzen 5 5600G 3.9GHz (4.4GHz Turbo)', 'O Ryzen 5 5600G conta com 6 núcleos incríveis para quem quer apenas jogar. Os processadores AMD Ryzen série 5000 capacitam a próxima geração de jogos exigentes, proporcionando experiências imersivas únicas e dominando qualquer tarefa multithread como 3D e renderização de vídeo e compilação de software.','Com grande poder de processamento do seu vídeo integrado, vêm as tecnologias de ponta para ​oferecer suporte.', 1045.88, 'sim', 2);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Cadeira Gamer TGT Heron', 'A cadeira Heron te dá a possibilidade de inclinação personalizada.', 'Cadeira Preta e Azul', 540.00,'sim', 4);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Headset Gamer Redragon Zeus', 'Som estéreo Surround 7.1 Virtual', 'Headset Gamer', 330.00,'sim', 3);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Gabinete  T-Dagger TGC P03W', 'Painel frontal texturizado e com iluminação RGB integrada', 'Gabinete Gamer Branco',200.00, 'sim', 2);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Mouse Multilaser Sem Fio', 'Tecnologia 2.4Ghz. Design Automático com alcande de 10 metros.', 'Mouse sem fio Multilaser', 50.00, 'sim', 3);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Mini Teclado Wireless Tv Box Pc Android Tv Smart', 'USB portátil como mouse touch integrado para controlar o seu Tv Box, Video Game, Smart TV, Notebook. Possui teclado QWERTY, setas direcionais, teclados de atalho e um touchpad para que possa controlar também o mouse dele.', 'Mini Teclado NT', 39.90,'sim', 6);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'KIT GAMER DUST', 'Acompanha teclado ABNT, Headphone e mouse com fio - Possuem iluminação com padroes de cores em RGB', 'Kit Gamer DUST', 320.77, 'sim', 3);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Microfone gamer trust lance GXT-242','Sensor condensador de microfone, Ligação USB digital que funciona em qualquer pc e portátil. Perfeito para podcasts, vlogs, locuções e gravações de música ou transmissão em fluxos no YouTube, Twitch e Facebook.',  'Microfone Gamer Trust', 499.90, 'sim',  3);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Cadeira Gamer Roxtor LED Preta','Sistema Led/RGB estático ou dinâmico, com até 04 modos, Controle remoto para ajuste das funções Led; Elevação por pistão a gás classe 3; Rodas de nylon revestidas; Braços com regulagem 3D; Encosto reclinável em até 155º; Almofadas para apoio lombar e pescoço, ajustáveis','Cadeira Gamer Roxtor', 1720.00, 'sim', 4);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Placa Gráfica Nvidia RTX2060', 'As placas gráficas GeForce RTX são equipadas com a arquitetura Turing GPU e a nova plataforma RTX. Isso oferece maior desempenho em comparação com as placas gráficas da geração anterior e traz o poder do traçado de raios em tempo real e da IA ??para os jogos.','KO Ultra Gaming 6GB GDDR6', 2344.99 , 'sim', 1);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO MSI GEFORCE GTX 1650', 'O dissipador de calor extrudado de alumínio maximiza a área de contato direto com a GPU e a memória para transferir o calor com eficiência. Melhora a dissipação de calor ao guiar o fluxo de ar para o PCB através das seções do dissipador de calor.','Esse componente eletrônico processa as informações que chegam ao dispositivo e as transforma em imagens ou vídeos para exibi-las visualmente.', 959.99, 'sim', 1);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Cadeira Gamer Craft Preta e Vermelha', 'Se você passa um longo período de tempo sentado na frente do computador sabe o quanto a cadeira influencia no aconchego do seu corpo, não é? E para aprimorar esses momentos, nada melhor do que contar com um móvel como a Cadeira Gamer Craft. Além de estrutura aconchegante, ela também possui apoio para os braços com regulagem, ajuste de altura e rodízios – tudo para se adaptar às suas necessidades.','Para ficar em uma posição ideal, com as pernas bem apoiadas e confortáveis enquanto joga, o sistema de ajuste de altura dessa cadeira é ótimo - ao acionar o dispositivo na base,', 803.58, 'sim', 4);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Cadeira Gamer Ninja Twilight, Preto e Branco', 'Assegurando um produto de qualidade com ajuste de altura.as cadeiras gamer Ninja foram feitas para acompanhar gamers de diversas alturas, além de proporcionar uma postura correta e melhor adaptação do jogador em relação à sua área de trabalho. ','Desenvolvida especialmente para gamers. A Gamer Ninja Twilight foi projetada para você aproveitar o máximo de tempo nas suas jogatinas ou até mesmo em seu trabalho, uma cadeira extremamente confortável e de alta qualidade.', 470.47, 'sim', 4);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Processador AMD Ryzen 5 5600G 3.9GHz (4.4GHz Turbo)', 'O Ryzen 5 5600G conta com 6 núcleos incríveis para quem quer apenas jogar. Os processadores AMD Ryzen série 5000 capacitam a próxima geração de jogos exigentes, proporcionando experiências imersivas únicas e dominando qualquer tarefa multithread como 3D e renderização de vídeo e compilação de software.','Com grande poder de processamento do seu vídeo integrado, vêm as tecnologias de ponta para ​oferecer suporte.', 1045.88, 'sim', 2);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Cadeira Gamer TGT Heron', 'A cadeira Heron te dá a possibilidade de inclinação personalizada.', 'Cadeira Preta e Azul', 540.00,'sim', 4);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Headset Gamer Redragon Zeus', 'Som estéreo Surround 7.1 Virtual', 'Headset Gamer', 330.00,'sim', 3);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Gabinete  T-Dagger TGC P03W', 'Painel frontal texturizado e com iluminação RGB integrada', 'Gabinete Gamer Branco',200.00, 'sim', 2);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mouse Multilaser Sem Fio', 'Tecnologia 2.4Ghz. Design Automático com alcande de 10 metros.', 'Mouse sem fio Multilaser', 50.00, 'sim', 3);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mini Teclado Wireless Tv Box Pc Android Tv Smart', 'USB portátil como mouse touch integrado para controlar o seu Tv Box, Video Game, Smart TV, Notebook. Possui teclado QWERTY, setas direcionais, teclados de atalho e um touchpad para que possa controlar também o mouse dele.', 'Mini Teclado NT', 39.90,'sim', 6);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'KIT GAMER DUST', 'Acompanha teclado ABNT, Headphone e mouse com fio - Possuem iluminação com padroes de cores em RGB', 'Kit Gamer DUST', 320.77, 'sim', 3);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Microfone gamer trust lance GXT-242','Sensor condensador de microfone, Ligação USB digital que funciona em qualquer pc e portátil. Perfeito para podcasts, vlogs, locuções e gravações de música ou transmissão em fluxos no YouTube, Twitch e Facebook.',  'Microfone Gamer Trust', 499.90, 'sim',  3);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Cadeira Gamer Roxtor LED Preta','Sistema Led/RGB estático ou dinâmico, com até 04 modos, Controle remoto para ajuste das funções Led; Elevação por pistão a gás classe 3; Rodas de nylon revestidas; Braços com regulagem 3D; Encosto reclinável em até 155º; Almofadas para apoio lombar e pescoço, ajustáveis','Cadeira Gamer Roxtor', 1720.00, 'sim', 4);
 
 
 insert images (caminho, principal_img, produto_id) values ('nvidiartx.png',1,1);
@@ -74,38 +74,3 @@ insert images (caminho, principal_img, produto_id) values ('cadeiraroxtor.jpg',1
 insert images (caminho, principal_img, produto_id) values ('cadeiraroxtorlateral.jpg',0,13);
 insert images (caminho, principal_img, produto_id) values ('cadeiraroxtortraseira.jpg',0,13);
 insert images (caminho, principal_img, produto_id) values ('cadeiraroxtormedida.jpg',0,13);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
