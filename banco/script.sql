@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`enderecos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`enderecos` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `logradouro` VARCHAR(50) NOT NULL,
   `numero` VARCHAR(5) NOT NULL,
   `bairro` VARCHAR(20) NOT NULL,
@@ -61,17 +61,17 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
   `nome` VARCHAR(45) NOT NULL,
   `cpf` VARCHAR(45) NOT NULL,
   `telefone_id` INT NOT NULL,
-  `enderecos_id` INT NOT NULL,
+  `endereco_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cliente_telefone1_idx` (`telefone_id` ASC) ,
-  INDEX `fk_cliente_enderecos1_idx` (`enderecos_id` ASC) ,
+  INDEX `fk_cliente_enderecos1_idx` (`endereco_id` ASC) ,
   CONSTRAINT `fk_cliente_telefone1`
     FOREIGN KEY (`telefone_id`)
     REFERENCES `gamerzonedb`.`telefone` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_cliente_enderecos1`
-    FOREIGN KEY (`enderecos_id`)
+    FOREIGN KEY (`endereco_id`)
     REFERENCES `gamerzonedb`.`enderecos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -101,7 +101,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(32) NOT NULL,
+  `senha` VARCHAR(16) NOT NULL,
   `nivel_id` INT NOT NULL,
   `email_id` INT NOT NULL,
   PRIMARY KEY (`id`),
@@ -142,11 +142,11 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`produtos` (
   `preco` DECIMAL(10,2) NOT NULL,
   `destaque` VARCHAR(45) NOT NULL,
   `desconto` DECIMAL(10,2) NULL,
-  `tipos_id` INT NOT NULL,
+  `tipo_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_produtos_tipos1_idx` (`tipos_id` ASC) ,
+  INDEX `fk_produtos_tipos1_idx` (`tipo_id` ASC) ,
   CONSTRAINT `fk_produtos_tipos1`
-    FOREIGN KEY (`tipos_id`)
+    FOREIGN KEY (`tipo_id`)
     REFERENCES `gamerzonedb`.`tipos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -163,18 +163,18 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
   `assunto` VARCHAR(45) NOT NULL,
   `status` VARCHAR(45) NOT NULL,
   `cliente_id` INT NOT NULL,
-  `usuarios_id` INT NOT NULL,
+  `usuario_id` INT NOT NULL,
   `data_final` DATETIME NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_chamados_cliente1_idx` (`cliente_id` ASC) ,
-  INDEX `fk_chamados_usuarios1_idx` (`usuarios_id` ASC) ,
+  INDEX `fk_chamados_usuarios1_idx` (`usuario_id` ASC) ,
   CONSTRAINT `fk_chamados_cliente1`
     FOREIGN KEY (`cliente_id`)
     REFERENCES `gamerzonedb`.`cliente` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_chamados_usuarios1`
-    FOREIGN KEY (`usuarios_id`)
+    FOREIGN KEY (`usuario_id`)
     REFERENCES `gamerzonedb`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -185,7 +185,7 @@ ENGINE = InnoDB;
 -- Table `gamerzonedb`.`cartao`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cartao` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `numero` VARCHAR(16) NULL,
   `validade` VARCHAR(5) NULL,
   `cvv` VARCHAR(3) NULL,
@@ -238,11 +238,11 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`itempedido` (
   `quntidade` INT NOT NULL,
   `preco` DECIMAL(10,2) NOT NULL,
   `desconto` DECIMAL(10,2) NULL,
-  `produtos_id` INT NOT NULL,
+  `produto_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_itempedido_produtos1_idx` (`produtos_id` ASC) ,
+  INDEX `fk_itempedido_produtos1_idx` (`produto_id` ASC) ,
   CONSTRAINT `fk_itempedido_produtos1`
-    FOREIGN KEY (`produtos_id`)
+    FOREIGN KEY (`produto_id`)
     REFERENCES `gamerzonedb`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -283,11 +283,11 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`estoque` (
   `data_entrada` DATE NOT NULL,
   `data_saida` DATE NOT NULL,
   `lote` VARCHAR(45) NOT NULL,
-  `produtos_id` INT NOT NULL,
+  `produto_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_estoque_produtos1_idx` (`produtos_id` ASC) ,
+  INDEX `fk_estoque_produtos1_idx` (`produto_id` ASC) ,
   CONSTRAINT `fk_estoque_produtos1`
-    FOREIGN KEY (`produtos_id`)
+    FOREIGN KEY (`produto_id`)
     REFERENCES `gamerzonedb`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -304,12 +304,12 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`boleto` (
   `codbar` VARCHAR(45) NULL,
   `boletocol` VARCHAR(45) NULL,
   `cliente_id` INT NOT NULL,
-  `pedidos_id` INT NOT NULL,
+  `pedido_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_boleto_pedidos1_idx` (`pedidos_id` ASC) ,
+  INDEX `fk_boleto_pedidos1_idx` (`pedido_id` ASC) ,
   INDEX `fk_boleto_cliente1_idx` (`cliente_id` ASC) ,
   CONSTRAINT `fk_boleto_pedidos1`
-    FOREIGN KEY (`pedidos_id`)
+    FOREIGN KEY (`pedido_id`)
     REFERENCES `gamerzonedb`.`pedidos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -328,11 +328,11 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`carac_tec` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `caracs` TEXT NOT NULL,
-  `produtos_id` INT NOT NULL,
+  `produto_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_carac_tec_produtos1_idx` (`produtos_id` ASC) ,
+  INDEX `fk_carac_tec_produtos1_idx` (`produto_id` ASC) ,
   CONSTRAINT `fk_carac_tec_produtos1`
-    FOREIGN KEY (`produtos_id`)
+    FOREIGN KEY (`produto_id`)
     REFERENCES `gamerzonedb`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -345,12 +345,12 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`images` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `caminho` VARCHAR(55) NOT NULL,
-  `principal-img` BIT NOT NULL,
-  `produtos_id` INT NOT NULL,
+  `principal_img` BIT NOT NULL,
+  `produto_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_images_produtos1_idx` (`produtos_id` ASC) ,
+  INDEX `fk_images_produtos1_idx` (`produto_id` ASC) ,
   CONSTRAINT `fk_images_produtos1`
-    FOREIGN KEY (`produtos_id`)
+    FOREIGN KEY (`produto_id`)
     REFERENCES `gamerzonedb`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

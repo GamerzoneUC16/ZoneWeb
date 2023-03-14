@@ -7,11 +7,15 @@
     <title>Rodapé</title>
 </head>
 <style>
+     @media screen and (max-width: 100px) {
+        
+     
     .img-lg {
         width: 60%;
         height: 100%;
 
     }
+
     .img-lg-rodapé {
         width: 60%;
         height: 100%;
@@ -19,7 +23,7 @@
         left: 290px;
         top: 20px;
     }
-
+}
     .fundo {
         /* background-image: linear-gradient(to right, rgb(0, 11, 12), rgb(10, 11, 12), rgb(0, 11, 12)); */
         background: #0b212d;
@@ -50,6 +54,9 @@
     {
         font-size: 30px;
     }
+
+
+    
 </style>
 
 <body>
