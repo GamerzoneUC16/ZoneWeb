@@ -18,7 +18,7 @@ insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values (
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'KIT GAMER DUST', 'Acompanha teclado ABNT, Headphone e mouse com fio - Possuem iluminação com padroes de cores em RGB', 'Kit Gamer DUST', 320.77, 'sim', 3);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Microfone gamer trust lance GXT-242','Sensor condensador de microfone, Ligação USB digital que funciona em qualquer pc e portátil. Perfeito para podcasts, vlogs, locuções e gravações de música ou transmissão em fluxos no YouTube, Twitch e Facebook.',  'Microfone Gamer Trust', 499.90, 'sim',  3);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'Cadeira Gamer Roxtor LED Preta','Sistema Led/RGB estático ou dinâmico, com até 04 modos, Controle remoto para ajuste das funções Led; Elevação por pistão a gás classe 3; Rodas de nylon revestidas; Braços com regulagem 3D; Encosto reclinável em até 155º; Almofadas para apoio lombar e pescoço, ajustáveis','Cadeira Gamer Roxtor', 1720.00, 'sim', 4);
-
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipos_id) values ( 'ACER Monitor Gamer Nitro KG282K 28" 3840x2160 4K UHD IPS, PRETO', '28 POLEGADAS com resolução de 3840 x 2160 em taxa de atualização de 160 Hz. Visor LED e Tela 4K', 'Monitor Gamer ACER 28pol ', 2650.00, 'sim', 2);
 
 insert images (caminho, principal_img, produto_id) values ('nvidiartx.png',1,1);
 insert images (caminho, principal_img, produto_id) values ('rtx2060.jpg',0,1);
@@ -70,10 +70,14 @@ insert images (caminho, principal_img, produto_id) values ('kitdustbrinde.jpg',0
 insert images (caminho, principal_img, produto_id) values ('mictrust.jpg',1,12);
 insert images (caminho, principal_img, produto_id) values ('mictrustfoto.jpg',0,12);
 
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtor.jpg',1,13);
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtorlateral.jpg',0,13);
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtortraseira.jpg',0,13);
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtormedida.jpg',0,13);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtor.jpg',1,14);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtorlateral.jpg',0,14);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtortraseira.jpg',0,14);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtormedida.jpg',0,14);
+
+insert images (caminho, principal_img, produto_id) values ('acer.jpg',1,15);
+insert images (caminho, principal_img, produto_id) values ('acerlateral',0,15);
+insert images (caminho, principal_img, produto_id) values ('acertraseira.jpg',0,15);
 
 
 
