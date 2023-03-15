@@ -11,35 +11,9 @@
   <title>GamerZone</title>
 </head>
 
-<body class="fundofixo container">
+<body class="container" style="background-color: blue;">
   <?php include "menu.php" ?>
-  <!-- inicio navbar -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <img class="img-Logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logotipo GamerZone">
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="quemsomos.php">Quem Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="loja.php">Loja</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="servicos.php">Serviços</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="login.php" tabindex="-1" aria-disabled="false">Cadastre-se | Iniciar sessão</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-  <!-- fim navbar -->
-  <!-- inicio introdução -->
+
   <div class="img img-responsive elemento">
     <h1 class="h1-1 text-light">GamerZone a LanHouse <br> feita para você</h1>
     <h3 class="h3-1 text-light">Venha bater aquela gameplay avançada e evoluir suas <br>
@@ -52,32 +26,39 @@
   </div>
   <!-- fim introdução -->
   <div>
-    <div class="row">
-      <div class="col">
-        <br>
-        <br>
-        <h4 class="h4-1 text-light" style="text-align: center;">CORUJÃO GZH</h4>
-      </div>
-      <h3 class="h3-3 text-light" style="text-align: center;">Reserve já</h3>
-      <div class="col">
-        <h1 class="h1-2 text-light" style="text-align: center;">Reserve agora mesmo o seu corujão na GZH, nosso corujão <br> começa às 22 horas e termina às 6 da manhã. <br>
-          <br>
-          Para comprar click no botão abaixo e você será redirecionado <br> para a GZH Store, nossa loja virtual, lá você poderá escolher o <br> mês e o dia que gostaria de reservar!!
-        </h1>
-        <br><br>
-        <div id="dov">
-          <img class="img-fluid" src="./images/jogadores_no_escuro.jpeg" alt="Jogadores GZH" width="500">
+    <br>
+    <h4 class="h4-1 text-light" style="text-align: left;">CORUJÃO GZH</h4>
+    <h3 class="h3-3 text-light" style="text-align: left;">Reserve já</h3>
+    <br>
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 d-flex align-itens-stretch" data-aos="fade-up">
+            <h1 class="h1-2 text-light" style="text-align: left;">Reserve agora mesmo o seu corujão na GZH, nosso corujão <br> começa às 22 horas e termina às 6 da manhã. <br>
+              <br>
+              Para comprar click no botão abaixo e você será redirecionado <br> para a GZH Store, nossa loja virtual, lá você poderá escolher o <br> mês e o dia que gostaria de reservar!!
+            </h1>
+            <br><br>
+          </div>
+          <div class="col-md-6 col-lg-6 d-flex align-itens-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <img class="img-fluid" src="./images/jogadores_no_escuro.jpeg" alt="Jogadores GZH" width="500">
+            </div>
+            <br>
+            <br>
+          </div>
         </div>
-        <button type="button" class="btn btn-lg button2 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">RESERVE JÁ!</button>
       </div>
-    </div>
   </div>
-
+  </section>
+  <div id="dov">
+    <button type="button" class="btn btn-lg button2 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">RESERVE JÁ!</button>
+  </div>
   <div class="fundobranco">
-    <h3 class="font" style="text-align: center;">A LAN</h3>
+    <h3 class="font h3-4" style="text-align: center;">A LAN</h3>
     <div class="row">
       <div class="col">
-        <h3 class="font">O desempenho é algo que levamos a sério!</h3>
+        <h3 class="font h3-5">O desempenho é algo que levamos a sério!</h3>
       </div>
     </div>
     <div class="container" style="background-color: transparent;">
@@ -123,10 +104,14 @@
             R$ 85,00</h3>
           <br>
           <br>
-          <button type="button" class="btn btn-lg button3 text-light">Reserve já</button>
         </div>
       </div>
     </div>
+    <br><br><br><br><br>
+  </div>
+  <br>
+  <div id="dov">
+    <button type="button" class="btn btn-lg button2 text-light">Reserve já</button>
   </div>
   <footer class="panel-footer">
     <?php include "rodape.php" ?>

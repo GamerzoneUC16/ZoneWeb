@@ -1,3 +1,16 @@
+<?php
+include "conn/connect.php";
+
+if(isset($_POST['submit']))
+{
+  print_r($_POST['nome']);
+  print_r($_POST['eemail']);
+  print_r($_POST['telefone']);
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -288,9 +301,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form>
+          <form action="servicos.php " method="POST">
               <div class="mb-3">
-                <label for="Nome" class="col-form-label"><b> Completo:</b></label>
+                <label for="Nome" class="col-form-label"><b> Nome Completo:</b></label>
                 <input type="text" class="form-control" id="Nome" required>
 
                 <label for="Email" class="col-form-label"><b>E-mail:</b></label>

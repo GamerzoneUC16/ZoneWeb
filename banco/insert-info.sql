@@ -20,6 +20,13 @@ insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Cadeira Gamer Roxtor LED Preta','Sistema Led/RGB estático ou dinâmico, com até 04 modos, Controle remoto para ajuste das funções Led; Elevação por pistão a gás classe 3; Rodas de nylon revestidas; Braços com regulagem 3D; Encosto reclinável em até 155º; Almofadas para apoio lombar e pescoço, ajustáveis','Cadeira Gamer Roxtor', 1720.00, 'sim', 4);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'ACER Monitor Gamer Nitro KG282K 28" 3840x2160 4K UHD IPS, PRETO', '28 POLEGADAS c/ resolução de 3840 x 2160, taxa de atualização de 160HZ', 'Monitor Gamer ACER 28pol', 2650.00, 'sim', 5);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Intel Processador Core i9-13900K', 'Desktop 24 núcleos (8 P-core + 16 E-cores) 36M Cache, até 5,8 GHz, Até 5,8 GHz desbloqueado. 36M de cache; Compatível com placas-mãe Intel série 600 e série 700 baseadas em chipsets; Tecnologia Turbo Boost Max 3.0 e suporte PCIe 5.0 e 4.0. Suporte Intel Optane Memory. Nenhuma solução térmica incluída', 'Processador Intel CORE I9', 4200.00, 'sim', 2);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Monitor Gamer LG Ultrawide 29UM69G','O LG UltraWide Pro Gamer oferece 30% mais tela para uma incrível imersão visual, dando a vantagem que você precisa para ganhar de seus adversários.' ,'Monitor Gamer LG',1200.00,'sim',5);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO NVIDIA GEFORCE GTX 1050 2GB GDDR5 128 BITS DUAL-FAN - GRAFFITI SERIES – PA10502GBDF128 – PCYES','GPU: GTX 1050CUDA Cores: 640; Base clock: 1354 MHz; Boost clock: 1455 MHz; Tipo de memória: GDDR5','NVIDIA GEFORCE GTX 1050', 999.90 ,'sim', 2);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Teclado Gamer Mecânico PC Computador Adamantiun Mini Shuriken Tkl Switch Brown Led Rainbow ABNT2 Double Injection','Modelo 80% TKL; Mecânico - Compatível com Mac - Numérico; Teclas Double Injection, não apagam; Switch Brown Marrom - tátil e silencioso.','Teclado Gamer Mecânico Adamantiun',210.00,'sim', 2);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'CIC G9000 Fone de ouvido Gamer, Luz LED - Azul','Com bom microfone. O fone de ouvido que pode cancelar os ruídos oferece alta clareza de som. Entrega áudio de qualidade superior, e deixa você completamente imerso na atmosfera no jogoFácil controle de volume.','HeadSet Kotion Each',155.90,'sim', 3);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Water Cooler Gamer Corsair iCUE H115i ELITE CAPELLIX RGB - 280mm, Preto - CW-9060047-WW',' resfriamento potente e de baixo ruído para sua CPU; iluminado por 33 LEDs CAPELLIX RGB ultrabrilhantes.;CORSAIR iCUE Commander CORE Incluído: Uma iluminação RGB inteligente e controlador de velocidade do ventilador oferece controle preciso da velocidade e da iluminação em até seis ventiladores RGB.;Ventiladores RGB de levitação magnética: Dois ventiladores PWM da série CORSAIR ML RGB de 140 mm fornecem fluxo de ar poderoso para desempenho de resfriamento extremo da CPU, com oito LEDs RGB por ventilador.', 'Water Cooler GAMER Corsair',250.00,'sim', 2);
+
+
 
 insert images (caminho, principal_img, produto_id) values ('nvidiartx.png',1,1);
 insert images (caminho, principal_img, produto_id) values ('rtx2060.jpg',0,1);
@@ -82,4 +89,25 @@ insert images (caminho, principal_img, produto_id) values ('acertraseira.jpg',0,
 
 insert images (caminho, principal_img, produto_id) values ('i9intel.jpg',1,15);
 insert images (caminho, principal_img, produto_id) values ('i9intel2.jpg',0,15);
+
+insert images (caminho, principal_img, produto_id) values ('ultrawide2.jpg',1,16);
+insert images (caminho, principal_img, produto_id) values ('ultrawide.jpg',0,16);
+
+insert images (caminho, principal_img, produto_id) values ('gtxprincipal.jpg',1,17);
+insert images (caminho, principal_img, produto_id) values ('gtxq2.jpg',0,17);
+
+insert images (caminho, principal_img, produto_id) values ('tecadamantiun.jpg',1,18);
+
+insert images (caminho, principal_img, produto_id) values ('ctcfone.jpg',1,19);
+insert images (caminho, principal_img, produto_id) values ('ctcfone2.jpg',0,19);
+insert images (caminho, principal_img, produto_id) values ('ctcfone3.jpg',0,19);
+
+insert images (caminho, principal_img, produto_id) values ('watercorsair1.jpg',1,20);
+insert images (caminho, principal_img, produto_id) values ('watercorsair2.jpg',0,20);
+insert images (caminho, principal_img, produto_id) values ('watercorsair3.jpg',0,20);
+insert images (caminho, principal_img, produto_id) values ('watercorsair4.jpg',0,20);
+
+
+
+
 
