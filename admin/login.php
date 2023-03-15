@@ -1,34 +1,26 @@
-<?php 
+<?php  
+
 include "../conn/connect.php";
-// inicia a verificação do login
-if ($_POST){
-    $login = $_POST['username'];
-    $senha = $_POST['senha'];
 
-    $loginRes = $conn->query("select * from usuarios where username ='$login' and senha = md5('$senha')");
-    $rowLogin = $loginRes->fetch_assoc();
-    $numRow = mysqli_num_rows($loginRes);
 
-    // se a sessão não existir 
-    if (!isset($_SESSION)){
-        $sessaoAntiga = session_name('GamerZone');
-        session_start();
-        $session_name_new = session_name();
-    }
-    if($numRow > 0){
-        $_SESSION['username'] = $login;
-        $_SESSION['nivel'] = $rowLogin['nivel'];
-        $_SESSION['nome_da_sessao'] = session_name();
-        if($rowLogin['nivel']=='sup'){
-            echo "<script>window.open('index.php','_self')</script>";
-        }elseif ($rowLogin['nivel']=='com') {
-            echo "<script>window.open('../client/index.php','_self')</script>";
-        }
-    }else{
-        echo "<script>window.open('invasor.php','_self')</script>";
-    }
-}
+if($_POST){
 
+
+    $id     =   $_POST['id'];
+    $username  =   $_POST['username'];
+    $senha  =   $_POST['senha'];
+    $nivel_id  =   $_POST['nivel_id'];
+
+    $insertSQL  =   "Insert usuarios (username, senha, nivel_id) values ('$username','$senha','$nivel_id')";
+$resultado  =   $conn->query($insertSQL);
+
+
+// if(mysqli_insert_id($conn)){
+//     header("Location: ./inicio.php");
+// }else{
+//     header("Location: inicio.php");
+// };
+ };
 ?>
 
 <!DOCTYPE html>
@@ -170,7 +162,7 @@ if ($_POST){
         <br>
         <form action="login.php" name="form_login" id="form_login" method="POST" enctype="multipart/form-data">
         <div class="form__group field">
-    <input name="login_usuario" id="login_usuario" autofocus required="" placeholder="Name" autocomplete="off" class="form__field" type="text">
+    <input name="login_id" id="login_usuario" autofocus required="" placeholder="Name" autocomplete="off" class="form__field" type="text">
     <label class="form__label" for="name">Name</label>
 </div>
         <br>
@@ -195,21 +187,29 @@ if ($_POST){
             <h1 class="modal-title" id="exampleModalLabel">Cadastre-se</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-            <input class="form-control" type="text" placeholder="Nome">
+      <div class="modal-body fundofixo">
+        <form action="login.php" id="form_usuarios_insere" name="form_usuarios_insere" method="POST" enctype="multipart/form-data">
+        <div class="form__group field">
+            <input class="form__field" type="text" name="username" id="username" placeholder="Nome" maxlength="100" required>
+            <label class="form__label" for="username">Name</label>
         <br>
-            <input class="form-control" type="text" placeholder="Sobrenome">
+        </div>
+        <div class="form__group field">
+            <input class="form__field" type="password" name="senha" id="senha" placeholder="Senha" maxlength="100" required>
+            <label class="form__label" for="senha">Senha</label>
         <br>
-            <input class="form-control" type="text" placeholder="Email">
+        </div>
+        <div class="form__group field">
+            <input class="form__field" type="text" name="nivel_id" id="nivel_id" placeholder="Nivel" maxlength="100" required>
+            <label class="form__label" for="nivel">Nivel</label>
         <br>
-            <input class="form-control" type="password" placeholder="Senha">
-        <br>
-            <input class="form-control" type="password" placeholder="Confirmar senha">
-        <br>
+        </div>
+        <input type="submit" value="Cadastrar" name="enviar" id="enviar" class="btn btn-success btn-block">
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-success">Cadastrar</button>
+        
       </div>
     </div>
   </div>
