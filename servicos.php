@@ -290,7 +290,7 @@
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="Nome" class="col-form-label"><b> Completo:</b></label>
+                <label for="Nome" class="col-form-label"><b> Nome Completo:</b></label>
                 <input type="text" class="form-control" id="Nome" required>
 
                 <label for="Email" class="col-form-label"><b>E-mail:</b></label>
