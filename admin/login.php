@@ -11,15 +11,15 @@ if($_POST){
     $senha  =   $_POST['senha'];
     $nivel_id  =   $_POST['nivel_id'];
 
-    $insertSQL  =   "Insert usuarios (username, senha, nivel_id) values ('$username','$senha','$nivel_id')";
+    $insertSQL  =   "insert usuarios (username, senha, nivel_id) values ('$username', '$senha','$nivel_id')";
 $resultado  =   $conn->query($insertSQL);
 
 
-// if(mysqli_insert_id($conn)){
-//     header("Location: ./inicio.php");
-// }else{
-//     header("Location: inicio.php");
-// };
+if(mysqli_insert_id($conn)){
+    header("Location: ./inicio.php");
+}else{
+    header("Location: inicio.php");
+};
  };
 ?>
 

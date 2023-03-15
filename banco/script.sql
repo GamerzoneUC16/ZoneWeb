@@ -26,6 +26,57 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `gamerzonedb`.`usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(16) NOT NULL,
+  `nivel_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_usuarios_nivel1_idx` (`nivel_id` ASC) ,
+  CONSTRAINT `fk_usuarios_nivel1`
+    FOREIGN KEY (`nivel_id`)
+    REFERENCES `gamerzonedb`.`nivel` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamerzonedb`.`tipos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`tipos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `sigla` VARCHAR(45) NOT NULL,
+  `rotulo` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamerzonedb`.`produtos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`produtos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(80) NOT NULL,
+  `descricao` MEDIUMTEXT NOT NULL,
+  `resumo` TEXT NOT NULL,
+  `preco` DECIMAL(10,2) NOT NULL,
+  `destaque` VARCHAR(10) NOT NULL,
+  `desconto` DECIMAL(10,2) NULL,
+  `tipo_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_produtos_tipos1_idx` (`tipo_id` ASC) ,
+  CONSTRAINT `fk_produtos_tipos1`
+    FOREIGN KEY (`tipo_id`)
+    REFERENCES `gamerzonedb`.`tipos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `gamerzonedb`.`telefone`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`telefone` (
@@ -96,64 +147,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`usuarios`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(16) NOT NULL,
-  `nivel_id` INT NOT NULL,
-  `email_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_usuarios_nivel1_idx` (`nivel_id` ASC) ,
-  INDEX `fk_usuarios_email1_idx` (`email_id` ASC) ,
-  CONSTRAINT `fk_usuarios_nivel1`
-    FOREIGN KEY (`nivel_id`)
-    REFERENCES `gamerzonedb`.`nivel` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuarios_email1`
-    FOREIGN KEY (`email_id`)
-    REFERENCES `gamerzonedb`.`email` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`tipos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`tipos` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `sigla` VARCHAR(45) NOT NULL,
-  `rotulo` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`produtos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`produtos` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `titulo` VARCHAR(45) NOT NULL,
-  `descricao` VARCHAR(45) NOT NULL,
-  `resumo` VARCHAR(45) NOT NULL,
-  `preco` DECIMAL(10,2) NOT NULL,
-  `destaque` VARCHAR(45) NOT NULL,
-  `desconto` DECIMAL(10,2) NULL,
-  `tipo_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_produtos_tipos1_idx` (`tipo_id` ASC) ,
-  CONSTRAINT `fk_produtos_tipos1`
-    FOREIGN KEY (`tipo_id`)
-    REFERENCES `gamerzonedb`.`tipos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `gamerzonedb`.`chamados`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
@@ -164,6 +157,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
   `status` VARCHAR(45) NOT NULL,
   `cliente_id` INT NOT NULL,
   `usuario_id` INT NOT NULL,
+  `motivo` TEXT NOT NULL,
   `data_final` DATETIME NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_chamados_cliente1_idx` (`cliente_id` ASC) ,
@@ -299,10 +293,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`boleto` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `vencimento` VARCHAR(45) NULL,
-  `data` VARCHAR(45) NULL,
-  `codbar` VARCHAR(45) NULL,
-  `boletocol` VARCHAR(45) NULL,
+  `vencimento` VARCHAR(45) NOT NULL,
+  `data` DATETIME NOT NULL,
+  `codbar` VARCHAR(45) NOT NULL,
   `cliente_id` INT NOT NULL,
   `pedido_id` INT NOT NULL,
   PRIMARY KEY (`id`),
