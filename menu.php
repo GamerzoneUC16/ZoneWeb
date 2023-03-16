@@ -1,6 +1,14 @@
 <?php
 $current_url = $_SERVER['REQUEST_URI'];
 
+
+
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} else {
+    $username = 'Visitante';
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +70,7 @@ $current_url = $_SERVER['REQUEST_URI'];
             </li>
             <li class="nav-item">
             <a class="nav-link active" href="admin/login.php">
-                <span class="bi bi-person-fill" style="color: #EAF2EF;"></span>
+                <span class="bi bi-person-fill" style="color: #EAF2EF;"><?php echo $username; ?></span>
             </a>
             </ul>
             </div>

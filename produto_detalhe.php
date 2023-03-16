@@ -26,7 +26,7 @@ $numRows = $ProdutoGet->num_rows;
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner product-images">
     <div class="carousel-item active">
-      <img src="images/Produtos" class="d-block w-100" alt="Imagem 1">
+      <img src="images/Produtos/" class="d-block w-100" alt="Imagem 1">
     </div>
     <div class="carousel-item">
       <img src="images/Produtos" class="d-block w-100" alt="Imagem 2">
@@ -43,7 +43,27 @@ $numRows = $ProdutoGet->num_rows;
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Próximo</span>
   </button>
-</div>  
+</div>
+<div class="row">
+<?php
+$ListaImg = $conn->query("select * from images where produto_id = $idGet");
+$rowListaImg = $ListaImg->fetch_all();
+$numRows = $ListaImg->num_rows;
+foreach ($rowListaImg as $img) {
+?>
+  <div class="col d-flex">
+  <?php if ($img[2] == 1) { ?>
+      <img class="img-fluid w-100 rounded float-start" src="images/Produtos/<?php echo $img[1]; ?>">
+<?php } ?>
+  <?php if ($img[3] == $idGet) { ?>
+      <img class="img-fluid w-100  rounded float-end flex-column" src="images/Produtos/<?php echo $img[1]; ?>">
+<?php }
+}    print_r($img);?>
+  </div>
+  <div class="col d-flex">
+    <h1>Informaçoes do produto</h1>
+  </div>
+</div>            
     </main>
     <footer class="panel-footer">
     <?php include 'rodape.php' ?>

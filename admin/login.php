@@ -2,7 +2,8 @@
 
 include "../conn/connect.php";
 
-
+$inicio = "http://localhost:8080/ZoneWeb/loja.php";
+// Cadastrar
 if($_POST){
 
 
@@ -16,11 +17,40 @@ $resultado  =   $conn->query($insertSQL);
 
 
 if(mysqli_insert_id($conn)){
-    header("Location: ./inicio.php");
+    header("Location: $inicio");
 }else{
-    header("Location: inicio.php");
+    header("Location: $inicio");
 };
  };
+// Fim Cadastrar
+
+if ($_POST) {
+  $login = $_POST['username'];
+  $senha = $_POST['senha'];
+
+  $loginRes = $conn->query("select * from usuarios where username ='$login' and senha_usuario = md5('$senha')");
+  $rowLogin = $loginRes->fetch_assoc();
+
+  $numRow = mysqli_num_rows($loginRes);
+ if (!isset($_SESSION)){
+  $sessaoAntiga = session_name('GamerZone');
+  session_start();
+  $session_name_new = session_name();
+ }
+ if ($numRow > 0) {
+  $_SESSION['username'] = $login;
+  $_SESSION['nivel'] = $rowLogin['nivel'];
+  $_SESSION['nome_da_sessao'] = session_name();
+  if($rowLogin['nivel']=='sup'){
+    echo "<script>window.open('index.php','.self')</script>";
+  }elseif ($rowLogin['nivel']=='com') {
+    echo "<script>window.open('$inicio','.self')</script>";
+  }
+ }else {
+  echo "<script>window.open('invasor.php','.self')</script>";
+ }
+}
+
 ?>
 
 <!DOCTYPE html>

@@ -11,7 +11,7 @@ if(!isset($_SESSION)){
 // verificar se usuário está logado na sessão
 if (!isset($_SESSION['username'])) {
     // Se não existir redirecionamos a sessão por segurança
-    header('location: login.php');
+    header('location: inicio.php');
     exit;
 }
 
@@ -24,7 +24,7 @@ if (!isset($_SESSION['nome_da_sessao']) OR
     header('location: login.php');
 }
 
-if(!isset($_SESSION['login_usuario'])) {
+if(!isset($_SESSION['username'])) {
     session_destroy();
     header('location: login.php');
 }
