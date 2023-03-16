@@ -1,12 +1,29 @@
 <?php
 include "conn/connect.php";
 
-if(isset($_POST['submit']))
+/* if(isset($_POST['submit']))
 {
   print_r($_POST['nome']);
-  print_r($_POST['eemail']);
+
+  print_r($_POST['email']);
+  print_r('<br>');
   print_r($_POST['telefone']);
-}
+  print_r('<br>');
+  print_r($_POST['titulo']);
+  print_r('<br>');
+  print_r($_POST['motivo']);
+  print_r('<br>');
+  print_r($_POST['assunto']);
+} */
+
+$nome = $_POST['nome'];
+$telefone = $_POST['telefone'];
+$titulo =$_POST['titulo'];
+$motivo = $_POST['motivo'];
+$assunto = $_POST['assunto'];
+
+$result = mysqli_query($conn, "INSERT INTO chamados(nome, email, telefone, titulo, motivo, assunto) 
+VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
 
 
 ?>
@@ -304,10 +321,10 @@ if(isset($_POST['submit']))
           <form action="servicos.php " method="POST">
               <div class="mb-3">
                 <label for="Nome" class="col-form-label"><b> Nome Completo:</b></label>
-                <input type="text" class="form-control" id="Nome" required>
+                <input type="text" class="form-control"  name="nome" id="nome" required>
 
-                <label for="Email" class="col-form-label"><b>E-mail:</b></label>
-                <input type="email" class="form-control" id="Email" required>
+                <label for="email" class="col-form-label"><b>E-mail:</b></label>
+                <input type="email" class="form-control"  name="email" id="email" required>
 
                 <label for="Telefone" class="col-form-label"><b>Telefone:</b></label>
                 <input type="tel" name="telefone" class="form-control" id="Telefone" required>
@@ -318,31 +335,31 @@ if(isset($_POST['submit']))
               <label for="form-check" class="col-for-label"><b>Motivo de Contato</b></label>
               <br>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="motivo" id="problema">
+                <label class="form-check-label" for="problema">
                   Problema com produto
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="motivo" id="duvida" checked>
+                <label class="form-check-label" for="duvida">
                   Dúvida
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="motivo" id="solicitacao" checked>
+                <label class="form-check-label" for="solicitacao">
                   Solicitação
                 </label>
               </div>
               <div class="mb-3">
-                <label for="message-text" class="col-form-label "><b> Descreva o seu Problema:</b></label>
-                <textarea class="form-control" id="message-text" required></textarea>
+                <label for="mesagens_texto" class="col-form-label "><b> Descreva o seu Problema:</b></label>
+                <textarea class="form-control"  name="assunto" id="mesagens_texto" required></textarea>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 
-                  <button type="submit" class="btn btn-success">Enviar</button>
+                  <button type="submit" name="submit" id="submit" class="btn btn-success">Enviar</button>
                 </div>
             </form>
           </div>
