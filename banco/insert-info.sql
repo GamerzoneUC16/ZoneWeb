@@ -91,7 +91,7 @@ insert images (caminho, principal_img, produto_id) values ('i9intel.jpg',1,15);
 insert images (caminho, principal_img, produto_id) values ('i9intel2.jpg',0,15);
 
 insert images (caminho, principal_img, produto_id) values ('ultrawide2.jpg',1,16);
-insert images (caminho, principal_img, produto_id) values ('ultrawide.jpg',0,16);
+insert images (caminho, principal_img, produto_id) values ('ultrawide.png',0,16);
 
 insert images (caminho, principal_img, produto_id) values ('gtxprincipal.jpg',1,17);
 insert images (caminho, principal_img, produto_id) values ('gtxq2.jpg',0,17);
