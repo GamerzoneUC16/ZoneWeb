@@ -1,7 +1,7 @@
 <?php
 include "conn/connect.php";
 
-/* if(isset($_POST['submit']))
+/*  if(isset($_POST['submit']))
 {
   print_r($_POST['nome']);
 
@@ -14,16 +14,17 @@ include "conn/connect.php";
   print_r($_POST['motivo']);
   print_r('<br>');
   print_r($_POST['assunto']);
-} */
-
-$nome = $_POST['nome'];
+} 
+ */
+ $nome = $_POST['nome'];
+$email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $titulo =$_POST['titulo'];
 $motivo = $_POST['motivo'];
 $assunto = $_POST['assunto'];
 
-$result = mysqli_query($conn, "INSERT INTO chamados(nome, email, telefone, titulo, motivo, assunto) 
-VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
+$result = mysqli_query($conn, "INSERT INTO chamados (nome, email, telefone, titulo, motivo, assunto) 
+VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')"); 
 
 
 ?>
