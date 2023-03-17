@@ -44,6 +44,7 @@
   font-size: 25px;
   position: relative;
   text-align: left;
+  padding-top: 3%;
 }
 .button1{
   background-color: #201f1f;
@@ -64,20 +65,26 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 16px;
   text-align: left;
+  padding-left: 11%;
 }
 .h3-3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 55px;
-  text-align: left;
+  padding-left: 11%;
 }
 
 .button2{
   background-color: #00baf3a1;  
 }
-.img-1{
-  position: relative;
-  width: 400px;
 
+.button--sla{
+  position: relative;
+  left: 190px;
+}
+
+
+.img-1{
+  margin-top: -7%;
 }
 .fundoinicio{
   background-color: #3a0448;   

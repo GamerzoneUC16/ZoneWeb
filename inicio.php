@@ -1,6 +1,3 @@
-<?php 
-include "/admin/acesso_com.php"
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -14,8 +11,9 @@ include "/admin/acesso_com.php"
   <title>GamerZone</title>
 </head>
 
-<body class="container" style="background-color: blue;">
-  <?php include "menu.php" ?>
+<?php include "menu.php" ?>
+
+<body class="fundofixo">
 
   <div class="img img-responsive elemento">
     <h1 class="h1-1 text-light">GamerZone a LanHouse <br> feita para você</h1>
@@ -30,9 +28,12 @@ include "/admin/acesso_com.php"
   <!-- fim introdução -->
   <div>
     <br>
-    <h4 class="h4-1 text-light" style="text-align: left;">CORUJÃO GZH</h4>
-    <h3 class="h3-3 text-light" style="text-align: left;">Reserve já</h3>
-    <br>
+    <div class="col">
+      <h4 class="h4-1 text-light" style="text-align: left;">CORUJÃO GZH</h4>
+      <h3 class="h3-3 text-light" style="text-align: left;">Reserve já</h3>
+      <br>
+      <br>
+    </div>
     <section class="services">
       <div class="container">
         <div class="row">
@@ -42,10 +43,14 @@ include "/admin/acesso_com.php"
               Para comprar click no botão abaixo e você será redirecionado <br> para a GZH Store, nossa loja virtual, lá você poderá escolher o <br> mês e o dia que gostaria de reservar!!
             </h1>
             <br><br>
+            <div>
+            </div>
           </div>
           <div class="col-md-6 col-lg-6 d-flex align-itens-stretch" data-aos="fade-up" data-aos-delay="100">
             <div>
-              <img class="img-fluid" src="./images/jogadores_no_escuro.jpeg" alt="Jogadores GZH" width="500">
+              <br><br>
+              <img class="img-fluid img-1" src="./images/jogadores_no_escuro.jpeg" alt="Jogadores GZH" width="500">
+              <br><br>
             </div>
             <br>
             <br>
@@ -54,8 +59,8 @@ include "/admin/acesso_com.php"
       </div>
   </div>
   </section>
-  <div id="dov">
-    <button type="button" class="btn btn-lg button2 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">RESERVE JÁ!</button>
+  <button type="button" class="btn btn-lg button--sla btn-outline-light">RESERVE JÁ</button>
+
   </div>
   <div class="fundobranco">
     <h3 class="font h3-4" style="text-align: center;">A LAN</h3>
