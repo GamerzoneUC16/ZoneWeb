@@ -10,6 +10,46 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>GamerZone</title>
 </head>
+<style>
+  @media screen and (max-width: 744.17px){
+    .items{
+      flex-wrap: wrap;
+    }
+
+  }
+  .container-flex{
+    display: flex;
+    align-items: center;
+    
+  }
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .items{
+    display: flex;
+    align-self: flex-end;
+    gap: 17px;
+  }
+  .items h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+   
+  }
+  .items h2{
+    font-size: 20px;
+
+  }
+    .options{
+      display: flex;
+      gap: 20px;
+    }
+    .icon{
+      display: flex;
+      align-items: center;
+    }
+</style>
 
 <?php include "menu.php" ?>
 
@@ -69,53 +109,65 @@
         <h3 class="font h3-5">O desempenho é algo que levamos a sério!</h3>
       </div>
     </div>
-    <div class="container" style="background-color: transparent;">
-      <div class="row ajuste-1">
-        <div class="col">
-          <h3 class="h3-6">Especificações Técnicas</h3>
-          <h3 class="h3-11">Processador Intel i7 8700 <br>
-            Vídeo RTX 2070 <br>
-            SSD 240 GB <br>
-            ASUS TUF B360M Plus Gaming <br>
-            16 Gb RAM Corsair <br> 3.000Mhz</h3>
+    <div class="container-flex">
+      <div class="left-side">
+      <div class="items">
+        <div class="items-2">
+      <h1>Especificações Técnicas</h1>
+      <h2>Processador Intel i7 8700 <br>
+        Vídeo RTX 2070 <br>
+        SSD 240 GB <br>
+        ASUS TUF B360M Plus Gaming <br>
+        16 Gb RAM Corsair <br> 3.000Mhz</2>
         </div>
-        <div class="col">
-          <h3 class="h3-7 ">Monitor e Cadeira</h3>
-          <h3 class="h3-12">Monitor Benq ZOWIE XL2546 240Hz Dyac <br>
-            Cadeiras Gamer DT3 Elise</h3>
+      <div class="items-3">
+        <h1>Monitor e Cadeira</h1>
+    
+        <h2>Monitor Benq ZOWIE XL2546 240Hz Dyac <br>
+          Cadeiras Gamer DT3 Elise</h2>
+          </div>
+       <div class="item-4">
+       <div class="options">
+        <div class="icon">
+        
         </div>
-        <div class="col">
-          <h3 class="h3-8">Periféricos</h3>
-          <h3 class="h3-15">Mouse Zowie ZA12 <br>
-            HeadSet Corsair HS50 <br>
-            Teclado Mecânico CK104 MotoSpeed <br>
-            MousePad HyperX <br> Fury S Large</h3>
-        </div>
+       </div>
+        <h1>Periféricos</h1>
+     
+        <h2>Mouse Zowie ZA12 <br>
+          HeadSet Corsair HS50 <br>
+          Teclado Mecânico CK104 MotoSpeed <br>
+          MousePad HyperX <br> Fury S Large</h2>
+          </div>
 
-        <div class="col">
-          <h3 class="h3-9">Horários</h3>
-          <h3 class="h3-13">Todos os dias <br>
-            10:00 am - 06:00 am <br>
-            Corujão TODOS os dias!</h3>
-        </div>
-        <div class="col">
-          <h3 class="h3-10">Valores</h3>
-          <h3 class="h3-14">Avulso <br>
-            R$ 10,00 <br>
-            Pacote 3 horas
-            R$ 27,00 <br>
-            Pacote 6 horas
-            R$ 50,00 <br>
-            Pacote 8 horas
-            R$ 65,00 <br>
-            Corujão
-            R$ 85,00</h3>
-          <br>
-          <br>
-        </div>
-      </div>
+    <div class="item-5">
+        <h1>Horários</h1>
+ 
+        <h2>Todos os dias <br>
+          10:00 am - 06:00 am <br>
+          Corujão TODOS os dias!</h2>
+          </div>
+
+          <div class="item-6">
+    <h1>Valores</h1>
+    <h2>Avulso <br>
+      R$ 10,00 <br>
+      Pacote 3 horas
+      R$ 27,00 <br>
+      Pacote 6 horas
+      R$ 50,00 <br>
+      Pacote 8 horas
+      R$ 65,00 <br>
+      Corujão
+      R$ 85,00</h2>
+   
     </div>
-    <br><br><br><br><br>
+    </div>
+</div>
+    </div>
+  </div>
+  </div>
+ 
   </div>
   <br>
   <div id="dov">
