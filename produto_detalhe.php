@@ -173,9 +173,10 @@ $debito = $rowProd['preco'] + 900;
           <div class="items">
             <div class="select-image">
 
-              <?php if ($rowListaImg['2'] == 1) { ?>
+              <?php if ($rowListaImg['2'] == 1) {?>
                 <img src="images/Produtos/<?php echo $rowListaImg['1']; ?>">
               <?php } ?>
+               
             </div>
             <div class="thumbnails">
               <?php foreach ($rowListaImg as $img) {

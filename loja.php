@@ -30,13 +30,17 @@ $ImgP = $rowListaImg['principal_img']
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Store Zone</title>
 </head>
-
+<style>
+  /* @media screen and {
+    
+  } */
+</style>
 <body class="fundofixo">
   <!-- Area o menu -->
   <?php include "menu.php" ?>
   <br>
   <!-- Fim do menu -->
-  <main class="container-xxl">
+  <main class="container">
     <!--Body da Loja-->
     <!-- Inicio de Atalhos -->
     <div class="container">

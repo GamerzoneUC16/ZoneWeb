@@ -81,8 +81,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`telefone` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `numero` VARCHAR(11) NOT NULL,
-  `tipo` VARCHAR(15) NOT NULL,
+  `numero_tel` VARCHAR(11) NOT NULL,
+  `tipo_tel` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -93,13 +93,13 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`enderecos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `logradouro` VARCHAR(50) NOT NULL,
-  `numero` VARCHAR(5) NOT NULL,
+  `numero_end` VARCHAR(5) NOT NULL,
   `bairro` VARCHAR(20) NOT NULL,
   `cidade` VARCHAR(20) NOT NULL,
   `uf` VARCHAR(2) NOT NULL,
   `cep` VARCHAR(8) NOT NULL,
   `complemento` VARCHAR(15) NULL,
-  `tipo` VARCHAR(15) NULL,
+  `tipo_end` VARCHAR(15) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -110,7 +110,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
-  `cpf` VARCHAR(45) NOT NULL,
+  `sobrenome` TEXT NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
   `telefone_id` INT NOT NULL,
   `endereco_id` INT NOT NULL,
   PRIMARY KEY (`id`),
