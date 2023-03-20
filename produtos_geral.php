@@ -1,16 +1,23 @@
 <?php
 include "conn/connect.php";
+
+
+
+
 $listaGeral = $conn->query("select * from produtos");
 $row_geral = $listaGeral->fetch_assoc();
 $num_linhas = $listaGeral->num_rows;
 
-
+$ListaTipo = $conn->query('select * from tipos order by rotulo');
+$row_tipos = $ListaTipo->fetch_all();
 
 $ListaImg = $conn->query("select * from images where produto_id = id");
 $rowListaImg = $ListaImg->fetch_assoc();
 $numRows = $ListaImg->num_rows;
 
-$ImgP = $rowListaImg['principal_img']
+$ImgP = $rowListaImg['principal_img'];
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -21,6 +28,7 @@ $ImgP = $rowListaImg['principal_img']
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <title>Produtos</title>
 </head>
@@ -57,8 +65,17 @@ $ImgP = $rowListaImg['principal_img']
       </button>
     </div>
     </div>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <?php foreach ($row_tipos as $row) { ?>
+          <div class="col-md-auto">
+            <a href="produtos_geral.php?id=<?php echo $row['0']; ?>" class="btn btn-info" role="button"><?php echo $row['2']; ?></a>
+          </div>
+        <?php } ?>
+      </div>
+    </div>
     <main class="container">
-        <h2 class="breadcrump">Porduyos</h2>
+        <?php if ($row_tipos['0']) ?>
         <div class="row g-2">
             <?php do { ?>
                 <div class="col d-flex">

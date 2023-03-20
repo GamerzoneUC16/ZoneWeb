@@ -11,18 +11,22 @@ $consultaEnd = $conn->query("select * from enderecos ");
 $rowEnd = $consultaEnd->fetch_assoc();
 print_r($rowEnd);
 
+
+$GetTel = mysqli_insert_id($rowtel['id']);
+$GetEnd =mysqli_insert_id($rowEnd['id']);
+
 if($_POST){
     // Cadastro Cliente
         $id         = $_POST['id'];
         $nome       = $_POST['nome'];
         $sobrenome  = $_POST['sobrenome'];
         $cpf        = $_POST['cpf'];
-        $telefone   = $_POST ['telefone_id'];
-        $endereco   = $_POST ['endereco_id'];
+        $GetTel     = $_POST['telefone_id'];
+        $GetEnd     = $_POST['endereco_id'];
         
         
 
-        $insertCli = "insert cliente (nome, sobrenome, cpf,telefone_id,endereco_id) values ('$nome','$sobrenome','$cpf',$telefone,$endereco);";
+        $insertCli = "insert cliente (nome, sobrenome, cpf,telefone_id,endereco_id) values ('$nome','$sobrenome','$cpf',1, 1);";
         $resultadoCli = $conn->query($insertCli);
     // Fim Cadastro Cliente
   $idtel = $conn->insert_id;

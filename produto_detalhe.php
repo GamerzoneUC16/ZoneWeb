@@ -5,9 +5,10 @@ $ProdutoGet = $conn->query("select * from produtos where id = $idGet");
 $rowProd = $ProdutoGet->fetch_assoc();
 $numRows = $ProdutoGet->num_rows;
 
-// $ImagesGet = $conn->query("select * from images where produto_id = $idGet");
-// $rowImage = $ImagesGet->fetch_assoc();
-// $numRowsImg = $ImagesGet->num_rows;
+ $ImagesGet = $conn->query("select * from images where principal_img = 1");
+ $rowImage = $ImagesGet->fetch_assoc();
+ $numRowsImg = $ImagesGet->num_rows;
+
 
 $ListaImg = $conn->query("select * from images where produto_id = $idGet");
 $rowListaImg = $ListaImg->fetch_all();
@@ -24,6 +25,7 @@ $debito = $rowProd['preco'] + 900;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <title><?php echo $rowProd['titulo'] ?></title>
 </head>
@@ -77,6 +79,7 @@ $debito = $rowProd['preco'] + 900;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: #FEEFDD;
 }
 .prices{
   display: flex;
@@ -140,43 +143,26 @@ $debito = $rowProd['preco'] + 900;
     font-size: 12;
     font-weight: 700
   }
+  @media screen and (max-width: 582px){
+    .container{
+      flex-wrap: wrap
+    }
+  }
 </style>
 <?php include 'menu.php' ?>
 
-<body>
+<body class="fundofixo">
   <main>
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner product-images">
-        <div class="carousel-item active">
-          <img src="images/Produtos/" class="d-block w-100" alt="Imagem 1">
-        </div>
-        <div class="carousel-item">
-          <img src="images/Produtos" class="d-block w-100" alt="Imagem 2">
-        </div>
-        <div class="carousel-item">
-          <img src="images/Produtos" class="d-block w-100" alt="Imagem 3">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Próximo</span>
-      </button>
-    </div>
-    <?php print_r($rowListaImg) ?>
     <section>
       <div class="container">
         <div class="left-side">
           <div class="items">
             <div class="select-image">
-
-              <?php if ($rowListaImg['2'] == 1) {?>
-                <img src="images/Produtos/<?php echo $rowListaImg['1']; ?>">
-              <?php } ?>
-               
+              <?php do {?>
+              <?php if($rowImage['produto_id'] == $idGet) {?>
+                <img src="images/Produtos/<?php echo $rowImage['caminho']; ?>">
+              <?php }?>
+               <?php } while ($rowImage = $ImagesGet->fetch_assoc())?>
             </div>
             <div class="thumbnails">
               <?php foreach ($rowListaImg as $img) {

@@ -1,11 +1,18 @@
 <?php 
 include "conn/connect.php";
 $idTipo = $_GET['id'];
-$ListaPorTipo = $conn->query("select * from produtos where tipos_id = $idTipo");
+$ListaPorTipo = $conn->query("select * from produtos where tipo_id = $idTipo");
 $rowPorTipo = $ListaPorTipo->fetch_assoc();
 $numRows = $ListaPorTipo->num_rows;
 
-print_r($rowPorTipo);
+$lista_tipo = $conn->query("select * from tipos where id = $idTipo");
+$row_tipo = $lista_tipo->fetch_assoc();
+
+$ListaImg = $conn->query("select * from images where produto_id = id");
+$rowListaImg = $ListaImg->fetch_assoc();
+$numRows = $ListaImg->num_rows;
+
+$ImgP = $rowListaImg['principal_img']
 
 ?>
 
@@ -18,7 +25,8 @@ print_r($rowPorTipo);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <title>Buscar por tipo</title>
@@ -28,8 +36,8 @@ print_r($rowPorTipo);
     <div class="container">
         <!-- Tipo de Produto não encontrado -->
         <?php if ($numRows == 0) { ?>
-            <h2 class="breadcrumb alert-danger">
-                <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+            <h2 class="breadcrumb alert-info">
+                <a href="javascript:window.history.go(-1)" class="btn btn-info">
                     <span class="bi bi-arrow-left"></span>
                 </a>
                 Não há produtos cadastrados deste tipo
@@ -39,42 +47,60 @@ print_r($rowPorTipo);
 
             <!-- Tipo de Produto encontrado -->
             <?php if ($numRows > 0) { ?>
-            <h2 class="breadcrumb alert-danger">
-                <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+            <h2 class="breadcrumb alert-info">
+                <a href="javascript:window.history.go(-1)" class="btn btn-info">
                     <span class="bi bi-arrow-left"></span>
                 </a>
-                <strong><?php echo $rowPorTipo['rotulo']?></strong>
+                <strong>&nbsp; &nbsp;<?php echo $row_tipo['rotulo']?></strong>
             </h2>
             <?php } ?>
             <!-- Fim Tipo de Produto encontrado -->
 
             <!-- Campo do Produto -->
-            <div class="row">
-                <?php if ($rowPorTipo > 1) { ?>
-      <?php do { ?>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="produto_detalhe.php?id=<?php echo $rowPorTipo['id']; ?>">
-              <img src="images/Produtos/<?php echo $rowPorTipo['image']; ?>" class="img-responsive img-rounded" style="height:15em">
-            </a>
-            <div class="caption text-right">
-              <h4 class="text-danger">
-                <strong><?php echo $rowPorTipo['titulo']; ?></strong>
-              </h4>
-              <p class="text-left">
-                <?php echo mb_strimwidth($rowPorTipo['descricao'], 0, 42, '...'); ?>
-              </p>
-              <p class="text-end">
-                <?php echo "R$" . number_format($rowPorTipo['preco'], 2, ',', '.'); ?>
-              </p>
+            <div class="row g-2">
+        <?php do { ?>
+          <div class="col d-flex">
+            <div class="card" style="width: 18rem;">
+              <?php
+
+              $ListaImg = $conn->query("select * from images where produto_id = " . $rowPorTipo['id']);
+              $rowListaImg = $ListaImg->fetch_all();
+              $numRows = $ListaImg->num_rows;
+              foreach ($rowListaImg as $img) {
+
+                // print_r($img);
+              ?>
+                <?php if ($img[2] == 1) { ?>
+                  <a href="produto_detalhe.php?id=<?php echo $rowPorTipo['id']; ?>">
+                    <img class="card-img-top" src="images/Produtos/<?php echo $img[1]; ?>">
+                  </a>
+              <?php }
+              } ?>
+
+
+              <div class="card-body">
+                <h4 class="card-title">
+                  <strong><?php echo $rowPorTipo['titulo']; ?></strong>
+                </h4>
+                <br>
+                <p class="card-text">
+                  <?php echo mb_strimwidth($rowPorTipo['descricao'], 0, 60, '...'); ?>
+                </p>
+                <br>
+                <p class="card-text">
+                  <?php echo "R$" . number_format($rowPorTipo['preco'], 2, ',', '.'); ?>
+                </p>
+              </div>
+              <div class="d-grid gap-2">
+                <a href="carinho.php?id=<?php echo $rowPorTipo['id'] ?>" class="btn btn-success" role="button" data-bs-toggle="button">Adicionar ao Carinho</a>
+              </div>
             </div>
           </div>
-        </div>
-      <?php } while ($rowPorTipo = $ListaPorTipo->fetch_assoc()); ?>
-      <?php } else {?>
-        
-        <?php include "produtos_geral.php"?>
-        <?php }?>
+        <?php } while ($rowPorTipo = $ListaPorTipo->fetch_assoc()); ?>
+      </div>
+    </div>
+   
+  
     </div>
     <!-- Fim Campo do Produto -->
     </div>
