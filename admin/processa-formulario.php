@@ -21,12 +21,11 @@ if($_POST){
         $nome       = $_POST['nome'];
         $sobrenome  = $_POST['sobrenome'];
         $cpf        = $_POST['cpf'];
-        $GetTel     = $_POST['telefone_id'];
-        $GetEnd     = $_POST['endereco_id'];
+       
         
         
 
-        $insertCli = "insert cliente (nome, sobrenome, cpf,telefone_id,endereco_id) values ('$nome','$sobrenome','$cpf',1, 1);";
+        $insertCli = "insert cliente (nome, sobrenome, cpf) values ('$nome','$sobrenome','$cpf');";
         $resultadoCli = $conn->query($insertCli);
     // Fim Cadastro Cliente
   $idtel = $conn->insert_id;

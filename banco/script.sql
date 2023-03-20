@@ -15,31 +15,14 @@ CREATE SCHEMA IF NOT EXISTS `gamerzonedb` DEFAULT CHARACTER SET utf8 ;
 USE `gamerzonedb` ;
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`nivel`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`nivel` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `sigla` VARCHAR(45) NOT NULL,
-  `rotulo` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `gamerzonedb`.`usuarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(16) NOT NULL,
-  `nivel_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_usuarios_nivel1_idx` (`nivel_id` ASC) ,
-  CONSTRAINT `fk_usuarios_nivel1`
-    FOREIGN KEY (`nivel_id`)
-    REFERENCES `gamerzonedb`.`nivel` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `nivel` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
@@ -77,12 +60,14 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`telefone`
+-- Table `gamerzonedb`.`cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`telefone` (
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `numero_tel` VARCHAR(11) NOT NULL,
-  `tipo_tel` VARCHAR(15) NOT NULL,
+  `nome` VARCHAR(45) NOT NULL,
+  `sobrenome` TEXT NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -100,46 +85,28 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`enderecos` (
   `cep` VARCHAR(8) NOT NULL,
   `complemento` VARCHAR(15) NULL,
   `tipo_end` VARCHAR(15) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`cliente`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  `sobrenome` TEXT NOT NULL,
-  `cpf` VARCHAR(11) NOT NULL,
-  `telefone_id` INT NOT NULL,
-  `endereco_id` INT NOT NULL,
+  `cliente_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_cliente_telefone1_idx` (`telefone_id` ASC) ,
-  INDEX `fk_cliente_enderecos1_idx` (`endereco_id` ASC) ,
-  CONSTRAINT `fk_cliente_telefone1`
-    FOREIGN KEY (`telefone_id`)
-    REFERENCES `gamerzonedb`.`telefone` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_cliente_enderecos1`
-    FOREIGN KEY (`endereco_id`)
-    REFERENCES `gamerzonedb`.`enderecos` (`id`)
+  INDEX `fk_enderecos_cliente1_idx` (`cliente_id` ASC) ,
+  CONSTRAINT `fk_enderecos_cliente1`
+    FOREIGN KEY (`cliente_id`)
+    REFERENCES `gamerzonedb`.`cliente` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`email`
+-- Table `gamerzonedb`.`telefone`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`email` (
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`telefone` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `email` VARCHAR(45) NOT NULL,
+  `numero_tel` VARCHAR(11) NOT NULL,
+  `tipo_tel` VARCHAR(15) NOT NULL,
   `cliente_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_email_cliente_idx` (`cliente_id` ASC) ,
-  CONSTRAINT `fk_email_cliente`
+  INDEX `fk_telefone_cliente1_idx` (`cliente_id` ASC) ,
+  CONSTRAINT `fk_telefone_cliente1`
     FOREIGN KEY (`cliente_id`)
     REFERENCES `gamerzonedb`.`cliente` (`id`)
     ON DELETE NO ACTION

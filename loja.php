@@ -25,15 +25,34 @@ $ImgP = $rowListaImg['principal_img']
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Store Zone</title>
 </head>
 <style>
-  /* @media screen and {
-    
-  } */
+ .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+ .Img-Prod{
+border-radius:15%;
+
+}
+.Img-Cor{
+border-radius:15%;
+}
+.h1-Prod
+{
+  left: 68px;
+  position: relative;
+  color: blue;
+}
+.img-Logo
+{
+    width: 121px;
+    position: relative;
+}
 </style>
 <body class="fundofixo">
   <!-- Area o menu -->
