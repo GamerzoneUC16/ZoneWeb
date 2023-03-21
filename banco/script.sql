@@ -66,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `sobrenome` TEXT NOT NULL,
-  `cpf` VARCHAR(11) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -85,14 +85,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`enderecos` (
   `cep` VARCHAR(8) NOT NULL,
   `complemento` VARCHAR(15) NULL,
   `tipo_end` VARCHAR(15) NULL,
-  `cliente_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_enderecos_cliente1_idx` (`cliente_id` ASC) ,
-  CONSTRAINT `fk_enderecos_cliente1`
-    FOREIGN KEY (`cliente_id`)
-    REFERENCES `gamerzonedb`.`cliente` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 

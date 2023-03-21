@@ -148,6 +148,11 @@ $debito = $rowProd['preco'] + 900;
       flex-wrap: wrap
     }
   }
+  .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
 </style>
 <?php include 'menu.php' ?>
 
