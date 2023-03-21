@@ -11,7 +11,7 @@ if(!isset($_SESSION)){
 // verificar se usuário está logado na sessão
 if (!isset($_SESSION['username'])) {
     // Se não existir redirecionamos a sessão por segurança
-    header('location: inicio.php');
+    header('location: http://localhost:8080/ZoneWeb/admin/login.php');
     exit;
 }
 

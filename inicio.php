@@ -1,6 +1,6 @@
 <?php
 include "conn/connect.php";
-
+include 'admin/acesso_com.php';
 $current_url = $_SERVER['REQUEST_URI'];
 
 

@@ -1,3 +1,6 @@
+<?php 
+include 'admin/acesso_com.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

@@ -1,4 +1,5 @@
 <?php
+include 'admin/acesso_com.php';
 include "conn/connect.php";
 // $IdCart = $_GET['id'];
 $ListaProd = $conn->query("select * from produtos");

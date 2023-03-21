@@ -1,4 +1,5 @@
 <?php 
+include 'admin/acesso_com.php';
 include 'conn/connect.php';
 $ListaProd = $conn->query("select * from produtos where titulo like '%corujao%'");
 $rowListaProd = $ListaProd->fetch_assoc();

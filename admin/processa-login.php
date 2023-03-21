@@ -11,7 +11,7 @@ if($_POST){
     $senha  =   $_POST['senha'];
     $nivel  =   $_POST['nivel'];
 
-    $insertSQL  =   "insert usuarios (username, senha, nivel) values ('$username', '$senha','$nivel')";
+    $insertSQL  =   "insert usuarios (username, senha, nivel) values ('$username', md5('$senha'),'$nivel')";
 $resultado  =   $conn->query($insertSQL);
 
 

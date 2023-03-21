@@ -1,7 +1,7 @@
 <?php
 include "conn/connect.php";
+include 'admin/acesso_com.php';
 
-include "admin/acesso_com.php";
 $ListaProd = $conn->query("select * from produtos");
 $rowListaProd = $ListaProd->fetch_assoc();
 $numRows = $ListaProd->num_rows;

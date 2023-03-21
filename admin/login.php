@@ -1,7 +1,7 @@
 <?php  
 
 include "../conn/connect.php";
-$inicio = "";
+$inicio = "http://localhost:8080/ZoneWeb/inicio.php";
 $loja = "http://localhost:8080/ZoneWeb/loja.php";
 // Cadastrar
 $BuscaEmail = $conn->query("select * from cliente");
@@ -14,7 +14,7 @@ if ($_POST) {
   $username = $_POST['username'];
   $senha = $_POST['senha'];
 
-  $loginRes = $conn->query("select * from usuarios where username = '$username' and senha = '$senha'");
+  $loginRes = $conn->query("select * from usuarios where username = '$username' and senha = md5('$senha')");
   $rowLogin = $loginRes->fetch_assoc();
 
   $numRow = mysqli_num_rows($loginRes);
@@ -29,7 +29,7 @@ if ($_POST) {
   $_SESSION['nivel'] = $rowLogin['nivel'];
   $_SESSION['nome_da_sessao'] = session_name();
   if($rowLogin['nivel']=='sup'){
-    echo "<script>window.open('$loja','.self')</script>";
+    echo "<script>window.open('$inicio','.self')</script>";
   }elseif ($rowLogin['nivel']=='com') {
     echo "<script>window.open('$loja','.self')</script>";
   }
