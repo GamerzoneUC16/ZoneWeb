@@ -4,6 +4,13 @@ include "../conn/connect.php";
 
 $inicio = "http://localhost:8080/ZoneWeb/loja.php";
 // Cadastrar
+$BuscaEmail = $conn->query("select * from clientes");
+$rowEmail = $BuscaEmail->fetch_assoc();
+$$numRows = $BuscaEmail->num_rows;
+
+if ($rowEmail['email'] ) {
+  # code...
+}
 if($_POST){
 
 

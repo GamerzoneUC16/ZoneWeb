@@ -1,17 +1,26 @@
 <?php
 include "conn/connect.php";
 
-  if(isset($_POST['submit']))
-  {
- $nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$titulo =$_POST['titulo'];
-$motivo = $_POST['motivo'];
-$assunto = $_POST['assunto'];
+$login = "http://localhost:8080/ZoneWeb/servicos.php";
 
-$result = mysqli_query($conn, "INSERT INTO chamados (nome, email, telefone, titulo, motivo, assunto) 
-VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')"); 
+  if($_POST)
+  {
+    $id = $_POST['id'];
+    $titulo = $_POST['titulo'];
+    $motivo = $_POST['motivo'];
+    $assunto = $_POST['assunto'];
+
+$insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','Aguardando Atendimento',default,1,2,0)";
+ $resultado  =   $conn->query($insertSql);
+
+
+
+ if(mysqli_insert_id($conn)){
+  header("Location: $login");
+}else{
+  header("Location: $login");
+};
+
 }
 
 ?>
@@ -25,7 +34,7 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-   <link rel="stylesheet" href="css/reset.css"> 
+  <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Serviços</title>
 </head>
@@ -332,16 +341,16 @@ font-size:50px;
           <div class="modal-body">
           <form action="servicos.php " method="POST">
               <div class="mb-3">
-                <label for="Nome" class="col-form-label"> Nome Completo:</label>
-                <input type="text" class="form-control"  name="nome" id="nome" required>
+                <label for="titulo" class="col-form-label"> Titulo:</label>
+                <input type="text" class="form-control"  name="titulo" id="titulo" required>
                 
-                <label for="email" class="col-form-label">E-mail:</label>
-                <input type="email" class="form-control"  name="email" id="email" required>
+                <label for="motivo" class="col-form-label">Motivo:</label>
+                <input type="text" class="form-control"  name="motivo" id="motivo" required>
+<!-- 
+                <label for="assunto" class="col-form-label"><b>Descrição:</b></label>
+                <input type="text" name="assunto" class="form-control" id="assunto" required> -->
 
-                <label for="Telefone" class="col-form-label"><b>Telefone:</b></label>
-                <input type="tel" name="telefone" class="form-control" id="Telefone" required>
-
-                <label for="Titulo" class="col-form-label"><b>Título:</b></label>
+                <!-- <label for="Titulo" class="col-form-label"><b>Título:</b></label>
                 <input type="titulo" name="titulo" class="form-control" id="Titulo" required>
               </div>
               <label for="form-check" class="col-for-label"><b>Motivo de Contato</b></label>
@@ -363,15 +372,15 @@ font-size:50px;
                 <label class="form-check-label" for="solicitacao">
                   Solicitação
                 </label>
-              </div>
+              </div> -->
               <div class="mb-3">
-                <label for="mesagens_texto" class="col-form-label "><b> Descreva o seu Problema:</b></label>
-                <textarea class="form-control"  name="assunto" id="mesagens_texto" required></textarea>
+                <label for="assunto" class="col-form-label "><b> Descreva o seu Problema:</b></label>
+                <input type="text" name="assunto" id="assunto" class="form-control">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 
-                  <button type="submit" name="submit" id="submit" class="btn btn-success">Enviar</button>
+                  <button type="submit" class="btn btn-success">Enviar</button>
                 </div>
             </form>
           </div>
