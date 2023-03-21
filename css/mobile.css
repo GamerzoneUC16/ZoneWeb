@@ -1,0 +1,53 @@
+/* Showcase */
+#showcase-container {
+    padding: 40px;
+}
+
+/* Clients */
+#clients-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.client {
+    width: 50%;
+}
+
+/* Features */
+#features-container {
+    grid-template-columns: 1fr;
+}
+
+#features-container .feature:nth-child(2) {
+    margin: 15px 0;
+}
+
+/* Product */
+#product-container {
+    flex-direction: column;
+}
+
+#items {
+    width: 90%;
+}
+
+.item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Testimonials */
+.testimonial {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Gallery */
+
+#gallery-container {
+    grid-template-columns: 1fr;
+}
+
+.gallery-image {
+    width: 100%;
+}
