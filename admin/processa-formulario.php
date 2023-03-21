@@ -15,29 +15,7 @@ print_r($rowEnd);
 $GetTel = mysqli_insert_id($rowtel['id']);
 $GetEnd =mysqli_insert_id($rowEnd['id']);
 
-if($_POST){
-    // Cadastro Cliente
-        $id         = $_POST['id'];
-        $nome       = $_POST['nome'];
-        $sobrenome  = $_POST['sobrenome'];
-        $cpf        = $_POST['cpf'];
-       
-        
-        
-
-        $insertCli = "insert cliente (nome, sobrenome, cpf) values ('$nome','$sobrenome','$cpf');";
-        $resultadoCli = $conn->query($insertCli);
-    // Fim Cadastro Cliente
-  $idtel = $conn->insert_id;
-  $idend = $conn->insert_id;
-
-
-    if(mysqli_insert_id($conn)){
-        header("Location: $login");
-    }else{
-        header("Location: $login");
-    };
-}    
+   
 
 if($_POST){
 // Cadastro Telefone

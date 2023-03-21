@@ -1,21 +1,8 @@
 <?php
 include "conn/connect.php";
 
-/*  if(isset($_POST['submit']))
-{
-  print_r($_POST['nome']);
-
-  print_r($_POST['email']);
-  print_r('<br>');
-  print_r($_POST['telefone']);
-  print_r('<br>');
-  print_r($_POST['titulo']);
-  print_r('<br>');
-  print_r($_POST['motivo']);
-  print_r('<br>');
-  print_r($_POST['assunto']);
-} 
- */
+  if(isset($_POST['submit']))
+  {
  $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
@@ -25,7 +12,7 @@ $assunto = $_POST['assunto'];
 
 $result = mysqli_query($conn, "INSERT INTO chamados (nome, email, telefone, titulo, motivo, assunto) 
 VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')"); 
-
+}
 
 ?>
 
@@ -37,8 +24,8 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+   <link rel="stylesheet" href="css/reset.css"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Serviços</title>
 </head>
@@ -53,24 +40,35 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
 
   }
 
+  .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+
   h1 {
     text-align: center;
-    font-size: clamp(5.0em, 4.7em + 8vw, 4.0em);
+    font-size: clamp(7.5em, 5.7em + 8vw, 4.0em);
     font-weight: bold;
     position: relative;
   }
 
   p {
-    text-align: center;
+    text-align: flex;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
   }
 
   h2 {
     font-weight: bold;
+    font-size: 40px;
   }
 
   @media screen and (max-width: 680px) {
+    h1{
+      font-size: 50px;
+    }
 
     .services article {
       background: rgba(242, 242, 242, 0.9);
@@ -82,7 +80,7 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
 
     }
 
-    .colunas {
+    .container {
       display: flex;
       flex-direction: column;
       /*    justify-content: center ; */
@@ -92,8 +90,9 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
     .card-body {
       padding: 50px;
       background: rgba(242, 242, 242, 0.9);
-      border: px solid;
+      border: 6px solid;
       border-radius: 40px;
+      margin: 50px;
 
     }
 
@@ -107,7 +106,7 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
     background-size: cover;
   }
 
-  .colunas {
+  .container {
     display: flex;
     /*    position: relative; */
 
@@ -118,7 +117,7 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
   .services article {
     background: rgba(242, 242, 242, 0.9);
     color: #222;
-    padding: 60px;
+    padding: 100px;
     margin: 20px 6px;
     position: relative;
     font-weight: bold;
@@ -224,11 +223,12 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
     }
   }
 
-  .card-body {
+  .card-border {
     padding: 50px;
     background: rgba(242, 242, 242, 0.9);
     border: 6px solid blue;
     border-radius: 40px;
+    margin: 80px;
 
   }
 
@@ -247,6 +247,13 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
     width: 150px;
     position: relative;
   }
+
+  .icon{
+font-size:50px;
+  }
+ 
+
+  
 </style>
 
 <body class="fundofixo">
@@ -256,6 +263,7 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
   <br>
   <!-- Serviços-->
   <h1 class="text-white"><b>Serviços</b></h1>
+  <br>
   <p class="text-white">GamerZone a Melhor LanHouse da Zona Leste!!</p>
   <div class="text-center">
     <!--  <span class="bi bi-controller fs-1"></span> -->
@@ -265,13 +273,14 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
   </a>
   <!-- CARDS -->
   <section class=" services ">
-    <div class="colunas">
+    <div class="container">
 
       <a class="close" href="contato.php">
         <article>
           <!-- <img src="" alt="">  -->
-          <div class="icon"><i class="bi bi-gear-fill fs-1"></i></div>
+          <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
           <h2>Serviços</h2>
+          <br>
           <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
         </article>
       </a>
@@ -279,16 +288,18 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
       <a class="close" href="produtos_geral.php">
         <article>
           <!-- <img src="" alt="">  -->
-          <div class="i"><i class="bi bi-controller fs-1"></i></div>
+          <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
           <h2>Jogos</h2>
+          <br>
           <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
         </article>
       </a>
       <a class="close" href="loja.php">
         <article>
           <!--  <img src="" alt=""> -->
-          <div class="icon"><i class="bi bi-shop fs-1"></i></div>
+          <div class="icon"><span class="bi bi-shop fa-2x"></span></div>
           <h2>Vendas</h2>
+          <br>
           <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
         </article>
       </a>
@@ -300,7 +311,7 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
 
   <!-- borda em processo -->
 
-  <div class="card-body">
+  <div class="card-border">
     <h5 class="card-title text-black">Problema com produto ou com sua máquina solicite nosso suporte!</h5>
     <br>
     <!-- Final da Borda Implemetado com modal -->
@@ -321,10 +332,10 @@ VALUES ('$nome' , '$email', '$telefone', '$titulo', '$motivo', '$assunto')");
           <div class="modal-body">
           <form action="servicos.php " method="POST">
               <div class="mb-3">
-                <label for="Nome" class="col-form-label"><b> Nome Completo:</b></label>
+                <label for="Nome" class="col-form-label"> Nome Completo:</label>
                 <input type="text" class="form-control"  name="nome" id="nome" required>
-
-                <label for="email" class="col-form-label"><b>E-mail:</b></label>
+                
+                <label for="email" class="col-form-label">E-mail:</label>
                 <input type="email" class="form-control"  name="email" id="email" required>
 
                 <label for="Telefone" class="col-form-label"><b>Telefone:</b></label>

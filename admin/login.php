@@ -10,9 +10,9 @@ if($_POST){
     $id     =   $_POST['id'];
     $username  =   $_POST['username'];
     $senha  =   $_POST['senha'];
-    $nivel_id  =   $_POST['nivel_id'];
+    $nivel  =   $_POST['nivel'];
 
-    $insertSQL  =   "insert usuarios (username, senha, nivel_id) values ('$username', '$senha','$nivel_id')";
+    $insertSQL  =   "insert usuarios (username, senha, nivel) values ('$username', '$senha','$nivel')";
 $resultado  =   $conn->query($insertSQL);
 
 
@@ -51,6 +51,8 @@ if ($_POST) {
  }
 }
 
+$condição = $conn->query("select * from ")
+
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +61,6 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
-    <link rel="stylesheet" href="../css/style.css">
     <title>Tela de login</title>
     <style>
         body{
@@ -179,6 +180,11 @@ if ($_POST) {
 .form__field:required, .form__field:invalid {
   box-shadow: none;
 }
+.fundofixo{
+  background: url('../images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
     </style>
 </head>
 <body>
@@ -230,7 +236,7 @@ if ($_POST) {
         <br>
         </div>
         <div class="form__group field">
-            <input class="form__field" type="text" name="nivel_id" id="nivel_id" placeholder="Nivel" maxlength="100" required>
+            <input class="form__field" type="text" name="nivel" id="nivel" placeholder="Nivel" maxlength="100" required>
             <label class="form__label" for="nivel">Nivel</label>
         <br>
         </div>
@@ -247,4 +253,28 @@ if ($_POST) {
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    $('#email').blur(function()
+    
+  {
+    var email = $('#email').val();
+    $.ajax({
+      type:'GET',
+      url: '../admin/cadastros.php' + email,
+      data: {email: email},
+      success: function(data){
+        console.log(data)
+        $('#id').val(data.id);
+        $('#nome').val(data.nome);
+        $('#sobrenome').val(data.sobrenome);
+        $('#cpf').val(data.cpf);
+        $('#email').val(data.email);
+      }
+    });
+  });
+});
+</script>
 </html>

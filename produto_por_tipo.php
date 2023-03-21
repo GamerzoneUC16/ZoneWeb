@@ -31,6 +31,13 @@ $ImgP = $rowListaImg['principal_img']
 
     <title>Buscar por tipo</title>
 </head>
+<style>
+   .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+</style>
 <body class="fundofixo">
      <?php include "menu.php"?> 
     <div class="container">

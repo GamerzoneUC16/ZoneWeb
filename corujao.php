@@ -18,6 +18,13 @@ $numRows = $ListaProd->num_rows;
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Corujão</title>
 </head>
+<style>
+     .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+</style>
 
 <?php include 'menu.php';?>
 

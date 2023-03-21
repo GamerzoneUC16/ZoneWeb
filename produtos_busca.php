@@ -17,6 +17,13 @@ $numRows = $ListaPorPalavra->num_rows;
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Buscar produto <?php echo $buscar;?></title>
 </head>
+<style>
+   .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+</style>
 <body class="fundofixo">
     <?php include 'menu.php'?>
     <div class="container">
