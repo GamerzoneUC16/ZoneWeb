@@ -12,8 +12,7 @@ $rowEnd = $consultaEnd->fetch_assoc();
 print_r($rowEnd);
 
 
-$GetTel = mysqli_insert_id($rowtel['id']);
-$GetEnd =mysqli_insert_id($rowEnd['id']);
+
 
    
 

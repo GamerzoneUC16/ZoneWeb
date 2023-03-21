@@ -1,41 +1,20 @@
 <?php  
 
 include "../conn/connect.php";
-
-$inicio = "http://localhost:8080/ZoneWeb/loja.php";
+$inicio = "";
+$loja = "http://localhost:8080/ZoneWeb/loja.php";
 // Cadastrar
 $BuscaEmail = $conn->query("select * from cliente");
 $rowEmail = $BuscaEmail->fetch_assoc();
 
 
-if ($rowEmail['email'] ) {
-  
-}
-if($_POST){
 
-
-    $id     =   $_POST['id'];
-    $username  =   $_POST['username'];
-    $senha  =   $_POST['senha'];
-    $nivel  =   $_POST['nivel'];
-
-    $insertSQL  =   "insert usuarios (username, senha, nivel) values ('$username', '$senha','$nivel')";
-$resultado  =   $conn->query($insertSQL);
-
-
-if(mysqli_insert_id($conn)){
-    header("Location: $inicio");
-}else{
-    header("Location: $inicio");
-};
- };
-// Fim Cadastrar
 
 if ($_POST) {
   $username = $_POST['username'];
   $senha = $_POST['senha'];
 
-  $loginRes = $conn->query("select * from usuarios where username = '$username' and senha = md5('$senha')");
+  $loginRes = $conn->query("select * from usuarios where username = '$username' and senha = '$senha'");
   $rowLogin = $loginRes->fetch_assoc();
 
   $numRow = mysqli_num_rows($loginRes);
@@ -46,13 +25,13 @@ if ($_POST) {
   $session_name_new = session_name();
  }
  if ($numRow > 0) {
-  $_SESSION['username'] = $login;
+  $_SESSION['username'] = $username;
   $_SESSION['nivel'] = $rowLogin['nivel'];
   $_SESSION['nome_da_sessao'] = session_name();
   if($rowLogin['nivel']=='sup'){
-    echo "<script>window.open('index.php','.self')</script>";
+    echo "<script>window.open('$loja','.self')</script>";
   }elseif ($rowLogin['nivel']=='com') {
-    echo "<script>window.open('$inicio','.self')</script>";
+    echo "<script>window.open('$loja','.self')</script>";
   }
  }else {
   echo "<script>window.open('invasor.php','.self')</script>";
@@ -206,12 +185,12 @@ $condição = $conn->query("select * from ")
         <br>
         <form action="login.php" name="form_login" id="form_login" method="POST" enctype="multipart/form-data">
         <div class="form__group field">
-    <input name="login_id" id="login_usuario" autofocus required="" placeholder="Name" autocomplete="off" class="form__field" type="text">
-    <label class="form__label" for="name">Name</label>
+    <input name="username" id="username" autofocus required placeholder="Name" autocomplete="off" class="form__field" type="text">
+    <label class="form__label" for="username">Name</label>
 </div>
         <br>
         <div class="form__group field">
-    <input name="login_usuario" id="login_usuario" required="" placeholder="Senha" autocomplete="off" class="form__field" type="text">
+    <input name="senha" id="senha" required placeholder="Senha" autocomplete="off" class="form__field" type="password">
     <label class="form__label" for="senha">Senha</label>
 </div>
         <br>
@@ -232,7 +211,7 @@ $condição = $conn->query("select * from ")
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body fundofixo">
-        <form action="login.php" id="form_usuarios_insere" name="form_usuarios_insere" method="POST" enctype="multipart/form-data">
+        <form action="processa-login.php" id="form_usuarios_insere" name="form_usuarios_insere" method="POST" enctype="multipart/form-data">
         <div class="form__group field">
             <input class="form__field" type="text" name="username" id="username" placeholder="Nome" maxlength="100" required>
             <label class="form__label" for="username">Name</label>

@@ -70,8 +70,13 @@ if (isset($_SESSION['username'])) {
             </li>
             <li class="nav-item">
             <a class="nav-link active" href="admin/login.php">
-                <span class="bi bi-person-fill" style="color: #EAF2EF;"><?php echo $username; ?></span>
+                <span class="bi bi-person-fill" style="color: #EAF2EF;">&nbsp;<?php echo $username; ?></span>
             </a>
+            <li>
+            <a href="logout.php">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                </a>
+            </li>
             </ul>
             </div>
         </div>

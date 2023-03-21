@@ -107,6 +107,18 @@ insert images (caminho, principal_img, produto_id) values ('watercorsair2.jpg',0
 insert images (caminho, principal_img, produto_id) values ('watercorsair3.jpg',0,20);
 insert images (caminho, principal_img, produto_id) values ('watercorsair4.jpg',0,20);
 
+-- Tipos de status de chamado
+
+-- Aguardando Atendimento
+-- Em Andamento
+-- Pendente Usuário
+-- Informação adicionada
+-- Em Analise
+-- Em Teste
+-- Concluido
+-- Cancelado
+
+
 
 
 
