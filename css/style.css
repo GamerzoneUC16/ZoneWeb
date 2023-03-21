@@ -204,21 +204,21 @@ a {
     margin: 15px;
 }
 
-/* Gallery */
-#gallery {
+/* Galeria */
+#galeria {
     width: 90%;
     margin: auto;
     padding: 50px;
 }
 
-#gallery-container {
+#galeria-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     justify-items: center;
 }
 
-.gallery-image {
+.galeria-image {
     display: inline-block;
     width: 540px;
     height: 360px;

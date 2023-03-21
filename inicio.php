@@ -1,4 +1,6 @@
 <?php
+include "conn/connect.php";
+
 $current_url = $_SERVER['REQUEST_URI'];
 
 
@@ -109,15 +111,15 @@ if (isset($_SESSION['username'])) {
     </div>
   </div>
 
-  <section id="gallery">
+  <section id="galeria">
     <div class="headline">Galeria</div>
-    <div id="gallery-container">
-      <img src="images/lan1.jpg" alt="" class="gallery-image">
-      <img src="images/lan2.jpg" alt="" class="gallery-image">
-      <img src="images/lan3.jpg" alt="" class="gallery-image">
-      <img src="images/lan4.jpg" alt="" class="gallery-image">
-      <img src="images/lan5.jpg" alt="" class="gallery-image">
-      <img src="images/lan7.jpg" alt="" class="gallery-image">
+    <div id="galeria-container">
+      <img src="images/lan1.jpg" alt="" class="galeria-image">
+      <img src="images/lan2.jpg" alt="" class="galeria-image">
+      <img src="images/lan3.jpg" alt="" class="galeria-image">
+      <img src="images/lan4.jpg" alt="" class="galeria-image">
+      <img src="images/lan5.jpg" alt="" class="galeria-image">
+      <img src="images/lan7.jpg" alt="" class="galeria-image">
 
     </div>
   </section>
