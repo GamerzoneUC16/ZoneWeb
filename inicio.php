@@ -1,3 +1,16 @@
+<?php
+$current_url = $_SERVER['REQUEST_URI'];
+
+
+
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} else {
+    $username = 'Visitante';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -23,6 +36,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <?php if ($current_url == '/ZoneWeb/loja.php' ||  $current_url == '/ZoneWeb/produto_detalhe.php' || $current_url == '/ZoneWeb/produto_por_tipo.php' || $current_url == '/ZoneWeb/produtos_busca.php' || $current_url == '/ZoneWeb/produtos_geral.php') { ?>
+                        <div class="flex-nowrap">
+                            <form action="produtos_busca.php" method="get" name="form-busca" role="search" class="navbar-form d-flex" style="position:relative">
+                                <input type="search" name="buscar" size="30" class="form-control " placeholder="Buscar Produto" aria-label="Search" required>
+                                <div class="input-group-btn">
+                                    <button class="btn btn-outline-success" type="submit">
+                                        <span class="bi bi-search"></span>
+                                    </button>
+                                </div>
+                        </div>
+                        </form>
+                    <?php } else { ?>
+                    <?php } ?>
         <li class="nav-item">
           <a class="nav-link active text-info" aria-current="page" href="#">Home</a>
         </li>
@@ -43,6 +69,9 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
+        <a href="admin/login.php">
+        <span class="bi bi-person-fill" style="color: #EAF2EF;"><?php echo $username; ?></span>
+        </a>
       </ul>
     </div>
   </div>
@@ -93,7 +122,7 @@
   <section id="product">
     <div class="headline">Nosso produto</div>
     <div id="product-container">
-      <img src="images/iphone-x-gz.png" alt="iphone-x" class="iphone-x">
+      <img src="images/iphone-lan-branco.png" alt="iphone-x" class="iphone-x">
       <div id="items">
         <div class="item">
           <i class="fas fa-map-marked fa-2x color-primary"></i>
