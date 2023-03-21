@@ -3,24 +3,22 @@ include "conn/connect.php";
 
 $login = "http://localhost:8080/ZoneWeb/servicos.php";
 
-  if($_POST)
-  {
-    $id = $_POST['id'];
-    $titulo = $_POST['titulo'];
-    $motivo = $_POST['motivo'];
-    $assunto = $_POST['assunto'];
+if ($_POST) {
+  $id = $_POST['id'];
+  $titulo = $_POST['titulo'];
+  $motivo = $_POST['motivo'];
+  $assunto = $_POST['assunto'];
 
-$insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','Aguardando Atendimento',default,1,2,0)";
- $resultado  =   $conn->query($insertSql);
-
+  $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','Aguardando Atendimento',default,1,1,0)";
+  $resultado  =   $conn->query($insertSql);
 
 
- if(mysqli_insert_id($conn)){
-  header("Location: $login");
-}else{
-  header("Location: $login");
-};
 
+  if (mysqli_insert_id($conn)) {
+    header("Location: $login");
+  } else {
+    header("Location: $login");
+  };
 }
 
 ?>
@@ -34,7 +32,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-  <link rel="stylesheet" href="css/reset.css"> 
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Serviços</title>
 </head>
@@ -49,11 +47,11 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
 
   }
 
-  .fundofixo{
-  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
- }
+  .fundofixo {
+    background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
 
   h1 {
     text-align: center;
@@ -75,7 +73,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
   }
 
   @media screen and (max-width: 680px) {
-    h1{
+    h1 {
       font-size: 50px;
     }
 
@@ -89,7 +87,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
 
     }
 
-    .container {
+    .colunas {
       display: flex;
       flex-direction: column;
       /*    justify-content: center ; */
@@ -115,7 +113,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
     background-size: cover;
   }
 
-  .container {
+  .colunas {
     display: flex;
     /*    position: relative; */
 
@@ -232,12 +230,12 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
     }
   }
 
-  .card-border {
+  .card-body {
     padding: 50px;
     background: rgba(242, 242, 242, 0.9);
     border: 6px solid blue;
     border-radius: 40px;
-    margin: 80px;
+    margin: 10px;
 
   }
 
@@ -257,12 +255,13 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
     position: relative;
   }
 
-  .icon{
-font-size:50px;
+  .icon {
+    font-size: 50px;
   }
- 
 
-  
+  .btn1{
+    background-color: rgb(0, 157, 220);
+  }
 </style>
 
 <body class="fundofixo">
@@ -282,7 +281,7 @@ font-size:50px;
   </a>
   <!-- CARDS -->
   <section class=" services ">
-    <div class="container">
+    <div class="colunas">
 
       <a class="close" href="contato.php">
         <article>
@@ -320,8 +319,8 @@ font-size:50px;
 
   <!-- borda em processo -->
 
-  <div class="card-border">
-    <h5 class="card-title text-black">Problema com produto ou com sua máquina solicite nosso suporte!</h5>
+  <div class="card-body">
+    <h5 class="card-title text-black">Solicite nosso suporte!</h5>
     <br>
     <!-- Final da Borda Implemetado com modal -->
 
@@ -335,18 +334,30 @@ font-size:50px;
           <div class="modal-header">
             <span class="bi bi-headset fs-3"></span>
             <br>
-            <h3 class="modal-title fs-5" id="ModalLabel">Chamado</h3>
+            <h3 class="modal-title fs-5 fw-bolder" id="ModalLabel">Chamado</h3>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-          <form action="servicos.php " method="POST">
+            <form action="servicos.php " method="POST">
               <div class="mb-3">
-                <label for="titulo" class="col-form-label"> Titulo:</label>
-                <input type="text" class="form-control"  name="titulo" id="titulo" required>
-                
-                <label for="motivo" class="col-form-label">Motivo:</label>
-                <input type="text" class="form-control"  name="motivo" id="motivo" required>
-<!-- 
+                <label for="titulo" class="col-form-label fw-bolder"> Titulo:</label>
+                <input type="text" class="form-control" name="titulo" id="titulo" required>
+                <br>
+                <h3 class="fw-bolder">Motivo:</h3>
+                <br>
+
+                <div class="dropdown">
+                  <button class="btn btn dropdown-toggle btn-sm btn1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Escolha
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item">Troca</a></li>
+                    <li><a class="dropdown-item">Defeito</a></li>
+                    <li><a class="dropdown-item">Duvida</a></li>
+                    <li><a class="dropdown-item">Suporte tecnico</a></li>
+                  </ul>
+                </div>
+                <!-- 
                 <label for="assunto" class="col-form-label"><b>Descrição:</b></label>
                 <input type="text" name="assunto" class="form-control" id="assunto" required> -->
 
@@ -373,13 +384,13 @@ font-size:50px;
                   Solicitação
                 </label>
               </div> -->
-              <div class="mb-3">
-                <label for="assunto" class="col-form-label "><b> Descreva o seu Problema:</b></label>
-                <input type="text" name="assunto" id="assunto" class="form-control">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                
+                <div class="mb-3">
+                  <label for="assunto" class="col-form-label fw-bolder"> Descreva o seu Problema:</b></label>
+                  <textarea type="text" name="assunto" id="assunto" class="form-control" required></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+
                   <button type="submit" class="btn btn-success">Enviar</button>
                 </div>
             </form>
