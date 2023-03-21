@@ -112,13 +112,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `data` DATETIME NOT NULL,
   `titulo` VARCHAR(45) NOT NULL,
+  `motivo` TEXT NOT NULL,
   `assunto` VARCHAR(45) NOT NULL,
-  `status` VARCHAR(45) NOT NULL,
+  `status_ch` VARCHAR(45) NOT NULL,
+  `data_in` DATETIME NOT NULL,
   `cliente_id` INT NOT NULL,
   `usuario_id` INT NOT NULL,
-  `motivo` TEXT NOT NULL,
   `data_final` DATETIME NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_chamados_cliente1_idx` (`cliente_id` ASC) ,

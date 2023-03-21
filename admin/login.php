@@ -4,12 +4,12 @@ include "../conn/connect.php";
 
 $inicio = "http://localhost:8080/ZoneWeb/loja.php";
 // Cadastrar
-$BuscaEmail = $conn->query("select * from clientes");
+$BuscaEmail = $conn->query("select * from cliente");
 $rowEmail = $BuscaEmail->fetch_assoc();
-$$numRows = $BuscaEmail->num_rows;
+
 
 if ($rowEmail['email'] ) {
-  # code...
+  
 }
 if($_POST){
 
@@ -32,13 +32,14 @@ if(mysqli_insert_id($conn)){
 // Fim Cadastrar
 
 if ($_POST) {
-  $login = $_POST['username'];
+  $username = $_POST['username'];
   $senha = $_POST['senha'];
 
-  $loginRes = $conn->query("select * from usuarios where username ='$login' and senha_usuario = md5('$senha')");
+  $loginRes = $conn->query("select * from usuarios where username = '$username' and senha = md5('$senha')");
   $rowLogin = $loginRes->fetch_assoc();
 
   $numRow = mysqli_num_rows($loginRes);
+  
  if (!isset($_SESSION)){
   $sessaoAntiga = session_name('GamerZone');
   session_start();
