@@ -4,9 +4,9 @@ $current_url = $_SERVER['REQUEST_URI'];
 
 
 if (isset($_SESSION['username'])) {
-    $username = $_SESSION['username'];
+  $username = $_SESSION['username'];
 } else {
-    $username = 'Visitante';
+  $username = 'Visitante';
 }
 
 ?>
@@ -14,6 +14,7 @@ if (isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<?php include "menu.php" ?>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,61 +22,11 @@ if (isset($_SESSION['username'])) {
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-LG.css">
   <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
-  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Gamerzone</title>
 </head>
 
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-  <div class="container-fluid ">
-    <a class="navbar-brand" href="#">
-      <img src="images/Logo/GamerZone_logo-2-removebg-preview.png" class="img-Logo" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-      <?php if ($current_url == '/ZoneWeb/loja.php' ||  $current_url == '/ZoneWeb/produto_detalhe.php' || $current_url == '/ZoneWeb/produto_por_tipo.php' || $current_url == '/ZoneWeb/produtos_busca.php' || $current_url == '/ZoneWeb/produtos_geral.php') { ?>
-                        <div class="flex-nowrap">
-                            <form action="produtos_busca.php" method="get" name="form-busca" role="search" class="navbar-form d-flex" style="position:relative">
-                                <input type="search" name="buscar" size="30" class="form-control " placeholder="Buscar Produto" aria-label="Search" required>
-                                <div class="input-group-btn">
-                                    <button class="btn btn-outline-success" type="submit">
-                                        <span class="bi bi-search"></span>
-                                    </button>
-                                </div>
-                        </div>
-                        </form>
-                    <?php } else { ?>
-                    <?php } ?>
-        <li class="nav-item">
-          <a class="nav-link active text-info" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-info" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle text-info" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-        <a href="admin/login.php">
-        <span class="bi bi-person-fill" style="color: #EAF2EF;"><?php echo $username; ?></span>
-        </a>
-      </ul>
-    </div>
-  </div>
-</nav>
   <header id="showcase">
     <div id="showcase-container">
       <h2>Lorem ipsum dolor sit amet.</h2>
