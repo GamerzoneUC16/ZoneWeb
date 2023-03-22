@@ -14,7 +14,6 @@ insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Headset Gamer Redragon Zeus', 'Som estéreo Surround 7.1 Virtual', 'Headset Gamer', 330.00,'sim', 3);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Gabinete  T-Dagger TGC P03W', 'Painel frontal texturizado e com iluminação RGB integrada', 'Gabinete Gamer Branco',200.00, 'sim', 2);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mouse Multilaser Sem Fio', 'Tecnologia 2.4Ghz. Design Automático com alcande de 10 metros.', 'Mouse sem fio Multilaser', 50.00, 'sim', 3);
-insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mini Teclado Wireless Tv Box Pc Android Tv Smart', 'USB portátil como mouse touch integrado para controlar o seu Tv Box, Video Game, Smart TV, Notebook. Possui teclado QWERTY, setas direcionais, teclados de atalho e um touchpad para que possa controlar também o mouse dele.', 'Mini Teclado NT', 39.90,'sim', 6);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'KIT GAMER DUST', 'Acompanha teclado ABNT, Headphone e mouse com fio - Possuem iluminação com padroes de cores em RGB', 'Kit Gamer DUST', 320.77, 'sim', 3);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Microfone gamer trust lance GXT-242','Sensor condensador de microfone, Ligação USB digital que funciona em qualquer pc e portátil. Perfeito para podcasts, vlogs, locuções e gravações de música ou transmissão em fluxos no YouTube, Twitch e Facebook.',  'Microfone Gamer Trust', 499.90, 'sim',  3);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Cadeira Gamer Roxtor LED Preta','Sistema Led/RGB estático ou dinâmico, com até 04 modos, Controle remoto para ajuste das funções Led; Elevação por pistão a gás classe 3; Rodas de nylon revestidas; Braços com regulagem 3D; Encosto reclinável em até 155º; Almofadas para apoio lombar e pescoço, ajustáveis','Cadeira Gamer Roxtor', 1720.00, 'sim', 4);
@@ -25,6 +24,7 @@ insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Teclado Gamer Mecânico PC Computador Adamantiun Mini Shuriken Tkl Switch Brown Led Rainbow ABNT2 Double Injection','Modelo 80% TKL; Mecânico - Compatível com Mac - Numérico; Teclas Double Injection, não apagam; Switch Brown Marrom - tátil e silencioso.','Teclado Gamer Mecânico Adamantiun',210.00,'sim', 2);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'CIC G9000 Fone de ouvido Gamer, Luz LED - Azul','Com bom microfone. O fone de ouvido que pode cancelar os ruídos oferece alta clareza de som. Entrega áudio de qualidade superior, e deixa você completamente imerso na atmosfera no jogoFácil controle de volume.','HeadSet Kotion Each',155.90,'sim', 3);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Water Cooler Gamer Corsair iCUE H115i ELITE CAPELLIX RGB - 280mm, Preto - CW-9060047-WW',' resfriamento potente e de baixo ruído para sua CPU; iluminado por 33 LEDs CAPELLIX RGB ultrabrilhantes.;CORSAIR iCUE Commander CORE Incluído: Uma iluminação RGB inteligente e controlador de velocidade do ventilador oferece controle preciso da velocidade e da iluminação em até seis ventiladores RGB.;Ventiladores RGB de levitação magnética: Dois ventiladores PWM da série CORSAIR ML RGB de 140 mm fornecem fluxo de ar poderoso para desempenho de resfriamento extremo da CPU, com oito LEDs RGB por ventilador.', 'Water Cooler GAMER Corsair',250.00,'sim', 2);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Fortrek PRO M7 RGB - Mouse Gamer, Preto', 'Dimensões do mouse: 125x57x38 cm; Cor: preto; Resolução máxima: 250-4800 DPI (ajustável pelo software);Compatibilidade: windows xp/ vista / win7 / win8 / win10 e mac os x 10.2 ou superior.', 'Mouse Gamer Fortrek', 50.00, 'sim', 3);
 
 
 
@@ -58,11 +58,6 @@ insert images (caminho, principal_img, produto_id) values ('ttagger.jpg',1,8);
 insert images (caminho, principal_img, produto_id) values ('multilaser.jpg',1,9);
 insert images (caminho, principal_img, produto_id) values ('lateralmlaser.jpg',0,9);
 insert images (caminho, principal_img, produto_id) values ('plugmlaser.jpg',0,9);
-
-insert images (caminho, principal_img, produto_id) values ('miniteclado.jpg',1,10);
-insert images (caminho, principal_img, produto_id) values ('caixaminitec.jpg',0,10);
-insert images (caminho, principal_img, produto_id) values ('ledminit.jpg',0,10);
-insert images (caminho, principal_img, produto_id) values ('pilhaminit',0,10);
 
 insert images (caminho, principal_img, produto_id) values ('kitgamer.jpg',1,11);
 insert images (caminho, principal_img, produto_id) values ('kitdustfone.jpg',0,11);
@@ -102,6 +97,10 @@ insert images (caminho, principal_img, produto_id) values ('watercorsair2.jpg',0
 insert images (caminho, principal_img, produto_id) values ('watercorsair3.jpg',0,20);
 insert images (caminho, principal_img, produto_id) values ('watercorsair4.jpg',0,20);
 
+insert images (caminho, principal_img, produto_id) values ('mousefortrek2.jpg',1,21);
+insert images (caminho, principal_img, produto_id) values ('mousefortrek.jpg',0,21);
+insert images (caminho, principal_img, produto_id) values ('mousefortrek3.jpg',0,21);
+insert images (caminho, principal_img, produto_id) values ('mousefortrek4.jpg',0,21);
 -- Tipos de status de chamado
 
 -- Aguardando Atendimento
