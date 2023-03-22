@@ -115,6 +115,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
   `titulo` VARCHAR(45) NOT NULL,
   `motivo` TEXT NOT NULL,
   `assunto` VARCHAR(45) NOT NULL,
+  `anexo` VARCHAR(45) NULL,
   `status_ch` VARCHAR(45) NOT NULL,
   `data_in` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   `cliente_id` INT NOT NULL,

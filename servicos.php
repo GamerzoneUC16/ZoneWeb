@@ -9,8 +9,8 @@ $login = "http://localhost:8080/ZoneWeb/servicos.php";
     $titulo = $_POST['titulo'];
     $motivo = $_POST['motivo'];
     $assunto = $_POST['assunto'];
-
-$insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','Aguardando Atendimento',default,1,1,0)";
+    $anexo   = $_POST['anexo'];
+$insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,1,1,0)";
  $resultado  =   $conn->query($insertSql);
 
 
@@ -82,7 +82,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
     .services article {
       background: rgba(242, 242, 242, 0.9);
       color: #222;
-      padding: 60px;
+      padding: 50px;
       margin: 23px 16px;
       position: relative;
       font-weight: bold;
@@ -92,7 +92,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
     .colunas {
       display: flex;
       flex-direction: column;
-      /*    justify-content: center ; */
+         justify-content: center ; 
 
     }
 
@@ -232,12 +232,12 @@ $insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, clie
     }
   }
 
-  .card-border {
+  .card-body {
     padding: 50px;
     background: rgba(242, 242, 242, 0.9);
     border: 6px solid blue;
     border-radius: 40px;
-    margin: 80px;
+   margin: 80px; 
 
   }
 
@@ -320,8 +320,8 @@ font-size:50px;
 
   <!-- borda em processo -->
 
-  <div class="card-border">
-    <h5 class="card-title text-black">Problema com produto ou com sua máquina solicite nosso suporte!</h5>
+  <div class="card-body">
+    <h5 class="card-title text-black"> Solicite nosso suporte!</h5>
     <br>
     <!-- Final da Borda Implemetado com modal -->
 
@@ -346,46 +346,22 @@ font-size:50px;
                 <br>
                 <label for="motivo" class="col-form-label fw-bold">Motivo:</label>
                 <select  for="motivo" class="form-select" aria-label=""  name="motivo" id="motivo" required>
-                <option selected>Escolha</option>
-                <option value="troca">Troca</option>
-                <option value="defeito">Defeito</option>
-                <option value="duvida">Duvida</option>
-                <option value="sup_tecnico">Suporte Tecnico</option>
-
+                <option value="Troca">Troca</option>
+                <option value="Defeito">Defeito</option>
+                <option value="Duvida">Dúvida</option>
+                <option value="Sup_tecnico">Suporte Tecnico</option>
             </select>
-                <!-- <label for="motivo" class="col-form-label fw-bold">Motivo:</label>
-                <input type="text" class="form-control"  name="motivo" id="motivo" required> -->
-<!-- 
-                <label for="assunto" class="col-form-label"><b>Descrição:</b></label>
-                <input type="text" name="assunto" class="form-control" id="assunto" required> -->
-
-                <!-- <label for="Titulo" class="col-form-label"><b>Título:</b></label>
-                <input type="titulo" name="titulo" class="form-control" id="Titulo" required>
-              </div>
-              <label for="form-check" class="col-for-label"><b>Motivo de Contato</b></label>
-              <br>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="motivo" id="problema">
-                <label class="form-check-label" for="problema">
-                  Problema com produto
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="motivo" id="duvida" checked>
-                <label class="form-check-label" for="duvida">
-                  Dúvida
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="motivo" id="solicitacao" checked>
-                <label class="form-check-label" for="solicitacao">
-                  Solicitação
-                </label>
-              </div> -->
               <div class="mb-3">
-                <label for="assunto" class="col-form-label fw-bold"><b> Descreva o seu Problema:</b></label>
-                <textarea type="text" name="assunto" id="assunto" class="form-control"></textarea>
+                <label for="assunto" class="col-form-label fw-bold"> Descreva o seu Problema:</label>
+                <textarea  type="text" name="assunto" id="assunto"  class="form-control" required></textarea>
               </div>
+              <br>
+              <div class="form-group">
+             <label for="anexo" class="fw-bold">Anexo:</label>
+             <br>
+             <br>
+              <input type="file" class="form-control-file"  name="anexo" id="anexo">
+            </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 
