@@ -1,6 +1,6 @@
 <?php
 include "conn/connect.php";
-include 'admin/acesso_com.php';
+
 $current_url = $_SERVER['REQUEST_URI'];
 
 
@@ -17,6 +17,7 @@ if (isset($_SESSION['username'])) {
 <html lang="pt-BR">
 
 <?php include "menu.php" ?>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,9 +32,9 @@ if (isset($_SESSION['username'])) {
 <body>
   <header id="showcase">
     <div id="showcase-container">
-      <h2>Lorem ipsum dolor sit amet.</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, adipisci?</p>
-      <a href="loja.php" class="btn">Nossa loja</a>
+      <h2>A melhor Lan House do Brasil.</h2>
+      <p>Venha bater aquela gameplay avançada e evoluir suas mecânicas em equipamentos de alto desempenho!</p>
+      <a href="loja.php" class="btn">COMPRE AGORA</a>
     </div>
   </header>
 
@@ -49,31 +50,46 @@ if (isset($_SESSION['username'])) {
   </section>
 
   <section id="features">
-    <div class="headline">O que fazemos</div>
+    <div class="headline">sobre a lan</div>
     <div id="features-container">
       <div class="feature">
-        <i class="fas fa-tachometer-alt fa-3x"></i>
+        <i class="fa-regular fa-clock fa-3x"></i>
         <span class="feature-title"></span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam,
-          consectetur reiciendis sunt tempore et.</p>
+        <p>Horários</p>
+        <p>Todos os dias
+          10:00 am - 06:00 am
+          Corujão TODOS os dias!</p>
       </div>
       <div class="feature">
-        <i class="fas fa-code fa-3x"></i>
+        <i class="fas fa-computer fa-3x"></i>
         <span class="feature-title"></span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam,
-          consectetur reiciendis sunt tempore et.</p>
+        <p>Especificações Técnicas</p>
+        <p>Processador Intel i7 8700
+          Vídeo RTX 2070
+          SSD 240 GB
+          ASUS TUF B360M Plus Gaming
+          16 Gb RAM Corsair 3.000Mhz.</p>
       </div>
       <div class="feature">
-        <i class="fas fa-layer-group fa-3x"></i>
+        <i class="fa-regular fa-money-bill-1 fa-3x"></i>
         <span class="feature-title"></span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam,
-          consectetur reiciendis sunt tempore et.</p>
+        <p>Valores</p>
+        <p>Avulso
+          R$ 10,00|
+          Pacote 3 horas
+          R$ 27,00|
+          Pacote 6 horas
+          R$ 50,00|
+          Pacote 8 horas
+          R$ 65,00|
+          Corujão
+          R$ 85,00 |</p>
       </div>
     </div>
   </section>
 
   <section id="product">
-    <div class="headline">Nosso produto</div>
+    <div class="headline">jogos lan</div>
     <div id="product-container">
       <img src="images/iphone-lan-branco.png" alt="iphone-x" class="iphone-x">
       <div id="items">
@@ -101,11 +117,23 @@ if (isset($_SESSION['username'])) {
     <div class="headline">O que acham de nós</div>
     <div id="testimonials-container">
       <div class="testimonial">
+        <img src="images/vitão.jpg" alt="" class="testimonial-image">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/person-2.jpeg" alt="" class="testimonial-image">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+      </div>
+      <div class="testimonial">
         <img src="images/person-1.jpeg" alt="" class="testimonial-image">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
         <img src="images/person-2.jpeg" alt="" class="testimonial-image">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/person-1.jpeg" alt="" class="testimonial-image">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
     </div>
