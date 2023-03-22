@@ -1,6 +1,72 @@
-.img-Logo
-{
-    width: 121px;
+
+.fundofixo{
+    background: url('../images/Fundo/Fundo.jpg') no-repeat fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+   }
+   .Img-Prod{
+  border-radius:15%;
+  
+  }
+  .Img-Cor{
+  border-radius:15%;
+  }
+  .h1-Prod
+  {
+    left: 68px;
     position: relative;
-    
+    color: blue;
+  }
+  .img-Logo
+  {
+      width: 110px;
+      position: relative;
+  }
+  @media screen and (max-width: 100px) {
+        
+     
+    .img-lg {
+        width: 60%;
+        height: 100%;
+
+    }
+
+    .img-lg-rodapé {
+        width: 60%;
+        height: 100%;
+        position: relative;
+        left: 290px;
+        top: 20px;
+    }
 }
+    .fundo {
+        /* background-image: linear-gradient(to right, rgb(0, 11, 12), rgb(10, 11, 12), rgb(0, 11, 12)); */
+        background: #0b212d;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+    iframe
+    {
+        margin: 20px 6px;
+    }
+    .close 
+    {                 
+    text-decoration: none;
+    }
+    .siga
+    {
+        font-size: 30px;
+
+    }
+    .link
+    {
+        font-size: 30px;
+
+    }
+    .endereco
+    {
+        font-size: 30px;
+    }
+

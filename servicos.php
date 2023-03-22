@@ -1,6 +1,6 @@
 <?php
 include "conn/connect.php";
-
+include "admin/acesso_com.php";
 $login = "http://localhost:8080/ZoneWeb/servicos.php";
 
   if($_POST)
@@ -10,7 +10,7 @@ $login = "http://localhost:8080/ZoneWeb/servicos.php";
     $motivo = $_POST['motivo'];
     $assunto = $_POST['assunto'];
 
-$insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','Aguardando Atendimento',default,1,2,0)";
+$insertSql = "insert chamados (titulo, motivo, assunto, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','Aguardando Atendimento',default,1,1,0)";
  $resultado  =   $conn->query($insertSql);
 
 

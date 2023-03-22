@@ -1,68 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <title>Área Administrativa</title>
     <meta charset="UTF-8">
-    <!-- Link arquivos Bootstrap CSS -->
-    <!-- CÓDIGO DESABILITADO PARA NÃO HAVER CONFLITOS 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-    -->
-    <!-- Link para CSS específico -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+
+   </style>
     
 </head>
 <body>
-<nav class="nav navbar-inverse">
-<div class="container-fluid">
-    <!-- Agrupamento para exibição Mobile -->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar" aria-expanded="false">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a href="index.php" class="navbar-brand">
-            <img src="../imagens/logochurrascopequeno.png" alt="">
-        </a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0, 0, 50, 0.5);">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img class="img-Logo" src="../images/Logo/GZ_logo.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav  ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-info" aria-current="page" href="#">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="#">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="#">Imagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-info" href="#">Produtos</a>
+        </li>
+      </ul>
     </div>
-    <!-- Fecha Agrupamento para exibição Mobile -->
-    <!-- nav direita -->
-    <div class="collapse navbar-collapse" id="defaultNavbar">
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <button type="button" class="btn btn-danger navbar-btn disabled">
-                    Olá, <?php echo($_SESSION['username']); ?>!
-                </button>
-            </li>
-            <li class="active"><a href="index.php">ADMIN</a></li>
-            <li><a href="produtos_lista.php">PRODUTOS</a></li>
-            <li><a href="tipos_lista.php">TIPOS</a></li>
-            <li><a href="usuarios_lista.php">USUÁRIOS</a></li>
-            <li class="active">
-                <a href="../index.php">
-                    <span class="glyphicon glyphicon-home"></span>
-                </a>
-            </li>
-            <li>
-                <a href="logout.php">
-                    <span class="glyphicon glyphicon-log-out"></span>
-                </a>
-            </li>
-        </ul>
-    </div><!-- fecha collapse navbar-collapse -->
-    <!-- Fecha nav direita -->
-
-</div><!-- fecha container-fluid -->
-
+  </div>
 </nav>
-
-    
-<!-- Link arquivos Bootstrap js -->
-<!-- CÓDIGO DESABILITADO PARA NÃO HAVER CONFLITOS 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
--->
-</body>
-</html>

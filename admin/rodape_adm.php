@@ -6,62 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodapé</title>
 </head>
-<style>
-     @media screen and (max-width: 100px) {
-        
-     
-    .img-lg {
-        width: 60%;
-        height: 100%;
-
-    }
-
-    .img-lg-rodapé {
-        width: 60%;
-        height: 100%;
-        position: relative;
-        left: 290px;
-        top: 20px;
-    }
-}
-    .fundo {
-        /* background-image: linear-gradient(to right, rgb(0, 11, 12), rgb(10, 11, 12), rgb(0, 11, 12)); */
-        background: #0b212d;
-    }
-
-    .map-container {
-        height: 400px;
-    }
-    iframe
-    {
-        margin: 20px 6px;
-    }
-    .close 
-    {                 
-    text-decoration: none;
-    }
-    .siga
-    {
-        font-size: 30px;
-
-    }
-    .link
-    {
-        font-size: 30px;
-
-    }
-    .endereco
-    {
-        font-size: 30px;
-    }
-
-
-    
-</style>
 
 <body>
     <div class="container">
-        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top fundo">
+        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500" class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top fundo gap-5">
             <!-- Contatos -->
             <div class="d-grid gap-2 fs-5">
                 <h1 class="siga text-white">Siga-nos</h1>
@@ -127,7 +75,7 @@
             <!-- Logo -->
             <div class="col">
                 <a href="inicio.php" class="d-flex img-right position-relative">
-                    <img src="images/Logo/GZ_logo.png" class=" img-responsive  img-lg-rodapé  rounded float-end img-fluid">
+                    <img src="../images/Logo/GZ_logo.png" class=" img-responsive  img-lg-rodapé  rounded float-end img-fluid">
                 </a>
             </div>
             <!-- Fim Logo -->
