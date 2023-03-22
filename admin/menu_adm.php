@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0, 0, 50, 0.5);">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../inicio.php">
         <img class="img-Logo" src="../images/Logo/GZ_logo.png">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav  ms-auto">
         <li class="nav-item">
-          <a class="nav-link active text-info" aria-current="page" href="#">Clientes</a>
+          <a class="nav-link active text-info" aria-current="page" href="client.php">Clientes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-info" href="#">Usuarios</a>
