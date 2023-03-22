@@ -341,11 +341,20 @@ font-size:50px;
           <div class="modal-body">
           <form action="servicos.php " method="POST">
               <div class="mb-3">
-                <label for="titulo" class="col-form-label"> Titulo:</label>
+                <label for="titulo" class="col-form-label fw-bold"> Titulo:</label>
                 <input type="text" class="form-control"  name="titulo" id="titulo" required>
-                
-                <label for="motivo" class="col-form-label">Motivo:</label>
-                <input type="text" class="form-control"  name="motivo" id="motivo" required>
+                <br>
+                <label for="motivo" class="col-form-label fw-bold">Motivo:</label>
+                <select  for="motivo" class="form-select" aria-label=""  name="motivo" id="motivo" required>
+                <option selected>Escolha</option>
+                <option value="troca">Troca</option>
+                <option value="defeito">Defeito</option>
+                <option value="duvida">Duvida</option>
+                <option value="sup_tecnico">Suporte Tecnico</option>
+
+            </select>
+                <!-- <label for="motivo" class="col-form-label fw-bold">Motivo:</label>
+                <input type="text" class="form-control"  name="motivo" id="motivo" required> -->
 <!-- 
                 <label for="assunto" class="col-form-label"><b>Descrição:</b></label>
                 <input type="text" name="assunto" class="form-control" id="assunto" required> -->
@@ -374,8 +383,8 @@ font-size:50px;
                 </label>
               </div> -->
               <div class="mb-3">
-                <label for="assunto" class="col-form-label "><b> Descreva o seu Problema:</b></label>
-                <input type="text" name="assunto" id="assunto" class="form-control">
+                <label for="assunto" class="col-form-label fw-bold"><b> Descreva o seu Problema:</b></label>
+                <textarea type="text" name="assunto" id="assunto" class="form-control"></textarea>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
