@@ -3,24 +3,22 @@ include "conn/connect.php";
 include "admin/acesso_com.php";
 $login = "http://localhost:8080/ZoneWeb/servicos.php";
 
-  if($_POST)
-  {
-    $id = $_POST['id'];
-    $titulo = $_POST['titulo'];
-    $motivo = $_POST['motivo'];
-    $assunto = $_POST['assunto'];
-    $anexo   = $_POST['anexo'];
-$insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,1,1,0)";
- $resultado  =   $conn->query($insertSql);
+if ($_POST) {
+  $id = $_POST['id'];
+  $titulo = $_POST['titulo'];
+  $motivo = $_POST['motivo'];
+  $assunto = $_POST['assunto'];
+  $anexo   = $_POST['anexo'];
+  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,1,1,0)";
+  $resultado  =   $conn->query($insertSql);
 
 
 
- if(mysqli_insert_id($conn)){
-  header("Location: $login");
-}else{
-  header("Location: $login");
-};
-
+  if (mysqli_insert_id($conn)) {
+    header("Location: $login");
+  } else {
+    header("Location: $login");
+  };
 }
 
 ?>
@@ -34,7 +32,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-  <link rel="stylesheet" href="css/servicos.css">
+  <!-- <link rel="stylesheet" href="css/servicos.css"> -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Serviços</title>
@@ -50,11 +48,11 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
 
   }
 
-  .fundofixo{
-  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
- }
+  .fundofixo {
+    background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
 
   h1 {
     text-align: center;
@@ -68,15 +66,18 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    color: black;
   }
 
   h2 {
     font-weight: bold;
     font-size: 40px;
+    text-align: center;
+    color: black;
   }
 
   @media screen and (max-width: 680px) {
-    h1{
+    h1 {
       font-size: 50px;
     }
 
@@ -93,7 +94,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     .colunas {
       display: flex;
       flex-direction: column;
-         justify-content: center ; 
+      justify-content: center;
 
     }
 
@@ -109,41 +110,40 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
 
   }
 
-  .services {
-
-    text-align: center;
-    background: no-repeat;
-    background-size: cover;
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .colunas {
-    display: flex;
-    /*    position: relative; */
-
-
+  .card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 60px;
+    margin: 30px;
+    width: 400px;
+    transition: all 0.3s ease-out;
   }
 
   
 
   /* colunas */
-  .services article {
+  /* .row .card{
     background: rgba(242, 242, 242, 0.9);
     color: #222;
     padding: 100px;
     margin: 20px 6px;
     position: relative;
     font-weight: bold;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; */
 
+  .row .card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
   }
 
-  .services article:hover {
-  transform: translateY(-5px);
-  cursor: pointer;
-}
-
   /* Parte esquerdo e inferior */
-  .services article::before {
+  .row .card::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -151,10 +151,10 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     width: 0;
     height: 0;
     background: transparent;
-    border: 4px solid transparent;
+    border: 5px solid transparent;
   }
 
-  .services article:hover::before {
+  .row .card:hover::before {
     animation: animate 0.5s linear forwards;
   }
 
@@ -183,15 +183,13 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
       width: 100%;
       height: 100%;
       border-top-color: rgb(0, 157, 220);
-      ;
       border-right-color: rgb(0, 157, 220);
-      ;
       border-bottom-color: transparent;
       border-left-color: transparent;
     }
   }
 
-  .services article::after {
+  .row .card::after {
     content: "";
     position: absolute;
     top: 0px;
@@ -199,10 +197,10 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     width: 0;
     height: 0;
     background: transparent;
-    border: 4px solid transparent;
+    border: 5px solid transparent;
   }
 
-  .services article:hover::after {
+  .row .card:hover::after {
     animation: animates 0.5s linear forwards;
   }
 
@@ -224,9 +222,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
       border-top-color: transparent;
       border-right-color: transparent;
       border-bottom-color: rgb(0, 157, 220);
-      ;
       border-left-color: rgb(0, 157, 220);
-      ;
     }
 
     100% {
@@ -235,18 +231,17 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
       border-top-color: transparent;
       border-right-color: transparent;
       border-bottom-color: rgb(0, 157, 220);
-      ;
       border-left-color: rgb(0, 157, 220);
-      ;
+      
     }
   }
 
   .card-body {
-    padding: 50px;
+    padding: 20px;
     background: rgba(242, 242, 242, 0.9);
     border: 6px solid blue;
     border-radius: 40px;
-   margin: 80px; 
+    margin: 80px;
 
   }
 
@@ -266,12 +261,24 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     position: relative;
   }
 
-  .icon{
-font-size:50px;
-  }
- 
-
   
+
+  .icon {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+  }
+
+  .icon-1 {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+  }
+
+  .a
+  {
+    text-align: center;
+  }
 </style>
 
 <body class="fundofixo">
@@ -284,56 +291,47 @@ font-size:50px;
   <br>
   <p class="text-white">GamerZone a Melhor LanHouse da Zona Leste!!</p>
   <div class="text-center">
-    <!--  <span class="bi bi-controller fs-1"></span> -->
     <a href="inicio.php">
       <img class="img-logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="">
   </div>
   </a>
-  <!-- CARDS -->
-  <section class=" services ">
-    <div class="colunas">
-
-      <a class="close" href="contato.php">
-        <article>
-          <!-- <img src="" alt="">  -->
-          <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
-          <h2>Serviços</h2>
-          <br>
-          <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
-        </article>
-      </a>
-
+  <!-- ############################################## CARDS  ###################################################-->
+  <div class="row ">
+   
+      <div class="card ">
       <a class="close" href="produtos_geral.php">
-        <article>
-          <!-- <img src="" alt="">  -->
-          
-          <div class="icon"><span class="bi bi-cart4 fa-2x"></span></div>
-          <h2>Vendas</h2>
-          <br>
-          <p>Venha conferir  o nossa variedades de produtos com tudo que você Monitor,Gabinite,Placa de video,Placa mãe e muito mais!!</p>
-        </article>
-      </a>
-      <a class="close" href="loja.php">
-        <article>
-          <!--  <img src="" alt=""> -->
-          <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
-          <h2>Jogos</h2>
-          <br>
-          <p>Venha ser Diverti com nosso catalogo  e variedades de  super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
+        <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
+        <h2>Serviços</h2>
+        <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
+       </a>
+  </div>
 
 
-        </article>
-      </a>
-    </div>
+  <div class="card ">
+  <a class="close" href="produtos_geral.php">
+    <div class="icon-1"><span class="bi bi-cart4 fa-2x"></span></div>
+    <h2>Vendas</h2>
+    <p>Venha conferir a nossa variedades de produtos com tudo que você precisa monitor,gabinite,placa de video placa mãe e muito mais!!</p>
+ 
+    </a>
+  </div>
 
-  </section>
+  <div class="card ">
+  <a class="close" href="loja.php">
+    <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
+    <h2>Jogos</h2>
+    <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
+    </a>
+  </div>
 
-  <!--  implementando o Modal -->
+  </div>
+
+  <!-- ################################################# implementando o Modal  ################################################-->
 
   <!-- borda em processo -->
 
   <div class="card-body">
-    <h5 class="card-title text-black"> Solicite nosso suporte!</h5>
+    <h5 class="card-title text-black"> Abertura de Chamado</h5>
     <br>
     <!-- Final da Borda Implemetado com modal -->
 
@@ -351,32 +349,32 @@ font-size:50px;
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-          <form action="servicos.php " method="POST">
+            <form action="servicos.php " method="POST">
               <div class="mb-3">
                 <label for="titulo" class="col-form-label fw-bold"> Titulo:</label>
-                <input type="text" class="form-control"  name="titulo" id="titulo" required>
+                <input type="text" class="form-control" name="titulo" id="titulo" required>
                 <br>
                 <label for="motivo" class="col-form-label fw-bold">Motivo:</label>
-                <select  for="motivo" class="form-select" aria-label=""  name="motivo" id="motivo" required>
-                <option value="Troca">Troca</option>
-                <option value="Defeito">Defeito</option>
-                <option value="Duvida">Dúvida</option>
-                <option value="Sup_tecnico">Suporte Tecnico</option>
-            </select>
-              <div class="mb-3">
-                <label for="assunto" class="col-form-label fw-bold"> Descreva o seu Problema:</label>
-                <textarea  type="text" name="assunto" id="assunto"  class="form-control" required></textarea>
-              </div>
-              <br>
-              <div class="form-group">
-             <label for="anexo" class="fw-bold">Anexo:</label>
-             <br>
-             <br>
-              <input type="file" class="form-control-file"  name="anexo" id="anexo">
-            </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                
+                <select for="motivo" class="form-select" aria-label="" name="motivo" id="motivo" required>
+                  <option value="Troca">Troca</option>
+                  <option value="Defeito">Defeito</option>
+                  <option value="Duvida">Dúvida</option>
+                  <option value="Sup_tecnico">Suporte Tecnico</option>
+                </select>
+                <div class="mb-3">
+                  <label for="assunto" class="col-form-label fw-bold"> Descreva o seu Problema:</label>
+                  <textarea type="text" name="assunto" id="assunto" class="form-control" required></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="anexo" class="fw-bold">Anexo:</label>
+                  <br>
+                  <br>
+                  <input type="file" class="form-control-file" name="anexo" id="anexo">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+
                   <button type="submit" class="btn btn-success">Enviar</button>
                 </div>
             </form>
@@ -386,6 +384,7 @@ font-size:50px;
     </div>
   </div>
   </div>
+
 
   <br>
   <!-- Final Modal Implemetado com a borda -->
