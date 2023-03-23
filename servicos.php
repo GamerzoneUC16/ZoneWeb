@@ -82,7 +82,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     .services article {
       background: rgba(242, 242, 242, 0.9);
       color: #222;
-      padding: 50px;
+      padding: 50px 13px;
       margin: 23px 16px;
       position: relative;
       font-weight: bold;
@@ -126,10 +126,11 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
   .services article {
     background: rgba(242, 242, 242, 0.9);
     color: #222;
-    padding: 100px;
-    margin: 20px 6px;
+    padding: 60px;
+    margin: 20px 5px;
     position: relative;
     font-weight: bold;
+  
 
   }
 
@@ -288,9 +289,9 @@ font-size:50px;
         <article>
           <!-- <img src="" alt="">  -->
           <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
-          <h2>Serviços</h2>
+          <h2>Steam Works</h2>
           <br>
-          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+          <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
         </article>
       </a>
 
@@ -300,7 +301,7 @@ font-size:50px;
           <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
           <h2>Jogos</h2>
           <br>
-          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+          <p>Venha ser Diverti com nosso catalogo e variedades de  super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
         </article>
       </a>
       <a class="close" href="loja.php">
@@ -309,7 +310,7 @@ font-size:50px;
           <div class="icon"><span class="bi bi-shop fa-2x"></span></div>
           <h2>Vendas</h2>
           <br>
-          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
+          <p>Venha conferir  o nossa variedades de produtos como gabinite,mouse,monitor,teclado,placa mãe,ssd,hd,fontes,memoria ram e entre outras variedades de acessorios</p>
         </article>
       </a>
     </div>
