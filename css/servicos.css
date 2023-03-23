@@ -1,0 +1,231 @@
+
+  body {
+    /*  background: url(../images/images.jpg) ; */
+    font-family: Arial, Helvetica, sans-serif;
+    /*  background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   */
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+
+  }
+
+  .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+
+  h1 {
+    text-align: center;
+    font-size: clamp(7.5em, 5.7em + 8vw, 4.0em);
+    font-weight: bold;
+    position: relative;
+  }
+
+  p {
+    text-align: flex;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 680px) {
+    h1{
+      font-size: 50px;
+    }
+
+    .services article {
+      background: rgba(242, 242, 242, 0.9);
+      color: #222;
+      padding: 50px;
+      margin: 23px 16px;
+      position: relative;
+      font-weight: bold;
+
+    }
+
+    .colunas {
+      display: flex;
+      flex-direction: column;
+         justify-content: center ; 
+
+    }
+
+    .card-body {
+      padding: 50px;
+      background: rgba(242, 242, 242, 0.9);
+      border: 6px solid;
+      border-radius: 40px;
+      margin: 50px;
+
+    }
+
+
+  }
+
+  .services {
+
+    text-align: center;
+    background: no-repeat;
+    background-size: cover;
+  }
+
+  .colunas {
+    display: flex;
+    /*    position: relative; */
+
+
+  }
+
+  
+
+  /* colunas */
+  .services article {
+    background: rgba(242, 242, 242, 0.9);
+    color: #222;
+    padding: 100px;
+    margin: 20px 6px;
+    position: relative;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+
+  }
+
+  .services article:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+  /* Parte esquerdo e inferior */
+  .services article::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+  }
+
+  .services article:hover::before {
+    animation: animate 0.5s linear forwards;
+  }
+
+  @keyframes animate {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: rgb(0, 157, 220);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+
+    50% {
+      width: 100%;
+      height: 0;
+      border-top-color: rgb(0, 157, 220);
+      ;
+      border-right-color: rgb(0, 157, 220);
+      ;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: rgb(0, 157, 220);
+      ;
+      border-right-color: rgb(0, 157, 220);
+      ;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+  .services article::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+  }
+
+  .services article:hover::after {
+    animation: animates 0.5s linear forwards;
+  }
+
+  /* Parte direita e superior */
+  @keyframes animates {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+
+    50% {
+      width: 0;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: rgb(0, 157, 220);
+      ;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: rgb(0, 157, 220);
+      ;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+  }
+
+  .card-body {
+    padding: 50px;
+    background: rgba(242, 242, 242, 0.9);
+    border: 6px solid blue;
+    border-radius: 40px;
+   margin: 80px; 
+
+  }
+
+
+  h5 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold
+  }
+
+  .close {
+    text-decoration: none;
+  }
+
+  .img-logo {
+    width: 150px;
+    position: relative;
+  }
+
+  .icon{
+font-size:50px;
+  }
+ 

@@ -1,0 +1,8 @@
+/* /* Features 
+#features-container {
+    grid-template-columns: 1fr;
+}
+
+#features-container .feature:nth-child(2) {
+    margin: 30px 30;
+} 

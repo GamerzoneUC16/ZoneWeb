@@ -3,22 +3,24 @@ include "conn/connect.php";
 include "admin/acesso_com.php";
 $login = "http://localhost:8080/ZoneWeb/servicos.php";
 
-if ($_POST) {
-  $id = $_POST['id'];
-  $titulo = $_POST['titulo'];
-  $motivo = $_POST['motivo'];
-  $assunto = $_POST['assunto'];
-  $anexo   = $_POST['anexo'];
-  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,1,1,0)";
-  $resultado  =   $conn->query($insertSql);
+  if($_POST)
+  {
+    $id = $_POST['id'];
+    $titulo = $_POST['titulo'];
+    $motivo = $_POST['motivo'];
+    $assunto = $_POST['assunto'];
+    $anexo   = $_POST['anexo'];
+$insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,1,1,0)";
+ $resultado  =   $conn->query($insertSql);
 
 
 
-  if (mysqli_insert_id($conn)) {
-    header("Location: $login");
-  } else {
-    header("Location: $login");
-  };
+ if(mysqli_insert_id($conn)){
+  header("Location: $login");
+}else{
+  header("Location: $login");
+};
+
 }
 
 ?>
@@ -32,25 +34,29 @@ if ($_POST) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/servicos.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Serviços</title>
 </head>
 <style>
-  .fundofixo {
-    background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
-    -webkit-background-size: cover;
-    background-size: cover;
+  body {
+    /*  background: url(../images/images.jpg) ; */
+    font-family: Arial, Helvetica, sans-serif;
+    /*  background-image: linear-gradient(to right, rgb(34, 78, 140),rgb(108, 163, 240), rgb(52, 91, 235));   */
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+
   }
 
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  .fundofixo{
+  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-h1 {
+  h1 {
     text-align: center;
     font-size: clamp(7.5em, 5.7em + 8vw, 4.0em);
     font-weight: bold;
@@ -69,65 +75,203 @@ h1 {
     font-size: 40px;
   }
 
+  @media screen and (max-width: 680px) {
+    h1{
+      font-size: 50px;
+    }
+
+    .services article {
+      background: rgba(242, 242, 242, 0.9);
+      color: #222;
+      padding: 50px;
+      margin: 23px 16px;
+      position: relative;
+      font-weight: bold;
+
+    }
+
+    .colunas {
+      display: flex;
+      flex-direction: column;
+         justify-content: center ; 
+
+    }
+
+    .card-body {
+      padding: 50px;
+      background: rgba(242, 242, 242, 0.9);
+      border: 6px solid;
+      border-radius: 40px;
+      margin: 50px;
+
+    }
+
+
+  }
+
+  .services {
+
+    text-align: center;
+    background: no-repeat;
+    background-size: cover;
+  }
+
+  .colunas {
+    display: flex;
+    /*    position: relative; */
+
+
+  }
+
+  
+
+  /* colunas */
+  .services article {
+    background: rgba(242, 242, 242, 0.9);
+    color: #222;
+    padding: 100px;
+    margin: 20px 6px;
+    position: relative;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+
+  }
+
+  .services article:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+  /* Parte esquerdo e inferior */
+  .services article::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+  }
+
+  .services article:hover::before {
+    animation: animate 0.5s linear forwards;
+  }
+
+  @keyframes animate {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: rgb(0, 157, 220);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+
+    50% {
+      width: 100%;
+      height: 0;
+      border-top-color: rgb(0, 157, 220);
+      ;
+      border-right-color: rgb(0, 157, 220);
+      ;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: rgb(0, 157, 220);
+      ;
+      border-right-color: rgb(0, 157, 220);
+      ;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+  .services article::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 4px solid transparent;
+  }
+
+  .services article:hover::after {
+    animation: animates 0.5s linear forwards;
+  }
+
+  /* Parte direita e superior */
+  @keyframes animates {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+
+    50% {
+      width: 0;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: rgb(0, 157, 220);
+      ;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: rgb(0, 157, 220);
+      ;
+      border-left-color: rgb(0, 157, 220);
+      ;
+    }
+  }
+
+  .card-body {
+    padding: 50px;
+    background: rgba(242, 242, 242, 0.9);
+    border: 6px solid blue;
+    border-radius: 40px;
+   margin: 80px; 
+
+  }
+
+
   h5 {
     text-align: center;
     font-size: 34px;
     font-weight: bold
   }
 
-.btn {
-    display: inline-block;
-    padding: 15px 60px;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    background: rgb(2, 33, 43);
-    color: #eee;
-    border-radius: 5px;
-    transition: background 500ms ease;
-}
+  .close {
+    text-decoration: none;
+  }
 
-.btn:hover {
-    cursor: pointer;
-    background: #000;
-}
+  .img-logo {
+    width: 150px;
+    position: relative;
+  }
 
-.headline {
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 50px;
-    letter-spacing: 2px;
-}
+  .icon{
+font-size:50px;
+  }
+ 
 
-/* About */
-#features {
-    width: 100%;
-    background: rgb(21, 21, 99);
-    color: #eee;
-    padding: 50px;
-}
-
-#features-container {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
-}
-
-.feature {
-    display: flex;
-    flex-direction: column;
-    background: rgb(2, 33, 43);
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.feature-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+  
 </style>
 
 <body class="fundofixo">
@@ -146,46 +290,44 @@ h1 {
   </div>
   </a>
   <!-- CARDS -->
+  <section class=" services ">
+    <div class="colunas">
 
-  <div class="row">
-    <section id="features">
-      <div class="headline">sobre a lan</div>
-      <div id="features-container">
-        <a class="close" href="contato.php">
-          <div class="feature">
-            <span class="feature-title"></span>
-            <p>Serviços</p>
-            <p></p>
-          </div>
-        </a>
-        <a class="close" href="produtos_geral.php">
-          <div class="feature">
-            <p>Loja</p>
-            <br>
-            <p>Processador Intel i7 8700
-              Vídeo RTX 2070
-              SSD 240 GB
-              ASUS TUF B360M Plus Gaming
-              16 Gb RAM Corsair 3.000Mhz.</p>
-          </div>
-        </a>
-        <a class="close" href="loja.php">
-          <div class="feature">
-            <p>Valores</p>
-            <p>Avulso
-              R$ 10,00|
-              Pacote 3 horas
-              R$ 27,00|
-              Pacote 6 horas
-              R$ 50,00|
-              Pacote 8 horas
-              R$ 65,00|
-              Corujão
-              R$ 85,00 |</p>
-          </div>
-      </div>
-    </section>
-    </a>
+      <a class="close" href="contato.php">
+        <article>
+          <!-- <img src="" alt="">  -->
+          <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
+          <h2>Serviços</h2>
+          <br>
+          <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
+        </article>
+      </a>
+
+      <a class="close" href="produtos_geral.php">
+        <article>
+          <!-- <img src="" alt="">  -->
+          
+          <div class="icon"><span class="bi bi-cart4 fa-2x"></span></div>
+          <h2>Vendas</h2>
+          <br>
+          <p>Venha conferir  o nossa variedades de produtos com tudo que você Monitor,Gabinite,Placa de video,Placa mãe e muito mais!!</p>
+        </article>
+      </a>
+      <a class="close" href="loja.php">
+        <article>
+          <!--  <img src="" alt=""> -->
+          <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
+          <h2>Jogos</h2>
+          <br>
+          <p>Venha ser Diverti com nosso catalogo  e variedades de  super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
+
+
+        </article>
+      </a>
+    </div>
+
+  </section>
+
   <!--  implementando o Modal -->
 
   <!-- borda em processo -->
@@ -209,32 +351,32 @@ h1 {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="servicos.php " method="POST">
+          <form action="servicos.php " method="POST">
               <div class="mb-3">
                 <label for="titulo" class="col-form-label fw-bold"> Titulo:</label>
-                <input type="text" class="form-control" name="titulo" id="titulo" required>
+                <input type="text" class="form-control"  name="titulo" id="titulo" required>
                 <br>
                 <label for="motivo" class="col-form-label fw-bold">Motivo:</label>
-                <select for="motivo" class="form-select" aria-label="" name="motivo" id="motivo" required>
-                  <option value="Troca">Troca</option>
-                  <option value="Defeito">Defeito</option>
-                  <option value="Duvida">Dúvida</option>
-                  <option value="Sup_tecnico">Suporte Tecnico</option>
-                </select>
-                <div class="mb-3">
-                  <label for="assunto" class="col-form-label fw-bold"> Descreva o seu Problema:</label>
-                  <textarea type="text" name="assunto" id="assunto" class="form-control" required></textarea>
-                </div>
-                <br>
-                <div class="form-group">
-                  <label for="anexo" class="fw-bold">Anexo:</label>
-                  <br>
-                  <br>
-                  <input type="file" class="form-control-file" name="anexo" id="anexo">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-
+                <select  for="motivo" class="form-select" aria-label=""  name="motivo" id="motivo" required>
+                <option value="Troca">Troca</option>
+                <option value="Defeito">Defeito</option>
+                <option value="Duvida">Dúvida</option>
+                <option value="Sup_tecnico">Suporte Tecnico</option>
+            </select>
+              <div class="mb-3">
+                <label for="assunto" class="col-form-label fw-bold"> Descreva o seu Problema:</label>
+                <textarea  type="text" name="assunto" id="assunto"  class="form-control" required></textarea>
+              </div>
+              <br>
+              <div class="form-group">
+             <label for="anexo" class="fw-bold">Anexo:</label>
+             <br>
+             <br>
+              <input type="file" class="form-control-file"  name="anexo" id="anexo">
+            </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                
                   <button type="submit" class="btn btn-success">Enviar</button>
                 </div>
             </form>
