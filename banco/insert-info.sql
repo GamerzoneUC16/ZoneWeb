@@ -25,8 +25,11 @@ insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'CIC G9000 Fone de ouvido Gamer, Luz LED - Azul','Com bom microfone. O fone de ouvido que pode cancelar os ruídos oferece alta clareza de som. Entrega áudio de qualidade superior, e deixa você completamente imerso na atmosfera no jogoFácil controle de volume.','HeadSet Kotion Each',155.90,'sim', 3);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Water Cooler Gamer Corsair iCUE H115i ELITE CAPELLIX RGB - 280mm, Preto - CW-9060047-WW',' resfriamento potente e de baixo ruído para sua CPU; iluminado por 33 LEDs CAPELLIX RGB ultrabrilhantes.;CORSAIR iCUE Commander CORE Incluído: Uma iluminação RGB inteligente e controlador de velocidade do ventilador oferece controle preciso da velocidade e da iluminação em até seis ventiladores RGB.;Ventiladores RGB de levitação magnética: Dois ventiladores PWM da série CORSAIR ML RGB de 140 mm fornecem fluxo de ar poderoso para desempenho de resfriamento extremo da CPU, com oito LEDs RGB por ventilador.', 'Water Cooler GAMER Corsair',250.00,'sim', 2);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Fortrek PRO M7 RGB - Mouse Gamer, Preto', 'Dimensões do mouse: 125x57x38 cm; Cor: preto; Resolução máxima: 250-4800 DPI (ajustável pelo software);Compatibilidade: windows xp/ vista / win7 / win8 / win10 e mac os x 10.2 ou superior.', 'Mouse Gamer Fortrek', 50.00, 'sim', 3);
-
-
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Gabinete Gamer Brazil Pc Bpc 330atx Preto S Fonte C Lateral Acr lico', 'Compatibilidade com placa mãe ATX; gabinete BRAZIL PC com 2.68 kg', 'Gabinete Gamer Brazil PC 330atx',430.00, 'sim', 2);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mousepad Gamer Husky Gaming Avalanche', 'MousePad Extra Grande 900x400mm', 'MousePad Husky Azul', 45.00, 'sim', 6);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mousepad Gamer Borda Vermelha', 'MousePad Gamer Extra Grande 75x35cm - Borda Costurada - Bsn', 'MousePad Gamer', 29.90, 'sim', 6);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Monitor Gamer Samsung Curvo 24Pol', 'Monitor Full HD, 144Hz, HDMI,Vesa, DisplayPort,Freesync - Lc24rg50fzlmza', 'Monitor Samsung 24pol',1920.00, 'sim', 5);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX', 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX (1-CLICK OC) 8GB GDDR6 DE 256 BITS - 37NSL6MD2VXI GALAX', ' Placa RTX 3070 Galax', 4438.00, 'sim', 1);
 
 insert images (caminho, principal_img, produto_id) values ('nvidiartx.png',1,1);
 insert images (caminho, principal_img, produto_id) values ('rtx2060.jpg',0,1);
@@ -59,58 +62,69 @@ insert images (caminho, principal_img, produto_id) values ('multilaser.jpg',1,9)
 insert images (caminho, principal_img, produto_id) values ('lateralmlaser.jpg',0,9);
 insert images (caminho, principal_img, produto_id) values ('plugmlaser.jpg',0,9);
 
-insert images (caminho, principal_img, produto_id) values ('kitgamer.jpg',1,11);
-insert images (caminho, principal_img, produto_id) values ('kitdustfone.jpg',0,11);
-insert images (caminho, principal_img, produto_id) values ('kitdustmouse.jpg',0,11);
-insert images (caminho, principal_img, produto_id) values ('kitdustteclado.jpg',0,11);
-insert images (caminho, principal_img, produto_id) values ('kitdustbrinde.jpg',0,11);
+insert images (caminho, principal_img, produto_id) values ('kitgamer.jpg',1,10);
+insert images (caminho, principal_img, produto_id) values ('kitdustfone.jpg',0,10);
+insert images (caminho, principal_img, produto_id) values ('kitdustmouse.jpg',0,10);
+insert images (caminho, principal_img, produto_id) values ('kitdustteclado.jpg',0,10);
+insert images (caminho, principal_img, produto_id) values ('kitdustbrinde.jpg',0,10);
 
-insert images (caminho, principal_img, produto_id) values ('mictrust.jpg',1,12);
-insert images (caminho, principal_img, produto_id) values ('mictrustfoto.jpg',0,12);
+insert images (caminho, principal_img, produto_id) values ('mictrust.jpg',1,11);
+insert images (caminho, principal_img, produto_id) values ('mictrustfoto.jpg',0,11);
 
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtor.jpg',1,13);
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtorlateral.jpg',0,13);
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtortraseira.jpg',0,13);
-insert images (caminho, principal_img, produto_id) values ('cadeiraroxtormedida.jpg',0,13);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtor.jpg',1,12);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtorlateral.jpg',0,12);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtortraseira.jpg',0,12);
+insert images (caminho, principal_img, produto_id) values ('cadeiraroxtormedida.jpg',0,12);
 
-insert images (caminho, principal_img, produto_id) values ('acer.jpg',1,14);
-insert images (caminho, principal_img, produto_id) values ('acerlateral.jpg',0,14);
-insert images (caminho, principal_img, produto_id) values ('acertraseira.jpg',0,14);
+insert images (caminho, principal_img, produto_id) values ('acer.jpg',1,13);
+insert images (caminho, principal_img, produto_id) values ('acerlateral.jpg',0,13);
+insert images (caminho, principal_img, produto_id) values ('acertraseira.jpg',0,13);
 
-insert images (caminho, principal_img, produto_id) values ('i9intel.jpg',1,15);
-insert images (caminho, principal_img, produto_id) values ('i9intel2.jpg',0,15);
+insert images (caminho, principal_img, produto_id) values ('i9intel.jpg',1,14);
+insert images (caminho, principal_img, produto_id) values ('i9intel2.jpg',0,14);
 
-insert images (caminho, principal_img, produto_id) values ('ultrawide2.jpg',1,16);
-insert images (caminho, principal_img, produto_id) values ('ultrawide.png',0,16);
+insert images (caminho, principal_img, produto_id) values ('ultrawide2.jpg',1,15);
+insert images (caminho, principal_img, produto_id) values ('ultrawide.jpg',0,15);
 
-insert images (caminho, principal_img, produto_id) values ('gtxprincipal.jpg',1,17);
-insert images (caminho, principal_img, produto_id) values ('gtxq2.jpg',0,17);
+insert images (caminho, principal_img, produto_id) values ('gtxprincipal.jpg',1,16);
+insert images (caminho, principal_img, produto_id) values ('gtxq2.jpg',0,16);
 
-insert images (caminho, principal_img, produto_id) values ('tecadamantiun.jpg',1,18);
+insert images (caminho, principal_img, produto_id) values ('tecadamantiun.jpg',1,17);
 
-insert images (caminho, principal_img, produto_id) values ('ctcfone.jpg',1,19);
-insert images (caminho, principal_img, produto_id) values ('ctcfone2.jpg',0,19);
-insert images (caminho, principal_img, produto_id) values ('ctcfone3.jpg',0,19);
+insert images (caminho, principal_img, produto_id) values ('ctcfone.jpg',1,18);
+insert images (caminho, principal_img, produto_id) values ('ctcfone2.jpg',0,18);
+insert images (caminho, principal_img, produto_id) values ('ctcfone3.jpg',0,18);
 
-insert images (caminho, principal_img, produto_id) values ('watercorsair1.jpg',1,20);
-insert images (caminho, principal_img, produto_id) values ('watercorsair2.jpg',0,20);
-insert images (caminho, principal_img, produto_id) values ('watercorsair3.jpg',0,20);
-insert images (caminho, principal_img, produto_id) values ('watercorsair4.jpg',0,20);
+insert images (caminho, principal_img, produto_id) values ('watercorsair1.jpg',1,19);
+insert images (caminho, principal_img, produto_id) values ('watercorsair2.jpg',0,19);
+insert images (caminho, principal_img, produto_id) values ('watercorsair3.jpg',0,19);
+insert images (caminho, principal_img, produto_id) values ('watercorsair4.jpg',0,19);
 
-insert images (caminho, principal_img, produto_id) values ('mousefortrek2.jpg',1,21);
-insert images (caminho, principal_img, produto_id) values ('mousefortrek.jpg',0,21);
-insert images (caminho, principal_img, produto_id) values ('mousefortrek3.jpg',0,21);
-insert images (caminho, principal_img, produto_id) values ('mousefortrek4.jpg',0,21);
--- Tipos de status de chamado
+insert images (caminho, principal_img, produto_id) values ('mousefortrek2.jpg',1,20);
+insert images (caminho, principal_img, produto_id) values ('mousefortrek.jpg',0,20);
+insert images (caminho, principal_img, produto_id) values ('mousefortrek3.jpg',0,20);
+insert images (caminho, principal_img, produto_id) values ('mousefortrek4.jpg',0,20);
 
--- Aguardando Atendimento
--- Em Andamento
--- Pendente Usuário
--- Informação adicionada
--- Em Analise
--- Em Teste
--- Concluido
--- Cancelado
+insert images (caminho, principal_img, produto_id) values ('gabpc4.jpg',1,21);
+insert images (caminho, principal_img, produto_id) values ('gabpc.jpg',0,21);
+insert images (caminho, principal_img, produto_id) values ('gabpc2.jpg',0,21);
+insert images (caminho, principal_img, produto_id) values ('gabpc3.jpg',0,21);
+
+insert images (caminho, principal_img, produto_id) values ('mpadhusky.jpg',1,23);
+insert images (caminho, principal_img, produto_id) values ('mpadhusky2.jpg',0,23);
+insert images (caminho, principal_img, produto_id) values ('mpadhusky3.jpg',0,23);
+insert images (caminho, principal_img, produto_id) values ('mpadhusky4.jpg',0,23);
+
+
+insert images (caminho, principal_img, produto_id) values ('samsung.jpg',1,25);
+insert images (caminho, principal_img, produto_id) values ('samsung2.jpg',0,25);
+insert images (caminho, principal_img, produto_id) values ('samsung3.jpg',0,25);
+insert images (caminho, principal_img, produto_id) values ('samsung4.jpg',0,25);
+
+insert images (caminho, principal_img, produto_id) values ('galaxpv.jpg',1,26);
+insert images (caminho, principal_img, produto_id) values ('galaxpv2.jpg',0,26);
+insert images (caminho, principal_img, produto_id) values ('galaxpv3.jpg',0,26);
+insert images (caminho, principal_img, produto_id) values ('galaxpv4.jpg',0,26);
 
 
 
