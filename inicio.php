@@ -94,19 +94,15 @@ if (isset($_SESSION['username'])) {
       <img src="images/iphone-lan-branco.png" alt="iphone-x" class="iphone-x">
       <div id="items">
         <div class="item">
-          <i class="fas fa-map-marked fa-2x color-primary"></i>
+          <p>Counter-Strike: Global Offensive.</p>
+        </div>
+        <div class="item">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aperiam dolor quaerat, autem ipsa quidem.</p>
         </div>
         <div class="item">
-          <i class="fas fa-users fa-2x color-primary"></i>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aperiam dolor quaerat, autem ipsa quidem.</p>
         </div>
         <div class="item">
-          <i class="fas fa-glass-cheers fa-2x color-primary"></i>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aperiam dolor quaerat, autem ipsa quidem.</p>
-        </div>
-        <div class="item">
-          <i class="fas fa-book-open fa-2x"></i>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aperiam dolor quaerat, autem ipsa quidem.</p>
         </div>
       </div>
