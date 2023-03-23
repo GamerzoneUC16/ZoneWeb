@@ -33,13 +33,13 @@ if (isset($_SESSION['username'])) {
           <a class="nav-link active text-info" aria-current="page" href="client.php">Clientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-info" href="#">Usuarios</a>
+          <a class="nav-link text-info" href="user_list.php">Usuarios</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-info" href="#">Imagens</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  text-info" href="#">Produtos</a>
+          <a class="nav-link  text-info" href="produtos_list.php">Produtos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="admin/login.php">

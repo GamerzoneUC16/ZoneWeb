@@ -42,6 +42,7 @@ $numRows = $ListaGZH->num_rows;
                         <th scope="col">Status</th>
                         <th scope="col">Solicitante</th>
                         <th scope="col">Responsavel</th>
+                        <th scope="col">Anexo</th>
                         <th scope="col">Data</th>
                         </tr>
                     </thead>
@@ -58,14 +59,15 @@ $numRows = $ListaGZH->num_rows;
                             <th scope="row"><?php echo $GZH['0']?></th>
                             <td><?php echo $GZH['1']?></td>
                             <td><?php echo $GZH['2']?></td>
-                            <td><?php echo $GZH['4']?></td>
-                            <?php if($GZH['6'] == $rowClient['id']) {?>
+                            <td><?php echo $GZH['5']?></td>
+                            <?php if($GZH['7'] == $rowClient['id']) {?>
                             <td><?php echo $rowClient['nome']?></td>
                             <?php }?>
-                            <?php if($GZH['7'] == $rowUser['id']) {?>
+                            <?php if($GZH['8'] == $rowUser['id']) {?>
                             <td><?php echo $rowUser['username']?></td>
                             <?php }?>
-                            <td><?php echo $GZH['5']?></td>
+                            <td><?php echo $GZH['4']?></td>
+                            <td><?php echo $GZH['6']?></td>
                         </tr>
                         <?php }?>
                     </tbody>
