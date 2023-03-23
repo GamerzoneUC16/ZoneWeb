@@ -138,55 +138,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`cartao`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cartao` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `numero` VARCHAR(16) NULL,
-  `validade` VARCHAR(5) NULL,
-  `cvv` VARCHAR(3) NULL,
-  `tipo` VARCHAR(15) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`frmpagamento`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`frmpagamento` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `tipo` VARCHAR(45) NOT NULL,
-  `cartao_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_frmpagamento_cartao1_idx` (`cartao_id` ASC) ,
-  CONSTRAINT `fk_frmpagamento_cartao1`
-    FOREIGN KEY (`cartao_id`)
-    REFERENCES `gamerzonedb`.`cartao` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`pagamento`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`pagamento` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `data` DATE NOT NULL,
-  `preco` DECIMAL(10,2) NOT NULL,
-  `parcelas` INT NULL,
-  `frmpagameno_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_pagamento_frmpagameno1_idx` (`frmpagameno_id` ASC) ,
-  CONSTRAINT `fk_pagamento_frmpagameno1`
-    FOREIGN KEY (`frmpagameno_id`)
-    REFERENCES `gamerzonedb`.`frmpagamento` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `gamerzonedb`.`itempedido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`itempedido` (
@@ -206,6 +157,16 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `gamerzonedb`.`frmpagamento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`frmpagamento` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tipo` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `gamerzonedb`.`pedidos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`pedidos` (
@@ -214,9 +175,11 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`pedidos` (
   `desconto` INT NULL,
   `cliente_id` INT NOT NULL,
   `itempedido_id` INT NOT NULL,
+  `frmpagamento_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_pedidos_cliente1_idx` (`cliente_id` ASC) ,
   INDEX `fk_pedidos_itempedido1_idx` (`itempedido_id` ASC) ,
+  INDEX `fk_pedidos_frmpagamento1_idx` (`frmpagamento_id` ASC) ,
   CONSTRAINT `fk_pedidos_cliente1`
     FOREIGN KEY (`cliente_id`)
     REFERENCES `gamerzonedb`.`cliente` (`id`)
@@ -226,62 +189,21 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`pedidos` (
     FOREIGN KEY (`itempedido_id`)
     REFERENCES `gamerzonedb`.`itempedido` (`id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`estoque`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`estoque` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `quantidade` INT NOT NULL,
-  `data_entrada` DATE NOT NULL,
-  `data_saida` DATE NOT NULL,
-  `lote` VARCHAR(45) NOT NULL,
-  `produto_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_estoque_produtos1_idx` (`produto_id` ASC) ,
-  CONSTRAINT `fk_estoque_produtos1`
-    FOREIGN KEY (`produto_id`)
-    REFERENCES `gamerzonedb`.`produtos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gamerzonedb`.`boleto`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`boleto` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `vencimento` VARCHAR(45) NOT NULL,
-  `data` DATETIME NOT NULL,
-  `codbar` VARCHAR(45) NOT NULL,
-  `cliente_id` INT NOT NULL,
-  `pedido_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_boleto_pedidos1_idx` (`pedido_id` ASC) ,
-  INDEX `fk_boleto_cliente1_idx` (`cliente_id` ASC) ,
-  CONSTRAINT `fk_boleto_pedidos1`
-    FOREIGN KEY (`pedido_id`)
-    REFERENCES `gamerzonedb`.`pedidos` (`id`)
-    ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_boleto_cliente1`
-    FOREIGN KEY (`cliente_id`)
-    REFERENCES `gamerzonedb`.`cliente` (`id`)
+  CONSTRAINT `fk_pedidos_frmpagamento1`
+    FOREIGN KEY (`frmpagamento_id`)
+    REFERENCES `gamerzonedb`.`frmpagamento` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gamerzonedb`.`carac_tec`
+-- Table `gamerzonedb`.`caracteristicas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gamerzonedb`.`carac_tec` (
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`caracteristicas` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
+  `modelo` VARCHAR(45) NOT NULL,
   `caracs` TEXT NOT NULL,
   `produto_id` INT NOT NULL,
   PRIMARY KEY (`id`),

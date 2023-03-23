@@ -22,9 +22,9 @@ if($_POST){
     // Fim Cadastro Cliente
 
     if(mysqli_insert_id($conn)){
-        header("Location: /index.php");
+        header("Location: http://localhost:8080/ZoneWeb/admin/client.php");
     }else{
-        header("Location: /index.php");
+        header("Location: http://localhost:8080/ZoneWeb/admin/cadastro.php");
     };
 } 
 

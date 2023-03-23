@@ -1,4 +1,12 @@
+<?php 
 
+if (isset($_SESSION['username'])) {
+  $username = $_SESSION['username'];
+} else {
+  $username = 'Visitante';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,6 +41,15 @@
         <li class="nav-item">
           <a class="nav-link  text-info" href="#">Produtos</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="admin/login.php">
+                <span class="bi bi-person-fill" style="color: #EAF2EF;">&nbsp;<?php echo $username; ?></span>
+            </a>
+            <li class="nav-item">
+            <a href="admin/logout.php">
+                    <span class="bi bi-door-open-fill" style="color: #EAF2EF;"></span>
+                </a>
+            </li>
       </ul>
     </div>
   </div>
