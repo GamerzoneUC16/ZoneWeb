@@ -89,7 +89,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
 
     }
 
-    .container {
+    .card {
       display: flex;
       flex-direction: column;
          justify-content: center ; 
@@ -106,36 +106,39 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     }
 
 
-  }
+  } 
 
-  .services {
+  .row {
 
     text-align: center;
     background: no-repeat;
     background-size: cover;
+    display: flex;
+    position: relative;
+    /* font-weight: bold; */
+    
   }
 
-  .container {
+  .card {
+    color: #222;
+    background: rgba(242, 242, 242, 0.9);
+    padding: 60px;
+    margin: 20px 6px;
+    /* width: 400px; */
     display: flex;
     /*    position: relative; */
+    transition: all 0.5s ease-out;
 
 
   }
 
-  /* colunas */
-  .services article {
-    background: rgba(242, 242, 242, 0.9);
-    color: #222;
-    padding: 60px;
-    margin: 20px 5px;
-    position: relative;
-    font-weight: bold;
-  
-
-  }
-
-  /* Parte esquerdo e inferior */
-  .services article::before {
+  /*  animação do card */
+ .card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+} 
+   /* Parte esquerdo e inferior */
+   .row .card::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -146,7 +149,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     border: 4px solid transparent;
   }
 
-  .services article:hover::before {
+  .row .card:hover::before {
     animation: animate 0.5s linear forwards;
   }
 
@@ -183,7 +186,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     }
   }
 
-  .services article::after {
+  .row .card::after {
     content: "";
     position: absolute;
     top: 0px;
@@ -194,11 +197,12 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     border: 4px solid transparent;
   }
 
-  .services article:hover::after {
+  .row .card:hover::after {
     animation: animates 0.5s linear forwards;
   }
 
-  /* Parte direita e superior */
+  /*  Parte direita e superior  */
+  
   @keyframes animates {
     0% {
       width: 0;
@@ -231,8 +235,8 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
       border-left-color: rgb(0, 157, 220);
       ;
     }
-  }
-
+  } 
+ 
   .card-body {
     padding: 50px;
     background: rgba(242, 242, 242, 0.9);
@@ -261,9 +265,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
   .icon{
 font-size:50px;
   }
- 
 
-  
 </style>
 
 <body class="fundofixo">
@@ -282,40 +284,35 @@ font-size:50px;
   </div>
   </a>
   <!-- CARDS -->
-  <section class=" services ">
-    <div class="container">
-
+  
+    <div class="row">
       <a class="close" href="contato.php">
-        <article>
-          <!-- <img src="" alt="">  -->
+          <div class="card">
           <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
           <h2>Steam Works</h2>
           <br>
           <p> O Steamworks é o conjunto de ferramentas  e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
-        </article>
+        </div>
       </a>
-
+       
       <a class="close" href="produtos_geral.php">
-        <article>
-          <!-- <img src="" alt="">  -->
+      <div class="card">
           <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
           <h2>Jogos</h2>
           <br>
-          <p>Venha ser Diverti com nosso catalogo  evariedades de  super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
-        </article>
+          <p>Venha ser Diverti com nosso catalogo  e variedades de  super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
+          </div>
       </a>
+
       <a class="close" href="loja.php">
-        <article>
-          <!--  <img src="" alt=""> -->
+      <div class="card">
           <div class="icon"><span class="bi bi-shop fa-2x"></span></div>
           <h2>Vendas</h2>
           <br>
-          <p>Venha conferir o nossa variedades de produtos como gabinite,mouse,monitor,teclado,placa mãe,ssd,hd,fontes,memoria ram e entre outras variedades de acessorios</p>
-        </article>
-      </a>
+          <p>Venha conferir  o nossa variedades de produtos como gabinite,mouse,monitor,teclado,placa mãe,ssd,hd,fontes,memoria ram e entre outras variedades de acessorios</p>
     </div>
-
-  </section>
+    </div>
+    </a>
 
   <!--  implementando o Modal -->
 
