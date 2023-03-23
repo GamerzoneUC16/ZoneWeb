@@ -89,7 +89,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
 
     }
 
-    .colunas {
+    .container {
       display: flex;
       flex-direction: column;
          justify-content: center ; 
@@ -115,7 +115,7 @@ $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_i
     background-size: cover;
   }
 
-  .colunas {
+  .container {
     display: flex;
     /*    position: relative; */
 
@@ -283,7 +283,7 @@ font-size:50px;
   </a>
   <!-- CARDS -->
   <section class=" services ">
-    <div class="colunas">
+    <div class="container">
 
       <a class="close" href="contato.php">
         <article>
@@ -291,7 +291,7 @@ font-size:50px;
           <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
           <h2>Steam Works</h2>
           <br>
-          <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
+          <p> O Steamworks é o conjunto de ferramentas  e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
         </article>
       </a>
 
@@ -301,7 +301,7 @@ font-size:50px;
           <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
           <h2>Jogos</h2>
           <br>
-          <p>Venha ser Diverti com nosso catalogo e variedades de  super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
+          <p>Venha ser Diverti com nosso catalogo  evariedades de  super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
         </article>
       </a>
       <a class="close" href="loja.php">
@@ -310,7 +310,7 @@ font-size:50px;
           <div class="icon"><span class="bi bi-shop fa-2x"></span></div>
           <h2>Vendas</h2>
           <br>
-          <p>Venha conferir  o nossa variedades de produtos como gabinite,mouse,monitor,teclado,placa mãe,ssd,hd,fontes,memoria ram e entre outras variedades de acessorios</p>
+          <p>Venha conferir o nossa variedades de produtos como gabinite,mouse,monitor,teclado,placa mãe,ssd,hd,fontes,memoria ram e entre outras variedades de acessorios</p>
         </article>
       </a>
     </div>
