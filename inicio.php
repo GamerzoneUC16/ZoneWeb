@@ -113,23 +113,28 @@ if (isset($_SESSION['username'])) {
     <div class="headline">O que acham de nós</div>
     <div id="testimonials-container">
       <div class="testimonial">
-        <img src="images/vitão.jpg" alt="" class="testimonial-image">
+        <img src="images/Vito.jpg" alt="" class="testimonial-image">
+        <p>Vitor</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
-        <img src="images/person-2.jpeg" alt="" class="testimonial-image">
+        <img src="images/Igor.jpg" alt="" class="testimonial-image">
+        <p>Igor</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
-        <img src="images/person-1.jpeg" alt="" class="testimonial-image">
+        <img src="images/Dan.jpg" alt="" class="testimonial-image">
+        <p>Danyllo</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
-        <img src="images/person-2.jpeg" alt="" class="testimonial-image">
+        <img src="images/Caio.jpg" alt="" class="testimonial-image">
+        <p>Caio</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
-        <img src="images/person-1.jpeg" alt="" class="testimonial-image">
+        <img src="images/Kaua.jpg" alt="" class="testimonial-image">
+        <p>Kauã</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
     </div>
