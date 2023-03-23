@@ -68,6 +68,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
   `sobrenome` TEXT NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `cpf` VARCHAR(11) NOT NULL,
+  `ativo` BIT(1) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
