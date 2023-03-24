@@ -184,6 +184,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`pedidos` (
   `cliente_id` INT NOT NULL,
   `itempedido_id` INT NOT NULL,
   `frmpagamento_id` INT NOT NULL,
+  `arquivado` BIT(1) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_pedidos_cliente1_idx` (`cliente_id` ASC) ,
   INDEX `fk_pedidos_itempedido1_idx` (`itempedido_id` ASC) ,
