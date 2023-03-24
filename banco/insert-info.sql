@@ -30,6 +30,12 @@ insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mousepad Gamer Borda Vermelha', 'MousePad Gamer Extra Grande 75x35cm - Borda Costurada - Bsn', 'MousePad Gamer', 29.90, 'sim', 6);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Monitor Gamer Samsung Curvo 24Pol', 'Monitor Full HD, 144Hz, HDMI,Vesa, DisplayPort,Freesync - Lc24rg50fzlmza', 'Monitor Samsung 24pol',1920.00, 'sim', 5);
 insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX', 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX (1-CLICK OC) 8GB GDDR6 DE 256 BITS - 37NSL6MD2VXI GALAX', ' Placa RTX 3070 Galax', 4438.00, 'sim', 1);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'C3Tech NBC-50 Base para Notebook, Preto','Tenha seguranca, comodidade e praticidade enquanto utiliza o seu notebook com a base refrigerada NBC-50 da C3Tech;', 'Base para Notebook Preto', 99.90, 'sim', 6);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Redragon SUPORTE PARA CABO DE MOUSE GAMER PRETO, Modelo: MA301','Braço ajustável por mola para vários ajustes de altura; Clipe de borracha para segurar diferentes tamanhos de cabos de mouse', 'Suporte p/ Cabo de Mouse Redragon', 84.77, 'sim', 6);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'MONITOR GAMER CURVO ALIENWARE QD-OLED DE 34”- AW3423DWF','Monitor curvo de 34" com tecnologia QD-OLED e AMD FreeSync™ Premium Pro. Apresenta taxa de contraste infinita e VESA DisplayHDR TrueBlack 400, oferecendo um desempenho incrível diante da tela.' ,'Monitor Gamer Curvo AlienWare',8870.88,'sim',5);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Nobreak Gamer RAGTECH modelo ONE UP NITRO de 1.000VA', 'Tripla proteção e sensor térmico em todas as tomadas de saída;Protetor de alta performance Transorb para RJ45 LAN/Ethernet;Frontal customizável por tags e retroiluminado com LEDs RGB;Gaming Sense (módulo de correção de voltagem que mantém as saídas estáveis e prolonga a vida útil do PC Gamer)', 'Nobreak Gamer RAGTECH', 1800.00, 'sim', 3);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mouse Gamer Logitech G203 LIGHTSYNC RGB', 'Efeito de Ondas de Cores, 6 Botões Programáveis e Até 8.000 DPI - Preto', 'Mouse Gamer Logitech', 139.00, 'sim', 3);
+insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'SSD Crucial BX500 2TB 3D NAND SATA lll 2,5" - CT2000BX500SSD1', 'O SSD BX500 tem o melhor custo-benefício e é ideal para você que busca aumentar a velocidade do seu Desktop. Com o SSD Crucial você adiciona memória flash para seu laptop sem complicações, acelere seu computador e deixe tudo mais rápido. O BX500 possui ótimo desempenho e uma capacidade de até 2TB para você armazenar seus dados.', 'SSD 2tb', 820.00, 'sim', 2);
 
 insert images (caminho, principal_img, produto_id) values ('nvidiartx.png',1,1);
 insert images (caminho, principal_img, produto_id) values ('rtx2060.jpg',0,1);
@@ -110,24 +116,54 @@ insert images (caminho, principal_img, produto_id) values ('gabpc.jpg',0,21);
 insert images (caminho, principal_img, produto_id) values ('gabpc2.jpg',0,21);
 insert images (caminho, principal_img, produto_id) values ('gabpc3.jpg',0,21);
 
-insert images (caminho, principal_img, produto_id) values ('mpadhusky.jpg',1,23);
-insert images (caminho, principal_img, produto_id) values ('mpadhusky2.jpg',0,23);
-insert images (caminho, principal_img, produto_id) values ('mpadhusky3.jpg',0,23);
-insert images (caminho, principal_img, produto_id) values ('mpadhusky4.jpg',0,23);
+insert images (caminho, principal_img, produto_id) values ('mpadhusky.jpg',1,22);
+insert images (caminho, principal_img, produto_id) values ('mpadhusky2.jpg',0,22);
+insert images (caminho, principal_img, produto_id) values ('mpadhusky3.jpg',0,22);
+insert images (caminho, principal_img, produto_id) values ('mpadhusky4.jpg',0,22);
 
+insert images (caminho, principal_img, produto_id) values ('simplempad.jpg',0,23);
+insert images (caminho, principal_img, produto_id) values ('simplempad2.jpg',1,23);
+insert images (caminho, principal_img, produto_id) values ('simplempad3.jpg',0,23);
+insert images (caminho, principal_img, produto_id) values ('simplempad4.jpg',0,23);
 
-insert images (caminho, principal_img, produto_id) values ('samsung.jpg',1,25);
-insert images (caminho, principal_img, produto_id) values ('samsung2.jpg',0,25);
-insert images (caminho, principal_img, produto_id) values ('samsung3.jpg',0,25);
-insert images (caminho, principal_img, produto_id) values ('samsung4.jpg',0,25);
+insert images (caminho, principal_img, produto_id) values ('samsung.jpg',1,24);
+insert images (caminho, principal_img, produto_id) values ('samsung2.jpg',0,24);
+insert images (caminho, principal_img, produto_id) values ('samsung3.jpg',0,24);
+insert images (caminho, principal_img, produto_id) values ('samsung4.jpg',0,24);
 
-insert images (caminho, principal_img, produto_id) values ('galaxpv.jpg',1,26);
-insert images (caminho, principal_img, produto_id) values ('galaxpv2.jpg',0,26);
-insert images (caminho, principal_img, produto_id) values ('galaxpv3.jpg',0,26);
-insert images (caminho, principal_img, produto_id) values ('galaxpv4.jpg',0,26);
+insert images (caminho, principal_img, produto_id) values ('galaxpv.jpg',1,25);
+insert images (caminho, principal_img, produto_id) values ('galaxpv2.jpg',0,25);
+insert images (caminho, principal_img, produto_id) values ('galaxpv3.jpg',0,25);
+insert images (caminho, principal_img, produto_id) values ('galaxpv4.jpg',0,25);
 
+insert images (caminho, principal_img, produto_id) values ('basenot.jpg',0,26);
+insert images (caminho, principal_img, produto_id) values ('basenot2.jpg',0,26);
+insert images (caminho, principal_img, produto_id) values ('basenot3.jpg',0,26);
+insert images (caminho, principal_img, produto_id) values ('basenot4.jpg',1,26);
 
+insert images (caminho, principal_img, produto_id) values ('suportem.jpg',1,27);
+insert images (caminho, principal_img, produto_id) values ('suportem2.jpg',0,27);
+insert images (caminho, principal_img, produto_id) values ('suportem3.jpg',0,27);
+insert images (caminho, principal_img, produto_id) values ('suportem4.jpg',0,27);
 
+insert images (caminho, principal_img, produto_id) values ('alien.jpg',1,28);
+insert images (caminho, principal_img, produto_id) values ('alien2.jpg',0,28);
+insert images (caminho, principal_img, produto_id) values ('alien3.jpg',0,28);
+insert images (caminho, principal_img, produto_id) values ('alien4.jpg',0,28);
 
+insert images (caminho, principal_img, produto_id) values ('gtx750.jpg',1,29);
+insert images (caminho, principal_img, produto_id) values ('gtx750b.jpg',0,29);
+insert images (caminho, principal_img, produto_id) values ('gtx750c.jpg',0,29);
+insert images (caminho, principal_img, produto_id) values ('gtx750d.jpg',0,29);
+
+insert images (caminho, principal_img, produto_id) values ('nobreak.jpg',1,30);
+insert images (caminho, principal_img, produto_id) values ('nobreak2.jpg',0,30);
+insert images (caminho, principal_img, produto_id) values ('nobreak3.jpg',0,30);
+insert images (caminho, principal_img, produto_id) values ('nobreak4.jpg',0,30);
+
+insert images (caminho, principal_img, produto_id) values ('logitech.jpg',1,31);
+insert images (caminho, principal_img, produto_id) values ('logitech2.jpg',0,31);
+insert images (caminho, principal_img, produto_id) values ('logitech3.jpg',0,31);
+insert images (caminho, principal_img, produto_id) values ('logitech4.jpg',0,31);
 
 
