@@ -52,6 +52,7 @@ if ($_POST) {
     background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
     -webkit-background-size: cover;
     background-size: cover;
+    font-weight: bold;
   }
 
   h1 {
