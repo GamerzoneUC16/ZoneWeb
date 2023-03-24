@@ -33,7 +33,7 @@ if (isset($_SESSION['username'])) {
     <nav class="navbar navbar-expand-lg navbar-light" style="background: #0b212d;">
         <div class="container-xl  ">
             <a class="navbar-brand  " href="inicio.php">
-                <img class="img-Logo" src="../images/Logo/GamerZone_logo-2-removebg-preview.png" alt="Logo-GZ">
+                <img class="img-Logo" src="images/Logo/GZ_logo.png" alt="Logo-GZ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

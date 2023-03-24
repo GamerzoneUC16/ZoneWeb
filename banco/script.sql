@@ -20,6 +20,7 @@ USE `gamerzonedb` ;
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(32) NOT NULL,
   `nivel` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
@@ -68,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`cliente` (
   `sobrenome` TEXT NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `cpf` VARCHAR(11) NOT NULL,
-  `ativo` BIT(1) NOT NULL,
+  `ativo` BIT(1) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -126,6 +127,7 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`chamados` (
   `anexo` VARCHAR(45) NULL,
   `status_ch` VARCHAR(45) NOT NULL,
   `data_in` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  `hashcode` VARCHAR(45) NOT NULL,
   `cliente_id` INT NOT NULL,
   `usuario_id` INT NOT NULL,
   `data_final` DATETIME NULL,
@@ -181,10 +183,11 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`pedidos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `preco` DECIMAL(10,2) NOT NULL,
   `desconto` INT NULL,
+  `status` VARCHAR(45) NOT NULL,
   `cliente_id` INT NOT NULL,
   `itempedido_id` INT NOT NULL,
   `frmpagamento_id` INT NOT NULL,
-  `arquivado` BIT(1) NOT NULL,
+  `arquivado` BIT(1) NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_pedidos_cliente1_idx` (`cliente_id` ASC) ,
   INDEX `fk_pedidos_itempedido1_idx` (`itempedido_id` ASC) ,
@@ -240,6 +243,19 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`images` (
     REFERENCES `gamerzonedb`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gamerzonedb`.`funcionario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`funcionario` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `nivel` VARCHAR(20) NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 

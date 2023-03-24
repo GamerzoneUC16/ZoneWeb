@@ -24,13 +24,8 @@ if ( $resultado ) {
 }
 };
 
-if ($_GET)
-$id_form  =   $_GET['id'];
-else
-$id_form = 0;
-$lista          =   $conn->query("SELECT * FROM cliente WHERE id = $id_form");
-$row            =   $lista->fetch_assoc();
-$totalRows      =   ($lista)->num_rows;
+
+
 ?>
 
 
