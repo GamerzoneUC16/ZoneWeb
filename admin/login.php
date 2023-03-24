@@ -8,7 +8,7 @@ $BuscaEmail = $conn->query("select * from cliente");
 $rowEmail = $BuscaEmail->fetch_assoc();
 
 
-
+$caminho = "Controlers/func.php";
 
 if ($_POST) {
   $username = $_POST['username'];
@@ -218,6 +218,11 @@ $condição = $conn->query("select * from ")
         <br>
         </div>
         <div class="form__group field">
+            <input class="form__field" type="email" name="email" id="email" placeholder="Email" maxlength="100" required>
+            <label class="form__label" for="email">Email</label>
+        <br>
+        </div>
+        <div class="form__group field">
             <input class="form__field" type="password" name="senha" id="senha" placeholder="Senha" maxlength="100" required>
             <label class="form__label" for="senha">Senha</label>
         <br>
@@ -250,15 +255,14 @@ $condição = $conn->query("select * from ")
     var email = $('#email').val();
     $.ajax({
       type:'GET',
-      url: '../admin/cadastros.php' + email,
+      url: '../Controlers/func.php?email=' + email,
       data: {email: email},
       success: function(data){
         console.log(data)
         $('#id').val(data.id);
-        $('#nome').val(data.nome);
-        $('#sobrenome').val(data.sobrenome);
-        $('#cpf').val(data.cpf);
         $('#email').val(data.email);
+        $('#nivel').val(data.nivel);
+        $('#cpf').val(data.cpf);
       }
     });
   });

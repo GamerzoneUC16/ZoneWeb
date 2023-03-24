@@ -15,6 +15,17 @@ CREATE SCHEMA IF NOT EXISTS `gamerzonedb` DEFAULT CHARACTER SET utf8 ;
 USE `gamerzonedb` ;
 
 -- -----------------------------------------------------
+-- Table `gamerzonedb`.`nivel`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gamerzonedb`.`nivel` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `sigla` VARCHAR(5) NOT NULL,
+  `rotulo` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `gamerzonedb`.`usuarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
@@ -22,8 +33,14 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`usuarios` (
   `username` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(32) NOT NULL,
-  `nivel` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
+  `nivel_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_usuarios_nivel1_idx` (`nivel_id` ASC) ,
+  CONSTRAINT `fk_usuarios_nivel1`
+    FOREIGN KEY (`nivel_id`)
+    REFERENCES `gamerzonedb`.`nivel` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -253,9 +270,15 @@ CREATE TABLE IF NOT EXISTS `gamerzonedb`.`funcionario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `nivel` VARCHAR(20) NOT NULL,
   `cpf` VARCHAR(11) NOT NULL,
-  PRIMARY KEY (`id`))
+  `nivel_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_funcionario_nivel1_idx` (`nivel_id` ASC) ,
+  CONSTRAINT `fk_funcionario_nivel1`
+    FOREIGN KEY (`nivel_id`)
+    REFERENCES `gamerzonedb`.`nivel` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
