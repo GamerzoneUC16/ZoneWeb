@@ -151,19 +151,25 @@ insert images (caminho, principal_img, produto_id) values ('alien2.jpg',0,28);
 insert images (caminho, principal_img, produto_id) values ('alien3.jpg',0,28);
 insert images (caminho, principal_img, produto_id) values ('alien4.jpg',0,28);
 
-insert images (caminho, principal_img, produto_id) values ('gtx750.jpg',1,29);
-insert images (caminho, principal_img, produto_id) values ('gtx750b.jpg',0,29);
-insert images (caminho, principal_img, produto_id) values ('gtx750c.jpg',0,29);
-insert images (caminho, principal_img, produto_id) values ('gtx750d.jpg',0,29);
 
-insert images (caminho, principal_img, produto_id) values ('nobreak.jpg',1,30);
-insert images (caminho, principal_img, produto_id) values ('nobreak2.jpg',0,30);
-insert images (caminho, principal_img, produto_id) values ('nobreak3.jpg',0,30);
-insert images (caminho, principal_img, produto_id) values ('nobreak4.jpg',0,30);
+insert images (caminho, principal_img, produto_id) values ('nobreak.jpg',1,29);
+insert images (caminho, principal_img, produto_id) values ('nobreak2.jpg',0,29);
+insert images (caminho, principal_img, produto_id) values ('nobreak3.jpg',0,29);
+insert images (caminho, principal_img, produto_id) values ('nobreak4.jpg',0,29);
 
-insert images (caminho, principal_img, produto_id) values ('logitech.jpg',1,31);
-insert images (caminho, principal_img, produto_id) values ('logitech2.jpg',0,31);
-insert images (caminho, principal_img, produto_id) values ('logitech3.jpg',0,31);
-insert images (caminho, principal_img, produto_id) values ('logitech4.jpg',0,31);
+insert images (caminho, principal_img, produto_id) values ('logitech.jpg',1,30);
+insert images (caminho, principal_img, produto_id) values ('logitech2.jpg',0,30);
+insert images (caminho, principal_img, produto_id) values ('logitech3.jpg',0,30);
+insert images (caminho, principal_img, produto_id) values ('logitech4.jpg',0,30);
 
+insert images (caminho, principal_img, produto_id) values ('ssd.jpg',1,31);
+insert images (caminho, principal_img, produto_id) values ('ssd2.jpg',0,31);
+insert images (caminho, principal_img, produto_id) values ('ssd3.jpg',0,31);
+insert images (caminho, principal_img, produto_id) values ('ssd4.jpg',0,31);
+
+
+-- insert images (caminho, principal_img, produto_id) values ('gtx750.jpg',1,29);
+-- insert images (caminho, principal_img, produto_id) values ('gtx750b.jpg',0,29);
+-- insert images (caminho, principal_img, produto_id) values ('gtx750c.jpg',0,29);
+-- insert images (caminho, principal_img, produto_id) values ('gtx750d.jpg',0,29);
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../ico/GZ.ico" type="image/x-icon">
     <title>Cadastro</title>
     <style>
         body{
@@ -142,20 +143,20 @@
         <form action="cadastro.php" method="POST" name="form_login" id="form_login" enctype="multipart/form-data">
         <!-- Cadastro Cliente -->
         <div class="form__group field">
-            <input name="nome" type="text" class="form__field" id="nome" aria-describedby="nome">
-            <label for="nome" class="form__label">Nome:</label>
-        </div>
-        <div class="form__group field">
-            <input name="sobrenome" type="text" class="form__field" id="sobrenome" aria-describedby="sobrenome">
-            <label for="sobrenome" class="form__label">Sobrenome:</label>
+            <input name="username" type="text" class="form__field" id="username" aria-describedby="username">
+            <label for="username" class="form__label">Nome:</label>
         </div>
         <div class="form__group field">
             <input name="email" type="text" class="form__field" id="email" aria-describedby="email">
             <label for="email" class="form__label">Email:</label>
         </div>
         <div class="form__group field">
-            <input name="cpf" type="text" class="form__field" id="cpf" aria-describedby="cpf">
-            <label for="cpf" class="form__label">Cpf:</label>
+            <input name="senha" type="text" class="form__field" id="senha" aria-describedby="senha">
+            <label for="senha" class="form__label">Senha:</label>
+        </div>
+        <div class="form__group field">
+            <input name="nivel" type="text" class="form__field" id="nivel" aria-describedby="nivel" disabled>
+            <label for="nivel" class="form__label">Nivel:</label>
         </div>
         <!-- Fim Cadastro Cliente -->
         <br>
@@ -168,4 +169,30 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#email').blur(function()
+
+      {
+        var email = $('#email').val();
+        $.ajax({
+          type: 'GET',
+          url: '../Controlers/func.php?email=' + email,
+          data: {
+            email: email
+          },
+          success: function(data) {
+            console.log(data)
+            $('#id').val(data.id);
+            $('#nome').val(data.nome);
+            $('#email').val(data.email);
+            $('#cpf').val(data.cpf);
+            $('#nivel').val(data.nivel);
+          }
+        });
+      });
+  });
+</script>
 </html>

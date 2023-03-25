@@ -23,16 +23,6 @@ if(mysqli_insert_id($conn)){
 };
  };
 // Fim Cadastrar
-if(email($id) == $email) {
-    echo '<div class="form__group field" hidden>
-    <input class="form__field" type="text" name="nivel" id="nivel" placeholder="Nivel" maxlength="100" required>
-    <label class="form__label" for="nivel">Nivel</label>
-<br>';
-} else {
-    '<div class="form__group field">
-    <input class="form__field" type="text" name="nivel" id="nivel" placeholder="Nivel" maxlength="100" required>
-    <label class="form__label" for="nivel">Nivel</label>
-<br>';
-}
+
 
 ?>

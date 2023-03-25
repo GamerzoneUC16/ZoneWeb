@@ -1,0 +1,1 @@
+insert funcionario (nome,email,cpf,nivel_id) values ('Igor','igor.santiago546@outlook.com','54751245324',1)
