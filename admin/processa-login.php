@@ -6,13 +6,13 @@ $inicio = "http://localhost:8080/ZoneWeb/loja.php";
 if($_POST){
 
 
-    $id     =   $_POST['id'];
-    $username  =   $_POST['username'];
-    $email  =   $_POST['email'];
-    $senha  =   $_POST['senha'];
-    $nivel  =   $_POST['nivel'];
+    $id         =   $_POST['id'];
+    $username   =   $_POST['username'];
+    $email      =   $_POST['email'];
+    $senha      =   $_POST['senha'];
+    
 
-    $insertSQL  =   "insert usuarios (username, email, senha, nivel) values ('$username','$email', md5('$senha'),'$nivel')";
+    $insertSQL  =   "insert usuarios (username, email, senha, nivel_id) values ('$username','$email', md5('$senha'),1)";
 $resultado  =   $conn->query($insertSQL);
 
 

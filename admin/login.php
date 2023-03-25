@@ -17,6 +17,10 @@ if ($_POST) {
   $loginRes = $conn->query("select * from usuarios where username = '$username' and senha = md5('$senha')");
   $rowLogin = $loginRes->fetch_assoc();
 
+  $Consulta_fk    =     "select * from nivel order by rotulo asc";
+  $lista_fk       =     $conn->query($Consulta_fk);
+  $row_fk         =     $lista_fk->fetch_assoc();
+
   $numRow = mysqli_num_rows($loginRes);
 
   if (!isset($_SESSION)) {
@@ -26,15 +30,15 @@ if ($_POST) {
   }
   if ($numRow > 0) {
     $_SESSION['username'] = $username;
-    $_SESSION['nivel'] = $rowLogin['nivel'];
+    $_SESSION['nivel_id'] = $row_fk['id'];
     $_SESSION['nome_da_sessao'] = session_name();
-    if ($rowLogin['nivel'] == 'sup') {
+    if ($rowLogin['nivel_id'] == $row_fk['id']) {
       echo "<script>window.open('$inicio','.self')</script>";
-    } elseif ($rowLogin['nivel'] == 'com') {
+    } elseif ($rowLogin['nivel_id'] == $row_fk['id']) {
       echo "<script>window.open('$loja','.self')</script>";
     }
   } else {
-    echo "<script>window.open('invasor.php','.self')</script>";
+    echo "<script>window.open('login.php','.self')</script>";
   }
 }
 
@@ -223,7 +227,7 @@ $condição = $conn->query("select * from ")
         <div class="modal-body fundofixo">
           <form action="processa-login.php" id="form_usuarios_insere" name="form_usuarios_insere" method="POST" enctype="multipart/form-data">
             <div class="form__group field">
-              <input class="form__field" type="text" name="usern  ame" id="username" placeholder="Nome" maxlength="100" required>
+              <input class="form__field" type="text" name="username" id="username" placeholder="Nome" maxlength="100" required>
               <label class="form__label" for="username">Name</label>
               <br>
             </div>
@@ -235,11 +239,6 @@ $condição = $conn->query("select * from ")
             <div class="form__group field">
               <input class="form__field" type="password" name="senha" id="senha" placeholder="Senha" maxlength="100" required>
               <label class="form__label" for="senha">Senha</label>
-              <br>
-            </div>
-            <div class="form__group field">
-              <input class="form__field" type="text" name="nivel" id="nivel" placeholder="Nivel" maxlength="100" disabled value="com">
-              <label class="form__label" for="nivel">Nivel</label>
               <br>
             </div>
             <input type="submit" value="Cadastrar" name="enviar" id="enviar" class="btn btn-success btn-block">
@@ -255,7 +254,7 @@ $condição = $conn->query("select * from ")
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#email').blur(function()
@@ -279,6 +278,6 @@ $condição = $conn->query("select * from ")
         });
       });
   });
-</script>
+</script> -->
 
 </html>
