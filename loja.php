@@ -28,7 +28,7 @@ $ImgP = $rowListaImg['principal_img']
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
-        
+    <link rel="stylesheet" href="css/style-LG.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <title>Store Zone</title>
 </head>
@@ -44,10 +44,10 @@ $ImgP = $rowListaImg['principal_img']
     <!--Body da Loja-->
     <!-- Inicio de Atalhos -->
     <div class="container">
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-md-center shadow p-3 mb-5 bg-dark rounded">
         <?php foreach ($row_tipos as $row) { ?>
-          <div class="col-md-auto">
-            <a href="produto_por_tipo.php?id=<?php echo $row['0']; ?>" class="btn btn-info" role="button"><?php echo $row['2']; ?></a>
+          <div class="col-md-auto ">
+            <a href="produto_por_tipo.php?id=<?php echo $row['0']; ?>" class="btn btn-light text-dark" role="button"><?php echo $row['2']; ?></a>
           </div>
         <?php } ?>
       </div>
@@ -127,14 +127,14 @@ $ImgP = $rowListaImg['principal_img']
 
               <div class="card-body">
                 <h4 class="card-title">
-                  <strong><?php echo $rowListaProd['titulo']; ?></strong>
+                  <strong class="titulo"><?php echo $rowListaProd['titulo'];?></strong>
                 </h4>
                 <br>
-                <p class="card-text">
+                <p class="card-text descricao">
                   <?php echo mb_strimwidth($rowListaProd['descricao'], 0, 60, '...'); ?>
                 </p>
                 <br>
-                <p class="card-text">
+                <p class="card-text valor">
                   <?php echo "R$" . number_format($rowListaProd['preco'], 2, ',', '.'); ?>
                 </p>
               </div>

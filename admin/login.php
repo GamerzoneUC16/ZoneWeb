@@ -38,7 +38,11 @@ if ($_POST) {
       echo "<script>window.open('$loja','.self')</script>";
     }
   } else {
-    echo "<script>window.open('login.php','.self')</script>";
+    echo "<script>
+      window.onload = function() {
+        alert('Senha incorreta!!! Tente Novamente');
+      }
+    </script>";
   }
 }
 

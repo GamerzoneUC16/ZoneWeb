@@ -141,7 +141,7 @@ $debito = $rowProd['preco'] + 900;
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 12;
+    font-size: 12px;
     font-weight: 700
   }
   @media screen and (max-width: 582px){

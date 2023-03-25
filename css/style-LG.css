@@ -69,4 +69,20 @@
     {
         font-size: 30px;
     }
-
+    .titulo
+    {
+        color: #0b212d;
+        font-size: 20px;
+        font-weight: 900
+    }
+    .descricao
+    {
+        color: blue;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .valor
+    {
+        font-size: 20px;
+        font-weight: 700;
+    }
