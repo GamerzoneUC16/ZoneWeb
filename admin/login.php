@@ -1,8 +1,8 @@
 <?php
 
 include "../conn/connect.php";
-$inicio = "http://localhost:8080/ZoneWeb/inicio.php";
-$loja = "http://localhost:8080/ZoneWeb/loja.php";
+$inicio = "../inicio.php";
+$loja = "../loja.php";
 // Cadastrar
 $BuscaEmail = $conn->query("select * from cliente");
 $rowEmail = $BuscaEmail->fetch_assoc();
