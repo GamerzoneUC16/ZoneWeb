@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/reset.css">
   <!--   <link rel="stylesheet" href="css/style.css"> -->
-  <title>Contato</title>
+  <title>Jogos</title>
 </head>
 
 <style>
@@ -27,8 +27,10 @@
 
   h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 25px;
+    text-align: center;
   }
+  
 
   p {
     font-family: Arial, Helvetica, sans-serif;
@@ -59,95 +61,121 @@
 
     <div class="card ">
       <img src="images/jogo/fortnite1.2.jpg" alt="">
-      <h2>Serviços</h2>
-      <!--      <p> O  é o  de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
- -->
+      <h2>Fortnite</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
 
 
-    <div class="card ">
+    <div class="card " >
       <img src="images/jogo/call.jpg" alt="">
-      <h2>Vendas</h2>
-      <!--  <p>Venha conferir a nossa variedades de produtos com tudo que você precisa monitor,gabinite,placa de video placa mãe e muito mais!!</p>
- -->
+      <h2>Call of Duty</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/resi.jpg" alt="">
-      <h2>Jogos</h2>
-      <!--  <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
- -->
+      <h2>Residente evil 4</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
+
     <div class="card ">
       <img src="images/jogo/rocket.jpg" alt="">
-      <h2>Jogos</h2>
-      <!--  <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
- -->
+      <h2>Rocket League</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
+    <!-- ############################################### coluna1 ########################################## -->
 
     <div class="card ">
       <img src="images/jogo/fifa.jpg" alt="">
-
-      <h2>Serviços</h2>
-      <!--      <p> O  é o  de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
- -->
+      <h2>FIFA 23</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
-
 
     <div class="card ">
       <img src="images/jogo/god1.jpg" alt="">
-      <h2>Vendas</h2>
-      <!--  <p>Venha conferir a nossa variedades de produtos com tudo que você precisa monitor,gabinite,placa de video placa mãe e muito mais!!</p>
- -->
+      <h2>God of War</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/last.jpg" alt="">
-      <h2>Jogos</h2>
-      <!--  <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
- -->
+      <h2>The last of us</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
+
     <div class="card ">
       <img src="images/jogo/gta5.jpg" alt="">
-      <h2>Jogos</h2>
-      <!--  <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
- -->
+      <h2>Gta 5</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
+    </div>
 
+<!-- ############################################### coluna2 ############################################# -->
 
+    <div class="card ">
+      <img src="images/jogo/free.jpg" alt="">
+      <h2>Free Fire</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
 
     <div class="card ">
-      <img src="images/teste1.jpg" alt="">
+      <img src="images/jogo/rambow.jpg" alt="">
+      <h2>Rambow Six</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
+    </div>
 
+    <div class="card ">
+      <img src="images/jogo/red.jpg" alt="">
+      <h2>Read Dead 2</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
+    </div>
+
+    <div class="card ">
+      <img src="images/jogo/forza.jpg" alt="">
+      <h2>Horizon 4</h2>
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
+    </div>
+
+    <!-- ################################### coluna3 ################################################## -->
+    
+    <div class="card ">
+      <img src="images/jogo/free.jpg" alt="">
       <h2>Serviços</h2>
-      <!--      <p> O  é o  de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
- -->
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
 
 
     <div class="card ">
-      <img src="images/maquinas.jpg" alt="">
+      <img src="images/jogo/rambow.jpg" alt="">
       <h2>Vendas</h2>
-      <!--  <p>Venha conferir a nossa variedades de produtos com tudo que você precisa monitor,gabinite,placa de video placa mãe e muito mais!!</p>
- -->
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
 
     <div class="card ">
-      <img src="images/teste3.jpg" alt="">
+      <img src="images/jogo/red.jpg" alt="">
       <h2>Jogos</h2>
-      <!--  <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
- -->
+      <br> 
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
+
     <div class="card ">
-      <img src="images/teste3.jpg" alt="">
+      <img src="images/jogo/forza.jpg" alt="">
       <h2>Jogos</h2>
-      <!--  <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>
- -->
-
-
-
-
-
+      <br>
+      <a href="#" class="btn btn-success">Go somewhere</a>
     </div>
 
 </body>
