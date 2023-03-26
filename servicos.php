@@ -9,7 +9,10 @@ if ($_POST) {
   $motivo = $_POST['motivo'];
   $assunto = $_POST['assunto'];
   $anexo   = $_POST['anexo'];
-  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,1,1,0)";
+
+  
+
+  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in,hashcode, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,$hashcode,1,1,0)";
   $resultado  =   $conn->query($insertSql);
 
 

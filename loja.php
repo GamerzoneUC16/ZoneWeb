@@ -15,8 +15,13 @@ $ListaImg = $conn->query("select * from images where produto_id = id");
 $rowListaImg = $ListaImg->fetch_assoc();
 $numRows = $ListaImg->num_rows;
 
-$ImgP = $rowListaImg['principal_img']
+$ImgP = $rowListaImg['principal_img'];
 
+  $string = 'GZH';
+
+  $hashcode = rand(5,10);
+
+  echo $hashcode
 ?>
 
 
