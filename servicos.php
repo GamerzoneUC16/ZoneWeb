@@ -2,7 +2,7 @@
 include "conn/connect.php";
 include "admin/acesso_com.php";
 $login = "http://localhost:8080/ZoneWeb/servicos.php";
-
+$string = 'GZH-';
 if ($_POST) {
   $id = $_POST['id'];
   $titulo = $_POST['titulo'];
@@ -10,12 +10,12 @@ if ($_POST) {
   $assunto = $_POST['assunto'];
   $anexo   = $_POST['anexo'];
 
+  $Id = mysqli_insert_id($conn);
   
-
-  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in,hashcode, cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,$hashcode,1,1,0)";
+  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in,hashcode,cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,'$string$Id',1,1,0)";
   $resultado  =   $conn->query($insertSql);
 
-
+ 
 
   if (mysqli_insert_id($conn)) {
     header("Location: $login");

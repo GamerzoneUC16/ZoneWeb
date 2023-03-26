@@ -17,7 +17,7 @@ if ($_POST) {
   $loginRes = $conn->query("select * from usuarios where username = '$username' and senha = md5('$senha')");
   $rowLogin = $loginRes->fetch_assoc();
 
-  $Consulta_fk    =     "select * from nivel order by rotulo asc";
+  $Consulta_fk    =     "select * from niveis order by rotulo asc";
   $lista_fk       =     $conn->query($Consulta_fk);
   $row_fk         =     $lista_fk->fetch_assoc();
 
@@ -32,9 +32,9 @@ if ($_POST) {
     $_SESSION['username'] = $username;
     $_SESSION['nivel_id'] = $row_fk['id'];
     $_SESSION['nome_da_sessao'] = session_name();
-    if ($rowLogin['nivel_id'] == $row_fk['id']) {
+    if ($row_fk['rotulo'] == 'sup') {
       echo "<script>window.open('$inicio','.self')</script>";
-    } elseif ($rowLogin['nivel_id'] == $row_fk['id']) {
+    } elseif ($row_fk['rotulo'] == 'com') {
       echo "<script>window.open('$loja','.self')</script>";
     }
   } else {

@@ -17,11 +17,7 @@ $numRows = $ListaImg->num_rows;
 
 $ImgP = $rowListaImg['principal_img'];
 
-  $string = 'GZH';
-
-  $hashcode = rand(5,10);
-
-  echo $hashcode
+  
 ?>
 
 
