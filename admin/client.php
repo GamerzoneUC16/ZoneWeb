@@ -45,7 +45,7 @@ $numRows = $ListaClient->num_rows;
                             <th scope="col">Sobrenome</th>
                             <th scope="col">Email</th>
                             <th scope="col">CPF</th>
-                            <th scope="col">
+                            <th scope="col" style="width: fit-content;">
                                 <a href="cadastro.php" class="text-decoration-none">
                                     <button type="button" class="btn btn-outline-success">Cadastrar</button>
                                 </a>
@@ -61,15 +61,15 @@ $numRows = $ListaClient->num_rows;
                                 <td><?php echo $GZH['2'] ?></td>
                                 <td><?php echo $GZH['3'] ?></td>
                                 <td><?php echo $GZH['4'] ?></td>
-                                <td>
+                                <td class="d-frid gap-2 d-md-flex justify-content-md-end">
                                     <a href="cliente_edit.php?id=<?php echo $GZH['0'];?>" class="text-decoration-none">
-                                        <button class="btn btn-outline-success">
+                                        <button type="button" class="btn btn-outline-success me-md-2">
                                             Ediatr
                                         </button>
                                     </a>
                                 
                                     <a href="client_exluir.php" class="text-decoration-none">
-                                        <button class="btn btn-outline-danger">
+                                        <button type="button" class="btn btn-outline-danger">
                                             Excluir
                                         </button>
                                     </a>

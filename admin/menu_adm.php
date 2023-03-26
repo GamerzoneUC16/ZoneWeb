@@ -36,9 +36,6 @@ if (isset($_SESSION['username'])) {
           <a class="nav-link text-info" href="user_list.php">Usuarios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-info" href="#">Imagens</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link  text-info" href="produtos_list.php">Produtos</a>
         </li>
         <li class="nav-item">
@@ -46,7 +43,7 @@ if (isset($_SESSION['username'])) {
                 <span class="bi bi-person-fill" style="color: #EAF2EF;">&nbsp;<?php echo $username; ?></span>
             </a>
             <li class="nav-item">
-            <a href="admin/logout.php">
+            <a href="logout.php">
                     <span class="bi bi-door-open-fill" style="color: #EAF2EF;"></span>
                 </a>
             </li>
