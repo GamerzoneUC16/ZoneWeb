@@ -321,7 +321,7 @@ if ($_POST) {
   </div>
 
   <div class="card ">
-  <a class="close" href="loja.php">
+  <a class="close" href="jogos.php">
     <div class="icon "><span class="bi bi-controller fa-2x"></span></div>
     <h2>Jogos</h2>
     <p>Venha ser Diverti com nosso catalogo e variedades de super realista e online não perde tempo vem jogar com a gente e ser diverti na GamerZone </p>

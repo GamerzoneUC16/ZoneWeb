@@ -114,22 +114,17 @@ if (isset($_SESSION['username'])) {
     <div id="testimonials-container">
       <div class="testimonial">
         <img src="images/Vito.jpg" alt="" class="testimonial-image">
-        <p>Vitor</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
         <img src="images/Igor.jpg" alt="" class="testimonial-image">
-        <p>Igor</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
         <img src="images/Dan.jpg" alt="" class="testimonial-image">
-        <p>Danyllo</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
         <img src="images/Caio.jpg" alt="" class="testimonial-image">
-        <p>Caio</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
