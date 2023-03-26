@@ -23,14 +23,16 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     color: white;
+    font-weight: bold;
   }
 
   h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
+    
   }
-  
+
 
   p {
     font-family: Arial, Helvetica, sans-serif;
@@ -49,134 +51,207 @@
     padding: 20px;
     margin: 25px;
     width: 250px;
+    
 
   }
+
+  .img-logo {
+    width: 150px;
+    position: relative;
+  }
+
 </style>
 
 <body class="fundofixo">
 
-  <h1>Catalogo de Jogos</h1>
+<?php
+  include 'menu.php'
+  ?>
+  <br>
+
+  <h1> CATALÁGO DE JOGOS</h1>
+  <br>
+  <div class="text-center">
+    <a href="inicio.php">
+      <img class="img-logo" src="images/Logo/GamerZone_logo-2-removebg-preview.png" alt="">
+  </div>
+  </a>
 
   <div class="row ">
 
     <div class="card ">
       <img src="images/jogo/fortnite1.2.jpg" alt="">
+      <br>
       <h2>Fortnite</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
 
-    <div class="card " >
+    <div class="card ">
       <img src="images/jogo/call.jpg" alt="">
+      <br>
       <h2>Call of Duty</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/resi.jpg" alt="">
+      <br>
       <h2>Residente evil 4</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/rocket.jpg" alt="">
+      <br>
       <h2>Rocket League</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
     <!-- ############################################### coluna1 ########################################## -->
 
     <div class="card ">
       <img src="images/jogo/fifa.jpg" alt="">
+      <br>
       <h2>FIFA 23</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/god1.jpg" alt="">
+      <br>
       <h2>God of War</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/last.jpg" alt="">
+      <br>
       <h2>The last of us</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/gta5.jpg" alt="">
+      <br>
       <h2>Gta 5</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
-<!-- ############################################### coluna2 ############################################# -->
+    <!-- ############################################### coluna2 ############################################# -->
 
     <div class="card ">
       <img src="images/jogo/free.jpg" alt="">
+      <br>
       <h2>Free Fire</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/rambow.jpg" alt="">
+      <br>
       <h2>Rambow Six</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/red.jpg" alt="">
+      <br>
       <h2>Read Dead 2</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
       <img src="images/jogo/forza.jpg" alt="">
-      <h2>Horizon 4</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <h2> Forza Horizon 4</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <!-- ################################### coluna3 ################################################## -->
-    
+
     <div class="card ">
-      <img src="images/jogo/free.jpg" alt="">
-      <h2>Serviços</h2>
+      <img src="images/jogo/CS.jpg" alt="">
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
-    </div>
-
-
-    <div class="card ">
-      <img src="images/jogo/rambow.jpg" alt="">
-      <h2>Vendas</h2>
+      <h2>CS:GO</h2>
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
-    <div class="card ">
-      <img src="images/jogo/red.jpg" alt="">
-      <h2>Jogos</h2>
-      <br> 
-      <a href="#" class="btn btn-success">Go somewhere</a>
-    </div>
 
     <div class="card ">
-      <img src="images/jogo/forza.jpg" alt="">
-      <h2>Jogos</h2>
+      <img src="images/jogo/W2k.jpg" alt="">
       <br>
-      <a href="#" class="btn btn-success">Go somewhere</a>
+      <h2>WWE 2K23</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
     </div>
+
+    <div class="card ">
+      <img src="images/jogo/mort.jpg" alt="">
+      <br>
+      <h2>Mortal Kombate 11</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
+    </div>
+
+    <div class="card ">
+      <img src="images/jogo/dota2.jpg" alt="">
+      <br>
+      <h2>DOTA 2</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
+    </div>
+
+    <!-- ################################### coluna4 ################################################## -->
+
+    <div class="card ">
+      <img src="images/jogo/hot.jpg" alt="">
+      <br>
+      <h2>Hogwarts Legacy</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
+    </div>
+
+
+    <div class="card ">
+      <img src="images/jogo/zero.jpg" alt="">
+      <br>
+      <h2>Horizon Zero Dawn</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
+    </div>
+
+    <div class="card ">
+      <img src="images/jogo/hero_capsule.jpg" alt="">
+      <br>
+      <h2>SEKIRO</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
+    </div>
+
+    <div class="card ">
+      <img src="images/jogo/spider.jpg" alt="">
+      <br>
+      <h2>Marvel Spider-Man</h2>
+      <br>
+      <a href="#" class="btn btn-success">Jogar</a>
+    </div>
+
+    <?php
+  include 'rodape.php'
+  ?>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
