@@ -2,7 +2,7 @@
 
 include "../conn/connect.php";
 $inicio = "../inicio.php";
-$loja = "../loja.php";
+$admin = "../admin/index.php";
 // Cadastrar
 $BuscaEmail = $conn->query("select * from cliente");
 $rowEmail = $BuscaEmail->fetch_assoc();
@@ -30,12 +30,12 @@ if ($_POST) {
   }
   if ($numRow > 0) {
     $_SESSION['username'] = $username;
-    $_SESSION['nivel_id'] = $row_fk['id'];
+    $_SESSION['nivel_id'] = $rowLogin['nivel_id'];
     $_SESSION['nome_da_sessao'] = session_name();
-    if ($row_fk['rotulo'] == 'sup') {
+    if ($rowLogin['nivel_id'] == 1) {
+      echo "<script>window.open('$admin','.self')</script>";
+    } elseif ($rowLogin['nivel_id'] == 3) {
       echo "<script>window.open('$inicio','.self')</script>";
-    } elseif ($row_fk['rotulo'] == 'com') {
-      echo "<script>window.open('$loja','.self')</script>";
     }
   } else {
     echo "<script>

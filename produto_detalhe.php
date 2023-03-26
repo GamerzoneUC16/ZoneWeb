@@ -1,6 +1,8 @@
 <?php
 include 'admin/acesso_com.php';
 include 'conn/connect.php';
+session_start();
+
 $idGet = $_GET['id'];
 $ProdutoGet = $conn->query("select * from produtos where id = $idGet");
 $rowProd = $ProdutoGet->fetch_assoc();
@@ -17,6 +19,17 @@ $numRows = $ListaImg->num_rows;
 
 $debito = $rowProd['preco'] + 900;
 
+
+$produto = array(
+  "id"      => $idGet,
+  "image"   => $rowListaImg['caminho'],
+  "titulo"  => $rowProd['titulo'],
+  "resumo"  => $rowProd['resumo'],
+  "preco"   => $rowProd['preco'],
+  "tipo"    => $rowProd['tipo_id']
+);
+  
+$_SESSION['carinho'][$idGet] = $produto;
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -200,9 +213,12 @@ $debito = $rowProd['preco'] + 900;
                   <span>+</span>
                 </div>
               </div>
-              <a href="" class="button"><span class="bi bi-cart fs-4"></span>Adicionar ao carinho</a>
+              <a href="carinho.php?id=<?php echo $idGet?>" class="button"><span class="bi bi-cart fs-4"></span>Adicionar ao carinho</a>
             </div>
           </div>
+          <?php 
+            
+          ?>
         </div>
       </div>
     </section>

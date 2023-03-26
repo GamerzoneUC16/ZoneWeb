@@ -46,10 +46,8 @@ $numRows = $ListaClient->num_rows;
                             <th scope="col">Email</th>
                             <th scope="col">CPF</th>
                             <th scope="col">
-                                <a href="cadastro.php">
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary">Cadastrar</button>
-                                </div>
+                                <a href="cadastro.php" class="text-decoration-none">
+                                    <button type="button" class="btn btn-outline-success">Cadastrar</button>
                                 </a>
                             </th>
                         </tr>
@@ -64,15 +62,14 @@ $numRows = $ListaClient->num_rows;
                                 <td><?php echo $GZH['3'] ?></td>
                                 <td><?php echo $GZH['4'] ?></td>
                                 <td>
-                                    <a href="cliente_edit.php?id=<?php echo $GZH['0'];?>">
-                                        <button class="btn btn-primary">
+                                    <a href="cliente_edit.php?id=<?php echo $GZH['0'];?>" class="text-decoration-none">
+                                        <button class="btn btn-outline-success">
                                             Ediatr
                                         </button>
                                     </a>
-                                </td>
-                                <td>
-                                    <a href="client_exluir.php">
-                                        <button class="btn btn-primary">
+                                
+                                    <a href="client_exluir.php" class="text-decoration-none">
+                                        <button class="btn btn-outline-danger">
                                             Excluir
                                         </button>
                                     </a>

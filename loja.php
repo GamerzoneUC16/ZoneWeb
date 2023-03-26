@@ -85,23 +85,18 @@ $ImgP = $rowListaImg['principal_img'];
     <br>
     <!--Fim banner da loja-->
     <div class="container">
-      <div class="row g-2">
-        <div class="col">
-          <a href="produtos_geral.php">
-            <img src="images/Prod.jpg" alt="Loja-Geral" class="Img-Prod img-fluid">
-          </a>
-          <h1 class="text-white text-center fs-1 fw-bold">Produtos da Loja<h1>
-        </div>
-        <div class="col">
-          <a href="corujao.php">
-            <img src="images/man-wearing-smart-glasses-touching-virtual-screen-futuristic-technology-digital-remix.jpg" class="Img-Cor img-fluid">
-          </a>
-
-          <div class="text-center">
-            <h1 class="text-white text-center fs-1 fw-bold">Planos de Corujão</h1>
+          <div id="corujao">
+            <div class="espaco">
+            <h1>Como funciona o plano Corujão</h1>
+            <br>
+            <p>Com esse plano você pode alugar as nossas maquinas da lanhouse <br>
+            para jogar das 22.00 ás 6:00 da manhã,</p>
+            </div>
+            <a href="corujao.php">
+              <img src="images/man.jpg" style="border-radius: 4%;">
+            </a>
           </div>
-        </div>
-      </div>
+    </div>
 
       <!-- Inicio Destaques -->
 
