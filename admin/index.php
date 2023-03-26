@@ -60,10 +60,10 @@ $numRows = $ListaGZH->num_rows;
                             <td><?php echo $GZH['1']?></td>
                             <td><?php echo $GZH['2']?></td>
                             <td><?php echo $GZH['5']?></td>
-                            <?php if($GZH['7'] == $rowClient['id']) {?>
+                            <?php if($GZH['8'] == $rowClient['id']) {?>
                             <td><?php echo $rowClient['nome']?></td>
                             <?php }?>
-                            <?php if($GZH['8'] == $rowUser['id']) {?>
+                            <?php if($GZH['9'] == $rowUser['id']) {?>
                             <td><?php echo $rowUser['username']?></td>
                             <?php }?>
                             <td><?php echo $GZH['4']?></td>

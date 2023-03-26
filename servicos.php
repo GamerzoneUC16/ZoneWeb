@@ -303,7 +303,7 @@ if ($_POST) {
   <div class="row ">
    
       <div class="card ">
-      <a class="close" href="produtos_geral.php">
+      <a class="close" href="loja.php">
         <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
         <h2>Serviços</h2>
         <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>
@@ -312,7 +312,7 @@ if ($_POST) {
 
 
   <div class="card ">
-  <a class="close" href="produtos_geral.php">
+  <a class="close" href="loja.php">
     <div class="icon-1"><span class="bi bi-cart4 fa-2x"></span></div>
     <h2>Vendas</h2>
     <p>Venha conferir a nossa variedades de produtos com tudo que você precisa monitor,gabinite,placa de video placa mãe e muito mais!!</p>

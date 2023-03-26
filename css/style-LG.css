@@ -73,16 +73,38 @@
     {
         color: #0b212d;
         font-size: 20px;
-        font-weight: 900
+        font-weight: 1000
     }
     .descricao
     {
-        color: blue;
+    
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 200;
     }
     .valor
     {
         font-size: 20px;
         font-weight: 700;
+    }
+    #corujao
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding: 15px;
+    }
+    .espaco
+    {
+        background-color: aliceblue;
+        border-radius: 4%;
+        align-items: center ;
+    }
+    .espaco h1{
+        font-size: 50px;
+        color: #0b212d;
+        font-weight: 700;
+    }
+    .espaco p{
+        font-size: 30px;
+
     }
