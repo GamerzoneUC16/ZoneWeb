@@ -32,8 +32,8 @@
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX', 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX (1-CLICK OC) 8GB GDDR6 DE 256 BITS - 37NSL6MD2VXI GALAX', ' Placa RTX 3070 Galax', 4438.00, 'sim', 1);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'C3Tech NBC-50 Base para Notebook, Preto','Tenha seguranca, comodidade e praticidade enquanto utiliza o seu notebook com a base refrigerada NBC-50 da C3Tech;', 'Base para Notebook Preto', 99.90, 'sim', 6);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Redragon SUPORTE PARA CABO DE MOUSE GAMER PRETO, Modelo: MA301','Braço ajustável por mola para vários ajustes de altura; Clipe de borracha para segurar diferentes tamanhos de cabos de mouse', 'Suporte p/ Cabo de Mouse Redragon', 84.77, 'sim', 6);
-    insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO NVIDIA GEFORCE GTX 750', 'Clock Boost: 1085 MHz; Saídas de vídeo: DP + HDMI + DVI','Placa Gráfica GTX 750', 850.00, 'sim', 1);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'MONITOR GAMER CURVO ALIENWARE QD-OLED DE 34”- AW3423DWF','Monitor curvo de 34" com tecnologia QD-OLED e AMD FreeSync™ Premium Pro. Apresenta taxa de contraste infinita e VESA DisplayHDR TrueBlack 400, oferecendo um desempenho incrível diante da tela.' ,'Monitor Gamer Curvo AlienWare',8870.88,'sim',5);
+    insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO NVIDIA GEFORCE GTX 750', 'Clock Boost: 1085 MHz; Saídas de vídeo: DP + HDMI + DVI','Placa Gráfica GTX 750', 850.00, 'sim', 1);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Nobreak Gamer RAGTECH modelo ONE UP NITRO de 1.000VA', 'Tripla proteção e sensor térmico em todas as tomadas de saída;Protetor de alta performance Transorb para RJ45 LAN/Ethernet;Frontal customizável por tags e retroiluminado com LEDs RGB;Gaming Sense (módulo de correção de voltagem que mantém as saídas estáveis e prolonga a vida útil do PC Gamer)', 'Nobreak Gamer RAGTECH', 1800.00, 'sim', 3);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mouse Gamer Logitech G203 LIGHTSYNC RGB', 'Efeito de Ondas de Cores, 6 Botões Programáveis e Até 8.000 DPI - Preto', 'Mouse Gamer Logitech', 139.00, 'sim', 3);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'SSD Crucial BX500 2TB 3D NAND SATA lll 2,5" - CT2000BX500SSD1', 'O SSD BX500 tem o melhor custo-benefício e é ideal para você que busca aumentar a velocidade do seu Desktop. Com o SSD Crucial você adiciona memória flash para seu laptop sem complicações, acelere seu computador e deixe tudo mais rápido. O BX500 possui ótimo desempenho e uma capacidade de até 2TB para você armazenar seus dados.', 'SSD 2tb', 820.00, 'sim', 2);
@@ -159,25 +159,23 @@
     insert images (caminho, principal_img, produto_id) values ('alien3.jpg',0,28);
     insert images (caminho, principal_img, produto_id) values ('alien4.jpg',0,28);
 
-
-    insert images (caminho, principal_img, produto_id) values ('nobreak.jpg',1,29);
-    insert images (caminho, principal_img, produto_id) values ('nobreak2.jpg',0,29);
-    insert images (caminho, principal_img, produto_id) values ('nobreak3.jpg',0,29);
-    insert images (caminho, principal_img, produto_id) values ('nobreak4.jpg',0,29);
-
-    insert images (caminho, principal_img, produto_id) values ('logitech.jpg',1,30);
-    insert images (caminho, principal_img, produto_id) values ('logitech2.jpg',0,30);
-    insert images (caminho, principal_img, produto_id) values ('logitech3.jpg',0,30);
-    insert images (caminho, principal_img, produto_id) values ('logitech4.jpg',0,30);
-
-    insert images (caminho, principal_img, produto_id) values ('ssd.jpg',1,31);
-    insert images (caminho, principal_img, produto_id) values ('ssd2.jpg',0,31);
-    insert images (caminho, principal_img, produto_id) values ('ssd3.jpg',0,31);
-    insert images (caminho, principal_img, produto_id) values ('ssd4.jpg',0,31);
-
-
     insert images (caminho, principal_img, produto_id) values ('gtx750.jpg',1,29);
     insert images (caminho, principal_img, produto_id) values ('gtx750b.jpg',0,29);
     insert images (caminho, principal_img, produto_id) values ('gtx750c.jpg',0,29);
     insert images (caminho, principal_img, produto_id) values ('gtx750d.jpg',0,29);
+
+    insert images (caminho, principal_img, produto_id) values ('nobreak.jpg',1,30);
+    insert images (caminho, principal_img, produto_id) values ('nobreak2.jpg',0,30);
+    insert images (caminho, principal_img, produto_id) values ('nobreak3.jpg',0,30);
+    insert images (caminho, principal_img, produto_id) values ('nobreak4.jpg',0,30);
+
+    insert images (caminho, principal_img, produto_id) values ('logitech.jpg',1,31);
+    insert images (caminho, principal_img, produto_id) values ('logitech2.jpg',0,31);
+    insert images (caminho, principal_img, produto_id) values ('logitech3.jpg',0,31);
+    insert images (caminho, principal_img, produto_id) values ('logitech4.jpg',0,31);
+
+    insert images (caminho, principal_img, produto_id) values ('ssd.jpg',1,32);
+    insert images (caminho, principal_img, produto_id) values ('ssd2.jpg',0,32);
+    insert images (caminho, principal_img, produto_id) values ('ssd3.jpg',0,32);
+    insert images (caminho, principal_img, produto_id) values ('ssd4.jpg',0,32);
 
