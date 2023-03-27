@@ -82,13 +82,13 @@ $ImgP = $rowListaImg['principal_img'];
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/Razer-Desc.webp" alt="Destaque-1" class="d-block w-100">
+          <img src="images/Banners/Banner3.png" alt="Destaque-1" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <img src="images/mesa.png" alt="Destaque-2" class="d-block w-100">
+          <img src="images/Banners/banner2.png" alt="Destaque-2" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <img src="images/Lougetch.jpeg" alt="Destaque-3" class="d-block w-100">
+          <img src="images/Banners/banner1.png" alt="Destaque-3" class="d-block w-100">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="Carrousel-Loja" data-bs-slide="prev">

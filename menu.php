@@ -64,7 +64,7 @@ if (isset($_SESSION['username'])) {
                     </li>
            
             <li class="nav-item">
-            <a class="nav-link active" href="carinho.php">
+            <a class="nav-link active" href="#">
                 <span class="bi bi-cart-fill" style="color: #EAF2EF;">&nbsp;Carrinho</span>
             </a>
             </li>
