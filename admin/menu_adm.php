@@ -45,7 +45,7 @@ if (isset($_SESSION['username'])) {
             <li class="nav-item">
             <a href="logout.php">
             <button type="button" class="btn btn-outline-danger">
-                    <span class="bi bi-door-open-fill text-info"></span>
+                    <span class="bi bi-door-open-fill text-white"></span>
             </button>
                 </a>
             </li>
