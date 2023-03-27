@@ -31,32 +31,13 @@
                             <!-- select>option*2 -->
                             <select name="id_tipo_produto" id="id_tipo_produto" class="form-control" required>
                                 <!-- Abre estrutura de repetição -->
-                                <?php do { ?>
-                                <option value="<?php echo $row_fk['id_tipo']; ?>">
-                                    <?php echo $row_fk['rotulo_tipo']; ?>
-                                </option>
-                                <?php } while($row_fk = $lista_fk->fetch_assoc()); 
-                                $rows_fk = mysqli_num_rows($lista_fk);
-                                if($rows_fk > 0){
-                                    mysqli_data_seek($lista_fk,0);
-                                    $rows_fk = $lista_fk->fetch_assoc();
-                                };
-                                ?>
+                                
                                 <!-- Fecha estrutura de repetição -->
                             </select>
                         </div><!-- fecha input-group -->
                         <br>
                         <!-- Fecha Select id_tipo_produto -->
 
-                        <!-- radio destaque_produto -->
-                        <label for="destaque_produto">Destaque?</label>
-                        <div class="input-group">
-                            <label for="destaque_produto_s" class="radio-inline">
-                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim">Sim
-                            </label>
-                            <label for="destaque_produto_n" class="radio-inline">
-                                <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" checked>Não
-                            </label>
                         </div><!-- fecha input-group -->
                         <br>
                         <!-- Fecha radio destaque_produto -->

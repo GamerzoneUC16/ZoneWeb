@@ -41,6 +41,12 @@
     flex-direction: column;
     text-align: center;
 }
+.testimonial .testimonial-image {
+    width: 55%;
+    border-radius: 50%;
+    margin: 15px;
+}
+
 
 /* Gallery */
 

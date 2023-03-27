@@ -109,27 +109,29 @@ if (isset($_SESSION['username'])) {
   </section>
 
   <div id="testimonials">
-    <div class="headline">O que acham de nós</div>
+    <div class="headline">Responsáveis</div>
     <div id="testimonials-container">
       <div class="testimonial">
         <img src="images/Igor.jpg" alt="" class="testimonial-image">
-        <p>Igor: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <p>Igor: Responsável por boa parte do Back-End e Front-End criou o banco de dados da gamerzone juntos com os demais respoonsaveis,
+          produziu o sistema da loja, login e cadastro.
+        </p>
       </div>
       <div class="testimonial">
         <img src="images/Dan.jpg" alt="" class="testimonial-image">
-        <p>Danyllo: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <p>Danyllo: Responsavel pelo Front-end de Quem Somos no site, e Back-End no projeto de suporte ao web no C# criou classes e metodos e prestou suporte as demais partes do projeto.</p>
       </div>
       <div class="testimonial">
         <img src="images/Vito.jpg" alt="" class="testimonial-image">
-        <p>Vitor: Responsavel pela parte de jogos, serviços, e chamados tanto back-end como front-end adicionou as imagem no codigo e também criou os cards aonde ficam os jogos.</p>
+        <p>Vitor: Responsavel pela parte de jogos, serviços, e chamados tanto Back-End como Front-End adicionou as imagem no codigo e também criou os cards aonde ficam os jogos.</p>
       </div>
       <div class="testimonial">
         <img src="images/Kaua.jpg" alt="" class="testimonial-image">
-        <p>Kauã: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <p>Kauã: Responsavel pelo Front-end do inicio e Back-End no C#/PHP configurando os formularios para listar chamados de suporte e progamando a parte aonde o técnico consegue reponder o chamado do cliente, prestou suporte as demais partes do projeto.</p>
       </div>
       <div class="testimonial">
         <img src="images/Caio.jpg" alt="" class="testimonial-image">
-        <p>Caio: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <p>Caio: Responsavel por buscar produtos da loja e adicionar no banco de dados para que podemos mostar na loja com o preço, descrição, e imagem principal dos produtos.</p>
       </div>
     </div>
   </div>
