@@ -40,11 +40,13 @@ if (isset($_SESSION['username'])) {
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="admin/login.php">
-                <span class="bi bi-person-fill" style="color: #EAF2EF;">&nbsp;<?php echo $username; ?></span>
+                <span class="bi bi-person-fill text-info">&nbsp;<?php echo $username; ?></span>
             </a>
             <li class="nav-item">
             <a href="logout.php">
-                    <span class="bi bi-door-open-fill" style="color: #EAF2EF;"></span>
+            <button type="button" class="btn btn-outline-danger">
+                    <span class="bi bi-door-open-fill text-info"></span>
+            </button>
                 </a>
             </li>
       </ul>
