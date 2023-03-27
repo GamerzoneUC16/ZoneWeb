@@ -54,7 +54,7 @@ $rowUser = $ListaUser->fetch_all();
 
                     <tbody>
                         <?php foreach ($rowUser as $GZH) { 
-                            $id = $GZH['0'];
+                            $id = $GZH['4'];
                             $ListaNivel = $conn->query("select * from niveis where id = $id");
                             $rownivel = $ListaNivel->fetch_assoc();
                             ?>
