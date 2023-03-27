@@ -138,7 +138,7 @@ include "admin/acesso_com.php";
     </div>
 
     <div class="card ">
-      <img src="images/jogo/last.jpg" alt="">
+      <img src="images/jogo/last2.jpg" alt="">
       <br>
       <h2>The last of us</h2>
       <br>
@@ -156,9 +156,9 @@ include "admin/acesso_com.php";
     <!-- ############################################### coluna2 ############################################# -->
 
     <div class="card ">
-      <img src="images/jogo/free.jpg" alt="">
+      <img src="images/jogo/apex1.jpg" alt="">
       <br>
-      <h2>Free Fire</h2>
+      <h2>Apex Legends</h2>
       <br>
  
     </div>
