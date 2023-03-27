@@ -12,7 +12,7 @@ if ($_POST) {
 
   $Id = mysqli_insert_id($conn);
   
-  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in,hashcode,cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,'$string$Id',1,1,0)";
+  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in,hashcode,cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,'$string',1,1,0)";
   $resultado  =   $conn->query($insertSql);
 
  
@@ -128,7 +128,7 @@ if ($_POST) {
 
   .row .card:hover {
     transform: translateY(-5px);
-    cursor: pointer;
+
   }
 
   /* Parte esquerdo e inferior */

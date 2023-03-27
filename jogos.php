@@ -255,6 +255,40 @@ include "admin/acesso_com.php";
    
     </div>
 
+    <div class="card ">
+      <img src="images/jogo/sons.jpg" alt="">
+      <br>
+      <h2>Sons of the forest</h2>
+      <br>
+ 
+    </div>
+
+    <div class="card ">
+      <img src="images/jogo/elder.jpg" alt="">
+      <br>
+      <h2>Elder King</h2>
+      <br>
+   
+    </div>
+
+    <div class="card ">
+      <img src="images/jogo/rost.jpg" alt="">
+      <br>
+      <h2>RUST</h2>
+      <br>
+ 
+    </div>
+
+    <div class="card ">
+      <img src="images/jogo/dis.jpg" alt="">
+      <br>
+      <h2>Destiny 2</h2>
+      <br>
+   
+    </div>
+
+
+
     <?php
   include 'rodape.php'
   ?>

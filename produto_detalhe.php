@@ -8,9 +8,13 @@ $ProdutoGet = $conn->query("select * from produtos where id = $idGet");
 $rowProd = $ProdutoGet->fetch_assoc();
 $numRows = $ProdutoGet->num_rows;
 
- $ImagesGet = $conn->query("select * from images where principal_img = 1");
- $rowImage = $ImagesGet->fetch_assoc();
- $numRowsImg = $ImagesGet->num_rows;
+$ImagesGet = $conn->query("select * from images where principal_img = 1");
+$rowImage = $ImagesGet->fetch_assoc();
+$numRowsImg = $ImagesGet->num_rows;
+
+$ListaCarac = $conn->query("select * from caracteristicas where produto_id = $idGet");
+$rowTec = $ListaCarac->fetch_assoc();
+
 
 
 $ListaImg = $conn->query("select * from images where produto_id = $idGet");
@@ -77,17 +81,20 @@ $debito = $rowProd['preco'] + 100;
     display: flex;
     flex-direction: column;
   }
-.content{
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #FEEFDD;
-}
-.prices{
-  display: flex;
-  flex-direction: column;
-}
+
+  .content {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FEEFDD;
+  }
+
+  .prices {
+    display: flex;
+    flex-direction: column;
+  }
+
   .right-side h1 {
     color: #003459;
   }
@@ -97,7 +104,7 @@ $debito = $rowProd['preco'] + 100;
     font-size: 18px;
     font-weight: 700;
   }
-  
+
 
   .price {
     font-size: 16px;
@@ -149,16 +156,24 @@ $debito = $rowProd['preco'] + 100;
     font-size: 12px;
     font-weight: 700
   }
-  @media screen and (max-width: 582px){
-    .container{
+
+  @media screen and (max-width: 582px) {
+    .container {
       flex-wrap: wrap
     }
   }
-  .fundofixo{
-  background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
- }
+
+  .fundofixo {
+    background: url('images/Fundo/Fundo.jpg') no-repeat fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .modelo{
+   
+  }
+  .carac{
+
+  }
 </style>
 <?php include 'menu.php' ?>
 
@@ -169,11 +184,11 @@ $debito = $rowProd['preco'] + 100;
         <div class="left-side">
           <div class="items">
             <div class="select-image">
-              <?php do {?>
-              <?php if($rowImage['produto_id'] == $idGet) {?>
-                <img src="images/Produtos/<?php echo $rowImage['caminho']; ?>">
-              <?php }?>
-               <?php } while ($rowImage = $ImagesGet->fetch_assoc())?>
+              <?php do { ?>
+                <?php if ($rowImage['produto_id'] == $idGet) { ?>
+                  <img src="images/Produtos/<?php echo $rowImage['caminho']; ?>">
+                <?php } ?>
+              <?php } while ($rowImage = $ImagesGet->fetch_assoc()) ?>
             </div>
             <div class="thumbnails">
               <?php foreach ($rowListaImg as $img) {
@@ -191,8 +206,8 @@ $debito = $rowProd['preco'] + 100;
             <h1><?php echo $rowProd['titulo']; ?></h1>
             <p><?php echo mb_strimwidth($rowProd['descricao'], 0, 100, '.'); ?></p>
             <div class="prices">
-            <span class="price"><?php echo "R$" . number_format($rowProd['preco'], 2, ',', '.'); ?></span>
-            <span class="off"><?php echo "R$" . number_format($debito, 2, ',', '.'); ?></span>
+              <span class="price"><?php echo "R$" . number_format($rowProd['preco'], 2, ',', '.'); ?></span>
+              <span class="off"><?php echo "R$" . number_format($debito, 2, ',', '.'); ?></span>
             </div>
             <div class="options">
               <div class="amount">
@@ -204,11 +219,19 @@ $debito = $rowProd['preco'] + 100;
                   <span>+</span>
                 </div>
               </div>
-              <a href="carinho.php?id=<?php echo $idGet?>" class="button"><span class="bi bi-cart fs-4"></span>Adicionar ao carinho</a>
+              <a href="carinho.php?id=<?php echo $idGet ?>" class="button"><span class="bi bi-cart fs-4"></span>Adicionar ao carinho</a>
             </div>
           </div>
-      </div>
+        </div>
     </section>
+    <div class="container-xl" style="background-color: white">
+      <div class="modelo">
+        <h1><?php echo $rowTec['modelo'] ?></h1>
+      </div>
+      <div class="caracs">
+      <p><?php echo $rowTec['caracs'] ?></p>
+      </div>
+    </div>
   </main>
   <footer class="panel-footer">
     <?php include 'rodape.php' ?>
