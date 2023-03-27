@@ -80,7 +80,7 @@
   <div class="row ">
 
     <div class="card ">
-      <img src="images/jogo/fortnite1.2.jpg" alt="">
+      <img src="images/jogo/fortnite11.jpg" alt="">
       <br>
       <h2>Fortnite</h2>
       <br>
@@ -114,15 +114,15 @@
     <!-- ############################################### coluna1 ########################################## -->
 
     <div class="card ">
-      <img src="images/jogo/fifa.jpg" alt="">
+      <img src="images/jogo/fifaa.jpg" alt="">
       <br>
-      <h2>FIFA 23</h2>
+      <h2>FIFA 22</h2>
       <br>
       <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
-      <img src="images/jogo/god1.jpg" alt="">
+      <img src="images/jogo/god2.png" alt="">
       <br>
       <h2>God of War</h2>
       <br>
@@ -138,9 +138,9 @@
     </div>
 
     <div class="card ">
-      <img src="images/jogo/gta5.jpg" alt="">
+      <img src="images/jogo/gta11.jpg" alt="">
       <br>
-      <h2>Gta 5</h2>
+      <h2>Gta V</h2>
       <br>
       <a href="#" class="btn btn-success">Jogar</a>
     </div>

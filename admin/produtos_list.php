@@ -46,7 +46,7 @@ $rowProd = $ListaProd->fetch_all();
                             <th scope="col">Desconto</th>
                             <th scope="col">Tipos</th>
                             <th scope="col">
-                                <a href="cadastro.php">
+                                <a href="produtos_inserir.php">
                                 <div class="d-grid gap-2">
                                     <button class="btn btn-success">Cadastrar</button>
                                 </div>
