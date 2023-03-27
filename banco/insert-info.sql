@@ -32,6 +32,7 @@
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX', 'PLACA DE VIDEO GALAX GEFORCE RTX 3070 EX (1-CLICK OC) 8GB GDDR6 DE 256 BITS - 37NSL6MD2VXI GALAX', ' Placa RTX 3070 Galax', 4438.00, 'sim', 1);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'C3Tech NBC-50 Base para Notebook, Preto','Tenha seguranca, comodidade e praticidade enquanto utiliza o seu notebook com a base refrigerada NBC-50 da C3Tech;', 'Base para Notebook Preto', 99.90, 'sim', 6);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Redragon SUPORTE PARA CABO DE MOUSE GAMER PRETO, Modelo: MA301','Braço ajustável por mola para vários ajustes de altura; Clipe de borracha para segurar diferentes tamanhos de cabos de mouse', 'Suporte p/ Cabo de Mouse Redragon', 84.77, 'sim', 6);
+    insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'PLACA DE VIDEO NVIDIA GEFORCE GTX 750', 'Clock Boost: 1085 MHz; Saídas de vídeo: DP + HDMI + DVI','Placa Gráfica GTX 750', 850.00, 'sim', 1);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'MONITOR GAMER CURVO ALIENWARE QD-OLED DE 34”- AW3423DWF','Monitor curvo de 34" com tecnologia QD-OLED e AMD FreeSync™ Premium Pro. Apresenta taxa de contraste infinita e VESA DisplayHDR TrueBlack 400, oferecendo um desempenho incrível diante da tela.' ,'Monitor Gamer Curvo AlienWare',8870.88,'sim',5);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Nobreak Gamer RAGTECH modelo ONE UP NITRO de 1.000VA', 'Tripla proteção e sensor térmico em todas as tomadas de saída;Protetor de alta performance Transorb para RJ45 LAN/Ethernet;Frontal customizável por tags e retroiluminado com LEDs RGB;Gaming Sense (módulo de correção de voltagem que mantém as saídas estáveis e prolonga a vida útil do PC Gamer)', 'Nobreak Gamer RAGTECH', 1800.00, 'sim', 3);
     insert produtos ( titulo, descricao, resumo, preco, destaque, tipo_id) values ( 'Mouse Gamer Logitech G203 LIGHTSYNC RGB', 'Efeito de Ondas de Cores, 6 Botões Programáveis e Até 8.000 DPI - Preto', 'Mouse Gamer Logitech', 139.00, 'sim', 3);
@@ -76,6 +77,7 @@
 
     insert images (caminho, principal_img, produto_id) values ('mictrust.jpg',1,11);
     insert images (caminho, principal_img, produto_id) values ('mictrustfoto.jpg',0,11);
+    insert images (caminho, principal_img, produto_id) values ('mi.jpg',0,11);
 
     insert images (caminho, principal_img, produto_id) values ('cadeiraroxtor.jpg',1,12);
     insert images (caminho, principal_img, produto_id) values ('cadeiraroxtorlateral.jpg',0,12);
@@ -88,14 +90,20 @@
 
     insert images (caminho, principal_img, produto_id) values ('i9intel.jpg',1,14);
     insert images (caminho, principal_img, produto_id) values ('i9intel2.jpg',0,14);
+    insert images (caminho, principal_img, produto_id) values ('i9core.jpg',0,14);
+
 
     insert images (caminho, principal_img, produto_id) values ('ultrawide2.jpg',1,15);
     insert images (caminho, principal_img, produto_id) values ('ultrawide.jpg',0,15);
+    insert images (caminho, principal_img, produto_id) values ('ultrawide3.jpg',0,7);
+    insert images (caminho, principal_img, produto_id) values ('ultrawide4.jpg',0,7);
 
     insert images (caminho, principal_img, produto_id) values ('gtxprincipal.jpg',1,16);
     insert images (caminho, principal_img, produto_id) values ('gtxq2.jpg',0,16);
 
     insert images (caminho, principal_img, produto_id) values ('tecadamantiun.jpg',1,17);
+    insert images (caminho, principal_img, produto_id) values ('tecadamantiun2.jpg',0,17);
+    insert images (caminho, principal_img, produto_id) values ('tecadam4.jpg',0,17);
 
     insert images (caminho, principal_img, produto_id) values ('ctcfone.jpg',1,18);
     insert images (caminho, principal_img, produto_id) values ('ctcfone2.jpg',0,18);
@@ -168,8 +176,8 @@
     insert images (caminho, principal_img, produto_id) values ('ssd4.jpg',0,31);
 
 
-    -- insert images (caminho, principal_img, produto_id) values ('gtx750.jpg',1,29);
-    -- insert images (caminho, principal_img, produto_id) values ('gtx750b.jpg',0,29);
-    -- insert images (caminho, principal_img, produto_id) values ('gtx750c.jpg',0,29);
-    -- insert images (caminho, principal_img, produto_id) values ('gtx750d.jpg',0,29);
+    insert images (caminho, principal_img, produto_id) values ('gtx750.jpg',1,29);
+    insert images (caminho, principal_img, produto_id) values ('gtx750b.jpg',0,29);
+    insert images (caminho, principal_img, produto_id) values ('gtx750c.jpg',0,29);
+    insert images (caminho, principal_img, produto_id) values ('gtx750d.jpg',0,29);
 
