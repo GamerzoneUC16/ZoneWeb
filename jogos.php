@@ -1,3 +1,8 @@
+<?php 
+include "conn/connect.php";
+include "admin/acesso_com.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,6 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/reset.css">
   <!--   <link rel="stylesheet" href="css/style.css"> -->
   <title>Jogos</title>
@@ -30,6 +36,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     text-align: center;
+    font-weight: bold;
     
   }
 
@@ -51,8 +58,14 @@
     padding: 20px;
     margin: 25px;
     width: 250px;
+    transition: all 0.3s ease-out;
     
 
+  }
+
+  .row .card:hover {
+    transform: translateY(-5px);
+    cursor: default	;
   }
 
   .img-logo {
@@ -84,7 +97,6 @@
       <br>
       <h2>Fortnite</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
 
@@ -93,7 +105,6 @@
       <br>
       <h2>Call of Duty</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
@@ -101,7 +112,7 @@
       <br>
       <h2>Residente evil 4</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+      
     </div>
 
     <div class="card ">
@@ -109,7 +120,6 @@
       <br>
       <h2>Rocket League</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
     </div>
     <!-- ############################################### coluna1 ########################################## -->
 
@@ -118,7 +128,6 @@
       <br>
       <h2>FIFA 22</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
@@ -126,7 +135,6 @@
       <br>
       <h2>God of War</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
@@ -134,7 +142,7 @@
       <br>
       <h2>The last of us</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+
     </div>
 
     <div class="card ">
@@ -142,7 +150,7 @@
       <br>
       <h2>Gta V</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+     
     </div>
 
     <!-- ############################################### coluna2 ############################################# -->
@@ -152,7 +160,7 @@
       <br>
       <h2>Free Fire</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+ 
     </div>
 
     <div class="card ">
@@ -160,7 +168,6 @@
       <br>
       <h2>Rambow Six</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
@@ -168,7 +175,6 @@
       <br>
       <h2>Read Dead 2</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
     </div>
 
     <div class="card ">
@@ -176,17 +182,17 @@
       <br>
       <h2> Forza Horizon 4</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+  
     </div>
 
     <!-- ################################### coluna3 ################################################## -->
 
     <div class="card ">
-      <img src="images/jogo/CS.jpg" alt="">
+      <img src="images/jogo/cs1.jpg" alt="">
       <br>
       <h2>CS:GO</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+
     </div>
 
 
@@ -195,7 +201,7 @@
       <br>
       <h2>WWE 2K23</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+    
     </div>
 
     <div class="card ">
@@ -203,7 +209,7 @@
       <br>
       <h2>Mortal Kombate 11</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+  
     </div>
 
     <div class="card ">
@@ -211,7 +217,7 @@
       <br>
       <h2>DOTA 2</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+   
     </div>
 
     <!-- ################################### coluna4 ################################################## -->
@@ -221,7 +227,7 @@
       <br>
       <h2>Hogwarts Legacy</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+
     </div>
 
 
@@ -230,7 +236,7 @@
       <br>
       <h2>Horizon Zero Dawn</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+ 
     </div>
 
     <div class="card ">
@@ -238,7 +244,7 @@
       <br>
       <h2>SEKIRO</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+ 
     </div>
 
     <div class="card ">
@@ -246,7 +252,7 @@
       <br>
       <h2>Marvel Spider-Man</h2>
       <br>
-      <a href="#" class="btn btn-success">Jogar</a>
+   
     </div>
 
     <?php

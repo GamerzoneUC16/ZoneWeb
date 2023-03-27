@@ -85,22 +85,7 @@ if ($_POST) {
       font-size: 50px;
     }
 
-    .services article {
-      background: rgba(242, 242, 242, 0.9);
-      color: #222;
-      padding: 50px;
-      margin: 23px 16px;
-      position: relative;
-      font-weight: bold;
-
-    }
-
-    .colunas {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-    }
+    
 
     .card-body {
       padding: 50px;
@@ -159,7 +144,7 @@ if ($_POST) {
   }
 
   .row .card:hover::before {
-    animation: animate 0.5s linear forwards;
+    animation: animate 0.9s linear forwards;
   }
 
   @keyframes animate {
@@ -205,7 +190,7 @@ if ($_POST) {
   }
 
   .row .card:hover::after {
-    animation: animates 0.5s linear forwards;
+    animation: animates 0.9s linear forwards;
   }
 
   /* Parte direita e superior */
