@@ -1,7 +1,7 @@
 <?php
 include 'admin/acesso_com.php';
 include 'conn/connect.php';
-session_start();
+
 
 $idGet = $_GET['id'];
 $ProdutoGet = $conn->query("select * from produtos where id = $idGet");
@@ -17,19 +17,8 @@ $ListaImg = $conn->query("select * from images where produto_id = $idGet");
 $rowListaImg = $ListaImg->fetch_all();
 $numRows = $ListaImg->num_rows;
 
-$debito = $rowProd['preco'] + 900;
+$debito = $rowProd['preco'] + 100;
 
-
-$produto = array(
-  "id"      => $idGet,
-  "image"   => $rowListaImg['caminho'],
-  "titulo"  => $rowProd['titulo'],
-  "resumo"  => $rowProd['resumo'],
-  "preco"   => $rowProd['preco'],
-  "tipo"    => $rowProd['tipo_id']
-);
-  
-$_SESSION['carinho'][$idGet] = $produto;
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -105,8 +94,10 @@ $_SESSION['carinho'][$idGet] = $produto;
 
   .right-side p {
     color: #0b212d;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 700;
   }
+  
 
   .price {
     font-size: 16px;
@@ -114,8 +105,9 @@ $_SESSION['carinho'][$idGet] = $produto;
   }
 
   .off {
-    font-size: 12px;
-    color: #ccc;
+    font-size: 15px;
+    color: #253D5B;
+    font-weight: 700;
   }
 
   .options {
@@ -194,7 +186,6 @@ $_SESSION['carinho'][$idGet] = $produto;
             </div>
           </div>
         </div>
-
         <div class="right-side">
           <div class="content">
             <h1><?php echo $rowProd['titulo']; ?></h1>
@@ -216,10 +207,6 @@ $_SESSION['carinho'][$idGet] = $produto;
               <a href="carinho.php?id=<?php echo $idGet?>" class="button"><span class="bi bi-cart fs-4"></span>Adicionar ao carinho</a>
             </div>
           </div>
-          <?php 
-            
-          ?>
-        </div>
       </div>
     </section>
   </main>

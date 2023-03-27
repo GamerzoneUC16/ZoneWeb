@@ -86,13 +86,17 @@
         font-size: 20px;
         font-weight: 700;
     }
-    #corujao
+    @media screen and (max-width: 768px){
+        #corujao
     {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
         padding: 15px;
     }
+
+    }
+    
     .espaco
     {
         background-color: aliceblue;

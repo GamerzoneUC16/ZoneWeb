@@ -65,7 +65,7 @@ if (isset($_SESSION['username'])) {
            
             <li class="nav-item">
             <a class="nav-link active" href="carinho.php">
-                <span class="bi bi-cart-fill" style="color: #EAF2EF;"></span>
+                <span class="bi bi-cart-fill" style="color: #EAF2EF;">&nbsp;Carrinho</span>
             </a>
             </li>
             <li class="nav-item">
@@ -74,7 +74,9 @@ if (isset($_SESSION['username'])) {
             </a>
             <li class="nav-item">
             <a href="admin/logout.php">
-                    <span class="bi bi-door-open-fill" style="color: #EAF2EF;"></span>
+                <button type="button" class="btn btn-outline-danger">
+                    <span class="bi bi-door-open-fill " style="color: #EAF2EF;"></span>
+                    </button>
                 </a>
             </li>
             </ul>

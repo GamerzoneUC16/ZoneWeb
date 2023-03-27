@@ -34,7 +34,25 @@ $ImgP = $rowListaImg['principal_img'];
   <title>Store Zone</title>
 </head>
 <style>
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    color: #FEEFDD;
+    background-color: #003459;
+    width: 100%;
+    padding: 10px 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    
+  }
 
+  .cart{
+    justify-items: center;
+  }
 </style>
 <body class="fundofixo">
   <!-- Area o menu -->
@@ -85,17 +103,7 @@ $ImgP = $rowListaImg['principal_img'];
     <br>
     <!--Fim banner da loja-->
     <div class="container">
-          <div id="corujao">
-            <div class="espaco">
-            <h1>Como funciona o plano Corujão</h1>
-            <br>
-            <p>Com esse plano você pode alugar as nossas maquinas da lanhouse <br>
-            para jogar das 22.00 ás 6:00 da manhã,</p>
-            </div>
-            <a href="corujao.php">
-              <img src="images/man.jpg" style="border-radius: 4%;">
-            </a>
-          </div>
+         
     </div>
 
       <!-- Inicio Destaques -->
@@ -134,8 +142,8 @@ $ImgP = $rowListaImg['principal_img'];
                   <?php echo "R$" . number_format($rowListaProd['preco'], 2, ',', '.'); ?>
                 </p>
               </div>
-              <div class="d-grid gap-2">
-                <a href="carinho.php?id=<?php echo $rowListaProd['id'] ?>" class="btn btn-success" role="button" data-bs-toggle="button">Adicionar ao Carinho</a>
+              <div style="text-align: center;">
+              <a href="carinho.php?id=<?php echo $rowListaProd['id']?>" class="button fs-5">Adicionar ao carinho</a>
               </div>
             </div>
           </div>
