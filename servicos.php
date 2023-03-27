@@ -128,7 +128,7 @@ if ($_POST) {
 
   .row .card:hover {
     transform: translateY(-5px);
-    cursor: pointer;
+
   }
 
   /* Parte esquerdo e inferior */
