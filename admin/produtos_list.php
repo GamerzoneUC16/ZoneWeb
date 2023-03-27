@@ -59,7 +59,7 @@ $rowProd = $ListaProd->fetch_all();
                         <?php foreach ($rowProd as $GZH) { 
                             
                             $ListaTipos = $conn->query("select * from tipos");
-                            $rowTipos = $ListaTipos->fetch_assoc();
+                            $rowTipos = $ListaTipos->fetch_all();
                             
                             ?>
                             <tr>
@@ -70,7 +70,7 @@ $rowProd = $ListaProd->fetch_all();
                                 <td><?php echo $GZH['4']; ?></td>
                                 <td><?php echo $GZH['5']; ?></td>
                                 <td><?php echo $GZH['6']; ?></td>
-                                <?php if($GZH['7'] == $rowTipos['id']) {?>
+                                <?php if($GZH['7'] == $rowTipos['0']) {?>
                                 <td><?php echo $rowTipos['rotulo']; ?></td>
                                 <?php }?>
                                 <td>

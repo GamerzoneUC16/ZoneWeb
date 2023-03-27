@@ -39,10 +39,11 @@ $rowUser = $ListaUser->fetch_all();
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Username</th>
-                            <th scope="col" hidden>Senha</th>
-                            <th scope="col">nivel</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Senha</th>
+                            <th scope="col">Nivel</th>
                             <th scope="col">
-                                <a href="cadastro.php">
+                                <a href="login.php" class="text-decoration-none">
                                 <div class="d-grid gap-2">
                                     <button class="btn btn-success">Cadastrar</button>
                                 </div>
@@ -52,26 +53,21 @@ $rowUser = $ListaUser->fetch_all();
                     </thead>
 
                     <tbody>
-                        <?php foreach ($rowUser as $GZH) { ?>
+                        <?php foreach ($rowUser as $GZH) { 
+                            $id = $GZH['0'];
+                            $ListaNivel = $conn->query("select * from niveis where id = $id");
+                            $rownivel = $ListaNivel->fetch_assoc();
+                            ?>
+
+                            
                             <tr>
                                 <th scope="row"><?php echo $GZH['0'] ?></th>
                                 <td><?php echo $GZH['1'] ?></td>
-                                <td hidden><?php echo $GZH['2'] ?></td>
+                                <td><?php echo $GZH['2'] ?></td>
                                 <td><?php echo $GZH['3'] ?></td>
-                                <td>
-                                    <a href="cliente_edit.php?id=<?php echo $GZH['0'];?>">
-                                        <button class="btn btn-primary">
-                                            Ediatr
-                                        </button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="client_exluir.php">
-                                        <button class="btn btn-danger">
-                                            Excluir
-                                        </button>
-                                    </a>
-                                </td>
+                                <?php if($GZH['4'] == $rownivel['id']) { ?>
+                                <td><?php echo $rownivel['rotulo'] ?></td>
+                                <?php } ?>
                             </tr>
                         <?php } ?>
                     </tbody>

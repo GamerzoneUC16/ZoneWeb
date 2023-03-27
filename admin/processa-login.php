@@ -2,7 +2,7 @@
 include '../conn/connect.php';
 
 
-$inicio = "http://localhost:8080/ZoneWeb/loja.php";
+$inicio = "../loja.php";
 if($_POST){
 
 
