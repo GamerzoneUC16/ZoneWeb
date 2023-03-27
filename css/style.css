@@ -236,3 +236,25 @@ a {
 .iphone-x{
     width: 320px;
 }
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 20px;
+    margin: 25px;
+    width: 250px;
+    transition: all 0.3s ease-out;
+    
+
+  }
+
+  .row .card:hover {
+    transform: translateY(-5px);
+    cursor: default	;
+  }

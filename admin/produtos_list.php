@@ -76,7 +76,7 @@ $rowProd = $ListaProd->fetch_all();
                                 <td>
                                     <a href="cliente_edit.php?id=<?php echo $GZH['0'];?>">
                                         <button class="btn btn-primary">
-                                            Ediatr
+                                            Editar
                                         </button>
                                     </a>
                                 </td>

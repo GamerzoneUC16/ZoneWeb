@@ -29,6 +29,7 @@ if (isset($_SESSION['username'])) {
   <title>Gamerzone</title>
 </head>
 
+
 <body>
   <header id="showcase">
     <div id="showcase-container">
@@ -57,7 +58,7 @@ if (isset($_SESSION['username'])) {
         <span class="feature-title"></span>
         <p>Horários</p>
         <p>Todos os dias <br>
-           Das 10:00 as 22:00
+          Das 10:00 as 22:00
         </p>
       </div>
       <div class="feature">
@@ -87,33 +88,43 @@ if (isset($_SESSION['username'])) {
     </div>
   </section>
 
-  <section id="product">
-    <div class="headline">jogos lan</div>
-    <div id="product-container">
-      <img src="images/iphone-lan-branco.png" alt="iphone-x" class="iphone-x">
-      <div id="items">
-        <div class="item">
-          <p>Counter-Strike: Global Offensive.</p>
-        </div>
-        <div class="item">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aperiam dolor quaerat, autem ipsa quidem.</p>
-        </div>
-        <div class="item">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aperiam dolor quaerat, autem ipsa quidem.</p>
-        </div>
-        <div class="item">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aperiam dolor quaerat, autem ipsa quidem.</p>
-        </div>
-      </div>
+  <div class="headline">jogos lan</div>
+  <div class="row">
+    <div class="card">
+      <img src="images/jogo/fortnite11.jpg" alt="">
+      <br>
+      <h2>Fortnite</h2>
+      <br>
     </div>
-  </section>
 
+    <div class="card">
+      <img src="images/jogo/call.jpg" alt="">
+      <br>
+      <h2>Call of Duty</h2>
+      <br>
+    </div>
+
+    <div class="card">
+      <img src="images/jogo/resi.jpg" alt="">
+      <br>
+      <h2>Residente evil</h2>
+      <br>
+
+    </div>
+
+  </div>
+  
+  
+
+
+
+<br><br><br><br>
   <div id="testimonials">
     <div class="headline">Responsáveis</div>
     <div id="testimonials-container">
       <div class="testimonial">
         <img src="images/Igor.jpg" alt="" class="testimonial-image">
-        <p>Igor: Responsável por boa parte do Back-End e Front-End criou o banco de dados da gamerzone juntos com os demais respoonsaveis,
+        <p>Igor: Responsável por boa parte do Back-End e Front-End criou o banco de dados da gamerzone juntos com os demais responsaveis,
           produziu o sistema da loja, login e cadastro.
         </p>
       </div>
@@ -127,7 +138,7 @@ if (isset($_SESSION['username'])) {
       </div>
       <div class="testimonial">
         <img src="images/Kaua.jpg" alt="" class="testimonial-image">
-        <p>Kauã: Responsavel pelo Front-end do inicio e Back-End no C#/PHP configurando os formularios para listar chamados de suporte e progamando a parte aonde o técnico consegue reponder o chamado do cliente, prestou suporte as demais partes do projeto.</p>
+        <p>Kauã: Responsavel pelo Front-end do inicio e Back-End no C#/PHP configurando os formularios para listar chamados de suporte e programando a parte aonde o técnico consegue reponder o chamado do cliente, prestou suporte as demais partes do projeto.</p>
       </div>
       <div class="testimonial">
         <img src="images/Caio.jpg" alt="" class="testimonial-image">
