@@ -34,7 +34,7 @@ if (isset($_SESSION['username'])) {
     <div id="showcase-container">
       <h2>A melhor Lan House do Brasil.</h2>
       <p>Venha bater aquela gameplay avançada e evoluir suas mecânicas em equipamentos de alto desempenho!</p>
-      <a href="loja.php" class="btn">COMPRE AGORA</a>
+      <a href="loja.php" class="btn1">COMPRE AGORA</a>
     </div>
   </header>
 
@@ -56,9 +56,9 @@ if (isset($_SESSION['username'])) {
         <i class="fa-regular fa-clock fa-3x"></i>
         <span class="feature-title"></span>
         <p>Horários</p>
-        <p>Todos os dias
-          10:00 am - 06:00 am
-          Corujão TODOS os dias!</p>
+        <p>Todos os dias <br>
+           Das 10:00 as 22:00
+        </p>
       </div>
       <div class="feature">
         <i class="fas fa-computer fa-3x"></i>
@@ -82,8 +82,7 @@ if (isset($_SESSION['username'])) {
           R$ 50,00|
           Pacote 8 horas
           R$ 65,00|
-          Corujão
-          R$ 85,00 |</p>
+        </p>
       </div>
     </div>
   </section>
