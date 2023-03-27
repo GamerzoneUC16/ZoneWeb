@@ -112,24 +112,24 @@ if (isset($_SESSION['username'])) {
     <div class="headline">O que acham de nós</div>
     <div id="testimonials-container">
       <div class="testimonial">
-        <img src="images/Vito.jpg" alt="" class="testimonial-image">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
-      </div>
-      <div class="testimonial">
         <img src="images/Igor.jpg" alt="" class="testimonial-image">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <p>Igor: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
         <img src="images/Dan.jpg" alt="" class="testimonial-image">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <p>Danyllo: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
       <div class="testimonial">
-        <img src="images/Caio.jpg" alt="" class="testimonial-image">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <img src="images/Vito.jpg" alt="" class="testimonial-image">
+        <p>Vitor: Responsavel pela parte de jogos, serviços, e chamados tanto back-end como front-end adicionou as imagem no codigo e também criou os cards aonde ficam os jogos.</p>
       </div>
       <div class="testimonial">
         <img src="images/Kaua.jpg" alt="" class="testimonial-image">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+        <p>Kauã: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/Caio.jpg" alt="" class="testimonial-image">
+        <p>Caio: ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, impedit. Consectetur vitae numquam exercitationem, nam ipsam quaerat accusamus nobis fugiat?</p>
       </div>
     </div>
   </div>
