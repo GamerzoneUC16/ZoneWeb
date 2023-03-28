@@ -1,3 +1,54 @@
+<?php
+// Incluindo o Sistema de autenticação
+include("acesso_com.php");
+
+// Incluir o arquivo e fazer a conexão
+include("../conn/connect.php");
+
+if($_POST){
+
+        // Guardo o nome da imagem no banco e o arquivo no diretório
+    if(isset($_POST['enviar'])){
+        $nome_img   =   $_FILES['imagem_produto']['name'];
+        $tmp_img    =   $_FILES['imagem_produto']['tmp_name'];
+        $dir_img    =   "../images/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    };
+
+    // Receber os dados do formulário
+    // Organizar os campos na mesma ordem
+    $id    =   $_POST['id'];
+    $titulo   =   $_POST['titulo_produto'];
+    $descri_produto     =   $_POST['descri_produto'];
+    $resumo_produto     =   $_POST['resumo_produto'];
+    $preco_produto      =   $_POST['preco_produto'];
+    $destaque_produto     =   $_POST['destaque_produto'];
+    $desconto_produto   =   $_POST['desconto_produto'];
+    $tipos_produto  =   $_POST['tipos_produto'];
+
+    // Consulta SQL para inserção de dados
+    $insertSQL  =   "INSERT INTO produtos
+                        (id_produto, titulo_produto, descri_produto, resumo_produto, preco_produto, destaque_produto, desconto_produto, tipos_produto)
+                    VALUES
+                        ('$id_produto','$titulo_produto','$descri_produto','$resumo_produto','$preco_produto','$destaque_produto','$desconto_produto','$tipos_produtos)
+                    ";
+    $resultado  =   $admin->query($insertSQL);
+
+    // Após a ação a página será redirecionada
+    if(mysqli_insert_id($admin)){
+        header("Location: produtos_list.php");
+    }else{
+        header("Location: produtos_list.php");
+    };
+};
+
+// Selecionar os dados da chave estrangeira
+$consulta_fk    =   "SELECT * FROM tipos  ORDER BY rotulo ASC ";
+$lista_fk       =   $admin->query($consulta_fk);
+$row_fk         =   $lista_fk->fetch_assoc();
+$totalRows_fk   =   ($lista_fk)->num_rows;
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
