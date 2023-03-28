@@ -40,16 +40,17 @@ $numRows = $ListaGZH->num_rows;
                         <th scope="col">Titulo</th>
                         <th scope="col">Motivo</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Solicitante</th>
                         <th scope="col">Responsavel</th>
+                        <th scope="col">Solicitante</th>
                         <th scope="col">Anexo</th>
                         <th scope="col">Data</th>
                         </tr>
                     </thead>
                     
                     <tbody>
-                    <?php foreach ($rowGZH as $GZH) { 
-                    $UserList = $conn->query('select * from usuarios');
+                    <?php foreach ($rowGZH as $GZH) {
+                    $id_user = $GZH['9'];
+                    $UserList = $conn->query("select * from usuarios where id = $id_user");
                     $rowUser = $UserList->fetch_assoc();
                     
                     $ClientList = $conn->query('select * from cliente');
