@@ -1,7 +1,21 @@
 <?php
 include "conn/connect.php";
 include "admin/acesso_com.php";
-$login = "http://localhost:8080/ZoneWeb/servicos.php";
+
+$login = "../ZoneWeb/servicos.php";
+
+
+if (isset($_SESSION['username'])) {
+  $username = $_SESSION['username'];
+} else {
+  $username = 'Visitante';
+}
+
+$ListaCli = $conn->query("select * from usuarios where username like '%$username%';");
+$rowcli = $ListaCli->fetch_assoc();
+
+$id_get = $rowcli['id'];
+
 $string = 'GZH-';
 if ($_POST) {
   $id = $_POST['id'];
@@ -12,7 +26,7 @@ if ($_POST) {
 
   $Id = mysqli_insert_id($conn);
   
-  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in,hashcode,cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,'$string$Id',1,1,0)";
+  $insertSql = "insert chamados (titulo, motivo, assunto, anexo, status_ch, data_in,hashcode,cliente_id, usuario_id, data_final) values ('$titulo','$motivo','$assunto','$anexo','Aguardando Atendimento',default,'GZH-',1,$id_get,0)";
   $resultado  =   $conn->query($insertSql);
 
  
@@ -288,7 +302,7 @@ if ($_POST) {
   <div class="row ">
    
       <div class="card ">
-      <a class="close" href="loja.php">
+      <a class="close" href="#">
         <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
         <h2>Serviços</h2>
         <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>

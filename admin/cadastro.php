@@ -6,7 +6,7 @@ $rowListaCli = $ListaCli->fetch_assoc();
 $numRows = $ListaCli->num_rows;
 
 
-$inicio = "http://localhost:8080/ZoneWeb/admin/index.php";  
+$inicio = "../admin/index.php";  
 
 
 if($_POST){
@@ -21,10 +21,12 @@ if($_POST){
         $resultadoCli = $conn->query($insertCli);
     // Fim Cadastro Cliente
 
+    $_SESSION['id_cli'] = $id;
+    
     if(mysqli_insert_id($conn)){
-        header("Location: http://localhost:8080/ZoneWeb/admin/client.php");
+        header("Location: ../admin/client.php");
     }else{
-        header("Location: http://localhost:8080/ZoneWeb/admin/cadastro.php");
+        header("Location: ../admin/cadastro.php");
     };
 } 
 

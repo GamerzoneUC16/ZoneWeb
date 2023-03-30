@@ -22,6 +22,7 @@ h2 {
     font-weight: bold;
     color: black;
     font-size: 25px;
+
 }
 
 p
@@ -41,7 +42,9 @@ p
   padding: 60px;
   margin: 25px;
   width: 400px;
+
   transition: all 0.3s ease-out;
+
 }
 
 .card:hover {
@@ -51,18 +54,16 @@ p
  
 
  
-
-
 .blue {
-  border-left: 5px solid #4895ff;
+  border-left: 6px solid #4895ff;
 }
  
 .green {
-  border-left: 10px solid #3bb54a;
+  border-left: 6px solid #3bb54a;
 }
  
 .red {
-  border-left: 3px solid #b3404a;
+  border-left: 6px solid #b3404a;
 }
 
 h2
@@ -85,7 +86,7 @@ h2
 
          <div class="row">
    
-      <div class="card ">
+      <div class="card  blue">
         <br>
       <i  class="bi bi-gear-fill fs-2" style="font-size: 60px; text-align:center"></i>
         <h2 >Manutenção e Suporte</h2>
@@ -95,13 +96,13 @@ h2
             instalação de periféricos e suporte.</p>
       </div>
 
-      <div class="card ">
+      <div class="card green ">
       <img class="image" src="images/jogo/steamworks_logo.png" alt="">
       <br>
         <p>O que é o Steamworks? O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam.</p>
       </div>
  
-      <div class="card ">
+      <div class="card red">
       <i class="bi bi-headset fs-2" style="font-size: 60px; text-align:center" ></i>
       <br>
         <h2>Consultoria e Orientação</h2>
