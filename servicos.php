@@ -16,8 +16,6 @@ $rowcli = $ListaCli->fetch_assoc();
 
 $id_get = $rowcli['id'];
 
-print_r($id_get);
-
 $string = 'GZH-';
 if ($_POST) {
   $id = $_POST['id'];
@@ -304,7 +302,7 @@ if ($_POST) {
   <div class="row ">
    
       <div class="card ">
-      <a class="close" href="loja.php">
+      <a class="close" href="#">
         <div class="icon"><span class="bi bi-gear-fill fa-2x"></span></div>
         <h2>Serviços</h2>
         <p> O Steamworks é o conjunto de ferramentas e serviços criados pela Valve que ajudam você a configurar, gerenciar e operar o seu jogo no Steam..</p>

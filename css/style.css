@@ -40,23 +40,6 @@ a {
     letter-spacing: 2px;
 }
 
-/* Navbar */
-#navbar {
-    width: 100%;
-    background: #111;
-    color: #eee;
-    height: 80px;
-    position: fixed;
-}
-
-#navbar-container {
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .logo {
     font-size: 2rem;

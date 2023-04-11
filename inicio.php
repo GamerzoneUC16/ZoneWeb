@@ -88,7 +88,7 @@ if (isset($_SESSION['username'])) {
     </div>
   </section>
 
-  <div class="headline">jogos lan</div>
+  <div class="headline">jogos da lan</div>
   <div class="row">
     <div class="card">
       <img src="images/jogo/fortnite11.jpg" alt="">
@@ -160,10 +160,7 @@ if (isset($_SESSION['username'])) {
     </div>
   </section>
 
-  <footer id="footer">
-    <p>Copyright 2023 - Todos os direitos.</p>
-    <p>Feito por Gamerzone</p>
-  </footer>
+  <?php include "rodape.php"?>
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/f93dccb0f6.js" crossorigin="anonymous"></script>
 </body>
