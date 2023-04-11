@@ -46,9 +46,13 @@ $numRows = $ListaClient->num_rows;
                             <th scope="col">Email</th>
                             <th scope="col">CPF</th>
                             <th scope="col" style="width: fit-content;">
+                            <div class="d-grid gap-2">
                                 <a href="cadastro.php" class="text-decoration-none">
+                                    
                                     <button type="button" class="btn btn-outline-success">Cadastrar</button>
+                                    
                                 </a>
+                                </div>
                             </th>
                         </tr>
                     </thead>

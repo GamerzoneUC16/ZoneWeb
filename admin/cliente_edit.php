@@ -1,28 +1,38 @@
-<?php 
+<?php
 include "acesso_com.php";
 include "../conn/connect.php";
 
 
 
-if($_POST){
+if ($_POST) {
 
 
 
-$id      =    $_POST['id']; 
-$nome       = $_POST['nome'];
-$sobrenome  = $_POST['sobrenome'];
-$email      = $_POST['email'];
-$cpf        = $_POST['cpf'];
+    $id      =    $_POST['id'];
+    $nome       = $_POST['nome'];
+    $sobrenome  = $_POST['sobrenome'];
+    $email      = $_POST['email'];
+    $cpf        = $_POST['cpf'];
 
-$idCli = $_POST['id'];
+    $idCli = $_POST['id'];
 
-$updateSql = "update cliente set id = '$id', nome = '$nome',sobrenome = '$sobrenome', email = '$email',cpf = '$cpf' where id = $idCli";
+    $updateSql = "update cliente set id = '$id', nome = '$nome',sobrenome = '$sobrenome', email = '$email',cpf = '$cpf' where id = $idCli";
 
-$resultado = $conn->query($updateSql);
-if ( $resultado ) {
-    header("Location: http://localhost:8080/ZoneWeb/admin/client.php");
-}
+    $resultado = $conn->query($updateSql);
+    if ($resultado) {
+        header("Location: http://localhost:8080/ZoneWeb/admin/client.php");
+    }
 };
+
+if($_GET)
+
+    $id_form    =   $_GET['id'];
+else
+    $id_form = 0;
+$lista          =   $conn->query("SELECT * FROM cliente WHERE id = $id_form");
+$row            =   $lista->fetch_assoc();
+
+
 
 
 
@@ -31,6 +41,7 @@ if ( $resultado ) {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,29 +50,60 @@ if ( $resultado ) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Cliente Edição</title>
 </head>
+
 <body class="fundofixo">
-    <?php include "menu_adm.php";?>
-<main class="container">
-    <form action="cliente_edit.php" method="post">
-        <div class="mb-3">
-            <label for="nome" class="form-label">Nome:</label>
-            <input type="text" class="form-label" id="nome" name="nome">
+    <?php include "menu_adm.php"; ?>
+    <main class="container">
+        <div class="thumbnail">
+            <div class="alert alert-danger" role="alert">
+                <form action="cliente_edit.php" id="form_cliente_edit" name="form_cliente_edit" enctype="multipart/form-data" method="post">
+                    <input type="hidden" name="id" id="id" value="<?php echo $row['id']?>">
+                    <label for="id">Nome:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text" aria-hidden="true">
+                                <i class="bi bi-person-add fs-3"></i>
+                            </span>
+                        </span>
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome.">
+                    </div>
+                    <br>
+                    <label for="id">Sobrenome:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text" aria-hidden="true">
+                                <i class="bi bi-person-add fs-3"></i>
+                            </span>
+                        </span>
+                        <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Digite o seu sobrenome.">
+                    </div>
+                    <br>
+                    <label for="id">Email:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text" aria-hidden="true">
+                                <i class="bi bi-envelope-plus fs-3"></i>
+                            </span>
+                        </span>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu email.">
+                    </div>
+                    <br>
+                    <label for="id">CPF:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text" aria-hidden="true">
+                                <i class="bi bi-person-add fs-3"></i>
+                            </span>
+                        </span>
+                        <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite o seu cpf.">
+                    </div>
+                    <br>
+
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="sobrenome" class="form-label">Sobrenome:</label>
-            <input type="text" class="form-label" id="sobrenome" name="sobrenome">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-label" id="email" name="email">
-        </div>
-        <div class="mb-3">
-            <label for="cpf" class="form-label">CPF:</label>
-            <input type="text" class="form-label" id="cpf" name="cpf">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</main>
+    </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </html>
