@@ -68,6 +68,17 @@ $rowUser = $ListaUser->fetch_all();
                                 <?php if($GZH['4'] == $rownivel['id']) { ?>
                                 <td><?php echo $rownivel['rotulo'] ?></td>
                                 <?php } ?>
+                                <td class="d-frid d-md-flex justify-content-md-end">
+                                    <a href="$?id=<?php echo $GZH['0'];?>" class="text-decoration-none">
+                                        <button type="button" class="btn btn-outline-success me-md-2">
+                                             EDITAR  
+                                        </button>
+                                    </a>
+                                    
+                                    <button data-nome="<?php echo $rowClient['1'];?>" data-id="<?php echo $rowClient['0'];?>" class="btn btn-outline-danger">
+                                        <span class="hidden-xs">EXCLUIR</span>
+                                    </button>
+                                </td>
                             </tr>
                         <?php } ?>
                     </tbody>

@@ -68,15 +68,12 @@ $numRows = $ListaClient->num_rows;
                                 <td class="d-frid gap-2 d-md-flex justify-content-md-end">
                                     <a href="cliente_edit.php?id=<?php echo $GZH['0'];?>" class="text-decoration-none">
                                         <button type="button" class="btn btn-outline-success me-md-2">
-                                            Ediatr
+                                            Editar
                                         </button>
                                     </a>
-                                
-                                    <a href="client_exluir.php" class="text-decoration-none">
-                                        <button type="button" class="btn btn-outline-danger">
-                                            Excluir
-                                        </button>
-                                    </a>
+                                    <button data-nome="<?php echo $rowClient['1'];?>" data-id="<?php echo $rowClient['0'];?>" class="btn btn-outline-danger">
+                                        <span class="hidden-xs">EXCLUIR</span>
+                                    </button>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -85,10 +82,32 @@ $numRows = $ListaClient->num_rows;
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modalEdit" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Deseja mesmo excluir o item?
+                    <h4><span class="nome text-danger"></span></h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="" type="button" class="btn btn-danger delete-yes">
+                        Confirmar
+                    </a>
+                    <button class="btn btn-success" data-dismiss="modal">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <?php include 'rodape_adm.php' ?>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 </html>

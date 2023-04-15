@@ -65,7 +65,7 @@ $row            =   $lista->fetch_assoc();
                                 <i class="bi bi-person-add fs-3"></i>
                             </span>
                         </span>
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome.">
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome." value="<?php echo $row['nome'];?>">
                     </div>
                     <br>
                     <label for="id">Sobrenome:</label>
@@ -75,7 +75,7 @@ $row            =   $lista->fetch_assoc();
                                 <i class="bi bi-person-add fs-3"></i>
                             </span>
                         </span>
-                        <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Digite o seu sobrenome.">
+                        <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Digite o seu sobrenome." value="<?php echo $row['sobrenome'];?>">
                     </div>
                     <br>
                     <label for="id">Email:</label>
@@ -85,7 +85,7 @@ $row            =   $lista->fetch_assoc();
                                 <i class="bi bi-envelope-plus fs-3"></i>
                             </span>
                         </span>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu email.">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu email." value="<?php echo $row['email'];?>">
                     </div>
                     <br>
                     <label for="id">CPF:</label>
@@ -95,15 +95,14 @@ $row            =   $lista->fetch_assoc();
                                 <i class="bi bi-person-add fs-3"></i>
                             </span>
                         </span>
-                        <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite o seu cpf.">
+                        <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite o seu cpf." value="<?php echo $row['cpf'];?>">
                     </div>
                     <br>
-
+                    <input type="submit" value="Atualizar" name="enviar" id="enviar" class="btn btn-danger btn-block">
                 </form>
             </div>
         </div>
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 </html>
